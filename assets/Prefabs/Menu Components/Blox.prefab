@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &118092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 400848}
+  - component: {fileID: 11420016}
+  m_Layer: 5
+  m_Name: Base Menu
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &400848
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -340, y: -144, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &11420016
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b92cfd65c0d2cb346b22db308ab94b15, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  corner: {fileID: 185650, guid: b10159503cf607c4ab587fc07d8d7903, type: 2}
+  line: {fileID: 196608, guid: 83c4a9b2b0d33fc4b8a6b746a712dac5, type: 2}
+  filling: {fileID: 190638, guid: a7efa11146de26f40974a91b09a2e035, type: 2}
+  textContent: {fileID: 166258, guid: 82a1395d4efc5a44ea7e3927733991e0, type: 2}
+  textContent2: {fileID: 154426, guid: ae9ced34b9834b548956ac1d5399d78e, type: 2}
+  arrowBase: {fileID: 123786, guid: ec158105a67b5ec4b9edca795a10c17d, type: 2}
+  type: Base Menu
+  message: Canvas
+  font: 0
+  limitUp: 0
+  limitDown: 0
+  limitLeft: 0
+  limitRight: 0
+  topLeft: {fileID: 0}
+  topRight: {fileID: 0}
+  bottomLeft: {fileID: 0}
+  bottomRight: {fileID: 0}
+  left: {fileID: 0}
+  right: {fileID: 0}
+  up: {fileID: 0}
+  down: {fileID: 0}
+  fill: {fileID: 0}
+  text: {fileID: 0}
+  arrow: {fileID: 0}
+  x: 0
+  y: 0
+  wid: 8
+  hei: 4
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: textContent
+      value: 
+      objectReference: {fileID: 166258, guid: 82a1395d4efc5a44ea7e3927733991e0, type: 2}
+    - target: {fileID: 0}
+      propertyPath: textContent2
+      value: 
+      objectReference: {fileID: 154426, guid: ae9ced34b9834b548956ac1d5399d78e, type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 118092}
+  m_IsPrefabParent: 1
