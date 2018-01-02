@@ -33,7 +33,7 @@ public class PlanningMaster : MonoBehaviour {
 		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
 		{
 			if(mon.Team == 0){
-				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.Point, 5);
+				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.MonsterPoint, 5);
 				foreach (Point InfluencePoint in MonInfluences)
 				{
 					FinalMap[InfluencePoint.x, InfluencePoint.z] += (MaxDepth - InfluencePoint.Depth) * 0.12f;
@@ -44,7 +44,7 @@ public class PlanningMaster : MonoBehaviour {
 		}
 		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
 		{
-			FinalMap[mon.Point.x, mon.Point.z] = 0;
+			FinalMap[mon.MonsterPoint.x, mon.MonsterPoint.z] = 0;
 		}
 	
 		return FinalMap;
@@ -94,13 +94,15 @@ public class PlanningMaster : MonoBehaviour {
 		}
 		return Total;
 	}
+
 	PieceSpell ChooseSpell(Monster ThinkingMonster){
 
-		Point Here = new Point(ThinkingMonster.Point);
+		Point Here = new Point(ThinkingMonster.MonsterPoint);
 		int MyTeam = ThinkingMonster.Team;
 		int BestDamage = 0;
 		Spell ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
+
 		//Foreach castable spell available
 		foreach (Spell CandidateSpell in ThinkingMonster.Spells_)
 		{
@@ -108,6 +110,7 @@ public class PlanningMaster : MonoBehaviour {
 			List<LinkedPoint> BSC = BlurredSpellCastRange(Here, CandidateSpell, 2);
 			foreach (LinkedPoint BlurredPoint in BSC)
 			{
+
 				List<Damage> DamageSimulations = ThinkingMonster.SimulateSpellPerformance(CandidateSpell, BlurredPoint);
 				
 				// Enemy damage dealt
@@ -142,7 +145,7 @@ public class PlanningMaster : MonoBehaviour {
 
 	PieceMove PathMaker(Monster ThinkingMonster, Point Goal){
 
-		Point Here = new Point(ThinkingMonster.Point);
+		Point Here = new Point(ThinkingMonster.MonsterPoint);
 		//BattleMaster.Log("["+ThinkingMonster.Name+"] aims for ["+NearestMonster.Name+"]");
 
 		Point BestOption = Here;
@@ -150,15 +153,15 @@ public class PlanningMaster : MonoBehaviour {
 		List<Point> UnnocupiedReachablePoints = Environment.GetReachableUnnocupiedCells(Here, 2);//Unnocupied
 		//OverlaysMaster.CleanUp();
 		//OverlaysMaster.SpawnSpellCells(reachables, 1);
-		foreach (Point Reachable in UnnocupiedReachablePoints)
+		foreach (Point ReachablePoint in UnnocupiedReachablePoints)
 		{
-			if(!Environment.IsOccupied(Reachable)){
-				if(Point.Distance(Reachable, Goal) < MinimumRecordedDistance){
-					MinimumRecordedDistance = Point.Distance(Reachable, Goal);
-					BestOption = Reachable;
+			if(!Environment.IsOccupied(ReachablePoint)){
+				if(Point.Distance(ReachablePoint, Goal) < MinimumRecordedDistance){
+					MinimumRecordedDistance = Point.Distance(ReachablePoint, Goal);
+					BestOption = ReachablePoint;
 				}
-				else if(Point.Distance(Reachable, Goal) == MinimumRecordedDistance && Point.Distance(Here, Reachable) < Point.Distance(Here, Goal)){
-					BestOption = Reachable;
+				else if(Point.Distance(ReachablePoint, Goal) == MinimumRecordedDistance && Point.Distance(Here, ReachablePoint) < Point.Distance(Here, Goal)){
+					BestOption = ReachablePoint;
 				}
 			}
 		}
@@ -170,10 +173,12 @@ public class PlanningMaster : MonoBehaviour {
 	public Deque<PieceAction> Thinking(Monster ThinkingMonster){
 
 		Deque<PieceAction> Actions = new Deque<PieceAction>();
+		InfluenceMap InfluenceMap = new InfluenceMap(GameBoard.size);
+		InfluenceMap.ConsiderMonsters(GameBoard.GetMonsters);
+		
 		//Find nearest enemy, find nearest free cell, move
 
-				//
-		Point Here = new Point(ThinkingMonster.Point);
+		Point Here = new Point(ThinkingMonster.MonsterPoint);
 		PieceSpell ChosenSpell = ChooseSpell(ThinkingMonster);
 		
 		if(ChosenSpell != null){

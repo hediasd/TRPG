@@ -83,9 +83,8 @@ public class BattleMaster : MonoBehaviour {
 		Teams.Add(new List<Monster>());
 		Teams.Add(new List<Monster>());
 
-		MapLoader ML = GetComponent<MapLoader>();
-		ML.Load();
-
+		MapLoader MapLoader = GetComponent<MapLoader>();
+		MapLoader.Load();
 
 		Grimoire = GetComponent<Grimoire>();
 		CanvasMaster = canvas.GetComponent<CanvasMaster>();

@@ -35,7 +35,7 @@ public class Monster : DataObject {
 	//public int HPA, HPM, POW, MGT, END, RES, LUK, SPD, MOV;
 	
 	[System.NonSerialized]
-	public Point Point;
+	public Point MonsterPoint;
 	[System.NonSerialized]
 	public bool alive;
 	[System.NonSerialized]
@@ -101,7 +101,7 @@ public class Monster : DataObject {
 			//TODO:	Debug.Log("do the radius 1");
 			//}else{ //radius or multiple target
 				//know shape = worth for terrains
-				List<Point> SpellShape = SimulatedSpell.EffectShapePoints(Point, TargetedCell);
+				List<Point> SpellShape = SimulatedSpell.EffectShapePoints(MonsterPoint, TargetedCell);
 				//know targets = important for choices
 				TargetedMonsters.AddRange(Environment.GameBoard.MonstersAt(TargetedCell, SpellShape));
 				//in the future, move this to outer layer perhaps

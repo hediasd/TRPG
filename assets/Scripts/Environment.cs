@@ -26,7 +26,7 @@ public class Environment : MonoBehaviour {
 		int index = -1;
 
 		for (int i = 0; i < ValidTargets.Count; i++){ //new Point(ValidTargets[i])
-			List<Point> path = GetSimplePath(p, ValidTargets[i].Point, false);
+			List<Point> path = GetSimplePath(p, ValidTargets[i].MonsterPoint, false);
 			if(path.Count < dist){
 				dist = path.Count;
 				index = i;

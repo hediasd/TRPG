@@ -28,6 +28,8 @@ public class GameboardMaster : MonoBehaviour{
 		//Debug.Log(string.Join("; ", a));
 	}
 
+
+
 	public List<bool> DealDamage(List<Damage> DamageList){
 		List<bool> Success = new List<bool>();
 		foreach (Damage DamageInstance in DamageList)
@@ -72,7 +74,7 @@ public class GameboardMaster : MonoBehaviour{
 		}
 	}	
 	public void RemoveMonster(Monster mon){
-		Point at = mon.Point;
+		Point at = mon.MonsterPoint;
 		if(Board[at.x, at.z, E.MONSTER_LAYER] != mon.ID){
 			Debug.Log("Illegal Board Move: No/Wrong monster to remove");
 			throw new GameboardException();
@@ -81,6 +83,10 @@ public class GameboardMaster : MonoBehaviour{
 			Set(0, at, E.MONSTER_LAYER);
 			//Debug.Log("gone to " + to.x + " " + to.z);
 		}
+	}
+
+	public List<Monster> GetMonsters(){
+		return new List<Monster>(MonstersOnBoard.Values);
 	}
 
 	public int MonsterIDAt(Point at){
@@ -128,7 +134,7 @@ public class GameboardMaster : MonoBehaviour{
 	}
 	private void Set(int Value, Point p, int layer){
 		if(Value > 0 && layer == E.MONSTER_LAYER){ //moving someone
-			MonstersOnBoard[Value].Point = p;
+			MonstersOnBoard[Value].MonsterPoint = p;
 		}
 		Board[(int)p.x, (int)p.z, layer] = Value;
 	}

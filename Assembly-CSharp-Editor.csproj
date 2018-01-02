@@ -65,6 +65,7 @@
      <Compile Include="assets\pixelcamera2d\scripts\Editor\PixelCamera2DEditor.cs" />
      <None Include="assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
      <None Include="assets\Resources\Texts\Logs\SJC_1610170758_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_0101180610_1205154744.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170156_1319791482.txt" />
      <None Include="assets\Resources\Texts\AnimationsJson.txt" />
      <None Include="assets\Resources\Texts\MonsterJson - Copia.txt" />
@@ -84,6 +85,7 @@
      <None Include="assets\Resources\GameMaps\town.xml" />
      <None Include="assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
      <None Include="assets\Resources\Texts\Logs\SJC_1610170818_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_0201181101_1205154744.txt" />
      <None Include="assets\Plugins\GitHub\Editor\CREDITS.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170150_1319791482.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170841_731674064.txt" />
@@ -91,6 +93,8 @@
      <None Include="assets\Resources\Texts\Logs\MJC_2910170211_1319791482.txt" />
      <None Include="assets\Tiled2Unity\Tiled2Unity.export.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_1510170542_-835479299.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_0101180324_1205154744.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_0101180341_731674064.txt" />
      <None Include="assets\Resources\Texts\make a folder for links.txt" />
      <None Include="assets\Resources\Texts\Salad.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170502_731674064.txt" />
@@ -105,12 +109,16 @@
      <None Include="assets\Resources\Texts\Love in Bright Landscapes.txt" />
      <None Include="assets\Resources\Texts\Bright Lights Big City.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Light.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170518_1205154744.txt" />
      <None Include="assets\Resources\Texts\MonsterJsonCopy.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170828_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170248_1319791482.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170217_1319791482.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_1510170551_-835479299.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170518_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_0201181102_731674064.txt" />
      <None Include="assets\Resources\Texts\MapOutput.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_0101180610_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170422_731674064.txt" />
      <None Include="assets\Resources\Texts\Roses at Summer&apos;s End.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170207_731674064.txt" />
@@ -118,7 +126,10 @@
      <None Include="assets\Resources\Texts\Through the Small Bridge.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Imported\spooky_village.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170551_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170216_1319791482.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170550_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170551_1205154744.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170842_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170508_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170506_731674064.txt" />
@@ -148,9 +159,11 @@
      <None Include="assets\Resources\Texts\Logs\SJC_1510170850_731674064.txt" />
      <None Include="assets\Resources\Sprites-ColorSwap.shader" />
      <None Include="assets\Tiled2Unity\Imported\snowp.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\MJC_0101180341_1205154744.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_2910170248_731674064.txt" />
      <None Include="assets\Resources\Texts\SpellsJson.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170422_1319791482.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170527_1205154744.txt" />
      <None Include="assets\Resources\Texts\Output.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1610170759_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170839_731674064.txt" />
@@ -159,6 +172,7 @@
      <None Include="assets\Resources\Texts\Logs\SJC_1610170816_731674064.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170134_1319791482.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_0201181102_1205154744.txt" />
      <None Include="assets\Resources\Texts\MonsterJson.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="assets\ProjectSettings\ProjectVersion.txt" />
@@ -167,11 +181,16 @@
      <None Include="assets\Tiled2Unity\Shaders\shaDepthColorKey-Instanced.shader" />
      <None Include="assets\Resources\Texts\Through the Bridge of Lightness.txt" />
      <None Include="assets\Tiled2Unity\License.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170538_1205154744.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170847_731674064.txt" />
      <None Include="assets\Resources\GameMaps\rules.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510170849_731674064.txt" />
      <None Include="assets\Resources\GameMaps\TileFlipTest.xml" />
      <None Include="assets\Resources\Texts\Logs\SJC_1610170822_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170550_1205154744.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_3112170524_1205154744.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170524_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_0101180324_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170416_1319791482.txt" />
      <None Include="assets\Resources\Texts\Status.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2710170403_1319791482.txt" />
@@ -182,12 +201,15 @@
      <None Include="assets\Resources\Texts\Logs\SJC_2910170156_731674064.txt" />
      <None Include="assets\Resources\Texts\Output2.txt" />
      <None Include="assets\Plugins\GitHub\Editor\EULA.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170538_731674064.txt" />
      <None Include="assets\Resources\Texts\Logh.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_3112170527_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1510171026_731674064.txt" />
      <None Include="assets\Resources\Texts\SpellsJson - Copia.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_1610170757_731674064.txt" />
      <None Include="assets\Resources\Texts\Faith Is for the Transient People.txt" />
      <None Include="assets\Tiled2Unity\Meshes\_ReadMe.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_0201181101_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_2910170502_1319791482.txt" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

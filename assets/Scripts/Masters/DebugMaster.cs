@@ -27,7 +27,7 @@ public class DebugMaster : MonoBehaviour {
 		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
 		{
 			if(mon.Team == 0){
-				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.Point, 5);
+				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.MonsterPoint, 5);
 				foreach (Point InfluencePoint in MonInfluences)
 				{
 					FinalMap[InfluencePoint.x, InfluencePoint.z] += (MaxDepth - InfluencePoint.Depth) * 0.12f;
@@ -38,7 +38,7 @@ public class DebugMaster : MonoBehaviour {
 		}
 		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
 		{
-			FinalMap[mon.Point.x, mon.Point.z] = 0;
+			FinalMap[mon.MonsterPoint.x, mon.MonsterPoint.z] = 0;
 		}
 	
 		return FinalMap;
