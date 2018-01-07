@@ -45,6 +45,33 @@ public static class WriteMaster
         writer.WriteLine(text);
         writer.Close();
     }
+
+    public static void WriteUp(string file, int[,] map)
+    {
+        string text = "";
+		
+        for (int j = 0; j < map.GetLength(1); j++)
+        {
+            for (int i = map.GetLength(0)-1; i >= 0 ; i--)
+            {
+				string s;
+				//if(map[j, i] < 0){
+				//	s = "XXX";
+				//}else{
+				s = map[i,j].ToString("0.0");
+					if(s.Equals("0.0")) s = "ZZZ";
+				//}
+				text += s;
+				text += " ";
+			}
+			text += "\n";
+		}
+
+        TextAsset asset = Resources.Load(file + ".txt") as TextAsset;
+        StreamWriter writer = new StreamWriter("Assets/Resources/Texts/" + file + ".txt"); // Does this work?
+        writer.WriteLine(text);
+        writer.Close();
+    }
        
     [Serializable]
     private class Wrapper<T>

@@ -9,7 +9,7 @@ public class DebugMaster : MonoBehaviour {
 	bool Q, W, e, R, T, Y, U;
 
 	void Start () {
-		BattleMaster = Logic.GetComponent<BattleMaster>();	
+		//BattleMaster = Logic.GetComponent<BattleMaster>();	
 		
 		Point a = new Point(1,2);
 		//LinkedPoint BlurredPoint = (LinkedPoint) (a + a);
@@ -17,17 +17,22 @@ public class DebugMaster : MonoBehaviour {
 		//Debug.Log(BlurredPoint.Parents.Count);
 	}
 
+}
+
+/* 
 	float[,] InfluenceMap(){
-		GameboardMaster GameBoard = BattleMaster.GameBoard;
-		float[,] FinalMap = new float[GameBoard.size.x, GameBoard.size.z];
+		throw new ExitGUIException();
+		GameboardMaster Gameboard = BattleMaster.GameboardMaster;
+		//int[,] WalkableMap = Gameboard
+		float[,] FinalMap = new float[Gameboard.size.x, Gameboard.size.z];
 
 		float MaxInfluence = 0.5f;
 		float MaxDepth = 5;
 
-		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
+		foreach (Monster mon in Gameboard.MonstersOnBoard.Values)
 		{
 			if(mon.Team == 0){
-				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.MonsterPoint, 5);
+			//	List<Point> MonInfluences = Algorithms.ReachableUnnocupiedCells(mon.MonsterPoint, 5);
 				foreach (Point InfluencePoint in MonInfluences)
 				{
 					FinalMap[InfluencePoint.x, InfluencePoint.z] += (MaxDepth - InfluencePoint.Depth) * 0.12f;
@@ -36,7 +41,7 @@ public class DebugMaster : MonoBehaviour {
 				}
 			}
 		}
-		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
+		foreach (Monster mon in Gameboard.MonstersOnBoard.Values)
 		{
 			FinalMap[mon.MonsterPoint.x, mon.MonsterPoint.z] = 0;
 		}
@@ -49,7 +54,7 @@ public class DebugMaster : MonoBehaviour {
 
 		//CastShape with Pivot
 		List<Point> CastShape = SimulatedSpell.CastShapePoints(PointPivot);
-		int[,] GroundMap = BattleMaster.GameBoard.GetLayer(E.GROUND_LAYER);
+		int[,] GroundMap = BattleMaster.GameboardMaster.GetLayer(E.GROUND_LAYER);
 		List<Point> Circle = Shape.GetShape(E.CIRCLE, BlurAmount);
 		
 		foreach (Point CastShapePoint in CastShape)
@@ -139,3 +144,5 @@ public class DebugMaster : MonoBehaviour {
 		//if(Input.GetKeyDown("up") && undefined > 0) undefined--;
 	}
 }
+
+*/

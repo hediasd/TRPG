@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class MapLoader : MonoBehaviour {
 
-	GameboardMaster GameBoard; 
+	GameboardMaster Gameboard; 
 	BattleMaster BattleMaster;
 
 	public void Load () {
@@ -16,8 +16,10 @@ public class MapLoader : MonoBehaviour {
 		string[] whole_text = Regex.Split(textAsset.text, "\n"); 
 
 		BattleMaster = GetComponent<BattleMaster>();
-		BattleMaster.GameBoard.Startup(Regex.Split(whole_text[0], ",").Length, whole_text.Length-1);
-		GameBoard = BattleMaster.GameBoard;
+
+		Gameboard = BattleMaster.GameboardMaster;
+		Gameboard.Startup(Regex.Split(whole_text[0], ",").Length, whole_text.Length-1);
+		
 
 		for (int x = whole_text.Length-2; x >= 0; x--) {
 			string[] rowi = Regex.Split(whole_text[whole_text.Length-2-x], ","); 
@@ -29,11 +31,11 @@ public class MapLoader : MonoBehaviour {
 				if (int.Parse(rowi[z]) > 0) {
 					//firstTable.Add(key, 1); 
 					MapWriteOutput += "X ";
-					GameBoard.SetGround(1, keyp);
+					Gameboard.SetGround(1, keyp);
 				}else {
 					//firstTable.Add(key, 0); 
 					MapWriteOutput += "_ ";
-					GameBoard.SetGround(0, keyp);
+					Gameboard.SetGround(0, keyp);
 				}
 			}
 			MapWriteOutput += "\n";

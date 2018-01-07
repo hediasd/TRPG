@@ -140,7 +140,7 @@ public class Grimoire : MonoBehaviour {
 		}
 		if(writeCopy){
 			string playerToJason = WriteMaster.ListToJson<Monster>(Monsters, true);
-			WriteMaster.WriteUp("MonsterJsonCopy", playerToJason);
+			WriteMaster.WriteUp("MonsterJsonCopy2", playerToJason);
 			Debug.Log(playerToJason);
 		}
 		if(writeOriginal || writeCopy){

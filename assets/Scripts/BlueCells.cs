@@ -80,8 +80,8 @@ public class BlueCells : MonoBehaviour {
 		z = point.z;
 		radius = Radius;
 		blueCell = CellExample;
-
-		List<Point> fc = Environment.GetReachableCells(new Point(x, z), radius);
+		Debug.Log("Fix blue cells");
+		List<Point> fc = null; //Algorithms.ReachableCells(new Point(x, z), radius, null);
 		for (int i = 0; i < fc.Count; i++)
 		{
 			GameObject blue = (GameObject)Instantiate (blueCell, new Vector3(fc[i].x + 0.5f, 0.025f, fc[i].z + 0.5f), Quaternion.Euler (90, 0, 0));

@@ -90,28 +90,6 @@ public class Monster : DataObject {
 		return true;
 	}
 
-	public List<Damage> SimulateSpellPerformance(Spell SimulatedSpell, Point TargetedCell){
-		List<Damage> SimulationResult = new List<Damage>();
-		List<Monster> TargetedMonsters = new List<Monster>();
-
-		if(SimulatedSpell.DamageSegments.Count == 0){
-			
-		}else{
-			//if(SimulatedSpell.Radius == 1){ //single target
-			//TODO:	Debug.Log("do the radius 1");
-			//}else{ //radius or multiple target
-				//know shape = worth for terrains
-				List<Point> SpellShape = SimulatedSpell.EffectShapePoints(MonsterPoint, TargetedCell);
-				//know targets = important for choices
-				TargetedMonsters.AddRange(Environment.GameBoard.MonstersAt(TargetedCell, SpellShape));
-				//in the future, move this to outer layer perhaps
-			//}
-			return SimulatedSpell.DamageInstances(this, TargetedMonsters);
-		}
-
-		return SimulationResult;
-	}
-	
 /*
 	public Damage PhysicalAttack(){
 		Damage d = new Damage();

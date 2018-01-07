@@ -1,5 +1,7 @@
 assets/Plugins/GitHub/
 /Library/
+/Temp/
 assets/Resources/Texts/
 assets/Resources/
+assets/Scripts/Dump/
 *.meta

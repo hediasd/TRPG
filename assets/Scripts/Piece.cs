@@ -12,8 +12,9 @@ public class Piece : MonoBehaviour {
 
     public void Walk(Point to, bool end = true){
         Point here = new Point(this.gameObject);
-        List<Point> path = Environment.GetPath(here, to, true);
-
+        
+        List<Point> path = Algorithms.GetPath(here, to);
+        Debug.Log("path has " + path.Count);
         foreach (Point p in path)
         {
             here = here + p;

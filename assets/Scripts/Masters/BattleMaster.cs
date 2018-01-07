@@ -20,7 +20,7 @@ public class BattleMaster : MonoBehaviour {
 
 	CanvasMaster CanvasMaster;
 	ChooserMaster ChooserMaster;
-	public GameboardMaster GameBoard;
+	public GameboardMaster GameboardMaster;
 	OverlaysMaster OverlaysMaster;
 	public PiecesMaster PiecesMaster;
 	PlanningMaster PlanningMaster;
@@ -55,7 +55,7 @@ public class BattleMaster : MonoBehaviour {
 		SpawnedMonster.Team = TeamNumber;
 		Teams[TeamNumber].Add(SpawnedMonster);
 
-		GameBoard.InsertMonster(SpawnedMonster, Position);
+		GameboardMaster.InsertMonster(SpawnedMonster, Position);
 		PiecesMaster.SpawnMonsterPiece(SpawnedMonster, Position);
 	}
 
@@ -83,6 +83,8 @@ public class BattleMaster : MonoBehaviour {
 		Teams.Add(new List<Monster>());
 		Teams.Add(new List<Monster>());
 
+		GameboardMaster = GetComponent<GameboardMaster>();
+
 		MapLoader MapLoader = GetComponent<MapLoader>();
 		MapLoader.Load();
 
@@ -91,7 +93,6 @@ public class BattleMaster : MonoBehaviour {
 		ChooserMaster = chooser.GetComponent<ChooserMaster>();
 		OverlaysMaster = overlays.GetComponent<OverlaysMaster>();
 		PiecesMaster = pieces.GetComponent<PiecesMaster>();	
-		GameBoard = GetComponent<GameboardMaster>();
 		PlanningMaster = GetComponent<PlanningMaster>();	
 
 		Random.InitState(System.DateTime.Now.Millisecond); //(int) System.DateTime.Now.Millisecond * 77); //
@@ -103,14 +104,14 @@ public class BattleMaster : MonoBehaviour {
 
 		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(10, 13), 1);
 		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(10, 11), 1);
-		//SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(8, 13), 1);
+		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(11, 12), 1);
 		//SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(8, 11), 1);
 
 		Allmons.AddRange(Teams[0]);
 		Allmons.AddRange(Teams[1]);
 		UpTurn.AddRange(Teams[0]);
 		UpTurn.AddRange(Teams[1]);
-		UpTurn.Sort((p1, p2) => Random.Range(-1, 1));
+		UpTurn.Sort((p1, p2) => p1.ID.CompareTo(p2.ID));
 		//UpTurn.Sort((p1, p2) => p2.GetComponent<Monster>().SPD_ - p1.GetComponent<Monster>().SPD_);
 
 		Selected = OnTurn = Teams[0][0];
@@ -160,20 +161,21 @@ public class BattleMaster : MonoBehaviour {
 				// TODO: This is awful
 				// TODO: Add logs when Gameboard does stuff
 				PieceMove pm = (PieceMove) Actions.Dequeue();
-				GameBoard.MoveMonster(pm.from, pm.to);
+				GameboardMaster.MoveMonster(pm.from, pm.to);
 				PiecesMaster.WalkTo(pm.who, pm.to);
 				BattleMaster.Log("%%% walks from "+pm.from+" to "+pm.to);
 
 			}else if(Actions.Peek() is PieceSpell){
 
 				PieceSpell ps = (PieceSpell) Actions.Dequeue();
-				List<Damage> DamagesList = ps.mon.SimulateSpellPerformance(ps.sp, ps.to);
+				List<Damage> DamagesList = PlanningMaster.SimulateSpellPerformance(ps.mon, ps.sp, ps.to);
 			//	Board
 				CanvasMaster.SpawnSpellName(ps.sp.Name);
 				PiecesMaster.SpawnDamage(DamagesList);
 				PiecesMaster.SpawnAnimation(ps); //
 
-				List<bool> Results = GameBoard.DealDamage(DamagesList);
+				List<bool> Results = GameboardMaster.DealDamage(DamagesList);
+
 				for (int i = 0; i < Results.Count; i++)
 				{
 					if(Results[i]){
@@ -182,7 +184,7 @@ public class BattleMaster : MonoBehaviour {
 						UpTurn.Remove(DeadMonster);
 						HadTurn.Remove(DeadMonster);
 						Teams[DeadMonster.Team].Remove(DeadMonster);
-						GameBoard.RemoveMonster(DeadMonster);
+						GameboardMaster.RemoveMonster(DeadMonster);
 						Destroy(PiecesMaster.MonsterGameObject(DamagesList[i].TargetMonster));
 
 
@@ -445,7 +447,15 @@ public class BattleMaster : MonoBehaviour {
 			yield return 0;
 		}
 
-		PlanningMaster.Feed(GameBoard, MonsterOnTurn, Teams[0], Teams[1]);
+		int i, j;
+		
+		if(MonsterOnTurn.Team == 0){
+			i = 0; j = 1;
+		}else{
+			i = 1; j = 0;
+		}
+
+		PlanningMaster.Feed(GameboardMaster, MonsterOnTurn, Teams[i], Teams[j]);
 		switch (type)
 		{
 			case 0:

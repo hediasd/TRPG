@@ -9,6 +9,7 @@ public class GameboardMaster : MonoBehaviour{
 	public Point size;
 
 	public void Startup(int x, int z){
+
 		size = new Point(x, z);
 		Point.Limits = size;
 		Board = new int[x, z, 3];
@@ -147,7 +148,7 @@ public class GameboardMaster : MonoBehaviour{
 	}
 
 	public int[,] GetLayer(int level){
-		int[,] layer = new int[(int)size.x, (int)size.z];
+		int[,] layer = new int[size.x, size.z];
 
 		//Copy matrix
 		for (int i = 0; i < size.x; i++){
@@ -157,6 +158,18 @@ public class GameboardMaster : MonoBehaviour{
 		}
 
 		return layer;
+	}
+	public int[,] WalkableMap(){
+		int[,] Map = GetLayer(E.GROUND_LAYER);
+
+		foreach (Monster Mon in MonstersOnBoard.Values)
+		{
+			Map[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
+		}
+
+		WriteMaster.WriteUp("WalkableMap", Map);
+
+		return Map;
 	}
 
 

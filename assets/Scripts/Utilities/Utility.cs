@@ -5,7 +5,6 @@ using UnityEngine;
 
 public class Utility : MonoBehaviour {
 
-
 	public static string[] ChewUp(string s, string format){
 		string[] r = Regex.Split(s, format);
 		List<string> li = new List<string>();
@@ -24,4 +23,5 @@ public class Utility : MonoBehaviour {
 		//if(false) li.RemoveAt(0);
 		return li.ToArray();
 	}
+	
 }

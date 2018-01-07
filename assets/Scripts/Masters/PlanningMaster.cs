@@ -5,15 +5,15 @@ using UnityEngine;
 public class PlanningMaster : MonoBehaviour {
 	
 	[HideInInspector]
-	public GameboardMaster GameBoard;
+	public GameboardMaster Gameboard;
 	public Monster OnTurn;
-	public Point onTurnPoint;
+	public Point OnTurnPoint;
 	public List<Monster> Allies, Enemies;
 
 	public void Feed(GameboardMaster board, Monster on, List<Monster> a, List<Monster> e) {
-		GameBoard = board;
+		Gameboard = board;
 		OnTurn = on;
-		onTurnPoint = new Point(on);
+		OnTurnPoint = new Point(on);
 		Allies = a;
 		Enemies = e;
 	}
@@ -23,63 +23,6 @@ public class PlanningMaster : MonoBehaviour {
 		int EnemyDamage;
 		int FriendFire;
 
-	}
-
-	float[,] InfluenceMap(){
-		float[,] FinalMap = new float[GameBoard.size.x, GameBoard.size.z];
-
-		float MaxDepth = 5;
-
-		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
-		{
-			if(mon.Team == 0){
-				List<Point> MonInfluences = Environment.GetReachableUnnocupiedCells(mon.MonsterPoint, 5);
-				foreach (Point InfluencePoint in MonInfluences)
-				{
-					FinalMap[InfluencePoint.x, InfluencePoint.z] += (MaxDepth - InfluencePoint.Depth) * 0.12f;
-					//FinalMap[InfluencePoint.x, InfluencePoint.z] += 1 * (Mathf.Pow(0.6f, InfluencePoint.Depth));
-					//FinalMap[InfluencePoint.x, InfluencePoint.z] += MaxInfluence - (MaxInfluence * (InfluencePoint.Depth / MaxDepth) * (InfluencePoint.Depth / MaxDepth));
-				}
-			}
-		}
-		foreach (Monster mon in GameBoard.MonstersOnBoard.Values)
-		{
-			FinalMap[mon.MonsterPoint.x, mon.MonsterPoint.z] = 0;
-		}
-	
-		return FinalMap;
-	}
-
-	List<LinkedPoint> BlurredSpellCastRange(Point PointPivot, Spell SimulatedSpell, int BlurAmount){
-		List<LinkedPoint> BlurredCastShape = new List<LinkedPoint>();
-
-		//CastShape with Pivot
-		List<Point> CastShape = SimulatedSpell.CastShapePoints(PointPivot);
-		int[,] GroundMap = GameBoard.GetLayer(E.GROUND_LAYER);
-		List<Point> Circle = Shape.GetShape(E.CIRCLE, BlurAmount);
-		
-		foreach (Point CastShapePoint in CastShape)
-		{
-			foreach (Point CirclePoint in Circle)
-			{
-				// Blurred point from a cast point
-				LinkedPoint BlurredCastShapePoint = new LinkedPoint(CastShapePoint + CirclePoint);
-				// If the cell is not obstructed, go ahead
-				if(BlurredCastShapePoint.WithinLimits() && GroundMap[BlurredCastShapePoint.x, BlurredCastShapePoint.z] != 1){
-					// If new, add to the list and add parent shape
-					// Else only add parent shape to existing point
-					int Index = BlurredCastShape.IndexOf(BlurredCastShapePoint);
-					if(Index >= 0){ // Exists
-						BlurredCastShape[0].Parents.Add(CastShapePoint);
-					}else{
-						BlurredCastShapePoint.Parents.Add(CastShapePoint);
-						BlurredCastShape.Add(BlurredCastShapePoint);
-					}
-				}
-			}
-		}
-
-		return BlurredCastShape;
 	}
 	
 	int TeamDamageDealt(List<Damage> Damages, int Team, bool ExceptTeam = false){
@@ -95,11 +38,11 @@ public class PlanningMaster : MonoBehaviour {
 		return Total;
 	}
 
-	PieceSpell ChooseSpell(Monster ThinkingMonster){
+	PieceSpell ChooseSpell(Monster ThinkingMonster, InfluenceMap InfluenceMap){
 
 		Point Here = new Point(ThinkingMonster.MonsterPoint);
-		int MyTeam = ThinkingMonster.Team;
-		int BestDamage = 0;
+		int[,] GroundMap = Gameboard.GetLayer(E.GROUND_LAYER);
+		int MyTeam = ThinkingMonster.Team, BestDamage = 0;
 		Spell ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
 
@@ -107,11 +50,11 @@ public class PlanningMaster : MonoBehaviour {
 		foreach (Spell CandidateSpell in ThinkingMonster.Spells_)
 		{
 			//Evaluate result when casting at any available point
-			List<LinkedPoint> BSC = BlurredSpellCastRange(Here, CandidateSpell, 2);
+			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange(Here, GroundMap, CandidateSpell, 2);
 			foreach (LinkedPoint BlurredPoint in BSC)
 			{
 
-				List<Damage> DamageSimulations = ThinkingMonster.SimulateSpellPerformance(CandidateSpell, BlurredPoint);
+				List<Damage> DamageSimulations = SimulateSpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
 				
 				// Enemy damage dealt
 				int A1 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team, ExceptTeam: true);
@@ -143,19 +86,19 @@ public class PlanningMaster : MonoBehaviour {
 
 	}
 
-	PieceMove PathMaker(Monster ThinkingMonster, Point Goal){
+	PieceMove PathMaker(Monster ThinkingMonster, Point Goal, int[,] Map){
 
 		Point Here = new Point(ThinkingMonster.MonsterPoint);
 		//BattleMaster.Log("["+ThinkingMonster.Name+"] aims for ["+NearestMonster.Name+"]");
 
 		Point BestOption = Here;
-		int MinimumRecordedDistance = 999;
-		List<Point> UnnocupiedReachablePoints = Environment.GetReachableUnnocupiedCells(Here, 2);//Unnocupied
+		int MinimumRecordedDistance = 9999;
+		List<Point> UnnocupiedReachablePoints = Algorithms.ReachableUnnocupiedCells(Here, 2, Map);//Unnocupied
 		//OverlaysMaster.CleanUp();
 		//OverlaysMaster.SpawnSpellCells(reachables, 1);
 		foreach (Point ReachablePoint in UnnocupiedReachablePoints)
 		{
-			if(!Environment.IsOccupied(ReachablePoint)){
+			if(Gameboard.MonsterAt(ReachablePoint) == null){
 				if(Point.Distance(ReachablePoint, Goal) < MinimumRecordedDistance){
 					MinimumRecordedDistance = Point.Distance(ReachablePoint, Goal);
 					BestOption = ReachablePoint;
@@ -173,21 +116,33 @@ public class PlanningMaster : MonoBehaviour {
 	public Deque<PieceAction> Thinking(Monster ThinkingMonster){
 
 		Deque<PieceAction> Actions = new Deque<PieceAction>();
-		InfluenceMap InfluenceMap = new InfluenceMap(GameBoard.size);
-		InfluenceMap.ConsiderMonsters(GameBoard.GetMonsters);
-		
-		//Find nearest enemy, find nearest free cell, move
 
-		Point Here = new Point(ThinkingMonster.MonsterPoint);
-		PieceSpell ChosenSpell = ChooseSpell(ThinkingMonster);
+		//Create a map of influence and feed it with board info
+		//Consider where you may walk or not
+		//Consider the influence of enemies	
+		InfluenceMap InfluenceMap = new InfluenceMap(ThinkingMonster, Gameboard.size);
+		InfluenceMap.ConsiderWalkables(Gameboard.GetLayer(E.GROUND_LAYER));
+		InfluenceMap.ConsiderMonsters(Allies, Enemies);
+
+		int[,] Map = Gameboard.WalkableMap();
+		
+		PieceSpell ChosenSpell = ChooseSpell(ThinkingMonster, InfluenceMap);
 		
 		if(ChosenSpell != null){
-			PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ChosenSpell.to);
+			Debug.Log("chosen sp");
+			PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ChosenSpell.to, Map);
 			Actions.Enqueue(ChosenMovementPath);
 			Actions.Enqueue(ChosenSpell);
 		}else{
-
+			Debug.Log("not chosen sp");
+			List<Point> ReachablePoints = Algorithms.ReachableUnnocupiedCells(ThinkingMonster.MonsterPoint, 2, Map);
+			ReachablePoints.Sort((a,b) => InfluenceMap[b].CompareTo(InfluenceMap[a]));
+			PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ReachablePoints[0], Map);
+			Debug.Log("from " + ThinkingMonster.MonsterPoint + " to " + ReachablePoints[0]);
+			Actions.Enqueue(ChosenMovementPath);
 		}
+
+		WriteMaster.WriteUp("InfluenceMap", InfluenceMap.ToString());
 
 		//}
 		//Actions.Enqueue(new PieceMove(OnTurn, here));
@@ -196,5 +151,29 @@ public class PlanningMaster : MonoBehaviour {
 		return Actions;
 
 	}
+
+
+	public List<Damage> SimulateSpellPerformance(Monster Caster, Spell SimulatedSpell, Point TargetedCell){
+		List<Damage> SimulationResult = new List<Damage>();
+		List<Monster> TargetedMonsters = new List<Monster>();
+
+		if(SimulatedSpell.DamageSegments.Count == 0){
+			
+		}else{
+			//if(SimulatedSpell.Radius == 1){ //single target
+			//TODO:	Debug.Log("do the radius 1");
+			//}else{ //radius or multiple target
+				//know shape = worth for terrains
+				List<Point> SpellShape = SimulatedSpell.EffectShapePoints(Caster.MonsterPoint, TargetedCell);
+				//know targets = important for choices
+				TargetedMonsters.AddRange(Gameboard.MonstersAt(TargetedCell, SpellShape));
+				//in the future, move this to outer layer perhaps
+			//}
+			return SimulatedSpell.DamageInstances(Caster, TargetedMonsters);
+		}
+
+		return SimulationResult;
+	}
+	
 
 }
