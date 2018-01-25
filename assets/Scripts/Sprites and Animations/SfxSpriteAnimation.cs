@@ -15,10 +15,10 @@ public class SfxSpriteAnimation : BaseSpriteAnimation {
         Kind = "Effects";
     }
 
-	 void Update(){
+	void Update(){
         //Debug.Log(MaxLoops);
         ChangeSprite(CurrentFrame);
-        Timer += Time.deltaTime;
+        Timer += TimeMaster.GeneralTiming * Time.deltaTime;
 
         if (Timer >= FrameTimer){
             Timer = 0;
@@ -35,7 +35,7 @@ public class SfxSpriteAnimation : BaseSpriteAnimation {
         }
         
         gameObject.GetComponent<SpriteRenderer>().color = new Color(r, g, b, a);
-	 }
+	}
      
      void ChangeSprite(int index)
      {

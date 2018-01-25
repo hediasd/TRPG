@@ -11,19 +11,19 @@ public class ChooserMaster : MonoBehaviour {
 		PiecesMaster = pieces.GetComponent<PiecesMaster>();		
 	}
 
-/*	public GameObject GetSelectedMon(){
-		GameObject selected = PiecesMaster.GetAt(new Point(transform.gameObject));
-		foreach (GameObject go in BattleMaster.Allies)
-		{
-			if(go == selected) return go;
+	/*	public GameObject GetSelectedMon(){
+			GameObject selected = PiecesMaster.GetAt(new Point(transform.gameObject));
+			foreach (GameObject go in BattleMaster.Allies)
+			{
+				if(go == selected) return go;
+			}
+			foreach (GameObject go in BattleMaster.Enemies)
+			{
+				if(go == selected) return go;
+			}
+			return null;
 		}
-		foreach (GameObject go in BattleMaster.Enemies)
-		{
-			if(go == selected) return go;
-		}
-		return null;
-	}
-*/
+	*/
 
 	public void Move(float x, float y, float z){
 		transform.position += new Vector3(x, y, z);

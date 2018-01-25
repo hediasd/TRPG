@@ -10,17 +10,12 @@ public class Piece : MonoBehaviour {
 
     float t = 0.0f;
 
-    public void Walk(Point to, bool end = true){
+    public void Walk(Point to, List<Point> PointPath, bool end = true){
         Point here = new Point(this.gameObject);
-        
-        List<Point> path = Algorithms.GetPath(here, to);
-        Debug.Log("path has " + path.Count);
-        foreach (Point p in path)
-        {
-            here = here + p;
-        }
-        StartCoroutine(Transition(path, 3, end, null));
+
+        StartCoroutine(Transition(PointPath, 3, end, null));
     }
+    
     //public void Fly(List<Point> moves, bool end = true, SfxSpriteAnimation animate = null){
     //    StartCoroutine(Transition(moves, 1.5f, end, animate));
     //}
@@ -42,25 +37,28 @@ public class Piece : MonoBehaviour {
     
     IEnumerator Transition(List<Point> moves, float speed, bool end, SfxSpriteAnimation animate)
     {
-        //Lock ck = new Lock(E.NONE);
-        //BattleMaster.AddLock(ck);
+        List<Point> UnitaryMovementPoints = new List<Point>();
+        for (int i = 0; i < moves.Count-1; i++)
+        {
+            UnitaryMovementPoints.Add(new Point(moves[i+1] - moves[i]));
+        }
 
-        for (int i = 0; i < moves.Count; i++)
+        for (int i = 0; i < UnitaryMovementPoints.Count; i++)
         {
             Vector3 startingPos = transform.position;
             t = 0.0f;
             
             while (t < 1.0f)
             {
-                t += Time.deltaTime * (Time.timeScale / (speed / 10)); ///
-                transform.position = Vector3.Lerp(startingPos, startingPos + new Vector3(moves[i].x, 0f, moves[i].z), t);
+                t += TimeMaster.GeneralTiming * Time.deltaTime * (Time.timeScale / (speed / 10)); ///
+                transform.position = Vector3.Lerp(startingPos, startingPos + new Vector3(UnitaryMovementPoints[i].x, 0f, UnitaryMovementPoints[i].z), t);
                 //transform.LookAt(target.position - new Vector3(0,1.5f,0));
                 yield return 0;
             }
         }
 
         //if(animate != null) animate.animating = true;
-        yield return new WaitForSeconds(0.15f);
+        TimeMaster.WaitSeconds(0.15f);
         if(end) BattleMaster.Acting = false;
         
         //BattleMaster.ReleaseLock(ck);

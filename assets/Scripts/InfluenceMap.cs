@@ -5,14 +5,16 @@ using UnityEngine;
 public class InfluenceMap {
 
 	float[,,] Map;
+	GameboardMaster GameboardMaster;
 	int LayerAmount = 8;
 	Point size;
 	Monster PivotMonster;
 
-	public InfluenceMap(Monster Mon, Point BoardSize){
+	public InfluenceMap(Monster Mon, GameboardMaster Gameboard){
 
 		PivotMonster = Mon;
-		size = BoardSize;
+		GameboardMaster = Gameboard;
+		size = Gameboard.size;
 		Map = new float[size.x, size.z, LayerAmount];
 
 		for (int i = 0; i < size.x; i++)
@@ -41,6 +43,13 @@ public class InfluenceMap {
         }
     }
 
+	private class ActivityPoint {
+		float DamageDealt, LifeRestored, EnemiesKilled,
+			AlteredStates, TerrainChanges,
+			ConsumedMovementPoints,	ConsumedManaPoints,	ConsumedActionPoints;
+		List<BoardAction> Activities;
+	}
+
 	public void ConsiderWalkables(int [,] Walkable){
 
 		for (int i = 0; i < size.x; i++)
@@ -62,7 +71,11 @@ public class InfluenceMap {
 				foreach (Monster EnemyMonster in Enemies)
 				{
 					int MonsterDistance = Point.Distance(EnemyMonster.MonsterPoint, new Point(i, j));
-					Map[i, j, E.MONSTER_LAYER] += Mathf.Pow(0.96f, MonsterDistance);
+					if(Map[i, j, E.MONSTER_LAYER] == 1.0f){
+						Map[i, j, E.MONSTER_LAYER] += 1.0f;
+					}else{
+						Map[i, j, E.MONSTER_LAYER] = Map[i, j, E.MONSTER_LAYER] * 1.08f * Mathf.Pow(0.94f, MonsterDistance);
+					}
 				}
 			}
 		}
@@ -76,6 +89,53 @@ public class InfluenceMap {
 		{
 			Map[EnemyMonster.MonsterPoint.x, EnemyMonster.MonsterPoint.z, E.MONSTER_LAYER] = -1;
 		}
+
+	}
+
+	public void ConsiderCastableSpells(Monster ThinkingMonster, List<Monster> Allies, List<Monster> Enemies, int[,] Walkable){
+
+		Point Here = new Point(ThinkingMonster.MonsterPoint);
+		int MyTeam = ThinkingMonster.Team, BestDamage = 0;
+		Spell ChosenSpell = null;
+		Point CastFrom = null, CastTo = null;
+
+		//Foreach castable spell available
+		foreach (Spell CandidateSpell in ThinkingMonster.Spells_)
+		{
+			//Evaluate result when casting at any available point
+			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange(Here, Walkable, CandidateSpell, 2);
+			foreach (LinkedPoint BlurredPoint in BSC)
+			{
+
+				List<Damage> DamageSimulations = GameboardMaster.SimulateSpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
+				
+				// Enemy damage dealt
+				//int A1 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team, ExceptTeam: true);
+				// Friendly fire
+				//int A2 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team);
+				// Killed enemies
+				int B1 = 0;
+				// Killed allies;
+				int B2;
+				
+
+
+
+
+				if(B1 > BestDamage){
+					//Debug.Log(ThisTotalDamage);
+					BestDamage = B1;
+					ChosenSpell = CandidateSpell;
+					//TODO: CAST FROM
+					CastTo = BlurredPoint;
+				}
+
+			}
+
+		}
+
+		//	if(ChosenSpell == null) return null;
+		//return new PieceSpell(ThinkingMonster, ChosenSpell, CastFrom, CastTo);
 
 	}
 

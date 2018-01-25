@@ -14,13 +14,14 @@ public static class WriteMaster
         return things;
     }
 
- /*   public static string ToJson<T>(T[] array, bool prettyPrint)
-    {
-        Wrapper<T> wrapper = new Wrapper<T>();
-        wrapper.Items = array;
-        return JsonUtility.ToJson(wrapper, prettyPrint);
-    }
-*/
+    /*   public static string ToJson<T>(T[] array, bool prettyPrint)
+        {
+            Wrapper<T> wrapper = new Wrapper<T>();
+            wrapper.Items = array;
+            return JsonUtility.ToJson(wrapper, prettyPrint);
+        }
+    */
+    
 	public static string ListToJson<T>(List<T> list, bool prettyPrint)
     {
         Wrapper<T> wrapper = new Wrapper<T>();

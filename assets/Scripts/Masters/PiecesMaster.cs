@@ -46,8 +46,9 @@ public class PiecesMaster : MonoBehaviour {
 		}
 	}
 
-	public void WalkTo(GameObject go, Point to){
-		go.GetComponent<Piece>().Walk(to);
+	public void WalkTo(GameObject go, Point to, List<Point> PointPath){
+		
+		go.GetComponent<Piece>().Walk(to, PointPath);
 	}
 
 	public GameObject SpawnMonsterPiece(Monster mon, Point p){
@@ -178,7 +179,7 @@ public class PiecesMaster : MonoBehaviour {
 					{
 						SpawnSfxEffect(sfx, p, fr);
 					}
-					yield return new WaitForSeconds(0.2f);
+					yield return TimeMaster.WaitSeconds(0.2f);
 				}
 			}else{
 				SpawnSfxEffect(sfx, target, fr);
@@ -186,11 +187,11 @@ public class PiecesMaster : MonoBehaviour {
 			if(sfx.Step) continue;
 
 			while(effPieces.transform.childCount > 0){
-				yield return new WaitForSeconds(0.05f);
+				yield return TimeMaster.WaitSeconds(0.05f);
 			}
 		}
 
-        yield return new WaitForSeconds(0.25f);
+        yield return TimeMaster.WaitSeconds(0.25f);
 		//Actors--;
 		BattleMaster.Acting = false;
     }

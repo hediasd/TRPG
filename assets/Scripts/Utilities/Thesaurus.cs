@@ -6,6 +6,7 @@ public class Thesaurus {
 	public static int Chew(string s){
 		string st = s.ToLower();
 		switch(st){
+			
 			case "darkness":
 				return E.DARKNESS;
 			case "earth":

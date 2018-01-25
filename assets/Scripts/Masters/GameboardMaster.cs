@@ -29,7 +29,35 @@ public class GameboardMaster : MonoBehaviour{
 		//Debug.Log(string.Join("; ", a));
 	}
 
+	public List<Damage> SimulateSpellPerformance(Monster Caster, Spell SimulatedSpell, Point TargetedCell){
+		List<Damage> SimulationResult = new List<Damage>();
+		List<Monster> TargetedMonsters = new List<Monster>();
 
+		if(SimulatedSpell.DamageSegments.Count == 0){
+			
+		}else{
+			//if(SimulatedSpell.Radius == 1){ //single target
+			//TODO:	Debug.Log("do the radius 1");
+			//}else{ //radius or multiple target
+				//know shape = worth for terrains
+				List<Point> SpellShape = SimulatedSpell.EffectShapePoints(Caster.MonsterPoint, TargetedCell);
+				//know targets = important for choices
+				TargetedMonsters.AddRange(MonstersAt(TargetedCell, SpellShape));
+				//in the future, move this to outer layer perhaps
+			//}
+			return SimulatedSpell.DamageInstances(Caster, TargetedMonsters);
+		}
+
+		return SimulationResult;
+	}
+
+	public Deque<BoardAction> OnTurnEnter(Monster OnTurn){
+		Deque<BoardAction> Actions = new Deque<BoardAction>();
+
+		OnTurn.AvailableMovementPoints = OnTurn.MovementPoints();
+
+		return Actions;
+	}
 
 	public List<bool> DealDamage(List<Damage> DamageList){
 		List<bool> Success = new List<bool>();
@@ -60,7 +88,7 @@ public class GameboardMaster : MonoBehaviour{
 			Set(id, at, E.MONSTER_LAYER);
 		}
 	}
-	public void MoveMonster(Point From, Point To){
+	public void WalkMonster(Point From, Point To){
 		bool EmptyFrom = Board[From.x, From.z, E.MONSTER_LAYER] == 0;
 		bool FullTo = Board[To.x, To.z, E.MONSTER_LAYER] != 0;
 		if(EmptyFrom || FullTo){
@@ -69,6 +97,11 @@ public class GameboardMaster : MonoBehaviour{
 			throw new GameboardException();
 		}
 		else{
+			Monster Mon = MonstersOnBoard[MonsterIDAt(From)];
+			if(Point.Distance(From, To) > Mon.AvailableMovementPoints){
+				Debug.Log("Illegal Board Move: No MP for that");			
+				throw new GameboardException();
+			}
 			Set(MonsterIDAt(From), To, E.MONSTER_LAYER);
 			Set(0, From, E.MONSTER_LAYER);
 			//Debug.Log("gone to " + to.x + " " + to.z);
@@ -91,6 +124,7 @@ public class GameboardMaster : MonoBehaviour{
 	}
 
 	public int MonsterIDAt(Point at){
+		if(!at.WithinLimits(size)) return 0;
 		return Board[at.x, at.z, E.MONSTER_LAYER];
 	}
 	public Monster MonsterAt(Point at){
@@ -117,6 +151,7 @@ public class GameboardMaster : MonoBehaviour{
 				Monsters.Add(MonsterAtPoint);
 			}	
 		}
+		Debug.Log("! "+ Monsters.Count);
 		return Monsters;
 	}
 	public Point MonsterPosition(Monster mon){
@@ -159,17 +194,18 @@ public class GameboardMaster : MonoBehaviour{
 
 		return layer;
 	}
-	public int[,] WalkableMap(){
-		int[,] Map = GetLayer(E.GROUND_LAYER);
+	public Map WalkableMap(){
+		int[,] IntMap = GetLayer(E.GROUND_LAYER);
 
 		foreach (Monster Mon in MonstersOnBoard.Values)
 		{
-			Map[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
+			IntMap[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
 		}
 
-		WriteMaster.WriteUp("WalkableMap", Map);
+		Map ReturnMap = new Map(IntMap);
+		WriteMaster.WriteUp("WalkableMap", IntMap);
 
-		return Map;
+		return ReturnMap;
 	}
 
 

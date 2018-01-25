@@ -39,7 +39,8 @@ public class Monster : DataObject {
 	[System.NonSerialized]
 	public bool alive;
 	[System.NonSerialized]
-	public int Team, lastDamage, turnDamage, lastTurnDamage, totalDamageTaken;
+	public int Team, AvailableMovementPoints,
+				lastDamage, turnDamage, lastTurnDamage, totalDamageTaken;
 	[System.NonSerialized]
 	public string lastSpellCast, lastElement;
 	[System.NonSerialized]
@@ -104,7 +105,9 @@ public class Monster : DataObject {
 		return d;
 	}
 */
-
+	public int MovementPoints(){
+		return Stats_[9].BattleActualValue;
+	}
 	public bool TakeDamage(Damage TakenDamage){
 		Stats_[0].Decrease(TakenDamage.FinalDamage);
 		return true;

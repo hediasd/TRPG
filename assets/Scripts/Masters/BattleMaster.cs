@@ -24,9 +24,10 @@ public class BattleMaster : MonoBehaviour {
 	OverlaysMaster OverlaysMaster;
 	public PiecesMaster PiecesMaster;
 	PlanningMaster PlanningMaster;
+	TimeMaster TimeMaster;
 
 	public Stack<GameState> States = new Stack<GameState>();
-	public Deque<PieceAction> Actions = new Deque<PieceAction>();
+	public Deque<BoardAction> Actions = new Deque<BoardAction>();
 	public static bool Acting = false;
 
 	public static string log;
@@ -83,6 +84,7 @@ public class BattleMaster : MonoBehaviour {
 		Teams.Add(new List<Monster>());
 		Teams.Add(new List<Monster>());
 
+		TimeMaster = GetComponent<TimeMaster>();
 		GameboardMaster = GetComponent<GameboardMaster>();
 
 		MapLoader MapLoader = GetComponent<MapLoader>();
@@ -102,9 +104,9 @@ public class BattleMaster : MonoBehaviour {
 		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 1), 0);
 		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 3), 0);
 
-		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(10, 13), 1);
-		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(10, 11), 1);
-		SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(11, 12), 1);
+		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(10, 13), 1);
+		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(10, 11), 1);
+		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(11, 12), 1);
 		//SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(8, 11), 1);
 
 		Allmons.AddRange(Teams[0]);
@@ -136,11 +138,15 @@ public class BattleMaster : MonoBehaviour {
 	}
 
 	void TurnWheel(){
+
+		// If no candidates for next turn, refill list of candidates
 		if(UpTurn.Count == 0){
 			UpTurn.AddRange(HadTurn);
 			HadTurn.Clear();
 		}
-		OnTurn = UpTurn[0]; //next turn starts
+
+		//next candidate on the line
+		OnTurn = UpTurn[0]; 
 
 		TurnNumber += 1;
 		BattleMaster.Log("--- TURN "+TurnNumber+" - ["+OnTurn.Name+"]"+"'s turn - ["+OnTurn.Stats_[0].BattleActualValue+"/"+OnTurn.Stats_[0].BattleStartValue+" HP]");
@@ -150,34 +156,54 @@ public class BattleMaster : MonoBehaviour {
 			GameObject blox = CanvasMaster.SummonBattleMenu();
 			States.Peek().windows.Add(blox);
 		}
+
 		UpTurn.Remove(OnTurn);
 		HadTurn.Add(OnTurn);
+
+		// Starts turn
+		
+		Actions.Enqueue(new GlobalAction(E.ON_TURN_START));
+
+		//Actions = PlanningMaster.Thinking(MonsterOnTurn);
+
 	}
 
 	void ProcessAction(){
+
 		try
 		{
-			if(Actions.Peek() is PieceMove){
+			if(Actions.Peek() is GlobalAction){
+				GlobalAction Action = (GlobalAction) Actions.Dequeue();
+				switch(Action.Trigger){
+					case(E.ON_TURN_START):
+
+					break;
+					case(E.ON_TURN_END):
+
+					break;
+
+				}
+			}else if(Actions.Peek() is PieceMove){
 				// TODO: This is awful
 				// TODO: Add logs when Gameboard does stuff
-				PieceMove pm = (PieceMove) Actions.Dequeue();
-				GameboardMaster.MoveMonster(pm.from, pm.to);
-				PiecesMaster.WalkTo(pm.who, pm.to);
-				BattleMaster.Log("%%% walks from "+pm.from+" to "+pm.to);
+				PieceMove Action = (PieceMove) Actions.Dequeue();
+				GameboardMaster.WalkMonster(Action.from, Action.to);
+				PiecesMaster.WalkTo(Action.who, Action.to, Action.pointpath);
+				BattleMaster.Log("%%% walks from "+Action.from+" to "+Action.to);
 
 			}else if(Actions.Peek() is PieceSpell){
 
-				PieceSpell ps = (PieceSpell) Actions.Dequeue();
-				List<Damage> DamagesList = PlanningMaster.SimulateSpellPerformance(ps.mon, ps.sp, ps.to);
-			//	Board
-				CanvasMaster.SpawnSpellName(ps.sp.Name);
+				PieceSpell Action = (PieceSpell) Actions.Dequeue();
+				List<Damage> DamagesList = GameboardMaster.SimulateSpellPerformance(Action.mon, Action.sp, Action.to);
+				//	Board
+				CanvasMaster.SpawnSpellName(Action.sp.Name);
 				PiecesMaster.SpawnDamage(DamagesList);
-				PiecesMaster.SpawnAnimation(ps); //
+				PiecesMaster.SpawnAnimation(Action); //
 
 				List<bool> Results = GameboardMaster.DealDamage(DamagesList);
 
 				for (int i = 0; i < Results.Count; i++)
-				{
+				{ // TODO: Move to gameboard master
 					if(Results[i]){
 						Monster DeadMonster = DamagesList[i].TargetMonster;
 						Allmons.Remove(DeadMonster);
@@ -187,14 +213,12 @@ public class BattleMaster : MonoBehaviour {
 						GameboardMaster.RemoveMonster(DeadMonster);
 						Destroy(PiecesMaster.MonsterGameObject(DamagesList[i].TargetMonster));
 
-
-
 					}
 				}
 
 			//	PiecesMaster.SpawnTerrain(Grimoire.Terrains[0], ps.to);
-				BattleMaster.Log("%%% casts ["+ps.sp.Name+"]");
-				BattleMaster.Log("%%% spell ["+ps.sp.Name+"] damages ", JumpLine: false);
+				BattleMaster.Log("%%% casts ["+Action.sp.Name+"]");
+				BattleMaster.Log("%%% spell ["+Action.sp.Name+"] damages ", JumpLine: false);
 
 				for (int i = 0; i < DamagesList.Count; i++)
 				{
@@ -207,9 +231,9 @@ public class BattleMaster : MonoBehaviour {
 				//Acting = false;
 				//SfxEffect("Bright", );
 			}else{
-
+				
 				Actions.Dequeue();
-				Debug.Log("fail");
+				Debug.Log("Unknown Action Unprocessed");
 
 			}	
 		}
@@ -223,6 +247,7 @@ public class BattleMaster : MonoBehaviour {
 			
 	}
 
+	// Turn Machine
 	void Update () {
 
 		if (Input.GetAxis("Mouse ScrollWheel") < 0) // forward
@@ -329,7 +354,8 @@ public class BattleMaster : MonoBehaviour {
 				StatePop(2); // TODO: THIS IS AWFUL
 				int id = Environment.GameBoard.MonsterIDAt(new Point(OnTurn));
 				Monster mon = Environment.GameBoard.MonstersOnBoard[id];
-				Actions.Enqueue(new PieceMove(mon, Environment.GameBoard.MonsterPosition(mon), new Point(chooser)));
+				Debug.Log("fix this");
+				Actions.Enqueue(new PieceMove(mon, Environment.GameBoard.MonsterPosition(mon), new Point(chooser), null));
 				TurnWheel();
 			break;
 			case "x":
@@ -426,7 +452,7 @@ public class BattleMaster : MonoBehaviour {
 						TurnWheel();
 					break;
 					case E.WAIT:
-						new WaitForSeconds(1f);
+						TimeMaster.WaitSeconds(0.5f);
 					break;
 				}
 			}	

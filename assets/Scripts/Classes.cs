@@ -44,6 +44,8 @@ public class E {
 //Geometry
 	public const int SQUARE = 110, CONE = 111, CIRCLE = 112, LINE = 113, TRILINE = 114, HORIZONTALLINE = 115, VERTICALLINE = 116, CROSS = 117;
 	public const int SELF = 100, ALLIES = 101, ENEMIES = 102, BOTH = 103, ALL = 104;
+//Triggers and Events
+	public const int ON_TURN_START = 200, ON_TURN_END = 201;
 //Animations
 	public const int SIMPLESINGLE = 700, WAVES = 701;
 //Properties
@@ -89,21 +91,41 @@ public class Property {
 	}
 } */
 
-public class PieceAction {
-	public GameObject who;
+public class BoardAction {
 }
 
-public class PieceMove : PieceAction {
+public class GlobalAction : BoardAction {
+	public int Trigger;
+
+	public GlobalAction(int t){
+		Trigger = t;
+	}
+}
+
+public class PieceMove : BoardAction {
+	public GameObject who;
+	public List<Point> pointpath;
 	public Point from, to;
 	public Monster mon;
-	public PieceMove(Monster m, Point fr, Point gt){
+
+	public PieceMove(Monster m, Point fr, Point gt, List<Point> PointPath){
 		who = PiecesMaster.MonsterGameObject(m);
 		mon = m;
 		from = fr;
 		to = gt;
+		pointpath = PointPath;
+	}
+	public override string ToString(){
+		string s = "";
+		foreach (Point p in pointpath)
+		{
+			s += p.ToString() + " ";
+		}
+		return s;
 	}
 }
-public class PieceSpell : PieceAction {
+public class PieceSpell : BoardAction {
+	public GameObject who;
 	public Spell sp;
 	public Point fr, to;
 	public Monster mon;

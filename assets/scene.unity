@@ -381,7 +381,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 303647802}
   m_LocalRotation: {x: 0.3145146, y: -0.2934849, z: 0.10292072, w: 0.89685816}
-  m_LocalPosition: {x: 7.01, y: -2.98, z: 9.18}
+  m_LocalPosition: {x: 7.74, y: -2.98, z: 11.27}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 907585290}
@@ -1370,7 +1370,6 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1099600156}
-  - component: {fileID: 1099600157}
   - component: {fileID: 1099600158}
   - component: {fileID: 1099600161}
   - component: {fileID: 1099600160}
@@ -1396,17 +1395,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1099600157
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1099600155}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e0e782820dc2d54429f756c1659acf69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1099600158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1438,7 +1426,7 @@ MonoBehaviour:
   overlays: {fileID: 1872248418}
   pieces: {fileID: 2082237893}
   Grimoire: {fileID: 0}
-  GameBoard: {fileID: 1099600161}
+  GameboardMaster: {fileID: 0}
   PiecesMaster: {fileID: 0}
 --- !u!114 &1099600160
 MonoBehaviour:
@@ -1451,7 +1439,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3e223b38a3c57428d4d95c9dc55dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  GameBoard: {fileID: 0}
+  Gameboard: {fileID: 0}
   OnTurn:
     Name: 
     Texture: 

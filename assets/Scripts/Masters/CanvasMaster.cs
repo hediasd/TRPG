@@ -47,13 +47,35 @@ public class CanvasMaster : MonoBehaviour {
 		}
 	}
 
-	public void SpawnSpellName(string SpellName){
+	public void SpawnSpellName2(string SpellName){
+		Debug.Log("HI");
 		GameObject blox = (GameObject) Instantiate(cellDmg, new Vector3(140, -216, 0), new Quaternion());
 		blox.transform.localScale = new Vector3(1, 80, 1);
 		ShakingText st = blox.transform.GetComponent<ShakingText>();
 		st.text = SpellName.ToUpper();
 		blox.AddComponent<SizeGrow>();
 		blox.transform.SetParent(this.transform, false);
+	}
+
+	public void SpawnSpellName(string SpellName){
+		List<GameObject> BloxList = new List<GameObject>();
+		int LetterCount = SpellName.Length;
+
+		for (int i = 0; i < 8; i++)
+		{
+			GameObject blox = (GameObject) Instantiate(cellDmg, new Vector3(((LetterCount*30 + 10) * i) - 260, -216, 0), new Quaternion());
+			blox.transform.localScale = new Vector3(80, 80, 1);
+			ShakingText st = blox.transform.GetComponent<ShakingText>();
+			st.text = SpellName.ToUpper();
+			blox.transform.SetParent(this.transform, false);
+		}
+
+		foreach (GameObject go in BloxList)
+		{
+					
+		}
+		
+	//	blox.AddComponent<SizeGrow>();
 	}
 
 	public GameObject SummonBattleMenu () {

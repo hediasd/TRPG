@@ -1,7 +1,8 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
 
-public class ShakingText : MonoBehaviour {
+public class SlidingText : MonoBehaviour {
 
 	public GameObject dmg;
 	public string text = "";
@@ -43,35 +44,27 @@ public class ShakingText : MonoBehaviour {
 			dmgg1.GetComponent<MeshRenderer>().sortingOrder = 5;
 		}
 
-		StartCoroutine(Shake());
+		StartCoroutine(Slide());
 	}
 
-	IEnumerator Shake(){
+	IEnumerator Slide(){
 		for (int i = 0; i < count; i++)
 		{
-			StartCoroutine(Shake(i, 0.01f));
+			StartCoroutine(Slide(i, 0.01f));
 			//yield return new WaitForSeconds(0.35f);
 			yield return 0;
 		}     
     }
 
-	IEnumerator Shake(int n, float y){      
+	IEnumerator Slide(int n, float y){      
 		int i = 0;
 		//while(i < 1){
 			float t = 0.0f;
 			while (t < 1.0f)
 			{
-				t += TimeMaster.GeneralTiming * Time.deltaTime * (Time.timeScale / scale); ///
+				t += Time.deltaTime * (Time.timeScale / scale); ///
 				Vector3 startingPos = transform.GetChild(n).transform.position;
 				transform.GetChild(n).transform.position = Vector3.Lerp(startingPos, startingPos + new Vector3(0f, y, 0f), t);
-				yield return 0;
-			}
-			t = 0.0f;
-			while (t < 1.0f)
-			{
-				t += TimeMaster.GeneralTiming * Time.deltaTime * (Time.timeScale / scale); ///
-				Vector3 startingPos = transform.GetChild(n).transform.position;
-				transform.GetChild(n).transform.position = Vector3.Lerp(startingPos, startingPos + new Vector3(0f, -y, 0f), t);
 				yield return 0;
 			}
 
@@ -84,8 +77,3 @@ public class ShakingText : MonoBehaviour {
 
 
 }
-
-
-
-
-
