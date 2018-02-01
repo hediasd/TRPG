@@ -5,7 +5,7 @@ public class CanvasMaster : MonoBehaviour {
 
 	public GameObject boxBase;
 	public GameState stackTop;
-	public GameObject cellDmg;
+	public GameObject ShakingTextBlox, SlidingTextBlox;
 
 
 	void Start()
@@ -15,6 +15,9 @@ public class CanvasMaster : MonoBehaviour {
 		boxMaker.type = boxBase.name = "Base Menu";
 		boxMaker.message = name;
 		boxMaker.Startup();
+
+		//this.transform.eulerAngles = new Vector3(-38.65f, 36.24f, 0);
+
 	}
 
 	public void Updater(){
@@ -49,10 +52,10 @@ public class CanvasMaster : MonoBehaviour {
 
 	public void SpawnSpellName2(string SpellName){
 		Debug.Log("HI");
-		GameObject blox = (GameObject) Instantiate(cellDmg, new Vector3(140, -216, 0), new Quaternion());
+		GameObject blox = (GameObject) Instantiate(ShakingTextBlox, new Vector3(140, -216, 0), new Quaternion());
 		blox.transform.localScale = new Vector3(1, 80, 1);
 		ShakingText st = blox.transform.GetComponent<ShakingText>();
-		st.text = SpellName.ToUpper();
+		st.Text = SpellName.ToUpper();
 		blox.AddComponent<SizeGrow>();
 		blox.transform.SetParent(this.transform, false);
 	}
@@ -63,11 +66,11 @@ public class CanvasMaster : MonoBehaviour {
 
 		for (int i = 0; i < 8; i++)
 		{
-			GameObject blox = (GameObject) Instantiate(cellDmg, new Vector3(((LetterCount*30 + 10) * i) - 260, -216, 0), new Quaternion());
+			GameObject blox = (GameObject) Instantiate(SlidingTextBlox, new Vector3(((LetterCount*30 + 10) * i) - 260, -216, 0), new Quaternion());
 			blox.transform.localScale = new Vector3(80, 80, 1);
-			ShakingText st = blox.transform.GetComponent<ShakingText>();
-			st.text = SpellName.ToUpper();
+			SlidingText st = blox.transform.GetComponent<SlidingText>();
 			blox.transform.SetParent(this.transform, false);
+			st.Startup(SpellName.ToUpper());
 		}
 
 		foreach (GameObject go in BloxList)

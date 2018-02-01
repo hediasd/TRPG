@@ -92,8 +92,8 @@ public class PiecesMaster : MonoBehaviour {
 			
 			damageText.name = "(Txt) " + "Damage " + DamageInstance.FinalDamage;
 			ShakingText st = damageText.transform.GetComponent<ShakingText>();
-			st.text = ""+DamageInstance.FinalDamage;
 			damageText.transform.SetParent(txtPieces.transform, false);
+			st.Startup(""+DamageInstance.FinalDamage);
 		}
 
 	}

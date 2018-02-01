@@ -2377,7 +2377,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boxBase: {fileID: 118092, guid: df528c821873b8e438a9392941b51734, type: 2}
-  cellDmg: {fileID: 1140115754607366, guid: f9c124b7998290042908511b2f75ad27, type: 2}
+  ShakingTextBlox: {fileID: 1140115754607366, guid: f9c124b7998290042908511b2f75ad27,
+    type: 2}
+  SlidingTextBlox: {fileID: 1158027974211726, guid: c980a6ffd3dc82c48ad76c602f737b00,
+    type: 2}
 --- !u!1 &1938571493
 GameObject:
   m_ObjectHideFlags: 0

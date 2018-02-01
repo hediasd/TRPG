@@ -29,7 +29,7 @@ public class Monster : DataObject {
 	[System.NonSerialized]
 	public Color PaletteA_, PaletteB_;
 	[System.NonSerialized]
-	public Stat[] Stats_;  //TODO: 9
+	public Stats StatList;  //TODO: 9
 
 	//public int HPA_, HPM_, LVL_, POW_, MGT_, END_, RES_, LUK_, SPD_, MOV_; //original
 	//public int HPA, HPM, POW, MGT, END, RES, LUK, SPD, MOV;
@@ -52,7 +52,7 @@ public class Monster : DataObject {
 		SpellsCast = new List<Spell>();
 		Statuses_ = new List<Status>();
 		StatusNames = new List<string>();
-		Stats_ = new Stat[10];
+		StatList = new Stats(new int[10]);
 	}
 	public Monster Copy(){
   		Monster mon = (Monster) this.MemberwiseClone();
@@ -65,11 +65,7 @@ public class Monster : DataObject {
 		mon.PaletteA_ = new Color(PaletteA_.r, PaletteA_.g, PaletteA_.b, PaletteA_.a);
 		mon.PaletteB_ = new Color(PaletteB_.r, PaletteB_.g, PaletteB_.b, PaletteB_.a);
 		
-		mon.Stats_ = new Stat[10];
-		for (int i = 0; i < Stats_.Length; i++)
-		{
-			mon.Stats_[i] = new Stat(Stats_[i]);
-		}
+		mon.StatList = StatList.Copy();
 		//Array.Copy(STATS_, mon.STATS_, 9);
 		
 		mon.SpellsCast = new List<Spell>();
@@ -106,10 +102,13 @@ public class Monster : DataObject {
 	}
 */
 	public int MovementPoints(){
-		return Stats_[9].BattleActualValue;
+		return StatList[E.MOV];
+	}
+	public void ResetMovementPoints(){
+		StatList.ResetValue(E.MOV);
 	}
 	public bool TakeDamage(Damage TakenDamage){
-		Stats_[0].Decrease(TakenDamage.FinalDamage);
+		StatList.Decrease(E.HPA, TakenDamage.FinalDamage);
 		return true;
 		
 	}

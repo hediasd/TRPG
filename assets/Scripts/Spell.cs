@@ -15,16 +15,20 @@ public class Spell : DataObject {
 
 	public bool LoS, BoostableRange, Linear;
 	public int MinimumCastRange, MaximumCastRange;
-	public int CastShape, EffectShape; //EffectSquare / EffectCone / EffectCircle / EffectLine / Effect3Line (Default: EffectCircle)
-	public int targeter; //Self / Allies / Enemies / Both / None / All
+	public string Properties;
+	public string CastShape, EffectShape; //EffectSquare / EffectCone / EffectCircle / EffectLine / Effect3Line (Default: EffectCircle)
+	public string Targets; //Self / Allies / Enemies / Both / None / All
+	
+	[System.NonSerialized]
+	public int SpellCastShape, SpellEffectShape, SpellTargets;
 	
 	public Spell(){
 		//Elements.Add(E.DARKNESS);
 		//Damages.Add(10);
 		Cooldown = Level = MinimumCastRange = MaximumCastRange = 1;
 		Radius = 0;
-		CastShape = EffectShape = E.CIRCLE;
-		targeter = E.ENEMIES;		
+		SpellCastShape = SpellEffectShape = E.CIRCLE;
+		SpellTargets = E.ENEMIES;		
 		//anim = new Animation();
 		//anim.sheet = "Bright2";
 	}
@@ -42,7 +46,7 @@ public class Spell : DataObject {
 				OverallSegmentsBruteDamage += Segment.Value;
 
 				int SegmentBakedDamage = Segment.Value; //spell segment power
-				SegmentBakedDamage *= (Caster.Stats_[1].BattleActualValue / TargetMonster.Stats_[1].BattleActualValue);
+				SegmentBakedDamage *= (Caster.StatList[1] + 1) / (TargetMonster.StatList[1] + 1);
 				//BakedDamage *= 
 				SegmentsIndividualDamages.Add(SegmentBakedDamage);
 				OverallSegmentsTotalDamage += SegmentBakedDamage;
@@ -55,7 +59,7 @@ public class Spell : DataObject {
 
 	public List<Point> CastShapePoints(Point PivotPoint = null){// int Radius){
 		
-		List<Point> ShapePoints = Shape.GetShape(CastShape, MaximumCastRange, MinimumCastRange);
+		List<Point> ShapePoints = Shape.GetShape(SpellCastShape, MaximumCastRange, MinimumCastRange);
 		if(PivotPoint != null){
 			for (int i = 0; i < ShapePoints.Count; i++)
 			{
@@ -85,10 +89,10 @@ public class Spell : DataObject {
 			f[1] = 0;
 		}
 
-		switch(EffectShape){
+		switch(SpellEffectShape){
 			case E.CIRCLE:
 			case E.SQUARE:
-				ShapePoints = Shape.GetShape(EffectShape, MaximumRange: Radius);
+				ShapePoints = Shape.GetShape(SpellEffectShape, MaximumRange: Radius);
 				break;
 			case E.CONE:
 				for (int i = 0; i < Radius+1; i++)

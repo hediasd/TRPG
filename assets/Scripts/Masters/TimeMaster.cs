@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TimeMaster : MonoBehaviour {
 
-	public static float GeneralTiming = 2f;
+	public static float GeneralTiming = 1.2f;
 
 	void Start () {
 		

@@ -95,7 +95,7 @@ public class Grimoire : MonoBehaviour {
 
 	void SpellLoader(){
 		bool read = true;
-		bool write = false;
+		bool write = true;
 
 		if(read){
 			TextAsset textAsset = (TextAsset)Resources.Load("Texts/SpellsJson", typeof(TextAsset)); 
@@ -105,8 +105,13 @@ public class Grimoire : MonoBehaviour {
 		foreach (Spell sp in Spells)
 		{
 			if(sp.MaximumCastRange - sp.MinimumCastRange < 0) throw new Exception();
+
+			sp.SpellCastShape = Thesaurus.Chew(sp.CastShape);
+			sp.SpellEffectShape = Thesaurus.Chew(sp.EffectShape);
+			sp.SpellTargets = Thesaurus.Chew(sp.Targets);
 		}
 		if(write){
+			Spells.Sort((a, b) => a.Name.CompareTo(b.Name));
 			string playerToJason = WriteMaster.ListToJson<Spell>(Spells, true);
 			WriteMaster.WriteUp("SpellsJson", playerToJason);
 			Debug.Log(playerToJason);
@@ -161,10 +166,12 @@ public class Grimoire : MonoBehaviour {
 			}
 			
 			string[] Values = Utility.ChewUp(mon.Stats, ", ");
+			int[] IntValues = new int[10];
 			for (int i = 0; i < 10; i++)
 			{
-				mon.Stats_[i] = new Stat(byte.Parse(Values[i]));
+				IntValues[i] = (int.Parse(Values[i]));
 			}
+			mon.StatList = new Stats(IntValues);
 
 			foreach (string SpellName in Utility.ChewUp(mon.Spells, ", "))
 			{
@@ -287,8 +294,13 @@ public class Grimoire : MonoBehaviour {
 				string[] second_line = Utility.ChewUp(sections[1], @", ");
 				int[] stats = Array.ConvertAll(second_line, s => int.Parse(s));
 
-				character.Stats_[0] = new Stat(stats[0]);
-				character.Stats_[1] = new Stat(stats[1]);
+				//string[] Values = Utility.ChewUp(mon.Stats, ", ");
+				//int[] IntValues = new int[10];
+				//for (int i = 0; i < 10; i++)
+				//{
+				//	IntValues[i] = (int.Parse(stats[i]));
+				//}
+				character.StatList = new Stats(stats);
 				
 				/*monster.POW_ = stats[2];
 				monster.MGT_ = stats[3];
@@ -313,81 +325,8 @@ public class Grimoire : MonoBehaviour {
 			
 		}		
 	}
-
 	
-	void MonsterChewUp(){
-
-		TextAsset textAsset = (TextAsset)Resources.Load("Texts/Plaything", typeof(TextAsset)); 
-		string lineless = textAsset.text.Replace(System.Environment.NewLine, "");
-		string[] whole_text = Utility.ChewUp(lineless, "= ");
-
-		for (int z = 1; z < whole_text.Length-1; z++) { //
-			string[] sections = Utility.ChewUp(whole_text[z], "> ");
-				Monster monster = new Monster();
-			try{	
-				string[] first_line = Utility.ChewUp(sections[0], @" \[|]|\(|\)");
-				monster.Name = first_line[0];
-				string[] texture = Utility.ChewUp(first_line[2], ", ");
-				monster.Texture = texture[0];
-				
-				try{
-					string[] colorA = Utility.ChewUp(texture[1], "_");
-					monster.PaletteA_ = new Color32(byte.Parse(colorA[0]), byte.Parse(colorA[1]), byte.Parse(colorA[2]), 255);					
-				//}catch{}
-				//try{
-					string[] colorB = Utility.ChewUp(texture[2], "_");
-					monster.PaletteB_ = new Color32(byte.Parse(colorB[0]), byte.Parse(colorB[1]), byte.Parse(colorB[2]), 255);								
-				
-					monster.PaletteA = colorA[0]+", "+colorA[1]+", "+colorA[2];
-					monster.PaletteB = colorB[0]+", "+colorB[1]+", "+colorA[2];
-				
-				}catch{}				
-
-				string[] second_line = Utility.ChewUp(sections[1], @", ");
-				int[] stats = Array.ConvertAll(second_line, s => int.Parse(s));
-				
-				try{
-					for (int i = 0; i < 9; i++){
-						monster.Stats_[i] = new Stat(stats[i]);
-					}
-				}
-				catch (Exception)
-				{
-				}
-
-				/*monster.POW_ = stats[2];
-				monster.MGT_ = stats[3];
-				monster.END_ = stats[4];
-				monster.RES_ = stats[5];
-				monster.SPD_ = stats[6];
-				monster.LUK_ = stats[7];
-				monster.MOV_ = stats[8];
-				*/
-
-				string[] third_line = Utility.ChewUp(sections[2], @", ");
-
-				string[] fourth_line = Utility.ChewUp(sections[3], @", ");
-				foreach (string s in fourth_line)
-				{
-					bool not = true;
-					foreach (Spell p in Spells)
-					{
-						if(p.Name == s){
-							not = false;
-							monster.AddSpell(p);
-							break;
-						}else{
-						}	
-					}
-				//	if(not) Alog("No Spell " + s);
-				}
-				Monsters.Add(monster);
-			}
-			catch (Exception){
-				//Debug.Log("Error at " + monster.name + e.StackTrace);
-			}
-		}		
-	}
+	
 
 	/*
 	void SpellChewUp(){

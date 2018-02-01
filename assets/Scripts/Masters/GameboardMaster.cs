@@ -54,7 +54,7 @@ public class GameboardMaster : MonoBehaviour{
 	public Deque<BoardAction> OnTurnEnter(Monster OnTurn){
 		Deque<BoardAction> Actions = new Deque<BoardAction>();
 
-		OnTurn.AvailableMovementPoints = OnTurn.MovementPoints();
+		OnTurn.ResetMovementPoints();
 
 		return Actions;
 	}
@@ -66,7 +66,7 @@ public class GameboardMaster : MonoBehaviour{
 			Monster Target = MonstersOnBoard[DamageInstance.TargetID];
 			Target.TakeDamage(DamageInstance);
 			bool Killed = false;
-			if(Target.Stats_[0].BattleActualValue == 0) Killed = Kill(Target);
+			if(Target.StatList.HPA() == 0) Killed = Kill(Target);
 			Success.Add(Killed);
 		}
 		return Success;
@@ -98,8 +98,8 @@ public class GameboardMaster : MonoBehaviour{
 		}
 		else{
 			Monster Mon = MonstersOnBoard[MonsterIDAt(From)];
-			if(Point.Distance(From, To) > Mon.AvailableMovementPoints){
-				Debug.Log("Illegal Board Move: No MP for that");			
+			if(Point.Distance(From, To) > Mon.MovementPoints()){
+				Debug.Log("Illegal Board Move: No MP "+From+" "+To+" "+Point.Distance(From, To));			
 				throw new GameboardException();
 			}
 			Set(MonsterIDAt(From), To, E.MONSTER_LAYER);
@@ -151,7 +151,7 @@ public class GameboardMaster : MonoBehaviour{
 				Monsters.Add(MonsterAtPoint);
 			}	
 		}
-		Debug.Log("! "+ Monsters.Count);
+		
 		return Monsters;
 	}
 	public Point MonsterPosition(Monster mon){

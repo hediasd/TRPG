@@ -39,7 +39,7 @@ public class PlanningMaster : MonoBehaviour {
 	}
 
 
-	PieceSpell ChooseSpell(Monster ThinkingMonster, InfluenceMap InfluenceMap){
+	PieceSpell ChooseSpell(Monster ThinkingMonster, List<Point> Paths, InfluenceMap InfluenceMap){
 
 		Point Here = new Point(ThinkingMonster.MonsterPoint);
 		int[,] GroundMap = Gameboard.GetLayer(E.GROUND_LAYER);
@@ -51,10 +51,13 @@ public class PlanningMaster : MonoBehaviour {
 		foreach (Spell CandidateSpell in ThinkingMonster.Spells_)
 		{
 			//Evaluate result when casting at any available point
-			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange(Here, GroundMap, CandidateSpell, 2);
+			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange(Here, GroundMap, CandidateSpell, ThinkingMonster.MovementPoints());
 			foreach (LinkedPoint BlurredPoint in BSC)
 			{
-
+				//Point p = (Point) BlurredPoint;
+				if(!Paths.Contains((Point) BlurredPoint.Parents[0])){
+					continue;
+				}
 				List<Damage> DamageSimulations = Gameboard.SimulateSpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
 				
 				// Enemy damage dealt
@@ -65,10 +68,6 @@ public class PlanningMaster : MonoBehaviour {
 				int B1;
 				// Killed allies;
 				int B2;
-				
-
-
-
 
 				if(A1 > BestDamage){
 					//Debug.Log(ThisTotalDamage);
@@ -129,8 +128,8 @@ public class PlanningMaster : MonoBehaviour {
 		InfluenceMap.ConsiderCastableSpells(ThinkingMonster, Allies, Enemies, Gameboard.GetLayer(E.GROUND_LAYER));
 
 		Map WalkableMap = Gameboard.WalkableMap();
-		Dictionary<Point, List<Point>> Paths = Algorithms.PathTracer(ThinkingMonster.MonsterPoint, 16, WalkableMap);
-		PieceSpell ChosenSpell = ChooseSpell(ThinkingMonster, InfluenceMap);
+		Dictionary<Point, List<Point>> Paths = Algorithms.PathTracer(ThinkingMonster.MonsterPoint, ThinkingMonster.MovementPoints(), WalkableMap);
+		PieceSpell ChosenSpell = ChooseSpell(ThinkingMonster, new List<Point>(Paths.Keys), InfluenceMap);
 		
 		if(ChosenSpell != null){
 			//PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ChosenSpell.to, WalkableMap);
@@ -138,12 +137,16 @@ public class PlanningMaster : MonoBehaviour {
 			Actions.Enqueue(ChosenMovementPath);
 			Actions.Enqueue(ChosenSpell);
 		}else{
-			List<Point> ReachablePoints = Algorithms.ReachableUnnocupiedCells(ThinkingMonster.MonsterPoint, 2, WalkableMap);
+			List<Point> ReachablePoints = Algorithms.ReachableUnnocupiedCells(ThinkingMonster.MonsterPoint, ThinkingMonster.MovementPoints(), WalkableMap);
+			Debug.Log(" "+ReachablePoints.Count+ " "+ThinkingMonster.MovementPoints());
 			ReachablePoints.Sort((a,b) => InfluenceMap[b].CompareTo(InfluenceMap[a]));
 			//PieceMove ChosenMovementPathh = PathMaker(ThinkingMonster, ReachablePoints[0], WalkableMap);
-			PieceMove ChosenMovementPath = new PieceMove(ThinkingMonster, ThinkingMonster.MonsterPoint, ReachablePoints[0], Paths[ReachablePoints[0]]);
-			//Debug.Log(ChosenMovementPath);
-			Actions.Enqueue(ChosenMovementPath);
+			//TODO: What if PM = 0
+			if(ReachablePoints.Count > 0){
+				PieceMove ChosenMovementPath = new PieceMove(ThinkingMonster, ThinkingMonster.MonsterPoint, ReachablePoints[0], Paths[ReachablePoints[0]]);
+				//Debug.Log(ChosenMovementPath);
+				Actions.Enqueue(ChosenMovementPath);
+			}
 		}
 
 		

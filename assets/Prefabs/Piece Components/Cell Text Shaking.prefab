@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 114805550384936058}
   - component: {fileID: 114443728231269508}
   m_Layer: 5
-  m_Name: Damage Text
+  m_Name: Cell Text Shaking
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -64,4 +64,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dmg: {fileID: 142284, guid: 6f7503445ad77dc42a754a6c172eea92, type: 2}
-  text: aa12
+  Text: shkk

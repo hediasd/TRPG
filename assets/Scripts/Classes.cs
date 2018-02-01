@@ -32,7 +32,7 @@ public class DamageSegment {
 public class E {
 /* USED AS ARRAY POSITIONS */
 //Monster Stats
-	public const int HPA = 0, HPM = 1, POW = 2, MGT = 3, END = 4, RES = 5, LUK = 6, SPD = 7, MOV = 8;
+	public const int HPA = 0, HPM = 1, POW = 2, MGT = 3, END = 4, RES = 5, LUK = 6, SPD = 7, IDK2 = 8, MOV = 9;
 //Gameboard Layers
 	public const int GROUND_LAYER = 0, MONSTER_LAYER = 1; 
 /* GENERAL */

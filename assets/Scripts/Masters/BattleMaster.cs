@@ -27,7 +27,8 @@ public class BattleMaster : MonoBehaviour {
 	TimeMaster TimeMaster;
 
 	public Stack<GameState> States = new Stack<GameState>();
-	public Deque<BoardAction> Actions = new Deque<BoardAction>();
+	public Deque<BoardAction> GameboardActions = new Deque<BoardAction>();
+	public Deque<BoardAction> PieceActions = new Deque<BoardAction>();
 	public static bool Acting = false;
 
 	public static string log;
@@ -99,15 +100,13 @@ public class BattleMaster : MonoBehaviour {
 
 		Random.InitState(System.DateTime.Now.Millisecond); //(int) System.DateTime.Now.Millisecond * 77); //
 		//Grimoire.Monsters[RandomGr()]
-		//SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(9, 1), 0);
-		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(9, 3), 0);
+		SpawnMonster(Grimoire.GetMonster("Ice Knight"), new Point(9, 3), 0);
 		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 1), 0);
 		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 3), 0);
 
-		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(10, 13), 1);
+		SpawnMonster(Grimoire.GetMonster("Prophet of Wicked"), new Point(10, 13), 1);
 		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(10, 11), 1);
 		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(11, 12), 1);
-		//SpawnMonster(Grimoire.GetMonster("Tundra Raider"), new Point(8, 11), 1);
 
 		Allmons.AddRange(Teams[0]);
 		Allmons.AddRange(Teams[1]);
@@ -120,18 +119,6 @@ public class BattleMaster : MonoBehaviour {
 		TurnWheel();
 		//StatePush(new GameState(E.BATTLE_MENU, E.ARROW_UPDOWN), false);
 		//GameObject blox = CanvasMaster.SummonBattleMenu();
-		//States.Peek().windows.Add(blox);
-
-		/*Transform to = PiecesMaster.monPieces.transform.GetChild(0);
-		Monster m0 = to.GetComponent<MonsterHolder>().Monster;
-		m0.Stats[0].ActualValue = 1;
-		Monster m1 = to.GetComponent<MonsterHolder>().Monster.Copy();
-		Monster m2 = to.GetComponent<MonsterHolder>().Monster.Copy();
-		m1.Stats[0].ActualValue = 2;
-		m2.Stats[0].ActualValue = 3;
-	
-		Debug.Log("size "+m0.Stats[0].ActualValue+" "+m1.Stats[0].ActualValue+" "+m2.Stats[0].ActualValue+" ");
-		*/
 
 		//Debug.Log(Environment.GameBoard.toString());
 
@@ -149,7 +136,7 @@ public class BattleMaster : MonoBehaviour {
 		OnTurn = UpTurn[0]; 
 
 		TurnNumber += 1;
-		BattleMaster.Log("--- TURN "+TurnNumber+" - ["+OnTurn.Name+"]"+"'s turn - ["+OnTurn.Stats_[0].BattleActualValue+"/"+OnTurn.Stats_[0].BattleStartValue+" HP]");
+		BattleMaster.Log("--- TURN "+TurnNumber+" - ["+OnTurn.Name+"]"+"'s turn - ["+OnTurn.StatList.HPA()+"/"+OnTurn.StatList.HPM()+" HP]");
 
 		if(Teams[0].Contains(OnTurn)) {
 			StatePush(new GameState(E.BATTLE_MENU, E.ARROW_UPDOWN), false);
@@ -161,19 +148,69 @@ public class BattleMaster : MonoBehaviour {
 		HadTurn.Add(OnTurn);
 
 		// Starts turn
-		
-		Actions.Enqueue(new GlobalAction(E.ON_TURN_START));
-
+		//Actions.Enqueue(new GlobalAction(E.ON_TURN_START));
 		//Actions = PlanningMaster.Thinking(MonsterOnTurn);
 
 	}
 
-	void ProcessAction(){
+	// Turn Machine
+	void Update () {
+
+		if (Input.GetAxis("Mouse ScrollWheel") < 0) // forward
+		{
+			Camera.main.orthographicSize += 0.25f;
+		}
+		if (Input.GetAxis("Mouse ScrollWheel") > 0) // back
+		{
+			Camera.main.orthographicSize -= 0.25f;
+		}
+
+		
+		if(GameboardActions.Count > 0 || Acting){
+			if(Acting ){ ///|| PiecesMaster.Actors > 0
+				//
+			}else{
+				Acting = true;
+				ProcessBoardAction();
+			}
+		}else if(Locks.Count > 0){
+			//
+		}else{
+			Unlocker();
+			/*if(Teams[0].Contains(OnTurn)){
+				CanvasMaster.Updater();
+				PiecesMaster.Updater();
+
+				switch(States.Peek().state){
+					case E.BATTLE_MENU:
+						BattleMenuUpdate();
+						break;
+					case E.MOVE:
+						MoveUpdate();
+						break;
+					case E.SPELL:
+						SpellUpdate();
+						break;
+					case E.ITEM:
+						ItemUpdate();
+						break;
+				}
+				
+			}else{ //Enemy*/
+			StartCoroutine(Think());
+				//EnemyTurn();
+			//}
+		}
+
+	}
+
+
+	void ProcessBoardAction(){
 
 		try
 		{
-			if(Actions.Peek() is GlobalAction){
-				GlobalAction Action = (GlobalAction) Actions.Dequeue();
+			if(GameboardActions.Peek() is GlobalAction){
+				GlobalAction Action = (GlobalAction) GameboardActions.Dequeue();
 				switch(Action.Trigger){
 					case(E.ON_TURN_START):
 
@@ -183,17 +220,20 @@ public class BattleMaster : MonoBehaviour {
 					break;
 
 				}
-			}else if(Actions.Peek() is PieceMove){
+			}else if(GameboardActions.Peek() is PieceMove){
 				// TODO: This is awful
 				// TODO: Add logs when Gameboard does stuff
-				PieceMove Action = (PieceMove) Actions.Dequeue();
+				PieceMove Action = (PieceMove) GameboardActions.Dequeue();
 				GameboardMaster.WalkMonster(Action.from, Action.to);
+
+				// TODO: SPLIT INTO TWO PROCESSERS
+				// WILL BE ABLE TO DO LOTS OF THINKING WHILE PIECES MOVE AND SPELLS GO
 				PiecesMaster.WalkTo(Action.who, Action.to, Action.pointpath);
 				BattleMaster.Log("%%% walks from "+Action.from+" to "+Action.to);
 
-			}else if(Actions.Peek() is PieceSpell){
+			}else if(GameboardActions.Peek() is PieceSpell){
 
-				PieceSpell Action = (PieceSpell) Actions.Dequeue();
+				PieceSpell Action = (PieceSpell) GameboardActions.Dequeue();
 				List<Damage> DamagesList = GameboardMaster.SimulateSpellPerformance(Action.mon, Action.sp, Action.to);
 				//	Board
 				CanvasMaster.SpawnSpellName(Action.sp.Name);
@@ -232,8 +272,8 @@ public class BattleMaster : MonoBehaviour {
 				//SfxEffect("Bright", );
 			}else{
 				
-				Actions.Dequeue();
-				Debug.Log("Unknown Action Unprocessed");
+				GameboardActions.Dequeue();
+				Debug.Log("Unknown Board Action Unprocessed");
 
 			}	
 		}
@@ -241,60 +281,44 @@ public class BattleMaster : MonoBehaviour {
 		{
 			Acting = false;
 			Debug.Log("Gameboard Threwup");
-			Actions.Clear(); //throwup
+			GameboardActions.Clear(); //throwup
 			Locks.Clear();
 		}
 			
 	}
 
-	// Turn Machine
-	void Update () {
+	void ProcessPieceAction(){
 
-		if (Input.GetAxis("Mouse ScrollWheel") < 0) // forward
-		{
-			Camera.main.orthographicSize += 0.25f;
-		}
-		if (Input.GetAxis("Mouse ScrollWheel") > 0) // back
-		{
-			Camera.main.orthographicSize -= 0.25f;
-		}
+		if(PieceActions.Peek() is GlobalAction){
+			GlobalAction Action = (GlobalAction) PieceActions.Dequeue();
+			switch(Action.Trigger){
+				case(E.ON_TURN_START):
 
-		if(Actions.Count > 0 || Acting){
-			if(Acting ){ ///|| PiecesMaster.Actors > 0
-				//
-			}else{
-				Acting = true;
-				ProcessAction();
+				break;
+				case(E.ON_TURN_END):
+
+				break;
+
 			}
-		}else if(Locks.Count > 0){
-			//
+		}else if(PieceActions.Peek() is PieceMove){
+
+			PieceMove Action = (PieceMove) PieceActions.Dequeue();
+			PiecesMaster.WalkTo(Action.who, Action.to, Action.pointpath);
+
+		}else if(PieceActions.Peek() is PieceSpell){
+
+			PieceSpell Action = (PieceSpell) PieceActions.Dequeue();
+			//	Board
+			//CanvasMaster.SpawnSpellName(Action.sp.Name);
+			//PiecesMaster.SpawnDamage(DamagesList);
+			//PiecesMaster.SpawnAnimation(Action); //
+
 		}else{
-			Unlocker();
-			/*if(Teams[0].Contains(OnTurn)){
-				CanvasMaster.Updater();
-				PiecesMaster.Updater();
+			
+			PieceActions.Dequeue();
+			Debug.Log("Unknown Piece Action Unprocessed");
 
-				switch(States.Peek().state){
-					case E.BATTLE_MENU:
-						BattleMenuUpdate();
-						break;
-					case E.MOVE:
-						MoveUpdate();
-						break;
-					case E.SPELL:
-						SpellUpdate();
-						break;
-					case E.ITEM:
-						ItemUpdate();
-						break;
-				}
-				
-			}else{ //Enemy*/
-			StartCoroutine(Think());
-				//EnemyTurn();
-			//}
 		}
-
 	}
 
 
@@ -355,7 +379,7 @@ public class BattleMaster : MonoBehaviour {
 				int id = Environment.GameBoard.MonsterIDAt(new Point(OnTurn));
 				Monster mon = Environment.GameBoard.MonstersOnBoard[id];
 				Debug.Log("fix this");
-				Actions.Enqueue(new PieceMove(mon, Environment.GameBoard.MonsterPosition(mon), new Point(chooser), null));
+				GameboardActions.Enqueue(new PieceMove(mon, Environment.GameBoard.MonsterPosition(mon), new Point(chooser), null));
 				TurnWheel();
 			break;
 			case "x":
@@ -389,7 +413,6 @@ public class BattleMaster : MonoBehaviour {
 			break;
 		}
 	}
-	
 
 	void StatePush(GameState gs, bool hideMenu){
 		if(States.Count > 0){
@@ -485,7 +508,7 @@ public class BattleMaster : MonoBehaviour {
 		switch (type)
 		{
 			case 0:
-				Actions = PlanningMaster.Thinking(MonsterOnTurn);
+				GameboardActions = PlanningMaster.Thinking(MonsterOnTurn);
 			break;
 			case 1:
 
