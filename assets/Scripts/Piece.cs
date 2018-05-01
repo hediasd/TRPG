@@ -59,7 +59,7 @@ public class Piece : MonoBehaviour {
 
         //if(animate != null) animate.animating = true;
         TimeMaster.WaitSeconds(0.15f);
-        if(end) BattleMaster.Acting = false;
+        if(end) BattleMaster.Acting--;
         
         //BattleMaster.ReleaseLock(ck);
     }

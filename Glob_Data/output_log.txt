@@ -1,0 +1,1538 @@
+Mono path[0] = 'C:/Users/Henri/Dropbox/Cyclone/Frog/Glob_Data/Managed'
+Mono path[1] = 'C:/Users/Henri/Dropbox/Cyclone/Frog/Glob_Data/Mono'
+Mono config path = 'C:/Users/Henri/Dropbox/Cyclone/Frog/Glob_Data/Mono/etc'
+PlayerConnection initialized from C:/Users/Henri/Dropbox/Cyclone/Frog/Glob_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55437
+Multi-casting "[IP] 192.168.100.5 [Port] 55437 [Flags] 2 [Guid] 3697239117 [EditorId] 2897764013 [Version] 1048832 [Id] WindowsPlayer(Henri-PC) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55437]
+PlayerConnection already initialized - listening to [0.0.0.0:55437]
+Initialize engine version: 5.5.2f1 (3829d7f588f3)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce 940MX (ID=0x179c)
+    Vendor:   NVIDIA
+    VRAM:     3072 MB
+    Driver:   21.20.16.4534
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll (this message is harmless)
+Loading C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\UnityEngine.PlaymodeTestsRunner.dll into Unity Child Domain
+- Completed reload, in  0.538 seconds
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Henri\Dropbox\Cyclone\Frog\Glob_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+<RI> Input initialized.
+desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
+<RI> Initialized touch support.
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'chooser_ground') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1754)
+
+The referenced script on this Behaviour (Game Object 'chooser_ground (1)') is missing!
+ 
+(Filename: C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp Line: 1754)
+
+UnloadTime: 2.613947 ms
+ThesaurusError All
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError All
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError All
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError All
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError 101
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError 101
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+ThesaurusError All
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Thesaurus:Chew(String) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Utilities\Thesaurus.cs:53)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:111)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Utilities/Thesaurus.cs Line: 53)
+
+{
+    "Items": [
+        {
+            "Name": "Boom",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 1,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "All"
+        },
+        {
+            "Name": "Eschatology",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "All"
+        },
+        {
+            "Name": "Evil Claw",
+            "Description": "",
+            "AnimationName": "SingleSonic1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 1,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 3
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 2,
+            "MaximumCastRange": 3,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "All"
+        },
+        {
+            "Name": "Fire Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 15
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 6,
+            "MaximumCastRange": 8,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "All"
+        },
+        {
+            "Name": "Golden Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "101"
+        },
+        {
+            "Name": "Great Days",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "101"
+        },
+        {
+            "Name": "Zap",
+            "Description": "",
+            "AnimationName": "SingleElectric1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 5
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 2,
+            "MaximumCastRange": 2,
+            "Properties": "",
+            "CastShape": "Circle",
+            "EffectShape": "Circle",
+            "Targets": "All"
+        }
+    ]
+}
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Grimoire:SpellLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:117)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:30)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Grimoire.cs Line: 117)
+
+{
+    "Items": [
+        {
+            "Name": "Asmodeus",
+            "Texture": "Nogg",
+            "StatusNames": [],
+            "Spells": "Fire Wall, Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Astaroth",
+            "Texture": "DV_19",
+            "StatusNames": [],
+            "Spells": "Beneath the Absolute",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "240, 240, 240",
+            "PaletteB": "100, 50, 120"
+        },
+        {
+            "Name": "Beast of Revelation",
+            "Texture": "DV_10",
+            "StatusNames": [],
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Betrayed Knight",
+            "Texture": "DV_09",
+            "StatusNames": [],
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "150, 150, 250"
+        },
+        {
+            "Name": "Blood Priest",
+            "Texture": "CH_04",
+            "StatusNames": [],
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 220, 140",
+            "PaletteB": "240, 40, 40"
+        },
+        {
+            "Name": "Blood Templar",
+            "Texture": "DV_08",
+            "StatusNames": [],
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 20, 20"
+        },
+        {
+            "Name": "Bosk Mage",
+            "Texture": "PL_02",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "40, 80, 0",
+            "PaletteB": "250, 250, 190"
+        },
+        {
+            "Name": "Callalily",
+            "Texture": "PL_01",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "165, 70, 250"
+        },
+        {
+            "Name": "Dark Mirror",
+            "Texture": "MT_03",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "210, 60, 240",
+            "PaletteB": "250, 250, 200"
+        },
+        {
+            "Name": "Deity of Thirst",
+            "Texture": "WA_05",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "130, 80, 250"
+        },
+        {
+            "Name": "Graveyard Warden",
+            "Texture": "ZM_07",
+            "StatusNames": [],
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "70, 50, 30",
+            "PaletteB": "200, 200, 130"
+        },
+        {
+            "Name": "Guide of Lost",
+            "Texture": "ZM_03",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 245",
+            "PaletteB": "30, 30, 140"
+        },
+        {
+            "Name": "Ice Knight",
+            "Texture": "DV_09",
+            "StatusNames": [],
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Polar Gargoyle",
+            "Texture": "DV_06",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "60, 200, 230",
+            "PaletteB": "250, 250, 230"
+        },
+        {
+            "Name": "Prophet of Wicked",
+            "Texture": "WA_16",
+            "StatusNames": [],
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "190, 30, 30",
+            "PaletteB": "250, 250, 230"
+        },
+        {
+            "Name": "Rasselbock",
+            "Texture": "BE_22",
+            "StatusNames": [],
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "100, 65, 35",
+            "PaletteB": "240, 240, 240"
+        },
+        {
+            "Name": "Shold",
+            "Texture": "SL_10",
+            "StatusNames": [],
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "100, 160, 240"
+        },
+        {
+            "Name": "Tenth Spirit",
+            "Texture": "BE_13",
+            "StatusNames": [],
+            "Spells": "Zap",
+            "Passives": "Moral Philosophy",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "140, 25, 20",
+            "PaletteB": "140, 45, 130"
+        },
+        {
+            "Name": "Tundra Raider",
+            "Texture": "BE_27",
+            "StatusNames": [],
+            "Spells": "Zap",
+            "Passives": "Moral Philosophy",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 200",
+            "PaletteB": "10, 120, 250"
+        },
+        {
+            "Name": "Vinlandsaga",
+            "Texture": "ZM_03",
+            "StatusNames": [],
+            "Spells": "Fire Wall",
+            "Passives": "Skraelings",
+            "Stats": "25, 10, 10, 10, 10, 0, 0, 0, 0, 8",
+            "PaletteA": "250, 240, 240",
+            "PaletteB": "200, 0, 0"
+        },
+        {
+            "Name": "Yatagarasu",
+            "Texture": "BR_08",
+            "StatusNames": [],
+            "Spells": "Boom, Evil Claw, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 3, 3, 3, 3",
+            "PaletteA": "230, 250, 230",
+            "PaletteB": "130, 0, 130"
+        },
+        {
+            "Name": "Yeti",
+            "Texture": "BE_14",
+            "StatusNames": [],
+            "Spells": "Boom, Zap, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 2, 2, 2, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "150, 100, 50"
+        }
+    ]
+}
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+Grimoire:MonsterLoader() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:149)
+Grimoire:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Grimoire.cs:36)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Grimoire.cs Line: 149)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:120)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:120)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Start() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:120)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 11 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1c90 -> priority: 1 
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 6 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 9 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+ 7 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 11 3
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 12 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 10 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+ 10 2
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+PlanningMaster:Thinking(Monster) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PlanningMaster.cs:141)
+<Think>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:488)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:293)
+ 
+(Filename: C:/Users/Henri/Dropbox/Cyclone/Frog/assets/Scripts/Masters/PlanningMaster.cs Line: 141)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Mon') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+BoxMaker:Rescale(Single, Single, Single, Single) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Menu Related\BoxMaker.cs:74)
+CanvasMaster:SummonBattleMenu() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\CanvasMaster.cs:90)
+BattleMaster:TurnWheel() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:156)
+BattleMaster:Unlocker() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:452)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:272)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object '<null>') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+
+The referenced script on this Behaviour (Game Object 'Effect') is missing!
+UnityEngine.Object:INTERNAL_CALL_Internal_InstantiateSingle(Object, Vector3&, Quaternion&)
+UnityEngine.Object:Internal_InstantiateSingle(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\UnityEngineObjectBindings.gen.cs:51)
+UnityEngine.Object:Instantiate(Object, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:157)
+UnityEngine.Object:Instantiate(GameObject, Vector3, Quaternion) (at C:\buildslave\unity\build\Runtime\Export\UnityEngineObject.cs:207)
+PiecesMaster:SpawnSfxEffect(SfxSpriteAnimation, Point, Point) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:107)
+<Actor>c__Iterator0:MoveNext() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:185)
+UnityEngine.SetupCoroutine:InvokeMoveNext(IEnumerator, IntPtr) (at C:\buildslave\unity\build\Runtime\Export\Coroutines.cs:17)
+UnityEngine.MonoBehaviour:StartCoroutine_Auto_Internal(IEnumerator)
+UnityEngine.MonoBehaviour:StartCoroutine(IEnumerator) (at C:\buildslave\unity\build\artifacts\generated\common\runtime\MonoBehaviourBindings.gen.cs:54)
+PiecesMaster:SpawnAnimation(PieceSpell) (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\PiecesMaster.cs:102)
+BattleMaster:ProcessAction() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:201)
+BattleMaster:Update() (at C:\Users\Henri\Dropbox\Cyclone\Frog\assets\Scripts\Masters\BattleMaster.cs:267)
+
+[C:/buildslave/unity/build/Runtime/Mono/MonoBehaviour.cpp line 1754] 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineObjectBindings.gen.cs Line: 51)
+

@@ -19,6 +19,13 @@ public class Deque<T> {
 		InternalList.Insert(0, Thing);
 		Count++;
 	}
+	public void EnqueueRange(List<T> Things){
+		foreach (T Thing in Things)
+		{
+			InternalList.Add(Thing);
+			Count++;
+		}
+	}
 	public T Dequeue(){
 		T Thing = InternalList[0];
 		InternalList.RemoveAt(0);

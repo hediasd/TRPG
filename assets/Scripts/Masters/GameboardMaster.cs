@@ -33,7 +33,7 @@ public class GameboardMaster : MonoBehaviour{
 		List<Damage> SimulationResult = new List<Damage>();
 		List<Monster> TargetedMonsters = new List<Monster>();
 
-		if(SimulatedSpell.DamageSegments.Count == 0){
+		if(SimulatedSpell.Damage == ""){
 			
 		}else{
 			//if(SimulatedSpell.Radius == 1){ //single target

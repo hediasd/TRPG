@@ -1,11 +1,18 @@
-﻿using System.Collections;
+﻿using System;//.Collections;
 using System.Collections.Generic;
 using System.Text.RegularExpressions; 
-using UnityEngine;
+//using UnityEngine;
 
-public class Utility : MonoBehaviour {
+public static class Utility {
+
+	public static void Each<T>(this IEnumerable<T> items, Action<T> action) {
+		foreach (var item in items) {
+			action(item);
+		} 
+	}
 
 	public static string[] ChewUp(string s, string format){
+		//char[] formated = Regex.Split(format, "|");
 		string[] r = Regex.Split(s, format);
 		List<string> li = new List<string>();
 		foreach (string t in r)

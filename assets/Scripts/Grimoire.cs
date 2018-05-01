@@ -105,10 +105,15 @@ public class Grimoire : MonoBehaviour {
 		foreach (Spell sp in Spells)
 		{
 			if(sp.MaximumCastRange - sp.MinimumCastRange < 0) throw new Exception();
-
+			string[] Segments = Utility.ChewUp(sp.Damage, "_|, ");//sp.Damage
+			for (int i = 0; i < Segments.Length; i+=2)
+			{
+				sp.DamageSegments.Add(new DamageSegment(int.Parse(Segments[i]), Thesaurus.Chew(Segments[i+1])));
+			}
 			sp.SpellCastShape = Thesaurus.Chew(sp.CastShape);
 			sp.SpellEffectShape = Thesaurus.Chew(sp.EffectShape);
 			sp.SpellTargets = Thesaurus.Chew(sp.Targets);
+			//Utility.Each(sp.DamageSegments, i => sp.Damages += (""+i.Value+"_"+i.Element));
 		}
 		if(write){
 			Spells.Sort((a, b) => a.Name.CompareTo(b.Name));

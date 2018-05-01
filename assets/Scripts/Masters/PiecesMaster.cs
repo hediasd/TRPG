@@ -47,7 +47,7 @@ public class PiecesMaster : MonoBehaviour {
 	}
 
 	public void WalkTo(GameObject go, Point to, List<Point> PointPath){
-		
+		BattleMaster.Acting++;
 		go.GetComponent<Piece>().Walk(to, PointPath);
 	}
 
@@ -81,24 +81,22 @@ public class PiecesMaster : MonoBehaviour {
 		return SpawnedMonsterPiece;
 	}
 
-	public void SpawnDamage(List<Damage> DamageList){
+	public void SpawnDamage(GameObject MonsterPiece, string Text){
 		
-		foreach (Damage DamageInstance in DamageList)
-		{
-			GameObject monpiece = MonsterGameObject(DamageInstance.TargetMonster);
-			Point at = new Point(monpiece);
+			//GameObject monpiece = MonsterGameObject(DamageInstance.TargetMonster);
+			Point at = new Point(MonsterPiece);
 			GameObject damageText;
 			damageText = (GameObject) Instantiate(cellDmg, new Vector3(1+at.x, 0.2f, at.z), Quaternion.Euler (18, -45, 0));
 			
-			damageText.name = "(Txt) " + "Damage " + DamageInstance.FinalDamage;
+			damageText.name = "(Txt) " + "Damage " + Text;//DamageInstance.FinalDamage;
 			ShakingText st = damageText.transform.GetComponent<ShakingText>();
 			damageText.transform.SetParent(txtPieces.transform, false);
-			st.Startup(""+DamageInstance.FinalDamage);
-		}
+			st.Startup(""+Text);
 
 	}
 
 	public void SpawnAnimation(PieceSpell ps){
+		BattleMaster.Acting++;
 		StartCoroutine(Actor(ps));		
 	}
 
@@ -193,7 +191,7 @@ public class PiecesMaster : MonoBehaviour {
 
         yield return TimeMaster.WaitSeconds(0.25f);
 		//Actors--;
-		BattleMaster.Acting = false;
+		BattleMaster.Acting--;
     }
 
 

@@ -11,17 +11,20 @@ public class Spell : DataObject {
 	public int Radius;
 	
 	//public List<Property> Properties = new List<Property>();
-	public List<DamageSegment> DamageSegments = new List<DamageSegment>();
+	//public List<DamageSegment> DamageSegments = new List<DamageSegment>();
+	public string Damage;
 
 	public bool LoS, BoostableRange, Linear;
 	public int MinimumCastRange, MaximumCastRange;
-	public string Properties;
+	public string Property1, Property2, Property3;
 	public string CastShape, EffectShape; //EffectSquare / EffectCone / EffectCircle / EffectLine / Effect3Line (Default: EffectCircle)
 	public string Targets; //Self / Allies / Enemies / Both / None / All
 	
 	[System.NonSerialized]
 	public int SpellCastShape, SpellEffectShape, SpellTargets;
-	
+	[System.NonSerialized]
+	public List<DamageSegment> DamageSegments = new List<DamageSegment>();
+
 	public Spell(){
 		//Elements.Add(E.DARKNESS);
 		//Damages.Add(10);
