@@ -14,7 +14,7 @@ public class BaseText : MonoBehaviour {
 
 		for (int i = 0; i < TextLength; i++)
 		{
-			GameObject dmgg1 = (GameObject) Instantiate (dmg, new Vector3 (0.3f + (i*0.37f - (0.37f * (TextLength / 2.0f))), 1, 0), Quaternion.Euler (0, 0, 0));
+			GameObject dmgg1 = (GameObject) Instantiate (dmg, new Vector3 (0.3f + (i*0.37f - (0.37f * (TextLength / 2.0f))), 1, 0), Quaternion.identity);
 			dmgg1.GetComponent<TextMesh>().text = ""+Text[i];
 			dmgg1.GetComponent<TextMesh>().color = Color.black;
 			dmgg1.GetComponent<MeshRenderer>().sortingLayerName  = "UI";
@@ -23,11 +23,12 @@ public class BaseText : MonoBehaviour {
 			float depth = 0.02f;
 			float space = 0.05f;
 
-			GameObject dmgg2 = (GameObject) Instantiate (dmgg1, new Vector3(-space, 0.0f, depth), Quaternion.Euler (0, 0, 0));
-			GameObject dmgg3 = (GameObject) Instantiate (dmgg1, new Vector3(space, 0.0f, depth), Quaternion.Euler (0, 0, 0));
-			GameObject dmgg4 = (GameObject) Instantiate (dmgg1, new Vector3(0.0f, -space, depth), Quaternion.Euler (0, 0, 0));
-			GameObject dmgg5 = (GameObject) Instantiate (dmgg1, new Vector3(0.0f, space, depth), Quaternion.Euler (0, 0, 0));
+			GameObject dmgg2 = Instantiate (dmgg1, new Vector3(-0.02f, 0.0f, 0.05f), Quaternion.identity);
+			GameObject dmgg3 = Instantiate (dmgg1, new Vector3(space, 0.0f, depth), Quaternion.identity);
+			GameObject dmgg4 = Instantiate (dmgg1, new Vector3(0.0f, -space, depth), Quaternion.identity);
+			GameObject dmgg5 = Instantiate (dmgg1, new Vector3(0.0f, space, depth), Quaternion.identity);
 			
+			Debug.Log(dmgg2.transform.localPosition + " " +dmgg3.transform.localPosition + " " +dmgg4.transform.localPosition + " " +dmgg5.transform.localPosition);
 			//dmgg2.transform.localPosition = ;
 			//dmgg2.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
 			//dmgg2.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);

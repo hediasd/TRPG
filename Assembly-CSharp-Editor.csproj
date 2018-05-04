@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
+    <LangVersion>4</LangVersion>
+</PropertyGroup>
+  <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
@@ -20,10 +23,11 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_5_2;UNITY_5_5;UNITY_5;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_SCRIPTING_NEW_CSHARP_COMPILER;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VIDEO;ENABLE_VR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_2;UNITY_2017_4;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<LangVersion>default</LangVersion>
 </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
@@ -33,6 +37,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
 	<LangVersion>default</LangVersion>
 </PropertyGroup>
   <ItemGroup>
@@ -42,499 +47,32 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="UnityEngine">
-      <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+      <HintPath>C:/Program Files/Unity/Editor/Data/Managed\UnityEngine.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="assets\pixelcamera2d\scripts\Editor\PixelCamera2DEditor.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\CustomTiledImporterAttribute.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ICustomTiledImporter.cs" />
+     <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Material.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Mesh.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Prefab.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Texture.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.Xml.cs" />
-     <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportTiled2Unity.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\ImportUtils.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\SortingLayerExposedEditor.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\SpriteDepthInMapEditor.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\Tiled2UnityMenuItems.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Editor\TiledAssetPostProcessor.cs" />
-     <Compile Include="assets\pixelcamera2d\scripts\Editor\PixelCamera2DEditor.cs" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDiffuseDepth-Instanced.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180128_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180712_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180706_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180930_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180554_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181227_731674064.txt" />
-     <None Include="assets\Resources\Texts\MonsterJsonCopy2.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180818_1990229994.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180501_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180552_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180105_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180710_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180927_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180534_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180253_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180507_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180233_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170156_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180728_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180422_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180737_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180725_-261097059.txt" />
-     <None Include="assets\Resources\Texts\AnimationsJson.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180233_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180227_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180722_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180449_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180555_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180230_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180223_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180453_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180249_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180139_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180356_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180548_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180146_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Imported\banana_town.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180440_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180657_-2040478053.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180641_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1510170552_-835479299.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180520_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180117_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180712_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180543_1205154744.txt" />
-     <None Include="assets\Tiled2Unity\Imported\snowers.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2710170402_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180112_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180219_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180735_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180202_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180407_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180250_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180713_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180545_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180847_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180551_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180553_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180734_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180433_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180728_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180416_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180705_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2710170406_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180320_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180719_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180346_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180243_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180302_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDefault.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180422_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180718_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181224_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180415_731674064.txt" />
-     <None Include="assets\Sprites-ColorSwap.shader" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180639_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180854_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180637_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180547_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180144_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180214_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180731_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180404_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180703_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180705_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180556_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170222_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180715_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180534_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180713_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180246_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180334_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180544_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180414_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180734_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180414_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180722_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181227_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180810_1205154744.txt" />
-     <None Include="assets\Resources\GameMaps\town.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180737_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181228_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180115_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901181228_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180653_731674064.txt" />
-     <None Include="assets\Resources\Texts\WalkableMap.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180723_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180305_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180812_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180316_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180350_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170150_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180224_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180240_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180715_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180446_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170211_1319791482.txt" />
-     <None Include="assets\Tiled2Unity\Tiled2Unity.export.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180236_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180227_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180714_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180818_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1510170542_-835479299.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180805_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0101180324_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180550_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180736_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180712_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180222_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0101180341_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180658_731674064.txt" />
-     <None Include="assets\Resources\Texts\make a folder for links.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180304_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180553_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180537_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180725_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180825_1205154744.txt" />
-     <None Include="assets\Resources\Texts\SpellsJson - Copia (2).txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180510_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180711_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180117_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180144_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180930_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Salad.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180541_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180813_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180712_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180300_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180226_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180525_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180732_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180817_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180637_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180714_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDepth.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0701180307_1205154744.txt" />
-     <None Include="assets\Tiled2Unity\Imported\isometric_grass_and_water.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180426_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDiffuseDepth.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180818_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180307_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180658_-2040478053.txt" />
-     <None Include="assets\Tiled2Unity\Imported\cemetery.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180701_731674064.txt" />
-     <None Include="assets\Resources\Texts\Love in Bright Landscapes.txt" />
-     <None Include="assets\Resources\Texts\Bright Lights Big City.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180639_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180244_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180329_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180231_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180105_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180226_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180347_731674064.txt" />
-     <None Include="assets\Resources\Texts\Through the Bridge of Light.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180723_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180732_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180709_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170518_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180743_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180711_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180301_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180752_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180433_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180724_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180429_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180231_731674064.txt" />
-     <None Include="assets\Resources\Texts\MonsterJsonCopy.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180155_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180445_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180711_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170248_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180529_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170217_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180717_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1510170551_-835479299.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180529_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180128_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180643_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0201181102_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180701_-261097059.txt" />
-     <None Include="assets\Resources\Texts\MapOutput.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0101180610_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0701180304_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Roses at Summer&apos;s End.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180645_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180549_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180212_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180521_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180309_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180424_731674064.txt" />
-     <None Include="assets\HSVDefault.shader" />
-     <None Include="assets\Resources\Texts\Through the Small Bridge.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180640_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180703_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180245_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180548_-351662026.txt" />
-     <None Include="assets\Tiled2Unity\Imported\snowy.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180540_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180831_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180444_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Imported\spooky_village.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181226_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180753_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180719_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3112170551_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170216_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180659_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180521_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180457_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180424_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180806_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181226_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180410_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180242_731674064.txt" />
-     <None Include="assets\Resources\Texts\MonsterJsonCopy - Copia.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180531_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180229_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180133_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180724_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180653_1990229994.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180115_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170551_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180645_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180809_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180425_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180444_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180526_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180525_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180647_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180455_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180256_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180815_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180810_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180221_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180709_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180718_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180646_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180219_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180711_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Imported\snowy2.tiled2unity.xml" />
-     <None Include="assets\Resources\VertexLit with Z.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180226_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180718_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180643_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180425_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180550_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180719_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180710_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180725_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180806_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180447_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180356_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180927_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180916_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Materials\_ReadMe.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180544_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180526_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180444_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180156_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180730_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180259_731674064.txt" />
-     <None Include="assets\Resources\Texts\Size of the Moon.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180656_-2040478053.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170149_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180213_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180704_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180710_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Textures\_ReadMe.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180604_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180549_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180522_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180638_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180422_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180659_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180159_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180710_731674064.txt" />
-     <None Include="assets\Resources\Texts\TerrainsJson.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180402_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170219_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181216_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Imported\town.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180412_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170207_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180352_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180521_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180121_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180531_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDefault-Instanced.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180520_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901181221_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170506_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Plaything.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180257_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0701180305_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180459_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180847_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180116_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180126_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180716_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180118_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180424_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180706_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181216_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180604_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170508_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180225_-2056183147.txt" />
-     <None Include="assets\Resources\Sprites-ColorSwap.shader" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180656_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180221_-1266647564.txt" />
-     <None Include="assets\Tiled2Unity\Imported\snowp.tiled2unity.xml" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181223_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180659_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180418_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180427_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180724_731674064.txt" />
-     <None Include="assets\Resources\Texts\SpellsJson.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180224_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180232_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180449_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901181229_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170422_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180540_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170527_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180808_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Output.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180357_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180146_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180308_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180154_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180646_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180220_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180506_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180747_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180647_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180641_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180357_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2710170401_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180733_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180118_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180230_-1266647564.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180426_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0701180308_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180222_-2056183147.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180348_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180446_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2801180240_-351662026.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180735_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180657_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180356_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180726_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180825_1990229994.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170134_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180211_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180509_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180733_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180120_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
-     <None Include="assets\ProjectSettings\ProjectVersion.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180449_1740244538.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0102180423_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180215_1472699641.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181223_-261097059.txt" />
-     <None Include="assets\Tiled2Unity\Shaders\shaDepthColorKey-Instanced.shader" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180719_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180804_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180116_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180525_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Through the Bridge of Lightness.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180731_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180104_731674064.txt" />
-     <None Include="assets\Tiled2Unity\License.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180754_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3001180718_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180224_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180717_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180537_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180245_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170538_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180448_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180546_1205154744.txt" />
-     <None Include="assets\Resources\GameMaps\rules.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180204_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180423_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180730_731674064.txt" />
-     <None Include="assets\Resources\GameMaps\TileFlipTest.xml" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170550_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3112170524_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180716_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180439_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180640_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0101180324_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101181224_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180704_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1301180735_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3001180659_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180457_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170416_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Status.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2710170403_1319791482.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180732_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0102180446_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_1510170531_-1046863196.txt" />
-     <None Include="assets\Tiled2Unity\Imported\_ReadMe.txt" />
-     <None Include="assets\Resources\Plaything.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2701180152_1740244538.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180124_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180854_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180725_731674064.txt" />
-     <None Include="assets\Resources\Texts\Output2.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180452_1740244538.txt" />
-     <None Include="assets\Resources\Texts\InfluenceMap.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180344_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180117_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180311_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180458_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180736_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180726_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101180916_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0701180309_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_0202180159_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2901180819_1990229994.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_3101181228_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180303_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180544_-261097059.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0701180428_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logh.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_3101180724_-261097059.txt" />
-     <None Include="assets\Resources\Texts\SpellsJson - Copia.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2101180335_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180638_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2201180235_1205154744.txt" />
-     <None Include="assets\Resources\Texts\Faith Is for the Transient People.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0601180331_731674064.txt" />
-     <None Include="assets\Tiled2Unity\Meshes\_ReadMe.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0201181101_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\SJC_0202180133_731674064.txt" />
-     <None Include="assets\Resources\Texts\Logs\MJC_2910170502_1319791482.txt" />
- <Reference Include="UnityEditor.Advertisements">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>
+ <Reference Include="Vuforia.UnityExtensions.Editor">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Editor/Vuforia.UnityExtensions.Editor.dll</HintPath>
  </Reference>
- <Reference Include="nunit.framework">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/nunit.framework.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.EditorTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/EditorTestsRunner/Editor/UnityEditor.EditorTestsRunner.dll</HintPath>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
@@ -548,20 +86,35 @@
  <Reference Include="UnityEditor.Networking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Networking/Editor/UnityEditor.Networking.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.PlaymodeTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/Editor/UnityEditor.PlaymodeTestsRunner.dll</HintPath>
+ <Reference Include="UnityEditor.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/Editor/UnityEditor.TestRunner.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.PlaymodeTestsRunner">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/PlaymodeTestsRunner/UnityEngine.PlaymodeTestsRunner.dll</HintPath>
+ <Reference Include="UnityEngine.TestRunner">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/UnityEngine.TestRunner.dll</HintPath>
+ </Reference>
+ <Reference Include="nunit.framework">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TestRunner/net35/unity-custom/nunit.framework.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/RuntimeEditor/UnityEngine.Timeline.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Timeline">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Timeline/Editor/UnityEditor.Timeline.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.TreeEditor">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/TreeEditor/Editor/UnityEditor.TreeEditor.dll</HintPath>
  </Reference>
- <Reference Include="UnityEngine.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/UnityEngine.Analytics.dll</HintPath>
+ <Reference Include="UnityEngine.UIAutomation">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/UnityEngine.UIAutomation.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.Analytics">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityAnalytics/Editor/UnityEditor.Analytics.dll</HintPath>
+ <Reference Include="UnityEditor.UIAutomation">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UIAutomation/Editor/UnityEditor.UIAutomation.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/Editor/UnityEditor.GoogleAudioSpatializer.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.GoogleAudioSpatializer">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityGoogleAudioSpatializer/RuntimeEditor/UnityEngine.GoogleAudioSpatializer.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/Editor/UnityEditor.HoloLens.dll</HintPath>
@@ -569,20 +122,44 @@
  <Reference Include="UnityEngine.HoloLens">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityHoloLens/RuntimeEditor/UnityEngine.HoloLens.dll</HintPath>
  </Reference>
+ <Reference Include="UnityEditor.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/Editor/UnityEditor.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.SpatialTracking">
+ <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
  <Reference Include="UnityEditor.VR">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/Editor/UnityEditor.VR.dll</HintPath>
- </Reference>
- <Reference Include="UnityEngine.VR">
- <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnityVR/RuntimeEditor/UnityEngine.VR.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.Graphs">
  <HintPath>C:/Program Files/Unity/Editor/Data/Managed/UnityEditor.Graphs.dll</HintPath>
  </Reference>
- <Reference Include="UnityEditor.WebGL.Extensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll</HintPath>
+ <Reference Include="UnityEditor.Android.Extensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.WindowsStandalone.Extensions">
  <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/windowsstandalonesupport/UnityEditor.WindowsStandalone.Extensions.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Advertisements">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Advertisements">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/Editor/UnityEditor.Advertisements.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Analytics">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/UnityEngine.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Analytics">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.13/Editor/UnityEditor.Analytics.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.Purchasing">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/UnityEngine.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.Purchasing">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.purchasing@0.0.19/Editor/UnityEditor.Purchasing.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEngine.StandardEvents">
+ <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.standardevents@1.0.10/UnityEngine.StandardEvents.dll</HintPath>
  </Reference>
   </ItemGroup>
   <ItemGroup>

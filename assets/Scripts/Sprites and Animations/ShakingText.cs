@@ -5,7 +5,6 @@ public class ShakingText : BaseText {
 
 	float TimeScale = 2f;
 
-
 	public override void Startstuff(){
 		StartCoroutine(Shake());
 	}

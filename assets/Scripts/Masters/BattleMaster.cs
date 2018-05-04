@@ -88,8 +88,8 @@ public class BattleMaster : MonoBehaviour {
 		TimeMaster = GetComponent<TimeMaster>();
 		GameboardMaster = GetComponent<GameboardMaster>();
 
-		MapLoader MapLoader = GetComponent<MapLoader>();
-		MapLoader.Load();
+		MapMaster MapMaster = GameObject.Find("Map").GetComponent<MapMaster>();
+		MapMaster.Load(GameboardMaster, "snowy4");
 
 		Grimoire = GetComponent<Grimoire>();
 		CanvasMaster = canvas.GetComponent<CanvasMaster>();
@@ -302,7 +302,7 @@ public class BattleMaster : MonoBehaviour {
 		}else if(PieceActions.Peek() is PieceText && Acting < 2){
 
 			PieceText Action = (PieceText) PieceActions.Dequeue();
-			PiecesMaster.SpawnDamage(Action.who, Action.Text);
+			PiecesMaster.SpawnDamageText(Action.who, Action.Text);
 			TimeMaster.WaitSeconds(1);
 
 		}else if(PieceActions.Peek() is PieceKill && Acting < 2){

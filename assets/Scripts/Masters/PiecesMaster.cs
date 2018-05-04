@@ -81,7 +81,7 @@ public class PiecesMaster : MonoBehaviour {
 		return SpawnedMonsterPiece;
 	}
 
-	public void SpawnDamage(GameObject MonsterPiece, string Text){
+	public void SpawnDamageText(GameObject MonsterPiece, string Text){
 		
 			//GameObject monpiece = MonsterGameObject(DamageInstance.TargetMonster);
 			Point at = new Point(MonsterPiece);

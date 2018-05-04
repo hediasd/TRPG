@@ -61,7 +61,7 @@ public class Keys : MonoBehaviour {
 				blox.GetComponent<BoxMaker>().Transite(222);
 			}else{
 				for (int i = 0; i < 6; i++){
-					Random.seed *= Random.seed/2;
+					//Random.seed *= Random.seed/2;
 					Monster m = grimoire.Monsters[Random.Range( 0, grimoire.Monsters.Count)]; //
 					pieceMaster.SpawnMonsterPiece(m, new Point(ch.x + Random.Range(-2, 2), ch.z + Random.Range(-2, 2)));
 				}
@@ -90,7 +90,7 @@ public class Keys : MonoBehaviour {
 			{
 				if(pieces.transform.GetChild(c).transform.position.x == chooser.transform.position.x){
 					if(pieces.transform.GetChild(c).transform.position.z == chooser.transform.position.z){
-						int radius = 3;
+						//int radius = 3;
 						//Environment.table
 					}
 				}
@@ -153,7 +153,7 @@ public class Keys : MonoBehaviour {
 			catch (System.Exception) {
 			}
 		}else if(k != -1){
-				Random.seed = (int) System.DateTime.Now.Ticks; 
+				//Random.seed = (int) System.DateTime.Now.Ticks; 
 
 				//moves[1,0] = 1f; moves[1,1] = 0f;
 				//moves[2,0] = 0f; moves[2,1] = 1f;

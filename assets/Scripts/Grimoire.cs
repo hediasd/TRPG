@@ -45,11 +45,6 @@ public class Grimoire : MonoBehaviour {
 		}
 		return null;
 	}
-
-
-
-
-
 	
 	void AnimationLoader(){
 		//TODO:
@@ -95,7 +90,7 @@ public class Grimoire : MonoBehaviour {
 
 	void SpellLoader(){
 		bool read = true;
-		bool write = true;
+		bool write = false;
 
 		if(read){
 			TextAsset textAsset = (TextAsset)Resources.Load("Texts/SpellsJson", typeof(TextAsset)); 
@@ -123,7 +118,7 @@ public class Grimoire : MonoBehaviour {
 		}
 		if(read || write){
 			string playerToJason = WriteMaster.ListToJson<Monster>(Monsters, true);
-			WriteMaster.WriteUp("Logs/SJC_"+DateTime.Now.ToString("ddMMyyhhmm")+"_"+playerToJason.GetHashCode(), playerToJason);
+			WriteMaster.WriteUp("Logs/SJC_"+DateTime.Now.ToString("ddMMyy")+"_"+playerToJason.GetHashCode(), playerToJason);
 		}
 	}
 
@@ -155,7 +150,7 @@ public class Grimoire : MonoBehaviour {
 		}
 		if(writeOriginal || writeCopy){
 			string playerToJason = WriteMaster.ListToJson<Monster>(Monsters, true);
-			WriteMaster.WriteUp("Logs/MJC_"+DateTime.Now.ToString("ddMMyyhhmm")+"_"+playerToJason.GetHashCode(), playerToJason);
+			WriteMaster.WriteUp("Logs/MJC_"+DateTime.Now.ToString("ddMMyy")+"_"+playerToJason.GetHashCode(), playerToJason);
 		}
 
 		foreach (Monster mon in Monsters) //TODO: This is awful
