@@ -14,8 +14,8 @@ public class MapMaster : MonoBehaviour {
 
 	public void Load (GameboardMaster Gameboard, string MapName) {
 
-		this.MapName = MapName;
-
+		//this.MapName = MapName;
+		MapName = this.MapName;
 		UnityEngine.Object prefab = Resources.Load(MapName);
 		Debug.Log(prefab.name);
 
@@ -30,37 +30,61 @@ public class MapMaster : MonoBehaviour {
 		string TilesetName = go.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().sharedMaterials[0].name;
 		string MapWriteOutput = "";
 
-		TextAsset textAsset = Resources.Load<TextAsset>("GameMaps/" + MapName + "/" + MapName + "_Blocks");
-		List<Sprite> TilesetSprites = new List<Sprite>(Resources.LoadAll<Sprite>("TilesetSprites/"+TilesetName+"/"));
+		TextAsset[] MapCSVs = Resources.LoadAll<TextAsset>("GameMaps/" + MapName + "/");// + MapName + "_Blocks");
+		List<Sprite> TilesetSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Tilesets/"+TilesetName));
 
-		string[] whole_text = Regex.Split(textAsset.text, "\n"); 
+		for (int i = 0; i < MapCSVs.Length; i++)
+		{
+			TextAsset MapCSV = MapCSVs[i];
+			string[] FileName = Regex.Split(MapCSV.name, "_");
+			string[] MapMatrix = Regex.Split(MapCSV.text, "\n"); 
 
-		Gameboard.Startup(Regex.Split(whole_text[0], ",").Length, whole_text.Length-1);
-		 
-		for (int x = whole_text.Length-2; x >= 0; x--) {
-
-			string[] rowi = Regex.Split(whole_text[whole_text.Length-2-x], ","); 
-			MapWriteOutput += x + " ";
-
-			for (int z = 0; z < rowi.Length; z++) {
-				
-				Point p = new Point(z, x);
-				
-				int IdAtPoint = int.Parse(rowi[z]);
-				int TileTypeAtPoint = TileType(IdAtPoint);
-
-				GameObject cellSprite = Instantiate(cellSpr, new Vector3(p.x, 0, p.z), Quaternion.identity);
-				cellSprite.transform.parent = blocks.transform;
-				cellSprite.GetComponentInChildren<SpriteRenderer>().sprite = TilesetSprites.Find(Tile => Tile.name == (""+IdAtPoint));
-				//Debug.Log(cellSprite.transform.position);
-				string MapWriteCharacter = (TileTypeAtPoint == 0 ? "_ " : "X ");
-
-				MapWriteOutput += MapWriteCharacter;
-				Gameboard.SetGround(TileTypeAtPoint, p);
-
+			if(i == 0){
+				Gameboard.Startup(Regex.Split(MapMatrix[0], ",").Length, MapMatrix.Length-1);
 			}
 
-			MapWriteOutput += "\n";
+			if(FileName[1].Equals("Terrain")){
+				continue;
+			}
+			if(!FileName[1].Equals("Blocks")){
+				continue;
+			}
+
+			float Height = 0;
+			if(FileName.Length > 2){
+				Height = float.Parse(FileName[2]);
+			}
+			
+			for (int x = MapMatrix.Length-2; x >= 0; x--) {
+
+				string[] rowi = Regex.Split(MapMatrix[MapMatrix.Length-2-x], ","); 
+				MapWriteOutput += x + " ";
+
+				for (int z = 0; z < rowi.Length; z++) {
+					
+					Point p = new Point(z, x);
+					int IdAtPoint = int.Parse(rowi[z]);
+					int TileTypeAtPoint = TileType(IdAtPoint);
+
+					if(IdAtPoint >= 0){
+
+						GameObject cellSprite = Instantiate(cellSpr, new Vector3(p.x, Height, p.z), Quaternion.identity);
+						cellSprite.transform.parent = blocks.transform;
+						cellSprite.GetComponentInChildren<SpriteRenderer>().sprite = TilesetSprites[IdAtPoint];//.Find(Tile => Tile.name == (""+IdAtPoint));
+						//Debug.Log(cellSprite.transform.position);
+					}
+					
+					string MapWriteCharacter = (TileTypeAtPoint == 0 ? "_ " : "X ");
+					MapWriteOutput += MapWriteCharacter;
+					if(Gameboard.At(p, E.GROUND_LAYER) < TileTypeAtPoint){
+						Gameboard.SetGround(TileTypeAtPoint, p);
+					}
+
+				}
+
+				MapWriteOutput += "\n";
+
+			}
 
 		}
 
@@ -69,6 +93,7 @@ public class MapMaster : MonoBehaviour {
 	}
 
 	int TileType(int id){
+
 		int offset_id = id + 12;
 		if(id < 0) offset_id += 1;
 		int rest = offset_id % 12;
@@ -77,6 +102,7 @@ public class MapMaster : MonoBehaviour {
 		if(rest >= 4 && rest <= 7)  return 1;
 		if(rest >= 8 && rest <= 11) return 2;
 		return -1;
+
 	}
 	
 }

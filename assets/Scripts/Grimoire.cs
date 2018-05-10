@@ -117,15 +117,16 @@ public class Grimoire : MonoBehaviour {
 			Debug.Log(playerToJason);
 		}
 		if(read || write){
-			string playerToJason = WriteMaster.ListToJson<Monster>(Monsters, true);
+			string playerToJason = WriteMaster.ListToJson<Spell>(Spells, true);
 			WriteMaster.WriteUp("Logs/SJC_"+DateTime.Now.ToString("ddMMyy")+"_"+playerToJason.GetHashCode(), playerToJason);
 		}
 	}
 
 	void MonsterLoader(){
 		//MonsterChewUp();
+
 		bool read = true;
-		bool writeOriginal = false;
+		bool writeOriginal = true;
 		bool writeCopy = true;
 
 		if(read){
@@ -140,7 +141,7 @@ public class Grimoire : MonoBehaviour {
 		}
 		if(writeOriginal){
 			string playerToJason = WriteMaster.ListToJson<Monster>(Monsters, true);
-			WriteMaster.WriteUp("MonsterJson", playerToJason);
+			WriteMaster.WriteUp("MonsterJsonCopy", playerToJason);
 			Debug.Log(playerToJason);
 		}
 		if(writeCopy){

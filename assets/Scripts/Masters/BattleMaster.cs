@@ -89,7 +89,7 @@ public class BattleMaster : MonoBehaviour {
 		GameboardMaster = GetComponent<GameboardMaster>();
 
 		MapMaster MapMaster = GameObject.Find("Map").GetComponent<MapMaster>();
-		MapMaster.Load(GameboardMaster, "snowy4");
+		MapMaster.Load(GameboardMaster, "desert1");
 
 		Grimoire = GetComponent<Grimoire>();
 		CanvasMaster = canvas.GetComponent<CanvasMaster>();
@@ -100,13 +100,13 @@ public class BattleMaster : MonoBehaviour {
 
 		Random.InitState(System.DateTime.Now.Millisecond); //(int) System.DateTime.Now.Millisecond * 77); //
 		//Grimoire.Monsters[RandomGr()]
-		SpawnMonster(Grimoire.GetMonster("Ice Knight"), new Point(9, 3), 0);
-		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 1), 0);
-		SpawnMonster(Grimoire.GetMonster("Yeti"), new Point(11, 3), 0);
+		SpawnMonster(Grimoire.GetMonster("Snake of Latos"), new Point(9, 3), 0);
+		SpawnMonster(Grimoire.GetMonster("Hungry Vulture"), new Point(11, 1), 0);
+		SpawnMonster(Grimoire.GetMonster("Snake of Latos"), new Point(11, 3), 0);
 
-		SpawnMonster(Grimoire.GetMonster("Prophet of Wicked"), new Point(10, 13), 1);
-		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(10, 11), 1);
-		SpawnMonster(Grimoire.GetMonster("Yatagarasu"), new Point(11, 12), 1);
+		SpawnMonster(Grimoire.GetMonster("Sandstone Golem"), new Point(10, 13), 1);
+		SpawnMonster(Grimoire.GetMonster("Sandstone Golem"), new Point(10, 11), 1);
+		SpawnMonster(Grimoire.GetMonster("Hungry Vulture"), new Point(11, 12), 1);
 
 		Allmons.AddRange(Teams[0]);
 		Allmons.AddRange(Teams[1]);

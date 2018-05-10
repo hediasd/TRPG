@@ -138,12 +138,13 @@ public class PlanningMaster : MonoBehaviour {
 			Actions.Enqueue(ChosenSpell);
 		}else{
 			List<Point> ReachablePoints = Algorithms.ReachableUnnocupiedCells(ThinkingMonster.MonsterPoint, ThinkingMonster.MovementPoints(), WalkableMap);
-			Debug.Log(" "+ReachablePoints.Count+ " "+ThinkingMonster.MovementPoints());
+			//" "+ReachablePoints.Count+ " "+ThinkingMonster.MovementPoints());
 			ReachablePoints.Sort((a,b) => InfluenceMap[b].CompareTo(InfluenceMap[a]));
 			//PieceMove ChosenMovementPathh = PathMaker(ThinkingMonster, ReachablePoints[0], WalkableMap);
 			//TODO: What if PM = 0
 			if(ReachablePoints.Count > 0){
 				PieceMove ChosenMovementPath = new PieceMove(ThinkingMonster, ThinkingMonster.MonsterPoint, ReachablePoints[0], Paths[ReachablePoints[0]]);
+				Debug.Log(ThinkingMonster.Name + " to " + ChosenMovementPath.to);
 				//Debug.Log(ChosenMovementPath);
 				Actions.Enqueue(ChosenMovementPath);
 			}
