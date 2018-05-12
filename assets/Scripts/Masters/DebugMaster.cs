@@ -9,12 +9,9 @@ public class DebugMaster : MonoBehaviour {
 	bool Q, W, e, R, T, Y, U;
 
 	void Start () {
-		//BattleMaster = Logic.GetComponent<BattleMaster>();	
+
 		
-		Point a = new Point(1,2);
-		//LinkedPoint BlurredPoint = (LinkedPoint) (a + a);
-		//Debug.Log(BlurredPoint);
-		//Debug.Log(BlurredPoint.Parents.Count);
+
 	}
 
 }

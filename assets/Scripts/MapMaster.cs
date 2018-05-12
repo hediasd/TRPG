@@ -12,6 +12,14 @@ public class MapMaster : MonoBehaviour {
 	public string MapName;
 	public GameObject cellSpr;
 
+	public void Cleanup(){
+
+		foreach (Transform child in this.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+
+	}
+
 	public void Load (GameboardMaster Gameboard, string MapName) {
 
 		//this.MapName = MapName;
@@ -33,6 +41,8 @@ public class MapMaster : MonoBehaviour {
 		TextAsset[] MapCSVs = Resources.LoadAll<TextAsset>("GameMaps/" + MapName + "/");// + MapName + "_Blocks");
 		List<Sprite> TilesetSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Tilesets/"+TilesetName));
 
+		go.transform.Find("Terrain").Find("desert day").GetComponent<MeshFilter>().mesh.RecalculateNormals();
+		
 		for (int i = 0; i < MapCSVs.Length; i++)
 		{
 			TextAsset MapCSV = MapCSVs[i];
@@ -71,7 +81,7 @@ public class MapMaster : MonoBehaviour {
 						GameObject cellSprite = Instantiate(cellSpr, new Vector3(p.x, Height, p.z), Quaternion.identity);
 						cellSprite.transform.parent = blocks.transform;
 						cellSprite.GetComponentInChildren<SpriteRenderer>().sprite = TilesetSprites[IdAtPoint];//.Find(Tile => Tile.name == (""+IdAtPoint));
-						//Debug.Log(cellSprite.transform.position);
+						if(Height != 0) cellSprite.transform.GetChild(1).gameObject.SetActive(false);
 					}
 					
 					string MapWriteCharacter = (TileTypeAtPoint == 0 ? "_ " : "X ");

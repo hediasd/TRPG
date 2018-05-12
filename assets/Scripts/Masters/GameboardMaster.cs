@@ -13,6 +13,7 @@ public class GameboardMaster : MonoBehaviour{
 		size = new Point(x, z);
 		Point.Limits = size;
 		Board = new int[x, z, 3];
+
 		for (int i = 0; i < size.x; i++)
 		{
 			for (int j = 0; j < size.z; j++)
@@ -23,13 +24,18 @@ public class GameboardMaster : MonoBehaviour{
 				}
 			}
 		}
+
 		MonstersOnBoard = new Dictionary<int, Monster>();
-		
 		//System.Array.Copy(a, b, a.Length);
 		//Debug.Log(string.Join("; ", a));
 	}
 
+	public void Cleanup(){
+		if(size != null) Startup(size.x, size.z);
+	}
+
 	public List<Damage> SimulateSpellPerformance(Monster Caster, Spell SimulatedSpell, Point TargetedCell){
+		
 		List<Damage> SimulationResult = new List<Damage>();
 		List<Monster> TargetedMonsters = new List<Monster>();
 

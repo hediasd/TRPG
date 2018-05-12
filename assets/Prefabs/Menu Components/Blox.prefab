@@ -10,7 +10,7 @@ GameObject:
   - component: {fileID: 400848}
   - component: {fileID: 11420016}
   m_Layer: 5
-  m_Name: Base Menu
+  m_Name: Blox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 11439310}
   - component: {fileID: 114824243429898830}
   m_Layer: 0
-  m_Name: Cell Mon
+  m_Name: Cell Mon v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -123,14 +123,15 @@ SpriteRenderer:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 136576}
   m_Enabled: 1
-  m_CastShadows: 0
-  m_ReceiveShadows: 0
-  m_DynamicOccludee: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 0
   m_Materials:
   - {fileID: 2100000, guid: c32d50fb846c662449889d803366ef5d, type: 2}
+  - {fileID: 2100000, guid: 180a00787b13cef43aeecf10b55f51d3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

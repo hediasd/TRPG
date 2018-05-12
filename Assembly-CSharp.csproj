@@ -157,7 +157,8 @@
      <None Include="assets\Tiled2Unity\Imported\banana_town.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Imported\snowers.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Shaders\shaDefault.shader" />
-     <None Include="assets\Sprites-ColorSwap.shader" />
+     <None Include="assets\Resources\Texts\Logs\MJC_100518_1672959700.txt" />
+     <None Include="assets\Resources\Sprites-ColorSwap.shader" />
      <None Include="assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
      <None Include="assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
@@ -167,8 +168,10 @@
      <None Include="assets\Resources\Texts\Logs\SJC_0405180211_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_46744619.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_0405180210_-261097059.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_110518_1672959700.txt" />
      <None Include="assets\Tiled2Unity\Tiled2Unity.export.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_0405180202_731674064.txt" />
+     <None Include="assets\Resources\Materials\StandardSprite.shader" />
      <None Include="assets\Resources\Texts\make a folder for links.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_460213585.txt" />
      <None Include="assets\Resources\Texts\SpellsJson - Copia (2).txt" />
@@ -182,6 +185,7 @@
      <None Include="assets\Resources\Texts\Bright Lights Big City.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Light.txt" />
      <None Include="assets\FreePixelEffect\Additive.shader" />
+     <None Include="assets\Resources\Texts\Logs\SJC_100518_1549799080.txt" />
      <None Include="assets\Resources\Texts\MonsterJsonCopy.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_0405180202_-261097059.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-2031016985.txt" />
@@ -189,8 +193,8 @@
      <None Include="assets\Resources\Texts\Logs\MJC_090518_1672959700.txt" />
      <None Include="assets\Resources\Texts\MapOutput.txt" />
      <None Include="assets\Resources\Texts\Roses at Summer&apos;s End.txt" />
-     <None Include="assets\ColourSpectrum.shader" />
-     <None Include="assets\HSVDefault.shader" />
+     <None Include="assets\Resources\Materials\ColourSpectrum.shader" />
+     <None Include="assets\Resources\Materials\HSVDefault.shader" />
      <None Include="assets\Resources\Texts\Through the Small Bridge.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1672959700.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy.tiled2unity.xml" />
@@ -202,8 +206,9 @@
      <None Include="assets\Tiled2Unity\Imported\desert2.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1675493644.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy2.tiled2unity.xml" />
-     <None Include="assets\Resources\VertexLit with Z.shader" />
+     <None Include="assets\Resources\Materials\VertexLit with Z.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1587097823.txt" />
+     <None Include="assets\Resources\Materials\Sprites-Diffuses.shader" />
      <None Include="assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="assets\Resources\Texts\Size of the Moon.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_040518_-261097059.txt" />
@@ -217,7 +222,7 @@
      <None Include="assets\Resources\Texts\Plaything.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_888523989.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_080518_1672959700.txt" />
-     <None Include="assets\Resources\Sprites-ColorSwap.shader" />
+     <None Include="assets\Resources\Materials\Sprites-ColorSwap.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_940275657.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-21347921.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowp.tiled2unity.xml" />
@@ -225,13 +230,17 @@
      <None Include="assets\Resources\Texts\Logs\SJC_070518_731674064.txt" />
      <None Include="assets\Resources\Texts\Output.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-322522001.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_120518_1549799080.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_110518_1549799080.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
      <None Include="assets\Tiled2Unity\Imported\snowy4.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
+     <None Include="assets\Resources\Materials\Sprites-Simple.shader" />
      <None Include="assets\ProjectSettings\ProjectVersion.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaDepthColorKey.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1614867765.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaDepthColorKey-Instanced.shader" />
+     <None Include="assets\Resources\Texts\Logs\MJC_120518_1672959700.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Lightness.txt" />
      <None Include="assets\Tiled2Unity\License.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1721623659.txt" />
@@ -245,6 +254,7 @@
      <None Include="assets\Resources\Plaything.txt" />
      <None Include="assets\Resources\Texts\Output2.txt" />
      <None Include="assets\Resources\Texts\InfluenceMap.txt" />
+     <None Include="assets\Resources\Materials\Simple Diffuse.shader" />
      <None Include="assets\Particle Attractor by Moonflower Carnivore\Particle Attractor documentation.txt" />
      <None Include="assets\Resources\Texts\Logh.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1190322355.txt" />

@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4415768789831096}
   - component: {fileID: 114676391569110496}
   m_Layer: 0
-  m_Name: Cell Spr
+  m_Name: Cell Spr v1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

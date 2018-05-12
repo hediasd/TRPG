@@ -21,6 +21,21 @@ public class PiecesMaster : MonoBehaviour {
 		MonsterSpriteAnimation.timer += Time.deltaTime;
 	}
 
+	public void Cleanup(){
+
+		foreach (Transform child in effPieces.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+		foreach (Transform child in monPieces.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+		foreach (Transform child in txtPieces.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+		MonPiecesList.Clear();
+
+	}
+
 	public static GameObject MonsterGameObject(Monster mon){
 		return MonPiecesList[mon.ID];
 	}

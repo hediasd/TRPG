@@ -20,6 +20,14 @@ public class CanvasMaster : MonoBehaviour {
 
 	}
 
+	public void Cleanup(){
+
+		foreach (Transform child in this.transform) {
+			GameObject.Destroy(child.gameObject);
+		}
+
+	}
+
 	public void Updater(){
 		switch (stackTop.selecter)
 		{
