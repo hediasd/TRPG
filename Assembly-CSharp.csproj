@@ -197,6 +197,7 @@
      <None Include="assets\Resources\Texts\MapOutput.txt" />
      <None Include="assets\Resources\Texts\Roses at Summer&apos;s End.txt" />
      <None Include="assets\Resources\Materials\ColourSpectrum.shader" />
+     <None Include="assets\Resources\Texts\Logs\SJC_170518_1549799080.txt" />
      <None Include="assets\Resources\Materials\HSVDefault.shader" />
      <None Include="assets\Resources\Texts\Through the Small Bridge.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1672959700.txt" />
@@ -233,6 +234,7 @@
      <None Include="assets\Tiled2Unity\Imported\snowp.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\SpellsJson.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_070518_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_170518_-672658293.txt" />
      <None Include="assets\Resources\Texts\Output.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-322522001.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_120518_1549799080.txt" />
