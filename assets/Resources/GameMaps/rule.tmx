@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="16" height="12" tilewidth="16" tileheight="16" nextobjectid="12">
+ <tileset firstgid="1" name="in the skies of love" tilewidth="16" tileheight="16" tilecount="108">
+  <image source="in the skies of love.png" width="144" height="192"/>
+ </tileset>
+ <tileset firstgid="109" name="pandora and the eagle" tilewidth="16" tileheight="16" tilecount="91">
+  <image source="pandora and the eagle.png" width="112" height="208"/>
+ </tileset>
+ <layer name="regions" width="16" height="12">
+  <data encoding="base64" compression="zlib">
+   eJwLYICAABw0rQEue+ll/ygY2QAAxVoCgQ==
+  </data>
+ </layer>
+ <layer name="input_Terrain" width="16" height="12" visible="0">
+  <data encoding="base64" compression="zlib">
+   eJxTZYAAdyhdB6XrGUbBKBj+AAAoPAFq
+  </data>
+ </layer>
+ <layer name="output_Blocks" width="16" height="12" opacity="0.63">
+  <data encoding="base64" compression="zlib">
+   eJxjYIAAdyhdh0aPglEwnAEAtkUBRA==
+  </data>
+ </layer>
+</map>

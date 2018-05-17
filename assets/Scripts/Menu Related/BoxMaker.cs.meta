@@ -1,0 +1,29 @@
+fileFormatVersion: 2
+guid: b92cfd65c0d2cb346b22db308ab94b15
+timeCreated: 1498931810
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - corner: {fileID: 185650, guid: b10159503cf607c4ab587fc07d8d7903, type: 2}
+  - line: {instanceID: 0}
+  - filling: {fileID: 190638, guid: a7efa11146de26f40974a91b09a2e035, type: 2}
+  - textContent: {instanceID: 0}
+  - textContent2: {instanceID: 0}
+  - arrowBase: {instanceID: 0}
+  - topLeft: {instanceID: 0}
+  - topRight: {instanceID: 0}
+  - bottomLeft: {instanceID: 0}
+  - bottomRight: {instanceID: 0}
+  - left: {instanceID: 0}
+  - right: {instanceID: 0}
+  - up: {instanceID: 0}
+  - down: {instanceID: 0}
+  - fill: {instanceID: 0}
+  - text: {instanceID: 0}
+  - arrow: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

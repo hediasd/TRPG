@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" orientation="orthogonal" renderorder="left-up" width="60" height="60" tilewidth="16" tileheight="16" backgroundcolor="#000000" nextobjectid="14">
+ <tileset firstgid="1" name="town" tilewidth="16" tileheight="16" tilecount="80">
+  <image source="yuwipi.png" width="160" height="128"/>
+ </tileset>
+ <layer name="Tile Layer 1" width="60" height="60">
+  <data encoding="base64" compression="zlib">
+   eJztmHlTE0EQxVs5E0WRrKIlyCUCCoV4FR5IwKvE7/99nK70q7z0zmyySw5C7R+vNrvZ2cxvXx8zaYlIq1atWrVq1apV65Yoo2M2gd+fFGvRtdsg72smedZpY/bzTfF45pgmzVLGPxwv7NgckHFauGOMn4N+2HmbvmN/N0tq0pye+cIY23Zs2GfIe1eW96Z5njk+Zf5nR3h9W3gz4ooJ3l8nnifN6+utMp1Kb1y3ibnpxk4bb4qZWZnZrzOmhbeoz/r+g8+vgtbdvdPAy/N9HPQkodWgXdLzoJOg/SnjZeYN6cTqedCnoDnT+6CtoDXpePrCeH08s45Nd4Jm6PymrEEy4p1zOjNejeE96XjqeZn5mI4xXuaeFCv763mvjPetdGL4HfGmcmA1wgtW/s1xM8b8jTEr764TxiD+P5gQ/y3ije0ZJyX8/kHQa9IO8R5JpwddSu86Y4PuAS/in3knyRdj9fmEz5gvOF/aUdch68Z7Zbzfgz7accuegfGodanfGzfzhfTORc9PpDcesa5SdtSuI/J3W7qx8UY6eyqMR+6De8XG92NO5UHZd+X3t9Blwl+tUQ3yRXkXJF+T8BzEAL+vzFhPbGzLnruXmGOsFuq7XL2Gr/4In8GG+cJbP6Yp+Z6j72Lf7sd3uHZi4+Bxk9j9szVXtA5qPeRcOTDmQT32cRF7j3ge857aUef+yOZ66e5BnmduPGJi3/wEa8OOfu8B3rb01kJf/8v6q6yaa5tOeIc637tD1FLQl6CvQd8i56jlqdrv639ZjzeM70HQ06Bn9lmvHZXgvd/nnPUz6FfQ78g5965ULUQ9rJK34I1pNsGL+oV6pmz3iJHP9V7Nz8UB3x3XvSXp5sOiXeM+UqVWFflbxNuUbm0u8hd+rQzIm3oH2s9Qxy8q8EJF/h5Kd8877DwuYotdY06s78p6289frJFQZ4fFFMvtJRPnCvc61O+yrF6ow95b1G2/V0W/4d6DOWnMal/dszlrDKKPI/Z9bmsd8n0QPmp8YX+2LfleWcXfTPL7BNQ/z5rq0+At2huuST7Xdcy8dNYT59Ldd8JHzjWsO7j3Xmf9zet3v6aHsDdQtaXzXzR61ox9xt5hzu45l+5/BT4ndMxfye87kav6ew+lN+7Qe6uypv6jiIl5Mb954p2V/L4ZDMzL/sZ4kaOxuCvbe/txD8LL81sm3kPJ1wGOv1j+LrtncqzG9kPD3EMWsabyfId49X1obecYRPw1Ev7G1k3Yt8RqzTBieFB/Y4JvM4n3wfEXy9+GjMa7QeK4jNcsv8ctus/z+ppedW87yjxO+duKzN/3LeVcJ17NAc1x3feglo/a01R8V/FX5//HaVN691oLxKvXz6S71xsF77C8jfmbWo/PEW+DeLmH8XpjlHyp74bp7yHxZlJcn8flaxVe729RjY7Vq3HF7iDcZXtTv/dyU1W1F08LX61atWrVqjUK/QeyqCzQ
+  </data>
+ </layer>
+ <objectgroup name="Object Layer 1">
+  <object id="1" x="626.333" y="541.667"/>
+  <object id="2" x="654.333" y="536"/>
+  <object id="3" x="629" y="511.667"/>
+  <object id="4" x="589" y="518"/>
+  <object id="5" x="599.667" y="559.333"/>
+  <object id="6" x="560.333" y="543.667"/>
+  <object id="7" x="548" y="500.667"/>
+  <object id="8" x="514" y="536"/>
+  <object id="9" x="554.333" y="578.333"/>
+  <object id="10" x="525" y="578"/>
+  <object id="11" x="583.667" y="596.333"/>
+  <object id="12" x="637.667" y="584.333"/>
+  <object id="13" x="654.333" y="556.333"/>
+ </objectgroup>
+</map>

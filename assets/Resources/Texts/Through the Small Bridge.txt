@@ -1,0 +1,115 @@
+Consolas Breathstealer's Crypt 
+-r -g `$(File):$(Line)`
+
+
+//
+	Ghooper
+	--- Ten Proficiencies ---
+	Providence
+	
+Mystic Pond - Miracle at Dawn
+Through the Outskirts of Love - Hard Black Road
+	
+I Stand Enobled
+All shall be one with me
+All There is to It
+In the Hall of the Mountain King
+My Way is Truly That of Heaven - Touhou 14.3
+She Sleeps Most of the Time
+Forty Days and Forty Nights
+Disco All Around You
+Gatekeeping
+Skee
+
+- ACTIVES -
+
+Theodicy (DARK/LIGHT)
+Shock of Reality
+Shower of Myriads
+Magnetized Earth
+Life in the Countryside
+Electro Shocker
+Mega Electro Shocker
+
+- PASSIVES -
+
+Eternity - fire passive, constant heals and revive
+Secret Night - all darkness-users gain bonus turn
+Early Spring -
+River Mist -
+Blizzard Blitz -
+Soteriology - study of salvation
+God Tree -
+Top of the Morning -
+Gateway to Glimmer - AoE immunity
+
+- REGULAR SPELLS -
+
+Nowhere to be Found (You're)
+Hall of Flame
+Inside your Heaven
+Miracle Loader
+Funeral Mist
+Light That Burns the Sky
+Out of Turn 
+Region Locked
+Tropic Thermae - EARTH/FIRE/WOOD Counters all AOEs
+Heaven Promised
+Palace Prelude
+Resistant World
+Shooting Schedule
+The Last of the Age of the Understatement
+Welcome, My Lord
+Wide Disgrace
+
+
+
+Against All Odds
+Arc High Voltage
+At the Highest Level Possible
+Back Storm
+Before It Kicks
+Blackout Tendencies
+Blazing Veins
+Casebook of Luck
+Cheating Back At You
+Collapsing Ceilling
+Conclave Chorus - heals allies, deals 3x3 damage on healed
+Constant Blessing / Constantly Blessed
+Cooling Towers
+Cronyism -  practice of partiality in awarding advantages to friends
+Crown of Twelve Stars
+Cutting Edge (STEEL/WATER)
+Day Out of Days
+Eight of Bolts (A bolt in every of eight directions)
+End of Time - Turn skip
+Epitome of Power
+Falling Catacombs (DARK/EARTH)
+Fast Recovery
+Fastest Recovery
+Fitful Nightmares
+Flown Up
+Fog Harvesting
+Fog Gathering
+Heat Dragon
+Honored Pillars Festival
+Holy War
+Honeypot
+Legal Plunder - steal
+No Desire
+Our Most Loved Star
+Peach Tree Legend
+Portal of Schlagl -
+Salt Marshes
+Sky of Perception
+Slush Fund - ?
+Speech on Spilled Wine
+Spring Cleaning
+Spring Swaps Snow for Leaves
+Street Fight - 1 range, high crit
+Sylph Storm
+The Tender Land
+Windscale Pileup
+Winter Evenings by the Fire
+Worms Armageddon
+

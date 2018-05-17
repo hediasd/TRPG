@@ -1,0 +1,22 @@
+I climb to the top of a no-tree hill
+Stare hard as I can at the sun
+I say why did you have to rise today?
+And what did she mean to you anyway?
+
+//
+
+= SingleBoom1 (Bomb, 250_250_250, 150_190_150)
+> SimpleSingle
+> Bomb, Bullet
+
+= SingleSonic1 (Sonic, 250_250_250, 150_190_150)
+> SimpleSingle
+> Bomb, Bullet
+
+= SingleElectric1 (Sonic, 250_250_250, 150_190_150)
+> SimpleSingle
+> Bomb, Bullet
+
+= SingleElectric2 (Bomb3, 250_200_250, 120_60_120)
+> SimpleSingle
+> Bomb, Loop_2, SpawnInterval_1

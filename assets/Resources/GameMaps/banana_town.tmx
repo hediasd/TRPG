@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="left-up" width="60" height="60" tilewidth="16" tileheight="16" nextobjectid="1">
+ <tileset firstgid="1" name="bananas around" tilewidth="16" tileheight="16" tilecount="77" columns="7">
+  <image source="bananas around.png" width="112" height="176"/>
+ </tileset>
+ <layer name="Camada de Tiles 1" width="60" height="60" offsetx="-23.5" offsety="-6.5">
+  <data encoding="base64" compression="zlib">
+   eJztmNlSwjAUhoOgIwIuiBfFdfRC4RJxARmpcoHr+7+OJzMn4/GQplBK2uK5+CahS5KPP00KgVIqEARBEARBEARBWAElJI020mjLh6uLNNpI2nYWvq5xLuNaJN+0EN/1dhZfcRZfcU7Td5ehjz06WEffO+DewkNBMnaNw+bbd9AkFM03BN4YYYxv0jUhy0wNe8A+4wB4Ap6BESvHOfNdpB997hQ4Y5wDrw6S+PrMshuBaz5/AJ9YTtjnrLON6+sauGH0yfkv4BvR9eOY9i6w33n3KN/PadS6o/ecEzW7PhuuHO6B+t2z4vYoH7629wTue2lxbOH9R8Q5KmPaVtbrFH9f0BmMCOOITHWebeY8z7zJ2tc2f+n5NvGxvW8Y5w2Hh9mzxhn4cmfXexG9rhORsT6nn+3DGBffa3OUr/7u+fw111FnOnep+wTLrsqnq82F13vALaNHnM0c76Cvdm2pfPtSZ14fAFNgSBhEjHN7SU+fvsbzgtSNL3Wd4rEmyVhTB6pArSCuxrOEdQP3fcdjAfo2MFdDFcudhO6+XEukpITACyPEa+vEsULu2QS2Enr78NX98HWpx8ZvcqtgrnVyrBwxduqdp4x1H3zehurv3mPGXUPXBvqWWbZFWK9svkNHVqvy9OXctPjS+UzXYZ+s0jlUs7/fef++vVed8SL/HfLnoYjOxnuZvovmaxtzGm3k2TdIsb88Oflk3f0EQRAE4T/yA4LbIUE=
+  </data>
+ </layer>
+</map>

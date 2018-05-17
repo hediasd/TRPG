@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="left-up" width="10" height="10" tilewidth="16" tileheight="16" nextobjectid="1">
+ <properties>
+  <property name="unity:scale" type="float" value="0.0625"/>
+ </properties>
+ <tileset firstgid="1" name="snowy day" tilewidth="16" tileheight="16" tilecount="91" columns="7">
+  <image source="../../Tiled2Unity/Textures/snowy day.png" width="112" height="208"/>
+ </tileset>
+ <layer name="Terrain" width="10" height="10">
+  <data encoding="csv">
+21,18,18,18,18,18,18,21,21,21,
+18,18,47,48,20,20,20,20,20,21,
+18,47,39,39,48,2,2,2,20,20,
+18,54,39,39,55,2,2,2,2,20,
+18,21,2,39,39,39,48,2,2,20,
+21,21,1,54,39,39,39,48,2,20,
+21,21,2,2,2,54,39,39,2,20,
+21,21,21,2,2,2,54,39,48,1,
+21,21,21,21,21,1,2,54,39,48,
+21,21,21,21,21,21,21,21,54,55
+</data>
+ </layer>
+ <layer name="Blocks" width="10" height="10" visible="0">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0
+</data>
+ </layer>
+</map>

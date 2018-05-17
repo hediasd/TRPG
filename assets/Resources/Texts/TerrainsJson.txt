@@ -1,0 +1,16 @@
+{
+    "Items": [
+        {
+            "Name": "Lava",
+            "Texture": "Lava",
+            "PaletteA": "220, 30, 0",
+            "PaletteB": "160, 0, 0"
+        },
+        {
+            "Name": "",
+            "Texture": "",
+            "PaletteA": "",
+            "PaletteB": ""
+        }
+    ]
+}

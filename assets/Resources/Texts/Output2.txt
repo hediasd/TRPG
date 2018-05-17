@@ -1,0 +1,402 @@
+{
+    "Items": [
+        {
+            "name": "Evil Claw",
+            "description": "",
+            "cooldown": 4,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                1
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Boom",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 1,
+            "Elements": [
+                1
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 2,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "The Flat Earth",
+            "description": "",
+            "cooldown": 6,
+            "level": 10,
+            "radius": 3,
+            "Elements": [
+                2
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 0,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 0
+        },
+        {
+            "name": "Fire Wall",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                3
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Forever Zero",
+            "description": "",
+            "cooldown": 20,
+            "level": 10,
+            "radius": 0,
+            "Elements": [
+                4
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 4,
+            "castshape": 113,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Zap",
+            "description": "",
+            "cooldown": 4,
+            "level": 1,
+            "radius": 1,
+            "Elements": [
+                7
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 3,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Hey",
+            "description": "",
+            "cooldown": 1,
+            "level": 2,
+            "radius": 0,
+            "Elements": [
+                1,
+                2
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Lavalanche",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                2,
+                3
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Golden Wall",
+            "description": "",
+            "cooldown": 1,
+            "level": 3,
+            "radius": 3,
+            "Elements": [
+                2,
+                5
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 0,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Mythic Age",
+            "description": "",
+            "cooldown": 1,
+            "level": 3,
+            "radius": 3,
+            "Elements": [
+                2,
+                5
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 0,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Great Days",
+            "description": "",
+            "cooldown": 1,
+            "level": 3,
+            "radius": 3,
+            "Elements": [
+                2,
+                5
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 0,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Eschatology",
+            "description": "",
+            "cooldown": 1,
+            "level": 10,
+            "radius": 0,
+            "Elements": [
+                3,
+                5
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n> Level_2, MaxCastRange_2, Radius_0, All",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                3,
+                5
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                6,
+                7
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                6,
+                8
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                6,
+                9
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                2,
+                3,
+                9
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                2,
+                6,
+                7
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                4,
+                6,
+                10
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "description": "",
+            "cooldown": 1,
+            "level": 1,
+            "radius": 0,
+            "Elements": [
+                5,
+                8,
+                10
+            ],
+            "Damages": [],
+            "los": false,
+            "boostableRange": false,
+            "linear": false,
+            "mincastrange": 1,
+            "maxcastrange": 1,
+            "castshape": 112,
+            "effectshape": 112,
+            "targeter": 102
+        }
+    ]
+}

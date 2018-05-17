@@ -1,0 +1,380 @@
+Name [ELEMENTS] (IMG)
+Stats: HP, LVL, POW, MGT, END, RES, SPD, LUK, MOV
+Resistances:
+Spells:
+Passives:
+Drops:
+
+Need: Scarabs
+
+//
+
+= Arch Devil [DARKNESS, THUNDER] ( )
+>
+>
+
+= Asmodeus [BOSS, DARKNESS] (Nogg)
+> 120, 12, 100, 150, 200, 50, 75, 100, 3
+> 0, 0
+> Fire Circle, Fire Wall, Evil Claw
+> Demon Aura
+> Bone
+
+= Baron of Hell [DARKNESS, FIRE] (DV_07)
+> 550, 0
+> 0, 0
+>
+>
+
+= Beast of Revelation [DARKNESS, EARTH](DV_10)
+> 50, 0, 20
+> 0, 0, 0
+> Zap
+> Dang
+
+= Betrayed Knight [FIRE](DV_09, 250_250_250, 150_150_150)
+> 30, 0
+> 0, 0
+> Evil Claw
+> Bet
+
+= Blood Priest [FIRE, LIGHT](CH_04, 248_216_144, 240_60_15)
+> 220, 0, 2
+> 0, 0, 0
+> Zap
+> Bloid
+
+= Blood Templar [FIRE, STEEL] (DV_08, 250_250_250, 250_50_10)
+> 110, 0
+> 0, 0
+> Idk
+> Lol
+> D
+
+= Bosk Mage [WOOD] (PL_02, 154_22_91, 228_207_186)
+> 120, 12, 100, 150, 200, 50, 75, 100, 3
+> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+> Evil Claw
+> B
+> C
+
+= Callalily [WATER, WOOD] (PL_01, 250_250_250, 165_70_165)
+> 120, 12, 100, 150, 200, 50, 75, 100, 3
+> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+> Zap
+> B
+> C
+
+= Catoblepas [DARKNESS, WOOD] (	)
+> Carry On, Hunger of the Pine, Beartrap
+> Poisonous Skin, No Desire
+>
+>
+>
+
+= Clay Golem [EARTH, LIGHT] (	)
+>
+> Clay Blood
+>
+>
+>
+
+= Cloud Giant [WATER, WIND] (	)
+>
+>
+>
+>
+>
+
+= Cosmo Queen [BOSS] [DARKNESS, FIRE, WATER] (	)
+> Chaos Meteor, Soul Gemini
+>
+>
+>
+>
+
+= Deity of Thirst [DARKNESS, WATER] (DV_11, 250_250_250, 130_80_10)
+> 120, 12, 100, 150, 200, 50, 75, 100, 3
+> 0, 0, 0, 0, 0, 0, 0, 0, 0, 0
+> A, Aa
+> B
+> C
+
+= Dishonored Knight []()
+>
+>
+>
+>
+
+= Dullahan [DARKNESS, STEEL, THUNDER] (	)
+> Killing Fog, Broken World
+>
+>
+>
+
+= Gaia Titan [EARTH, WATER, WOOD] (	)
+> Hugs Tonight, Canopy Cover
+> Photosynthesis
+>
+>
+
+= Galaxy Eater [DARKNESS, FIRE, WATER] (	)
+> 
+>
+>
+>
+
+= Geb [BOSS] [EARTH] (	)
+>
+>
+>
+>
+
+= Geogeddon [BOSS] [DARKNESS, EARTH, FIRE] (	)
+> Moltenore, 
+>
+>
+>
+
+= Glacier Apparition [BOSS] [ICE] (	)
+> White Screen, 
+> Cold Feet
+>
+>
+
+= Hanged Man [DARKNESS, EARTH] (	)
+>
+>
+>
+>
+
+= He Who Hungers [BOSS] [DARKNESS, STEEL] (	)
+>
+>
+>
+>
+
+= Hell Knight [EARTH, FIRE] (	)
+>
+>
+>
+>
+
+= Hopeless Knight []()
+>
+>
+>
+>
+
+= Icecube Golem [ICE] (	)
+>
+>
+>
+>
+
+= Land Devourer [EARTH, FIRE]	(	)
+> Drill Into Hell, Inner Core
+> Land of Thirst
+>
+>
+
+= Lagios [EARTH, WATER] (	)
+>
+>
+>
+>
+
+= Lady of the Moon [BOSS] [EARTH, LIGHT, WIND] (	)
+> Fly Me to the Moon, Spring on Jupiter
+> Crucifixion Speech
+>
+>
+
+= Living Nightmare [DARKNESS, LIGHT] (	)
+>
+>
+>
+>
+
+= Lord Mu [DARKNESS, EARTH, WIND] (	)
+>
+>
+>
+>
+
+= Lost Symphony [BOSS] [THUNDER] (	)
+>
+>
+>
+>
+
+= Magnetropos [EARTH, STEEL, THUNDER] (	)
+>
+>
+>
+>
+
+= Maestro of Thunder [BOSS] [THUNDER] (	)
+>
+>
+>
+>
+
+= Megawolf [BOSS] [EARTH, ICE, STEEL]()
+>
+>
+>
+>
+
+= Mechanic [BOSS] [STEEL] (	)
+> Workshop, Wrench
+>
+>
+>
+
+= Meteor Dragon [BOSS] [EARTH, FIRE, STEEL] (	)
+>
+>
+>
+>
+
+= Mechagodsaur [BOSS] [FIRE, STEEL, THUNDER] (	)
+> Disaster Dynamo, 
+>
+>
+>
+
+= Minacchi, the Fevered Dream [BOSS] [DARKNESS, FIRE] (	)
+>
+>
+>
+>
+
+= Mistress of Winter [BOSS] [ICE] (	)
+> Ice of Spades, 
+> Master Swordsmanship
+>
+>
+
+= Monarchomach [STEEL] (	)
+>
+>
+> Shooting to Kill
+>
+
+= Mother Brain [DARKNESS, WATER] (	)
+>
+>
+>
+>
+
+= Murder Bear [LIGHT](	)
+>
+> Killing Spree
+>
+>
+
+= Ofulgur [LIGHT](	)
+>
+>
+>
+>
+
+= Oolong [EARTH, WATER, WOOD] (	)
+> Brewing, Drifting Clouds and Flowing Water, End of Ceremony
+> Oxidizing
+>
+>
+
+= Palladium Oracle [LIGHT, WATER] (	)
+> Dawn of the Herald, Horus Eyes' Monsoon
+> Ikd
+>
+>
+
+= Party Devil [DARKNESS, FIRE, THUNDER] (	)
+>
+>
+>
+>
+
+= Red Giant [FIRE, THUNDER] (	)
+>
+>
+>
+>
+
+= Sand King [BOSS] [EARTH] (	)
+>
+>
+>
+>
+
+= Sobek [DARKNESS, EARTH, LIGHT] (	)
+> Sobel
+>
+>
+>
+
+= Stonemaiden [EARTH, THUNDER] (	)
+>
+>
+>
+>
+
+= Tecmo [DARKNESS] (	)
+> Tecmo's Deception
+>
+>
+>
+
+= Tetrarch [EARTH, THUNDER, WIND] (	)
+> Banishment from the Hall of the Ancients
+>
+>
+>
+
+= The Empress [BOSS] [LIGHT, WOOD] (	)
+> Wet Dreams, Tinfoil Hat, Tea Party, Long Arms
+> Skee
+> 
+>
+
+= Tirragus [EARTH, WOOD] (	)
+>
+>
+>
+>
+
+
+= Tiger Man [EARTH, FIRE] (	)
+>
+>
+>
+>
+
+
+= Thunder Armor [EARTH, FIRE] (	)
+>
+>
+>
+>
+
+= Vinlandsaga [ICE, FIRE, LIGHT] (	)
+>
+>
+>
+>
+
+= Wicked God Goyoo [BOSS] [DARKNESS, FIRE, WIND] (	)
+>
+>
+>
+>
+
+
+= White Knight Hayato [BOSS] [LIGHT, WIND, STEEL] (	)
+> Legend of Heart, Broken World
+>
+>
+>

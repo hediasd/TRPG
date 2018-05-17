@@ -1,0 +1,829 @@
+:Darkness:
+= "Evil Claw" - Darkness clawww
+> Level_1, MaxCastRange_1, Radius_0, Cooldown_4, Animation_SingleSonic1
+> Damage_Darkness_10, Unhealable
+
+= "Boom" - Bombobmbomb
+> Level_1, MaxCastRange_2, Radius_1
+> Damage_Darkness_10
+
+:Earth:
+= "Hours at a Time" - Enemies cant consecutively
+> Level_9, MaxCastRange_0, Radius_0, Cooldown_7, None
+> TurnsIntercalation_5
+
+= "The Flat Earth" - Land remove, earth mana
+> Level_10, MaxCastRange_0, Radius_3, Cooldown_6, None
+> TerrainRemoval_777
+
+:Fire:
+= "Fire Wall" - a
+> Level_1
+> Damage_Fire_10
+
+:Ice:
+= "Forever Zero"
+> Level_10, MaxCastRange_4, CastShape_Linear, Radius_0, Cooldown_20, Enemies
+> Damage_Ice_50, Poison_Ice_20
+
+:Light:
+= " " -
+>
+>
+
+:Steel:
+= " " -
+>
+>
+
+:Thunder:
+= "Blitzkrieg"
+> Level_3, MaxCastRange_0, Radius_2, Allies
+> Speed+_250_2
+
+= "Zap" - Zip zap
+> Level_1, MaxCastRange_3, Radius_1, Cooldown_4, Animation_SingleElectric1
+> Damage_Thunder_10, Unhealable
+
+:Water:
+= " " -
+>
+>
+
+:Wind:
+= " " -
+>
+>
+
+:Wood:
+= " " -
+>
+>
+
+:Darkness+Earth:
+= "Hey" - hi
+> Level_2
+> Damage_Darkness_222
+
+= "Crevice of Doom"
+> Level_3, MaxCastRange_1, CastShape_Linear, Radius_2, EffectShape_Cone, Enemies
+> Damage_Darkness_25, Curse_35_4
+
+:Darkness+Fire:
+= " " -
+>
+>
+
+:Darkness+Ice:
+= " " -
+>
+>
+
+:Darkness+Light:
+= " " -
+>
+>
+
+= "Shallow Grave"
+> Level_4, MaxCastRange_3, Radius_0, Allies
+> DeathPrevention_1
+
+:Darkness+Steel:
+= " " -
+>
+>
+
+:Darkness+Thunder:
+= " " -
+>
+>
+
+:Darkness+Water:
+= " " -
+>
+>
+
+= "Siren Blood Curse" - Lv5 Epic Attack - Huge AoE damage, 100% bleed
+> Level_10, MaxCastRange_6, Radius_4, Enemies
+> SimpleBleeding_100_5
+
+:Darkness+Wind:
+= " " -
+>
+>
+
+:Darkness+Wood:
+= " " -
+>
+>
+
+:Earth+Fire:
+= "Lavalanche" - F i r e
+>
+> Poison_Fire_75_6
+
+:Earth+Ice:
+= " " -
+>
+>
+
+:Earth+Light:
+= "Golden Wall" - Status - Full party individual Magic Shield (25% of each max hp)
+> Level_3, MaxCastRange_0, Radius_3, Allies
+>
+
+= "Mythic Age" - Status - party regen
+> Level_3, MaxCastRange_0, Radius_3, Allies
+>
+
+= "Great Days" - Status - luck bonus
+> Level_3, MaxCastRange_0, Radius_3, Allies
+>
+
+:Earth+Steel:
+= " " -
+>
+>
+
+:Earth+Thunder:
+= " " -
+>
+>
+
+:Earth+Water:
+= " " -
+>
+>
+
+:Earth+Wind:
+= " " -
+>
+>
+
+= "Air Stagnation"
+> Level_2, MaxCastRange_5, Radius_2, Enemies
+> Damage_Wind_5, PoisonsLinger_3
+
+:Earth+Wood:
+= " " -
+>
+>
+
+:Fire+Ice:
+= " " -
+>
+>
+
+:Fire+Light:
+= " " -
+>
+>
+
+= "Eschatology"
+> Level_10
+
+= "Purifying Flames"
+> Level_2, MaxCastRange_2, Radius_0, All
+> Damage_Fire_5, Damage_Fire_5, MediumPurge
+
+
+:Fire+Steel:
+= " " -
+>
+>
+
+= "Adrenaline Vault" - Status - +100% speed upon attacks
+> Level_3, MaxCastRange_0, Radius_0, Allies
+> AttackTriggered_Speed*_2
+
+= "Too Hot to Handle" - Status - Causes disarm if target Fire level is 5 or lower
+> Level_3, MaxCastRange_3, Radius_0, Enemies
+> Disarm
+
+:Fire+Thunder:
+= " " -
+>
+>
+
+:Fire+Water:
+= " " -
+>
+>
+
+:Fire+Wind:
+= " " -
+>
+>
+
+:Fire+Wood:
+= " " -
+>
+>
+
+:Ice+Light:
+= " " -
+>
+>
+
+= "Luminaire" - +50% dark/steel damage reduction this round
+> Level_3, MaxCastRange_0, Radius_2, All
+> Resistance+%_Darkness_50, Resistance+%_Darkness_50
+
+
+:Ice+Steel:
+= " " -
+>
+>
+
+:Ice+Thunder:
+= " " -
+>
+>
+
+:Ice+Water:
+>
+>
+
+:Ice+Wind:
+>
+>
+
+:Ice+Wood:
+>
+>
+
+:Light+Steel:
+>
+>
+
+:Light+Thunder:
+>
+>
+
+:Light+Water:
+>
+>
+
+:Light+Wind:
+>
+>
+
+:Light+Wood:
+>
+>
+
+= "Carpet of Flowers" - Status - Removes terrain, party regen
+> Level_2, MaxCastRange_2, Radius_3, EffectSquare, Allies
+> TerrainRemoval_Medium_0, FlowerTerrain
+
+:Steel+Thunder:
+>
+>
+
+= "Limiter Removal" - Doubles next turn damage 
+> Level_10, MaxCastRange_0, Radius_0, Allies
+> DoubleDamage_2, DamageDealtRebound_2
+
+= "Limitless Bridge" - Damage, increases next turn damage
+> Level_9, MaxCastRange_2, Radius_0, Linear, Enemies
+> Damage+_180_1
+
+:Steel+Water:
+>
+>
+
+= "Area Denial"
+> Level_4, MaxCastRange_0, Radius_2, EffectSquare, Allies
+> TerrainRemoval_Medium_3, DenialTerrain
+
+:Steel+Wind:
+>
+>
+
+= "Borderline of Phantasm"
+> Passive
+> AttackedTriggered_Evasion+_10
+
+
+:Steel+Wood:
+>
+>
+
+:Thunder+Water:
+>
+>
+
+:Thunder+Wind:
+>
+>
+
+:Thunder+Wood:
+>
+>
+
+:Water+Wind:
+>
+>
+
+:Water+Wood:
+>
+>
+
+:Wind+Wood:
+>
+>
+
+:Darkness+Earth+Fire:
+>
+>
+
+:Darkness+Earth+Ice:
+>
+>
+
+:Darkness+Earth+Light:
+>
+>
+
+:Darkness+Earth+Steel:
+>
+>
+
+:Darkness+Earth+Thunder:
+>
+>
+
+:Darkness+Earth+Water:
+>
+>
+
+:Darkness+Earth+Wind:
+>
+>
+
+:Darkness+Earth+Wood:
+>
+>
+
+:Darkness+Fire+Ice:
+>
+>
+
+:Darkness+Fire+Light:
+>
+>
+
+:Darkness+Fire+Steel:
+>
+>
+
+:Darkness+Fire+Thunder:
+>
+>
+
+:Darkness+Fire+Water:
+>
+>
+
+:Darkness+Fire+Wind:
+>
+>
+
+:Darkness+Fire+Wood:
+>
+>
+
+:Darkness+Ice+Light:
+>
+>
+
+:Darkness+Ice+Steel:
+>
+>
+
+:Darkness+Ice+Thunder:
+>
+>
+
+:Darkness+Ice+Water:
+>
+>
+
+:Darkness+Ice+Wind:
+>
+>
+
+:Darkness+Ice+Wood:
+>
+>
+
+:Darkness+Light+Steel:
+>
+>
+
+:Darkness+Light+Thunder:
+>
+>
+
+:Darkness+Light+Water:
+>
+>
+
+:Darkness+Light+Wind:
+>
+>
+
+:Darkness+Light+Wood:
+>
+>
+
+:Darkness+Steel+Thunder:
+>
+>
+
+:Darkness+Steel+Water:
+>
+>
+
+:Darkness+Steel+Wind:
+>
+>
+
+:Darkness+Steel+Wood:
+>
+>
+
+:Darkness+Thunder+Water:
+>
+>
+
+:Darkness+Thunder+Wind:
+>
+>
+
+:Darkness+Thunder+Wood:
+>
+>
+
+:Darkness+Water+Wind:
+>
+>
+
+:Darkness+Water+Wood:
+>
+>
+
+:Darkness+Wind+Wood:
+>
+>
+
+:Earth+Fire+Ice:
+>
+>
+
+:Earth+Fire+Light:
+>
+>
+
+:Earth+Fire+Steel:
+>
+>
+
+:Earth+Fire+Thunder:
+>
+>
+
+:Earth+Fire+Water:
+>
+>
+
+:Earth+Fire+Wind:
+>
+>
+
+= "Earth Wind Sun" - 
+> Level_3, MaxCastRange_3, Radius_0, LoS, Allies
+> Unparriable
+
+
+:Earth+Fire+Wood:
+>
+>
+
+:Earth+Ice+Light:
+>
+>
+
+:Earth+Ice+Steel:
+>
+>
+
+:Earth+Ice+Thunder:
+>
+>
+
+:Earth+Ice+Water:
+>
+>
+
+:Earth+Ice+Wind:
+>
+>
+
+:Earth+Ice+Wood:
+>
+>
+
+:Earth+Light+Steel:
+>
+>
+
+:Earth+Light+Thunder:
+>
+>
+
+:Earth+Light+Water:
+>
+>
+
+:Earth+Light+Wind:
+>
+>
+
+:Earth+Light+Wood:
+>
+>
+
+:Earth+Steel+Thunder:
+>
+>
+
+= "Master of Land= " - Status - Resistance, damage rebound (100% earth, 50% steel thunder, 25% rest)
+> Level_3, MaxCastRange_0, Radius_0, Self
+
+
+:Earth+Steel+Water:
+>
+>
+
+:Earth+Steel+Wind:
+>
+>
+
+:Earth+Steel+Wood:
+>
+>
+
+:Earth+Thunder+Water:
+>
+>
+
+:Earth+Thunder+Wind:
+>
+>
+
+:Earth+Thunder+Wood:
+>
+>
+
+:Earth+Water+Wind:
+>
+>
+
+:Earth+Water+Wood:
+>
+>
+
+:Earth+Wind+Wood:
+>
+>
+
+:Fire+Ice+Light:
+>
+>
+
+:Fire+Ice+Steel:
+>
+>
+
+:Fire+Ice+Thunder:
+>
+>
+
+:Fire+Ice+Water:
+>
+>
+
+:Fire+Ice+Wind:
+>
+>
+
+:Fire+Ice+Wood:
+>
+>
+
+:Fire+Light+Steel:
+>
+>
+
+:Fire+Light+Thunder:
+>
+>
+
+:Fire+Light+Water:
+>
+>
+
+:Fire+Light+Wind:
+>
+>
+
+:Fire+Light+Wood:
+>
+>
+
+:Fire+Steel+Thunder:
+>
+>
+
+:Fire+Steel+Water:
+>
+>
+
+:Fire+Steel+Wind:
+>
+>
+
+:Fire+Steel+Wood:
+>
+>
+
+:Fire+Thunder+Water:
+>
+>
+
+:Fire+Thunder+Wind:
+>
+>
+
+:Fire+Thunder+Wood:
+>
+>
+
+:Fire+Water+Wind:
+>
+>
+
+:Fire+Water+Wood:
+>
+>
+
+:Fire+Wind+Wood:
+>
+>
+
+:Ice+Light+Steel:
+>
+>
+
+:Ice+Light+Thunder:
+>
+>
+
+:Ice+Light+Water:
+>
+>
+
+:Ice+Light+Wind:
+>
+>
+
+:Ice+Light+Wood:
+>
+>
+
+:Ice+Steel+Thunder:
+>
+>
+
+:Ice+Steel+Water:
+>
+>
+
+:Ice+Steel+Wind:
+>
+>
+
+:Ice+Steel+Wood:
+>
+>
+
+= "Palace in the Pure Land= " - Status - High purge all party, status immunity
+> Level_3, MaxCastRange_0, Radius_8, Allies
+
+:Ice+Thunder+Water:
+>
+>
+
+:Ice+Thunder+Wind:
+>
+>
+
+:Ice+Thunder+Wood:
+>
+>
+
+:Ice+Water+Wind:
+>
+>
+
+:Ice+Water+Wood:
+>
+>
+
+:Ice+Wind+Wood:
+>
+>
+
+:Light+Steel+Thunder:
+>
+>
+
+:Light+Steel+Water:
+>
+>
+
+:Light+Steel+Wind:
+>
+>
+
+:Light+Steel+Wood:
+>
+>
+
+:Light+Thunder+Water:
+>
+>
+
+:Light+Thunder+Wind:
+>
+>
+
+:Light+Thunder+Wood:
+>
+>
+
+:Light+Water+Wind:
+>
+>
+
+:Light+Water+Wood:
+>
+>
+
+= "Sanitarium= " - Status - High purge all party, heals all party, +regen
+> Level_3, MaxCastRange_0, Radius_8, Allies
+
+:Light+Wind+Wood:
+>
+>
+
+:Steel+Thunder+Water:
+>
+>
+
+:Steel+Thunder+Wind:
+>
+>
+
+:Steel+Thunder+Wood:
+>
+>
+
+:Steel+Water+Wind:
+>
+>
+
+:Steel+Water+Wood:
+>
+>
+
+:Steel+Wind+Wood:
+>
+>
+
+:Thunder+Water+Wind:
+>
+>
+
+:Thunder+Water+Wood:
+>
+>
+
+:Thunder+Wind+Wood:
+>
+>
+
+:Water+Wind+Wood:
+>
+>

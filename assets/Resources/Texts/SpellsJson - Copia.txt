@@ -1,0 +1,444 @@
+{
+    "Items": [
+        {
+            "name": "Evil Claw",
+            "Description": "",
+            "AnimationName": "SingleSonic1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Boom",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "The Flat Earth",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 0
+        },
+        {
+            "name": "Fire Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Forever Zero",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 113,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Zap",
+            "Description": "",
+            "AnimationName": "SingleElectric1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Hey",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Lavalanche",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "Golden Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Mythic Age",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Great Days",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "name": "Eschatology",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n> Level_2, MaxCastRange_2, Radius_0, All",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "name": "\n>",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        }
+    ]
+}

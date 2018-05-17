@@ -156,6 +156,8 @@
      <None Include="assets\Resources\Texts\Logs\MJC_070518_342601162.txt" />
      <None Include="assets\Tiled2Unity\Imported\banana_town.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Imported\snowers.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\MJC_120518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_120518_985018890.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaDefault.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_100518_1672959700.txt" />
      <None Include="assets\Resources\Sprites-ColorSwap.shader" />
@@ -183,6 +185,7 @@
      <None Include="assets\Tiled2Unity\Imported\cemetery.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\Love in Bright Landscapes.txt" />
      <None Include="assets\Resources\Texts\Bright Lights Big City.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_120518_71363327.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Light.txt" />
      <None Include="assets\FreePixelEffect\Additive.shader" />
      <None Include="assets\Resources\Texts\Logs\SJC_100518_1549799080.txt" />
@@ -200,6 +203,8 @@
      <None Include="assets\Tiled2Unity\Imported\snowy.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1484680319.txt" />
      <None Include="assets\Tiled2Unity\Imported\spooky_village.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\MJC_160518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_160518_1549799080.txt" />
      <None Include="assets\Resources\Texts\MonsterJsonCopy - Copia.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_060518_-261097059.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1680220749.txt" />

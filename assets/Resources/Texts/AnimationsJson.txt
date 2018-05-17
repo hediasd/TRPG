@@ -1,0 +1,84 @@
+{
+    "Items": [
+        {
+            "name": "SingleBoom1",
+            "EffectList": [
+                {
+                    "instanceID": 0
+                }
+            ],
+            "paletteA": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "paletteB": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "name": "SingleSonic1",
+            "EffectList": [
+                {
+                    "instanceID": 0
+                }
+            ],
+            "paletteA": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "paletteB": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "name": "SingleElectric1",
+            "EffectList": [
+                {
+                    "instanceID": 0
+                }
+            ],
+            "paletteA": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "paletteB": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        },
+        {
+            "name": "SingleElectric2",
+            "EffectList": [
+                {
+                    "instanceID": 0
+                }
+            ],
+            "paletteA": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            },
+            "paletteB": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 0.0
+            }
+        }
+    ]
+}

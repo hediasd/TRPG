@@ -1,0 +1,1080 @@
+Consolas
+
+Breathstealer's Crypt 
+
+Wood > Earth
+Water > Fire
+
+Ice >< Fire
+Light >< Darkness
+Wood > Earth
+Earth > Thunder
+Darkness, Fire > Wood
+
+//
+
+:Darkness:
+>
+>
+
+"Aggression"
+"Beam of Mystery"
+"Critical Wound"
+ - Attack - Damage, high crit chance
+"Crypt Tonight"
+"Darkest Hour"
+"Death Pulse"
+"Don't Forget Me"
+ - Passive - One-time self-resurrect, Dead Knight: 25% HP, -25% All stats
+"Endow with Power"
+
+"Evil Feelings"
+ - Status - Weakness
+"Evil Land"
+ - Status - Summons Dark Land land effect. Bonuses increase for every active land effect.
+"False Promise"
+ - Status - Heal, insanity
+"Grand Darkness"
+ - Attack - Huge AoE damage
+"Life Drain"
+"Living End"
+"March of Abyss"
+ - Status - Slow, curse
+"Nemesis"
+"Never Again"
+"Night Raid"
+ - Attack - Damage
+"Pandemonium"
+"Penumbra"
+"Persecute"
+"Presence of the Dark Lord"
+ - Passive - 10% defence reduce of non-Darkness enemies
+"Suffering Blow"
+
+
+:Earth:
+>
+>
+
+"Aftershock"
+"Boulderfall"
+"Colossal Fist"
+"Continental Drift"
+"Crucible Claw"
+"Earthbound Immortal"
+"Endow with Will"
+"Eight Generals"
+"Foundations of the Earth" - LEVEL 10
+"Grand Fist"
+"Greatest of Fifty"
+"Grounded"
+"Holy Sandstorm"
+
+"Lake of Great Earth"
+"Lifespan"
+"Limit Valley"
+"Megalith"
+"Moat"
+"Monolith"
+"Pebble Shower"
+"Precious Blessing"
+"Protector of Earth"
+"Reversal"
+"Sandbox Mode"
+"Sinkhole"
+"Spire Barrage"
+"Subterfuge of the Horn"
+"Stele"
+"Stone Ocean"
+
+"Upheaval"
+ - Attack - Huge AoE damage, 25% chance to remove a random land effect
+"Waste Land"
+"Wholeness"
+
+:Fire:
+>
+>
+
+"Courage"
+"Calenture"
+"Endow with Courage"
+"Fill with Determination"
+"Fire Tower"
+"Firethrower"
+"Frenzy"
+"Heat Exhaustion"
+"Immortal/Kaiser Phoenix"
+ - Lv9 Passive - 
+"Inferno"
+"Keeper of the Flame"
+"Meltdown"
+ - Attack - Deals bonus damage to Steel-users
+
+"Pyromania"
+ - Passive - Increases damage of successive Fire spells
+"Realm of Eldr"
+
+"Searchlight"
+"Yellow Flame"
+
+
+:Ice:
+>
+>
+
+"Arctic Year"
+"Arctic Circle"
+"Absolute Zero"
+"Ballad of Jack Frost"
+"Cold Blood"
+"Core Low Pressure"
+"Delayed Strike"
+ - Status - Target moves last
+"Endow with Discipline"
+"Fimbul" - Epic -
+
+"Giga Freeze"
+"Howling Mistral"
+"Ice Edge"
+"Ice Statue"
+"Polar Night"
+"Polar Vortex"
+"Shelf of Ice"
+"Shelter"
+"Snowstorm"
+"Yolei"
+
+
+:Light:
+>
+>
+
+"Across/Beyond/Through the Bridge of Light"
+ - Lv10 Epic Status - Resurrect all dead party members at full health and mana
+"Beacon"
+"Burden You Can Bear"
+ - Status - Immunity from poison damage
+"Colorguard"
+"Divine Right"
+"Endow with Honor"
+"Leap of Faith"
+"Lunatic Lament"
+"Lustration"
+"Mandate of Heaven"
+"Overwhelming Eye"
+"Place of Reckoning"
+"Purging"
+"Repentance"
+"Sanctuary"
+"Sanitize"
+"Shield of Honor"
+"Top Gun"
+ - Attack - Damage
+"Trick of the Light"
+"Unyielding Wish"
+"Waiting for You"
+"Word of Altruism"
+ - Lv8 Status - Massive AoE healing, Altruist state
+
+
+:Steel:
+>
+>
+
+"Assembly Line"
+"Brittleness"
+"Chain of Events"
+"Continuous Casting"
+"Endow with Knowledge"
+"Full Potential"
+"Lethal Sight"
+"Metallicity"
+"Mirror Coat"
+"Power Frame"
+"Psychomanteum"
+"Purification"
+"Restriction"
+"Sea of Swords"
+"Scimitar Syndrome"
+"Soul Manteau"
+"Spear Pillar"
+"Stop the Clocks"
+"Ten of Swords"
+"Touch the Infinite"	
+"Warning Shot"
+
+:Thunder:
+>
+>
+
+"Bolt"
+"Chain Lightning"
+"Cloud to Ground"
+"Condenser Storm"
+"Double Bolt"
+"Discharge"
+"Electric Arc"
+"Endow with Justice"
+"Flying Thunder God"
+"High Voltage"
+"Keraunopathy / Keraunomedicine / Keraunotherapy"
+"Light Blades"
+ - Lv10 Attack -
+"Lightningrod"
+"Lightning Seeds"
+"Lord of Vermillion" 
+ - Epic Attack -
+"Overload"
+"Plasma Channel"
+"Resistor"
+"Thunder Justice"
+"Transistor"
+"Upward Stream"
+
+:Water:
+>
+>
+
+"Anchor"
+"Cascade"
+"Civilizing Process"
+"Cruiser"
+ - Lv3 Passive - +10% speed when casting water spells
+"Endow with Independence"
+"Moon Shower"
+"Lifesaver"
+"Out of Depth"
+"Rain of Mercy"
+"River of Power"
+"Saltwater on His Eyes"
+"Scholarchip"
+"Sea Level"
+"Theming Bonuses"
+"Tidal Wave"
+"Tsunami"
+"Ultimate Stream"
+"Unbroken"
+"Water Pillar"
+"Water Spout"
+
+
+:Wind:
+>
+>
+
+
+"Air Blast"
+"Air Raid"
+"Atmospheric Rift"
+"Blow Away"
+"Breathsteal"
+"Confused Storm"
+"Divine Wind"
+ - Lv10 Attack - Damage, full AoE wind mana restore
+"Dual Sonic"
+"Endow with Freedom"
+"Flanking Line"
+"Fresh Gale"
+"Haste"
+"Hunting Spear"
+"Missing the Point"
+"Multihued Clouds"
+"Overshooting Top"
+"Ozone"
+"Rewind"
+"Shelf Cloud"
+"Skies of Love"
+"Skyshaper"
+ - Lv10 Epic Status - Reflects all wind damage
+"Snore"
+"Super Typhoon"
+"Take You Higher"
+"Unbound"
+"Welcome Lost"
+"Whirlwind Turbine"
+"Whole Gale"
+"Wuthering Heights"
+"Zoom Punch"
+
+
+:Wood:
+>
+>
+
+
+"Amrita"
+"Backlog"
+"Beartrap"
+"Eaglehorn"
+"Eyes in the Forest"
+"Endow with Kindness"
+"Fiber Lock"
+"Forest Floor"
+"Forestry Commission
+"Hoimi Table"
+"Hundred Spikes"
+"Kabuki Showdown"
+ - Lv8 Attack - Damage. Costs less if "Kabuki Showdown" was cast last turn
+"Rope of Life"
+"Rosestorm"
+"Sapling Spears"
+"Shake Off"
+"This Garden is Growing Over"
+"Thousand Blossoms"
+"Tranquil Path"
+"Tree Tops"
+ - Lv6 Attack - Damage, extra damage if target attacked this turn
+"Trip Over"
+"Uproot"
+"Wear Out"
+
+
+:Darkness+Earth:
+>
+>
+
+"Badlands"
+"Black Rain"
+"Cursed Soil"
+ - Status - Slows enemy upon receiving physical damage
+"Descent into the Undermountain"
+"Drainer"
+ - Lv3 Attack - 
+"Ghoulungulate"
+"Lethal Blunder"
+ - Status - Huge AoE sluggish
+"Mummify"
+"Mutual Path"
+"Night of the Hunter"
+"Quagmire"
+"Terror"
+"Wither on the Vine"
+
+:Darkness+Fire:
+>
+>
+
+"Abyss Nova"
+"Banishing"
+"Berserk"
+"Chaos Meteor"
+"Demonology"
+"Final Doom"
+ - Epic Attack -
+"Hell of a Summer"
+"Hellfire"
+"Melting Blood"
+ - Lv4 Attack - Damage, extra damage if target is bleeding
+"Ominous Fire"
+ - Passive - Prevents fire damage from being reflected or reduced
+"One Soul Less on Your Fiery List"
+"Purgation"
+"Sire of Insanity"
+"Widespread Ruin"
+
+:Darkness+Ice:
+>
+>
+
+"Abyssal Swing"
+"Bleak Legion"
+"Blizzard of the Underworld"
+"Cliffhanger"
+ - Passive - Prevents death if user had more than 1 HP at the start of the round
+"Deadlock"
+"Deepest Hell"
+"Glowing Ice"
+ - Lv3 Attack - 
+"Haunted Ski Lodge"
+"Howls from the Necropolis"
+
+:Darkness+Light:
+>
+>
+
+"Dedication through Light and Darkness"
+"Don't Forget to Try in Mind"
+"Enlightened Absolutism"
+"Goodnight Moon"
+"Judgement"
+"Lights Out"
+ - Status - Randomizes all attack targets
+"Supersight"
+ - Status - Check info about target
+"Tender /is the/ Night"
+ - Status - Enemies: Curse & March of Abyss / Allies: Heal & Low Purge
+
+:Darkness+Steel:
+>
+>
+
+"Circle of Ouroboros"
+"Edge of Madness"
+"Eternal Return"
+"Flesh Ripper"
+"Gloom Under Night"
+"Gravekeeper's Cloak"
+"Scourge Sign"
+"Stare into Abyss"
+
+:Darkness+Thunder:
+>
+>
+
+"Baldur's Gate"
+"Bloody Stream"
+ - Attack - Damage, Bleed
+"Chaos Rising"
+"Drain"
+"Fiend's Sanctuary"
+"Overwhelming Feeling of Weakness"
+ - Lv5 Status - Full AoE, spells this round cost all available mana
+"Ride the Pandemonium"
+"Thriller"
+
+:Darkness+Water:
+>
+>
+
+"Cold Seeps"
+ - Status - Summons Seabed effect
+"Crocodile Tears"
+"Deep Nightmare"
+"Hydra Shadow"
+"Mind Crush"
+"Overawe"
+"River of Wailing"
+"Shallow Pond"
+"Slow Boat"
+"Soulquake"
+ - Lv4 Attack - AoE damage, damage varies according to the amount of mana in each target's pool
+
+:Darkness+Wind:
+>
+>
+
+"Bow of Stars"
+"Dead Wind"
+"Flux Clog"
+"Gale Blessing"
+"Hugin"
+"Ride the Gale"
+"Samsara"
+"Sorrowful Chain"
+
+:Darkness+Wood:
+>
+>
+
+"Carry On" - Attack - Antecipates all poison damage, removes poison
+"Degrade"
+"Entwine"
+ - Attack - imprisioning
+"Harvest Moon"
+"Hunger of the Pine"
+"Left to Rot"
+"Mandrake Uprooting"
+"Ripeness"
+"Snake Pit"
+"Unleash Wilderness"
+
+:Earth+Fire:
+>
+>
+
+"Basalt Shielding"
+"Demon's Disaster"
+"Earth Split"
+"Eruption Column"
+"Geogrid"
+"Heat Conduction"
+"Magma Flow"
+"Mantle of Core Boundaries"
+"Meteor Storm"
+"Melt Earth"
+"Moltenore"
+"Lavalanche"
+"Outer Layers"
+"Pull from the Abyss"
+"Rift"
+"Ring of Fire" - Lv5 Attack - AoE Eruption Column
+"Sinking of Dense Plates"
+
+:Earth+Ice:
+>
+>
+
+"Armor Coach"
+"Biome Propagation" - Copies terrain on a X radius
+"Castle of Cubes"
+"Cooling Rock"
+"Crust Rebound"
+"Cryovolcano" - Lv5 Status - AoE chance to chill, weather hail
+"Fellfield"
+"Frontline" - Passive - 
+"Geyser"
+"Glacial Deposit"
+"Moonfall" - Lv3 Attack - Random target 3 hits, 25% stun
+"Snowball"
+"Solid Ice" - Lv2 Status - Petrify, chill
+"Super Report"
+"Well Rounded"
+
+"Best Climate" - Status - Immunity to breathlessness and weather damage
+
+
+:Earth+Light:
+>
+>
+
+"Being Driven" - Lv2 Attack - Damage, low self-purge
+"Calcify" - Lv3 Attack - Damage, may petrify
+"Clay Blood" - Passive - Immunity to bleed
+"Comet"
+"Finest Hour" - Passive - Melee critical hits increase damage by %
+"Great Days"
+"Glory Towers"
+"Holy Grounds"
+"Heavens Fall"
+"Long Walls"
+"Mythic Age"
+"Pearl Dunes"
+"Running Up That Hill"
+"Salt Flats"
+
+:Earth+Steel:
+>
+>
+
+"Atomic Slicer"
+"Bonecrusher"
+"Checkers"
+"Compression"
+"Dust Mode"
+"Earthly Vortex"
+"Extinction"
+"Forgotten Works"
+"Fortune Comes Round"
+"Greatest Treasure"
+"Magnetic Earth"
+"Mineral Patch"
+"Monument"
+"Petrology"
+"Physical Drainage"
+"Pyramid of Wonders"
+"Relic Times"
+"Stone Hammer"
+ - Attack - Heavy damage
+"Unearthing Treasures"
+
+:Earth+Thunder:
+>
+>
+
+"Crossroads"
+"Echo Stomp"
+"Epitath"- Lv5 Attack - Heavy damage, silence
+"Geomancy"
+"Heavens Torn"
+"Lughnasa"- Status - Heal
+"Macro Cosmos" - Passive - Immunity to insanity, +5 might
+"Mound of the Bound Creator"
+"Mountain Spirit" - Passive - Prevents one debuff once per round
+"Mountain of Faith"
+"Natural Order" - Passive - 
+"Solid Plasma"
+"Split Horizon"
+"Wheel of the Year"
+
+:Earth+Water:
+>
+>
+
+"Arrival of Biosphere"
+"Continental Shelf"
+"Estuary Bed"
+"Erosion"
+"Foregone Conclusion"
+"Gravity Falls"
+"Hole of Sorrows"
+"Horn of Plenty"
+"Impermeable Surface"
+"Lonely Stretch"
+"Mud"
+"Mud Dome"
+"Mud Wrap" - Status - Reduces speed, heal, regeneration
+"Oath of Oasis" - Lv5 Attack 
+"Old Oligarchy"
+"Old World"
+"Separation of Continents"
+"Shadoof"
+
+:Earth+Wind:
+>
+>
+
+"Arid Gale"
+"Beholder's Gaze"
+"Bye Bye Blimps"
+"Debris Avalanche"
+"Desert Breath"
+"Dispersion"
+"Dust Storm"
+"Out on the Range"
+"Rain of Stones"
+"Sand Rush"
+"Splendid Climb and Fall"
+"Stone Cyclone"
+"The Trumpet of the Moon" - Status - Removes sleep and stun from party, castable while asleep
+"Tornado Alley"
+
+:Earth+Wood:
+>
+>
+
+"Amber Bath"
+ - Lv5 Attack - Burns
+"Biggest Reversal"
+"Butterflies into Worms"
+"Death Valley"
+"Force of Nature" - Lv 5 Status - Increase melee damage by 200%
+"Kick the Can Down the Road"
+"Monstrous Growth"
+"Orchard Warden"
+"Petrified Bark"
+"Petrifying Well"
+"Sanguine Blossom"
+"Sawdust"
+"Undying Lands"
+"Wood Opal"
+
+:Fire+Ice:
+>
+>
+
+"Climate Change"
+"Cloud Cover"
+"Dynamic Vision"
+"Flames from the Blue"
+"Fracture Zone"
+"Midnight Sun"
+"Midsummer Snowman"
+"Scalding Cold"
+"Summit Fever"
+"Thermic Anomaly"
+"Thermotherapy"
+"Thermostat"
+"Winter Evenings by the Fire"
+
+:Fire+Light:
+>
+>
+
+"Fire Fact"
+"Infrared Star"
+"Paladin Sword"
+"Raging Sun"
+"Starlight Explosion"
+"Tyrannicide" - Attack -
+"White Hot"
+
+:Fire+Steel:
+>
+>
+
+"Brave Heart"
+"Cat on a Hot Tin Roof" - Status - AoE burn, negates evasion of targets afflicted by burn
+"Forge of Will"
+ - Status - Regenerates every turn based on mana pool, +10 power on successive physical attacks
+"Fusillade"
+"Genocide Gear"
+"Hell and Heaven Meltdown" - Attack - Ignores steel resistance, deals bonus damage according to all resistances
+"Nucleosynthesis"
+"Solarize"
+"Supremacy Sun"
+
+:Fire+Thunder:
+>
+>
+
+"Chaos Cannon"
+"Cogeneration"
+"Cypherspeed"
+"Giga Flare"
+"Infinity Blaster"
+"Laser Edge"
+ - Attack - Ignores evasion
+"Nuclear Fusion"
+ - Lv4 Status - fire
+"Nuclear Fission"
+ - Lv4 Status - thunder
+"Obliterate"
+"Overcharge"
+ - Status - Increases might at the cost of 20% max hp
+"Short Pulse"
+"Top Gun Bomb"
+"Uncontainable Reaction"
+ - Lv5 -
+
+:Fire+Water:
+>
+>
+
+"Aqua Regia"
+"Acid Breath"
+"Acid Cloud"
+"Boiling Steam"
+"Dissuade"
+"Firemind"
+ - Status - 1 turn +int every fire cast
+"Liquid Smoke"
+"Metamorphosis"
+"Mist Body"
+ - Status - + resistance -100% wind res
+"Mistify"
+"Outburst Flood"
+"River of Fire"
+"Vapour Trail"
+- Status - Summons Foggy effect
+"White-Hot Steam"
+
+:Fire+Wind:
+>
+>
+
+"Anger"
+"Ash Courtain"
+"Battle Theme"
+"Hot Gates"
+"Parade of Wisps"
+"Phoenix Petals"
+"Searing Wind"
+"Sea of Fire"
+"Skies Aflame"
+ - Attack - Damage, bonus damage to burned targets
+"The Sky Above Shoots to Kill"
+"Tropical Cyclone"
+"Volcanic Foam"
+
+:Fire+Wood:
+>
+>
+
+"Bog"
+"Fireflies Heaven"
+"Greenhouse"
+"Hinotama"
+"Lit"
+"Pepper"
+"Stamina"
+"Summertime"
+"Traditional White Charcoal"
+ - Lv3 Status - 
+"Tropic"
+"Wildfire"
+
+:Ice+Light:
+>
+>
+
+"Aurora Veil"
+"Aerogel Coating"
+"Brain Freeze"
+"Contagious Spirit"
+"Cold Embrace"
+"Courtain of Lost Pleasures"
+"End of Winter"
+"Festivus"
+"Flying Shards"
+"Fogbank"
+"Glass Ball"
+"Mascarade" - Fake sprites
+"Mean Free Path"
+"Polish"
+"Veil of Eternity"
+"We All Get Along"
+
+:Ice+Steel:
+>
+>
+
+"Crystal Armour"
+"Ice Shards"
+"Fridge Bite"
+"Permafrost"
+"Rain of Needles"
+"The Beautiful Maiden Wants Blood"
+"Winter Counterpart"
+
+:Ice+Thunder:
+>
+>
+
+"Blizzard Warning"
+"Energy Arc"
+"Cold Static"
+"Conservation Law"
+ - Status - Each party member cannot gain more than one instance of debuff per turn
+"Lake Effect"
+"Laser Cooling"
+"Polarization"
+"Shortwave"
+"Sudden Pressure Fall"
+"Thundering Hooves"
+ - Status - Increase all party members' speed
+"Thundersnow"
+
+:Ice+Water:
+>
+>
+
+"Calm and Cool"
+"Cooler"
+"Drifting Packs"
+"Foggy Notion"
+"Heavy Freezing Spray"
+"Ice Dam"
+"Ocean Floor"
+"Pressure Ridge"
+"Sorrow Blue"
+"Stamukhi"
+"Walrus Punch"
+
+:Ice+Wind:
+>
+>
+
+"Advection"
+"Arctic Winds"
+"Barrier of Pressure"
+"Cold Front"
+"Cold Wave"
+"Diamond Dust"
+"Dry Falls"
+
+:Ice+Wood:
+>
+>
+
+"Drunken Trees
+"Elemental Ashes"
+"Evergreen Needles"
+"Folk of the Pines"
+"Frost Heaving"
+"Rolling Seasons"
+"Tree Line"
+
+:Light+Steel:
+>
+>
+
+"Chained to Ideals"
+"Order of the Sages"
+ - Passive - 
+"Paradox of Place"
+"Reflector Sight"
+"Refraction Trigger"
+"Renormalization"
+"Supertask"
+"Variety Comes Out"
+
+:Light+Thunder:
+>
+>
+
+"Full Access"
+ - Lv5 Status - Increases might, self-poison
+"Life Stream"
+"Outer Mind"
+"Psimon"
+"Psychoshock"
+"Psyphon"
+"Shining Justice"
+"Telepathy"
+
+:Light+Water:
+>
+>
+
+"Bioluminescence"
+"Crystal Days"
+"Holy Grail"
+"Magnify"
+"
+"Pool of Radiance"
+"Raining Pleasure"
+"Right as Rain"
+"Ripple Effect"
+"Sea of the Stars"
+
+:Light+Wind:
+>
+>
+
+"Aerostat"
+"Arrullo"
+"Earlier Heaven"
+"Free Balloon"
+"Hang'em High"
+"Hermit Fog"
+"Lift Up"
+"Lifting Gas"
+"Lighter than Air"
+"New Vision"
+"Ride of the Valkyries"
+"Sanction Storm"
+
+:Light+Wood:
+>
+>
+
+"Druidic Lore"
+ - Passive -
+
+"Moonstone Locust"
+"New Bloom"
+"Open the Vaults"
+"Philosophycal Stroll"
+"Resin Banquet"
+"Wicker Man"
+ - Lv10 Attack -
+
+
+:Steel+Thunder:
+>
+>
+
+"Circuit Breaker"
+"Factorial Strength"
+"Impedance of Free Space"
+"Impulse Generator"
+
+"Terminal"
+"Wave Resistance"
+
+:Steel+Water:
+>
+>
+
+
+"Depth Charge"
+"Critical Cruise"
+"Heavy Rain"
+"Naval Mine"
+"Plumbing"
+"Submarine Pipeline"
+"Tin Pest"
+"Turtle Carapace"
+
+:Steel+Wind:
+>
+>
+
+"Absolutely Lethal Sight"
+"Blink"
+"Cloud Chamber"
+"Diamond Storm"
+"Elusive"
+"Great Oxygenation"
+"Syphon Filter"
+"Vacuum Chamber"
+"Weight of the Sky"
+
+:Steel+Wood:
+>
+>
+
+"Ballistician"
+"Conversion of Wood Logs"
+"Crescent Moon Dance"
+"Enigma of the Sawery"
+"Heavy Stump"
+"Lumber Edger"
+"Pattern Matching"
+"Pit Saw"
+"Plunder Power"
+ - Status - Absorbs 10% of a defeated enemy's stats
+"Resaw"
+"Razor Brewing"
+"Rift Sawing"
+"Sawmill Fist"
+"Timber Framing"
+
+:Thunder+Water:
+>
+>
+
+"Awareness"
+"Eye of the Storm"
+"Forgotten Umbrella"
+"Net of the Heavens"
+
+:Thunder+Wind:
+>
+>
+
+"Call Down"
+"Extra Turbine"
+"Kaminari /Attack/"
+"Ozone Depletion"
+"Summon the Windstorm"
+"Summon the Lightningstorm
+"Thundering Entrance"
+"Weather God"
+
+:Thunder+Wood:
+>
+>
+
+"Cataclysm"
+"Collected Power"
+"Force Wall"
+"Forest of Power"
+"Gopyninch"
+"Rebirth"
+"Solar Ray"
+
+:Water+Wind:
+>
+>
+
+"Blinding //Haze//"
+"Dragonfish"
+"Ghost Channel"
+"Humidity Control"
+"Morning Cloud"
+"Ocean of You"
+"Out of the Fog"
+"Sail Setter"
+"Spindrift"
+"Spray Swept"
+"Skywave"
+"Tap Water"
+"Way Out"
+
+:Water+Wood:
+>
+>
+
+"Boiling Oil"
+"Beartrap Island"
+"Drench in Dew"
+ - Status - Heal, medium purge
+"Kikimora" 
+ - Status - Froggify
+"Oil Leak"
+"Poisoned Marsh"
+"Royal Water"
+
+:Wind+Wood:
+>
+>
+
+"Cactus"
+"Cicada Shed Skin"
+"Flute"
+"Fungus Crusher"
+"Kimono Sleeves"
+"Thunder Gemini"
+"Windmill Rush"

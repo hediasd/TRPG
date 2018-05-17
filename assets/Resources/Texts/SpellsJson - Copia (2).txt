@@ -1,0 +1,268 @@
+{
+    "Items": [
+        {
+            "Name": "Evil Claw",
+            "Description": "",
+            "AnimationName": "SingleSonic1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 1,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 3
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 2,
+            "MaximumCastRange": 3,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Boom",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "The Flat Earth",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 0
+        },
+        {
+            "Name": "Fire Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 15
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 6,
+            "MaximumCastRange": 8,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Forever Zero",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 113,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Zap",
+            "Description": "",
+            "AnimationName": "SingleElectric1",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 5
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 2,
+            "MaximumCastRange": 2,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Hey",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Lavalanche",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        },
+        {
+            "Name": "Golden Wall",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "Name": "Mythic Age",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "Name": "Great Days",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 101
+        },
+        {
+            "Name": "Eschatology",
+            "Description": "",
+            "AnimationName": "",
+            "Cooldown": 1,
+            "Level": 1,
+            "Radius": 0,
+            "DamageSegments": [
+                {
+                    "Element": 1,
+                    "Value": 10
+                }
+            ],
+            "LoS": false,
+            "BoostableRange": false,
+            "Linear": false,
+            "MinimumCastRange": 1,
+            "MaximumCastRange": 1,
+            "CastShape": 112,
+            "EffectShape": 112,
+            "targeter": 102
+        }
+    ]
+}

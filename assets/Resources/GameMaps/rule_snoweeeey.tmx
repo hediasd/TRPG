@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.0" tiledversion="1.0.1" orientation="orthogonal" renderorder="left-up" width="16" height="12" tilewidth="16" tileheight="16" nextobjectid="12">
+ <tileset firstgid="1" name="snowy day" tilewidth="16" tileheight="16" tilecount="91" columns="7">
+  <image source="../../Tiled2Unity/Textures/snowy day.png" width="112" height="208"/>
+ </tileset>
+ <layer name="regions" width="16" height="12" visible="0" opacity="0.12">
+  <data encoding="base64" compression="zlib">
+   eJwTYoAAIQI0rQAhe0ftHwW0BAAWrQFp
+  </data>
+ </layer>
+ <layer name="input_Terrain" width="16" height="12" opacity="0.44">
+  <data encoding="base64" compression="zlib">
+   eJwTYoAAYSgtAqVFobQMA22BCpRWhdJqUFoKSivS2H5tKK0DpXWhtB6UlqSx/UZQ2hhKm0BpUyitQGP7RzoAALpzAs4=
+  </data>
+ </layer>
+ <layer name="output_Blocks" width="16" height="12" visible="0" opacity="0.76">
+  <data encoding="base64" compression="zlib">
+   eJwTZoAAYQI0rQAhe0ftHwW0BABCbQF9
+  </data>
+ </layer>
+</map>

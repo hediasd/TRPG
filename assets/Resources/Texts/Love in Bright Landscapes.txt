@@ -1,0 +1,301 @@
+Gnaisse, Mignon, Geogeddon 
+
+The Needle, The Jar (Thanatos), The Eye, ___ (Maverick)
+Spectre and Meltdown
+
+???
+
+Styx 
+???
+
+Lawson Square Infirmary
+Brown Mountain Lights
+Ice Cutting Site
+Nymphs Bathhouse - Center/Right, Wood Water Nymphs
+Subterranean Canal
+Last Tomb - Ice Egyptian Tomb
+Sourbridge
+
+//
+
+= Backworld North
+
+Castle in the Rift - Dungeon -
+		Titan of Consciousness [ICE, LIGHT, WOOD], 
+		[BOSS] final boss
+
+= Backworld South
+
+= Backworld East
+
+White Wastelands
+
+Sanguine Swamp
+
+= Backworld West
+
+The Casino
+
+Land of Shadows
+
+
+
+
+= Center
+
+Old Roads - Dungeon -
+		Brazier Hound [DARKNESS, FIRE],
+
+Old Town - Dungeon -
+
+Jade Palace - Camp -
+		Heart of the mountain, library
+
+Roots of the Mountain - Dungeon - hidden lore
+		Minotaur of Shadow
+
+Vaults of Noghaltz - Camp -
+	Tea Warehouse - Dungeon -
+		[BOSS] Oolong
+	Hoaimu's Nest - Dungeon -
+		[BOSS] White Knight Hayato
+	Astarion Belt - Dungeon -
+		[BOSS] Bringer of the End
+	Fireflies Heaven - Dungeon
+		[BOSS] ? - fire bugs
+Shelf of Past Mistakes -   -
+	Edge of the Universe - Dungeon -
+		[BOSS] Heat Death
+		
+Garden Castle - Dungeon -
+		Catoblepas [WOOD], Bamboozle [EARTH, WOOD], 
+		[BOSS] The Empress [LIGHT, WOOD]
+
+Charmed Ridge - Dungeon -
+
+The Magma Puddles - Dungeon -
+		[BOSS] Minnachi [DARK, FIRE]
+		
+		
+= North
+
+
+
+= South
+
+Fishers' Guild - Camp -
+		Kraken Summoner
+
+
+= East
+
+
+
+Duwang - Town -
+
+Lake - Field -
+
+Holmdel's Horn -
+
+
+Swamps - Field - 
+
+Steamboat - Camp -
+
+Inner Plantations -
+
+Abandoned Zoo - Dungeon -
+		[BOSS] Lagios [EARTH, WATER],
+		[BOSS] Tirragus [EARTH, WOOD]
+
+
+
+Mount ... -
+		Shieldsman [STEEL, WOOD], Shieldmaiden [LIGHT, STEEL],
+		[BOSS] Stonemaiden [EARTH, THUNDER]
+			Colleen was once a human, you know. Fascinated with the weirdstone, she wore it as a necklace.
+			Long has the stone drained her energy
+		Quest: "The Weird Stone"
+Mount ... -
+
+Mountain Gates - Dungeon - 
+		Quest: "Leave the Gate as You Found It"
+
+
+
+Field of Glass - Field -
+
+Winter Gardens - Field -
+		Gardener of Skogul
+	
+Winter Palace - Dungeon -
+		[BOSS] Mistress of Winter [ICE]
+
+The Frostforge - Dungeon -
+		Submachine [ICE, STEEL]
+	
+Frost Streams - Dungeon - 
+	
+Tomb Underneath the Streams - Dungeon - 
+
+Coastal Flats - Field -
+
+Stairs of Madness - Dungeon -
+		[BOSS] He Who Hungers [DARKNESS, STEEL],
+		[BOSS] Asmodeus [DARKNESS]
+
+Archaic Ruins - Dungeon -
+		Betrayed Knight,
+		Lost Knight,
+		Hopeless Knight,
+		Dishonored Knight, 
+		[BOSS] Dullahan [DARKNESS, STEEL, THUNDER]
+
+
+
+Tundra - Field -
+
+Halogaland - Town -
+		Largest viking town. Chieftain House, Lothbrok Clan
+
+Pines - Field -
+		[BOSS] Megawolf [EARTH, ICE, STEEL]
+
+Igloo Temple - Camp -
+		Access fee: 1x Ice Block
+		Quest: "Survival is at Stake"
+
+
+
+= West
+
+
+
+The Crack - Small Field -
+
+Lightown - Dungeon -
+		Andero [LIGHT, THUNDER], 
+		Tropos [STEEL, THUNDER], 
+		Rai [THUNDER],
+		[BOSS] Reptoplasm [THUNDER],
+		[BOSS] Maestro of Thunder [THUNDER]
+			Arc Hight Voltage, Lord of Vermillion, Eight of Bolts
+	
+
+Underground Bunkers - Dungeon -
+		[BOSS] Lost Symphony [DARKNESS, LIGHT, THUNDER]
+
+
+
+Wind Hills - Field -
+		Poacher [DARKNESS, WIND],
+		Minor Simurgh [WIND],
+		Green Flame [FIRE, WIND],
+		[BOSS] Zephyr Titan [EARTH, WIND]
+		Obakemono Files [Quest Item]
+
+Wind Shrine - Dungeon -
+		Wind Priest [WIND]
+		[BOSS] Princess of the Wind [WIND]
+
+Hill of the Old Breeze - Small Field -
+		[BOSS] Stream Deity [WIND]
+		Quest: "The Deity They House"
+
+Windmills Barricade - Field -
+		Yurei [LIGHT, WIND],
+		Green Flame [FIRE, WIND]
+
+Solar Panels - Small Field -
+
+
+
+Avaris - Town -
+
+
+
+Dunes' Dam - Dungeon -
+
+Higher Dunes - Field -
+
+Nile River - Field - aa
+
+
+
+Saqqara - Town -
+
+Saqqara Outskirts - Field - 
+
+Salt Ruby Excavations - Dungeon - 
+
+Avenue of the Sphinx - Field -
+
+Crocodopolis - Dungeon -
+
+FBAF69
+155493
+e7a612
+
+Hot Tent Blues - Camp - 
+
+Lost Warehouse - Small Field -
+
+The Brewery - Dungeon - 
+
+Cave of Treasures - Dungeon - 
+		Living Scimitar [DARKNESS, STEEL],
+		Bag of Winds [THUNDER, WIND], 
+		Mystic Lamp [DARKNESS, FIRE]
+
+Pools of Poison - Dungeon -
+
+
+La Danse - Field -
+
+Southern Cliffs - Field -
+
+Castle of the Blood Oath - Dungeon -
+		Blood Knight, 
+		Blood Priest,
+		Monstruous Aberration, 
+		Outrageous Chimera
+
+Hazmat's Chamber - Small Field -
+Hazmat
+
+
+Solitary Peaks - Dungeon -
+		Raptor [WIND],
+
+Nest of the Hippogriff - Small Field -
+
+
+
+Menhir Hills - Field -
+
+The Trapdoor - Small Field -
+		Grants access to Old Neotopia.
+
+Old Neotopia - Dungeon - 
+		...
+		[BOSS] Mechanic [STEEL],
+		[BOSS] Mechagodsaur [FIRE, STEEL, THUNDER]
+
+
+
+Forgetful Woods - Dungeon - 
+
+Hidden Trail Forgotten in the Woods - Dungeon -
+
+Red Hell - Dungeon - Draconarium, sealed dragons
+
+Summer House - Camp -
+
+
+
+Small Woods - Field -
+
+Abandoned Townnnnnnnn Ghosts fake - Town -
+
+Mage Tower - Camp -
+
