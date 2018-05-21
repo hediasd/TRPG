@@ -9,13 +9,13 @@ public class Classes : MonoBehaviour {
 
 public class GameState {
 
-	public List<GameObject> windows;
-	public int state, selecter;
+	public List<GameObject> Windows;
+	public int State, Selecter;
 
 	public GameState(int st, int se = 0){
-		windows = new List<GameObject>();
-		state = st;
-		selecter = se;
+		Windows = new List<GameObject>();
+		State = st;
+		Selecter = se;
 	}
 
 }
@@ -27,22 +27,37 @@ public class DamageSegment {
 		Value = d;
 	}
 }
+	//Gameboard Layers
+public class LAYER {
+	public const int GROUND = 0, MONSTER = 1; 
+}
+	//Monster Stats
+public class STAT {
+	public const int HPA = 0, HPM = 1, POW = 2, MGT = 3, END = 4, RES = 5, LUK = 6, SPD = 7, IDK2 = 8, MOV = 9;
+}
+
+public class GAMESTATE {
+	public const int NONE = 0, ENEMY_TURN = 10, BATTLE_MENU = 11, MOVE = 12, ATTACK = 13, SPELL = 14, ITEM = 15;
+}
+
+public class TARGET {
+	public const int SELF = 100, ALLIES = 101, ENEMIES = 102, BOTH = 103, ALL = 104;
+}
+
+public class LOCK {
+	public const int TURN_WHEEL = 900, POP1 = 901, POP2 = 902, POP3 = 903, FLUSH = 904, WAIT = 910;
+}
+
+
 
 public class E {
 /* USED AS ARRAY POSITIONS */
-//Monster Stats
-	public const int HPA = 0, HPM = 1, POW = 2, MGT = 3, END = 4, RES = 5, LUK = 6, SPD = 7, IDK2 = 8, MOV = 9;
-//Gameboard Layers
-	public const int GROUND_LAYER = 0, MONSTER_LAYER = 1; 
+
 /* GENERAL */
-//Elements
-	public const int NONE = 0, DARKNESS = 1, EARTH = 2, FIRE = 3, ICE = 4, LIGHT = 5, STEEL = 6, THUNDER = 7, WATER = 8, WIND = 9, WOOD = 10;
 //Menu, Turn and UI
-	public const int ENEMY_TURN = 10, BATTLE_MENU = 11, MOVE = 12, ATTACK = 13, SPELL = 14, ITEM = 15;
+	
 	public const int CHOOSER = 30, ARROW = 31, ARROW_UPDOWN = 32;
-//Geometry
-	public const int SQUARE = 110, CONE = 111, CIRCLE = 112, LINE = 113, TRILINE = 114, HORIZONTALLINE = 115, VERTICALLINE = 116, CROSS = 117;
-	public const int SELF = 100, ALLIES = 101, ENEMIES = 102, BOTH = 103, ALL = 104;
+
 //Triggers and Events
 	public const int ON_TURN_START = 200, ON_TURN_END = 201;
 //Animations
@@ -50,8 +65,6 @@ public class E {
 //Properties
 	public const int HEAL = 800, DAMAGE = 801, POISON = 802, UNHEALABLE = 803,
 	TERRAINSPAWN = 810, TERRAINREMOVAL = 811;
-//States
-	public const int TURN_WHEEL = 900, POP1 = 901, POP2 = 902, POP3 = 903, FLUSH = 904, WAIT = 910;
 
 }
 

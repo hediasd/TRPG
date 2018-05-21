@@ -8,7 +8,7 @@ public class Environment : MonoBehaviour {
 	// destroy this class, make a full-algorithmwise one
 
 	//public static Hashtable firstTable;
-	public static GameboardMaster GameBoard; 
+	public static Gameboard GameBoard; 
 	BattleMaster BattleMaster;
 /*
 	void Start () { //chews up map

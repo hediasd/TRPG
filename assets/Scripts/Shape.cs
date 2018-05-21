@@ -15,11 +15,11 @@ public static class Shape {
 	}
 	static List<Point> SwitchShape(int Name, int Range){
 		switch(Name){
-			case E.CIRCLE:
+			case GEOMETRY.CIRCLE:
 				return CircleShape(Range);
-			case E.CROSS:
+			case GEOMETRY.CROSS:
 				return CrossShape(Range);
-			case E.SQUARE:
+			case GEOMETRY.SQUARE:
 				return SquareShape(Range);
 			default:
 				Debug.Log("Unclassified or Unknown Shape " + Name);

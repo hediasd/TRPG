@@ -20,7 +20,7 @@ public class MapMaster : MonoBehaviour {
 
 	}
 
-	public void Load (GameboardMaster Gameboard, string MapName) {
+	public void Load (Gameboard Gameboard, string MapName) {
 
 		//this.MapName = MapName;
 		MapName = this.MapName;
@@ -86,7 +86,7 @@ public class MapMaster : MonoBehaviour {
 					
 					string MapWriteCharacter = (TileTypeAtPoint == 0 ? "_ " : "X ");
 					MapWriteOutput += MapWriteCharacter;
-					if(Gameboard.At(p, E.GROUND_LAYER) < TileTypeAtPoint){
+					if(Gameboard.At(p, LAYER.GROUND) < TileTypeAtPoint){
 						Gameboard.SetGround(TileTypeAtPoint, p);
 					}
 

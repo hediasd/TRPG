@@ -5,13 +5,15 @@ using UnityEngine;
 public class PlanningMaster : MonoBehaviour {
 	
 	[HideInInspector]
-	public GameboardMaster Gameboard;
+	public GameboardMaster GameboardMaster;
+	public Gameboard Gameboard;
 	public Monster OnTurn;
 	public Point OnTurnPoint;
 	public List<Monster> Allies, Enemies;
 
 	public void Feed(GameboardMaster board, Monster on, List<Monster> a, List<Monster> e) {
-		Gameboard = board;
+		GameboardMaster = board;
+		Gameboard = GameboardMaster.Gameboard;
 		OnTurn = on;
 		OnTurnPoint = new Point(on);
 		Allies = a;
@@ -42,7 +44,7 @@ public class PlanningMaster : MonoBehaviour {
 	PieceSpell ChooseSpell(Monster ThinkingMonster, List<Point> Paths, InfluenceMap InfluenceMap){
 
 		Point Here = new Point(ThinkingMonster.MonsterPoint);
-		int[,] GroundMap = Gameboard.GetLayer(E.GROUND_LAYER);
+		int[,] GroundMap = Gameboard.GetLayer(LAYER.GROUND);
 		int MyTeam = ThinkingMonster.Team, BestDamage = 0;
 		Spell ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
@@ -118,14 +120,15 @@ public class PlanningMaster : MonoBehaviour {
 	public Deque<BoardAction> Thinking(Monster ThinkingMonster){
 
 		Deque<BoardAction> Actions = new Deque<BoardAction>();
+		//GameboardMaster DreamBoard = Gameboard.Clone();
 
 		//Create a map of influence and feed it with board info
 		//Consider where you may walk or not
 		//Consider the influence of enemies	
 		InfluenceMap InfluenceMap = new InfluenceMap(ThinkingMonster, Gameboard);
-		InfluenceMap.ConsiderWalkables(Gameboard.GetLayer(E.GROUND_LAYER));
+		InfluenceMap.ConsiderWalkableSpaces(Gameboard.GetLayer(LAYER.GROUND));
 		InfluenceMap.ConsiderMonsters(Allies, Enemies);
-		InfluenceMap.ConsiderCastableSpells(ThinkingMonster, Allies, Enemies, Gameboard.GetLayer(E.GROUND_LAYER));
+		InfluenceMap.ConsiderCastableSpells(ThinkingMonster, Allies, Enemies, Gameboard.GetLayer(LAYER.GROUND));
 
 		Map WalkableMap = Gameboard.WalkableMap();
 		Dictionary<Point, List<Point>> Paths = Algorithms.PathTracer(ThinkingMonster.MonsterPoint, ThinkingMonster.MovementPoints(), WalkableMap);

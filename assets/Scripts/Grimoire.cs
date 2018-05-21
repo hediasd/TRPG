@@ -6,7 +6,7 @@ using System.Globalization;
 
 public class Grimoire : MonoBehaviour {
 
-	public static List<Animation> Animations;
+	//public static List<Animation> Animations;
 	public List<Spell> Spells; 
 	public List<Status> Statuses;
 	public List<Monster> Monsters; 
@@ -17,14 +17,13 @@ public class Grimoire : MonoBehaviour {
 	
 	void Start () {
 
-		Animations = new List<Animation>();
+		//Animations = new List<Animation>();
 		Characters = new List<Monster>();
 		Monsters = new List<Monster>();
 		Spells = new List<Spell>();
 		Statuses = new List<Status>();
 		Terrains = new List<Terrain>();
 
-		AnimationLoader();
 		//Relog();
 		TerrainLoader();
 		SpellLoader();
@@ -263,7 +262,7 @@ public class Grimoire : MonoBehaviour {
 					character.AddSpell(sp);
 				}*/
 
-				Animations.Add(animation);
+				////////Animations.Add(animation);
 				
 			//}catch{}
 				//Debug.Log("Error Monster Utility.ChewUp");

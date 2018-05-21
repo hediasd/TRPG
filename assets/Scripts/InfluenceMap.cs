@@ -5,12 +5,12 @@ using UnityEngine;
 public class InfluenceMap {
 
 	float[,,] Map;
-	GameboardMaster GameboardMaster;
+	Gameboard GameboardMaster;
 	int LayerAmount = 8;
 	Point size;
 	Monster PivotMonster;
 
-	public InfluenceMap(Monster Mon, GameboardMaster Gameboard){
+	public InfluenceMap(Monster Mon, Gameboard Gameboard){
 
 		PivotMonster = Mon;
 		GameboardMaster = Gameboard;
@@ -50,13 +50,13 @@ public class InfluenceMap {
 		List<BoardAction> Activities;
 	}
 
-	public void ConsiderWalkables(int [,] Walkable){
+	public void ConsiderWalkableSpaces(int [,] Walkable){
 
 		for (int i = 0; i < size.x; i++)
 		{
 			for (int j = 0; j < size.z; j++)
 			{
-				Map[i, j, E.GROUND_LAYER] = (Walkable[i, j] == 0 ? 1 : 0);				
+				Map[i, j, LAYER.GROUND] = (Walkable[i, j] == 0 ? 1 : 0);				
 			}
 		}
 
@@ -71,10 +71,10 @@ public class InfluenceMap {
 				foreach (Monster EnemyMonster in Enemies)
 				{
 					int MonsterDistance = Point.Distance(EnemyMonster.MonsterPoint, new Point(i, j));
-					if(Map[i, j, E.MONSTER_LAYER] == 1.0f){
-						Map[i, j, E.MONSTER_LAYER] += 1.0f;
+					if(Map[i, j, LAYER.MONSTER] == 1.0f){
+						Map[i, j, LAYER.MONSTER] += 1.0f;
 					}else{
-						Map[i, j, E.MONSTER_LAYER] = Map[i, j, E.MONSTER_LAYER] * 1.08f * Mathf.Pow(0.94f, MonsterDistance);
+						Map[i, j, LAYER.MONSTER] = Map[i, j, LAYER.MONSTER] * 1.08f * Mathf.Pow(0.94f, MonsterDistance);
 					}
 				}
 			}
@@ -83,11 +83,11 @@ public class InfluenceMap {
 		// No chance to move to an occupied cell
 		foreach (Monster AllyMonster in Allies)
 		{
-			Map[AllyMonster.MonsterPoint.x, AllyMonster.MonsterPoint.z, E.MONSTER_LAYER] = -1;			
+			Map[AllyMonster.MonsterPoint.x, AllyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;			
 		}
 		foreach (Monster EnemyMonster in Enemies)
 		{
-			Map[EnemyMonster.MonsterPoint.x, EnemyMonster.MonsterPoint.z, E.MONSTER_LAYER] = -1;
+			Map[EnemyMonster.MonsterPoint.x, EnemyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;
 		}
 
 	}

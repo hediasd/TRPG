@@ -23,7 +23,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>Temp\bin\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_2;UNITY_2017_4;UNITY_2017;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;DEVELOPMENT_BUILD;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
+    <DefineConstants>DEBUG;TRACE;UNITY_5_3_OR_NEWER;UNITY_5_4_OR_NEWER;UNITY_5_5_OR_NEWER;UNITY_5_6_OR_NEWER;UNITY_2017_1_OR_NEWER;UNITY_2017_2_OR_NEWER;UNITY_2017_3_OR_NEWER;UNITY_2017_4_OR_NEWER;UNITY_2017_4_2;UNITY_2017_4;UNITY_2017;PLATFORM_ARCH_64;UNITY_64;ENABLE_AUDIO;ENABLE_CACHING;ENABLE_CLOTH;ENABLE_DUCK_TYPING;ENABLE_GENERICS;ENABLE_PVR_GI;ENABLE_MICROPHONE;ENABLE_MULTIPLE_DISPLAYS;ENABLE_PHYSICS;ENABLE_SPRITERENDERER_FLIPPING;ENABLE_SPRITES;ENABLE_GRID;ENABLE_TILEMAP;ENABLE_TERRAIN;ENABLE_RAKNET;ENABLE_DIRECTOR;ENABLE_UNET;ENABLE_LZMA;ENABLE_UNITYEVENTS;ENABLE_WEBCAM;ENABLE_WWW;ENABLE_CLOUD_SERVICES_COLLAB;ENABLE_CLOUD_SERVICES_COLLAB_SOFTLOCKS;ENABLE_CLOUD_SERVICES_ADS;ENABLE_CLOUD_HUB;ENABLE_CLOUD_PROJECT_ID;ENABLE_CLOUD_SERVICES_USE_WEBREQUEST;ENABLE_CLOUD_SERVICES_UNET;ENABLE_CLOUD_SERVICES_BUILD;ENABLE_CLOUD_LICENSE;ENABLE_EDITOR_HUB;ENABLE_EDITOR_HUB_LICENSE;ENABLE_WEBSOCKET_CLIENT;ENABLE_DIRECTOR_AUDIO;ENABLE_DIRECTOR_TEXTURE;ENABLE_TIMELINE;ENABLE_EDITOR_METRICS;ENABLE_EDITOR_METRICS_CACHING;ENABLE_NATIVE_ARRAY;ENABLE_SPRITE_MASKING;INCLUDE_DYNAMIC_GI;INCLUDE_GI;ENABLE_MONO_BDWGC;PLATFORM_SUPPORTS_MONO;RENDER_SOFTWARE_CURSOR;INCLUDE_PUBNUB;ENABLE_PLAYMODE_TESTS_RUNNER;ENABLE_VIDEO;ENABLE_RMGUI;ENABLE_PACKMAN;ENABLE_CUSTOM_RENDER_TEXTURE;ENABLE_STYLE_SHEETS;ENABLE_LOCALIZATION;PLATFORM_STANDALONE_WIN;PLATFORM_STANDALONE;UNITY_STANDALONE_WIN;UNITY_STANDALONE;ENABLE_SUBSTANCE;ENABLE_RUNTIME_GI;ENABLE_MOVIES;ENABLE_NETWORK;ENABLE_CRUNCH_TEXTURE_COMPRESSION;ENABLE_UNITYWEBREQUEST;ENABLE_CLOUD_SERVICES;ENABLE_CLOUD_SERVICES_ANALYTICS;ENABLE_CLOUD_SERVICES_PURCHASING;ENABLE_CLOUD_SERVICES_CRASH_REPORTING;ENABLE_EVENT_QUEUE;ENABLE_CLUSTERINPUT;ENABLE_VR;ENABLE_AR;ENABLE_WEBSOCKET_HOST;ENABLE_MONO;NET_2_0_SUBSET;ENABLE_PROFILER;UNITY_ASSERTIONS;UNITY_EDITOR;UNITY_EDITOR_64;UNITY_EDITOR_WIN;ENABLE_NATIVE_ARRAY_CHECKS;UNITY_TEAM_LICENSE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
@@ -75,6 +75,7 @@
      <Compile Include="assets\Scripts\Dump\GrimoireWithDictionaries.cs" />
      <Compile Include="assets\Scripts\Exceptions\GameboardException.cs" />
      <Compile Include="assets\Scripts\Game Logic\BoardAction.cs" />
+     <Compile Include="assets\Scripts\Gameboard.cs" />
      <Compile Include="assets\Scripts\Grimoire.cs" />
      <Compile Include="assets\Scripts\Holders\AnimationHolder.cs" />
      <Compile Include="assets\Scripts\Holders\MonsterHolder.cs" />
@@ -107,21 +108,24 @@
      <Compile Include="assets\Scripts\SizeGrow.cs" />
      <Compile Include="assets\Scripts\Spell.cs" />
      <Compile Include="assets\Scripts\Spin.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\BaseSpriteAnimation.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\BaseText.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\ColorSwap.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\HSVShift.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\MonsterSpriteAnimation.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\SfxSpriteAnimation.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\ShakingText.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\SlidingText.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\SnapToPixelGrid.cs" />
-     <Compile Include="assets\Scripts\Sprites and Animations\TransparencyShift.cs" />
+     <Compile Include="assets\Scripts\Sprites\BaseSpriteAnimation.cs" />
+     <Compile Include="assets\Scripts\Sprites\BaseText.cs" />
+     <Compile Include="assets\Scripts\Sprites\ColorSwap.cs" />
+     <Compile Include="assets\Scripts\Sprites\HSVShift.cs" />
+     <Compile Include="assets\Scripts\Sprites\MonsterSpriteAnimation.cs" />
+     <Compile Include="assets\Scripts\Sprites\SfxSpriteAnimation.cs" />
+     <Compile Include="assets\Scripts\Sprites\ShakingText.cs" />
+     <Compile Include="assets\Scripts\Sprites\SlidingText.cs" />
+     <Compile Include="assets\Scripts\Sprites\SnapToPixelGrid.cs" />
+     <Compile Include="assets\Scripts\Sprites\TransparencyShift.cs" />
      <Compile Include="assets\Scripts\Stats.cs" />
      <Compile Include="assets\Scripts\Terrain.cs" />
      <Compile Include="assets\Scripts\Utilities\Algorithms.cs" />
      <Compile Include="assets\Scripts\Utilities\Deque.cs" />
+     <Compile Include="assets\Scripts\Utilities\Element.cs" />
+     <Compile Include="assets\Scripts\Utilities\Geometry.cs" />
      <Compile Include="assets\Scripts\Utilities\Point.cs" />
+     <Compile Include="assets\Scripts\Utilities\Stuff.cs" />
      <Compile Include="assets\Scripts\Utilities\Thesaurus.cs" />
      <Compile Include="assets\Scripts\Utilities\Utility.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
@@ -164,6 +168,8 @@
      <None Include="assets\Tiled2Unity\Shaders\shaDepth-Instanced.shader" />
      <None Include="assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
+     <None Include="assets\Resources\Texts\Logs\SJC_190518_1549799080.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_200518_1549799080.txt" />
      <None Include="assets\Resources\GameMaps\town.xml" />
      <None Include="assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
      <None Include="assets\Resources\Texts\WalkableMap.txt" />
@@ -219,6 +225,7 @@
      <None Include="assets\Resources\Texts\Size of the Moon.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_040518_-261097059.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_060518_731674064.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_190518_-672658293.txt" />
      <None Include="assets\Tiled2Unity\Textures\_ReadMe.txt" />
      <None Include="assets\Resources\Texts\TerrainsJson.txt" />
      <None Include="assets\Tiled2Unity\Imported\town.tiled2unity.xml" />
@@ -240,6 +247,7 @@
      <None Include="assets\Resources\Texts\Logs\SJC_120518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_110518_1549799080.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
+     <None Include="assets\Resources\Texts\Logs\MJC_180518_-672658293.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy4.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="assets\Resources\Materials\Sprites-Simple.shader" />
@@ -255,22 +263,23 @@
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1932527421.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_080518_1549799080.txt" />
      <None Include="assets\Resources\GameMaps\TileFlipTest.xml" />
+     <None Include="assets\Resources\Texts\Logs\SJC_210518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_090518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Status.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_180518_1549799080.txt" />
      <None Include="assets\Tiled2Unity\Imported\_ReadMe.txt" />
      <None Include="assets\Resources\Plaything.txt" />
      <None Include="assets\Resources\Texts\Output2.txt" />
      <None Include="assets\Resources\Texts\InfluenceMap.txt" />
      <None Include="assets\Resources\Materials\Simple Diffuse.shader" />
      <None Include="assets\Particle Attractor by Moonflower Carnivore\Particle Attractor documentation.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_210518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_200518_-672658293.txt" />
      <None Include="assets\Resources\Texts\Logh.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1190322355.txt" />
      <None Include="assets\Resources\Texts\SpellsJson - Copia.txt" />
      <None Include="assets\Resources\Texts\Faith Is for the Transient People.txt" />
      <None Include="assets\Tiled2Unity\Meshes\_ReadMe.txt" />
- <Reference Include="Vuforia.UnityExtensions">
- <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
- </Reference>
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

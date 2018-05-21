@@ -41,7 +41,7 @@ public class PiecesMaster : MonoBehaviour {
 	}
 
 	public void Updater(){
-		switch (stackTop.selecter){
+		switch (stackTop.Selecter){
 			case E.CHOOSER:
 				if(Input.GetKeyDown("up")){
 					chooserMaster.Move(0f, 0f, 1f);
@@ -159,50 +159,62 @@ public class PiecesMaster : MonoBehaviour {
 
 	public IEnumerator Actor(PieceSpell ps)
     {
-		Animation animation = Grimoire.Animations[0];
+		//Animation animation = Grimoire.Animations[0];
+
+		GameObject SpellAnimation = Instantiate(Resources.Load("Animation/Fire Ball")) as GameObject;
+
+		if(SpellAnimation.GetComponent<Piece>() == null){
+			SpellAnimation.AddComponent<Piece>();
+		}
+
 		Point target = ps.to;
 		Point fr = new Point(ps.who);
 
+		SpellAnimation.transform.localPosition = new Vector3(fr.x, 0, fr.z);
+
 		List<Point> shape = ps.sp.EffectShapePoints(fr, target);
 		
-		Queue<SfxSpriteAnimation> EffectQueue = new Queue<SfxSpriteAnimation>();
+		//Queue<SfxSpriteAnimation> EffectQueue = new Queue<SfxSpriteAnimation>();
 		
-		foreach (SfxSpriteAnimation sfx in animation.EffectList)
-		{
-			List<List<Point>> fragmented_shape = ps.sp.FragmentedShape(fr, target, shape, sfx.Shape);
-			sfx.points = fragmented_shape;
-			/*foreach (List<Point> lp in fragmented_shape)
-			{
-				foreach (Point p in lp)
+		/*
+				foreach (SfxSpriteAnimation sfx in animation.EffectList)
 				{
-					Debug.Log(p.x + " " + p.z + "    ");
-				}
-				Debug.Log("\n ");
-			}*/
-			EffectQueue.Enqueue(sfx);
-		}
-
-		while(EffectQueue.Count > 0)
-		{
-			SfxSpriteAnimation sfx = EffectQueue.Dequeue();
-			if(sfx.Type == E.WAVES){
-				foreach (List<Point> points in sfx.points)
-				{
-					foreach (Point p in points)
+					List<List<Point>> fragmented_shape = ps.sp.FragmentedShape(fr, target, shape, sfx.Shape);
+					sfx.points = fragmented_shape;
+					/*foreach (List<Point> lp in fragmented_shape)
 					{
-						SpawnSfxEffect(sfx, p, fr);
+						foreach (Point p in lp)
+						{
+							Debug.Log(p.x + " " + p.z + "    ");
+						}
+						Debug.Log("\n ");
 					}
-					yield return TimeMaster.WaitSeconds(0.2f);
+					EffectQueue.Enqueue(sfx);
 				}
-			}else{
-				SpawnSfxEffect(sfx, target, fr);
-			}
-			if(sfx.Step) continue;
 
-			while(effPieces.transform.childCount > 0){
-				yield return TimeMaster.WaitSeconds(0.05f);
-			}
-		}
+				while(EffectQueue.Count > 0)
+				{
+					SfxSpriteAnimation sfx = EffectQueue.Dequeue();
+					if(sfx.Type == E.WAVES){
+						foreach (List<Point> points in sfx.points)
+						{
+							foreach (Point p in points)
+							{
+								SpawnSfxEffect(sfx, p, fr);
+							}
+							yield return TimeMaster.WaitSeconds(0.2f);
+						}
+					}else{
+						SpawnSfxEffect(sfx, target, fr);
+					}
+					if(sfx.Step) continue;
+
+					while(effPieces.transform.childCount > 0){
+						yield return TimeMaster.WaitSeconds(0.05f);
+					}
+				}
+				
+		 */
 
         yield return TimeMaster.WaitSeconds(0.25f);
 		//Actors--;

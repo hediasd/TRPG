@@ -102,13 +102,13 @@ public class Monster : DataObject {
 	}
 */
 	public int MovementPoints(){
-		return StatList[E.MOV];
+		return StatList[STAT.MOV];
 	}
 	public void ResetMovementPoints(){
-		StatList.ResetValue(E.MOV);
+		StatList.ResetValue(STAT.MOV);
 	}
 	public bool TakeDamage(Damage TakenDamage){
-		StatList.Decrease(E.HPA, TakenDamage.FinalDamage);
+		StatList.Decrease(STAT.HPA, TakenDamage.FinalDamage);
 		return true;
 		
 	}

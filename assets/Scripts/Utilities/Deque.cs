@@ -5,10 +5,11 @@ using UnityEngine;
 public class Deque<T> {
 
 	List<T> InternalList;
-	public int Count;
+	public int Count = 0;
 
 	public Deque(){
 		InternalList = new List<T>();
+		Stuff f = new Stuff();
 	}
 
 	public void Enqueue(T Thing){
@@ -26,6 +27,12 @@ public class Deque<T> {
 			Count++;
 		}
 	}
+	public void EnqueueRange(Deque<T> Things){
+		for (int i = 0; i < Things.Count; i++)
+		{
+			InternalList.Add(Things.At(i));
+		}
+	}
 	public T Dequeue(){
 		T Thing = InternalList[0];
 		InternalList.RemoveAt(0);
@@ -37,6 +44,9 @@ public class Deque<T> {
 	}
 	public T Peek(){
 		return InternalList[0];
+	}
+	public bool IsEmpty(){
+		return (Count <= 0);
 	}
 	public void Clear(){
 		InternalList.Clear();

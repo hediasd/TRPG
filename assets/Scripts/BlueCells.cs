@@ -9,11 +9,12 @@ public class BlueCells : MonoBehaviour {
 	public float x, z;
 
 	public void StartOver (float xa, float za, int rad){
-		Startup(new Point(xa,za), rad, blueCell);
+		Startup(new Point(xa, za), rad, blueCell);
 	}
 
 	public void Feed(List<LinkedPoint> points, bool HSV = false, bool depther = false, float Max = 0.5f, float Min = 0.1f){
 		if(HSV){
+			float f = 0;
 			float maxDepth = 0;
 			float minDepth = 0;
 			foreach (Point p in points)

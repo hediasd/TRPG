@@ -8,40 +8,40 @@ public class Thesaurus {
 		switch(st){
 			
 			case "darkness":
-				return E.DARKNESS;
+				return ELEMENT.DARKNESS;
 			case "earth":
-				return E.EARTH;
+				return ELEMENT.EARTH;
 			case "fire":
-				return E.FIRE;			 
+				return ELEMENT.FIRE;			 
 			case "ice":
-				return E.ICE;
+				return ELEMENT.ICE;
 			case "light":
-				return E.LIGHT;			 			
+				return ELEMENT.LIGHT;			 			
 			case "steel":
-				return E.STEEL;			 			
+				return ELEMENT.STEEL;			 			
 			case "thunder":
-				return E.THUNDER;			 			
+				return ELEMENT.THUNDER;			 			
 			case "water":
-				return E.WATER;			 			
+				return ELEMENT.WATER;			 			
 			case "wind":
-				return E.WIND;			 			
+				return ELEMENT.WIND;			 			
 			case "wood":
-				return E.WOOD;	
+				return ELEMENT.WOOD;	
 
 			case "linear":
-				return E.LINE;
+				return GEOMETRY.LINE;
 			case "trilinear":
-				return E.TRILINE;
+				return GEOMETRY.TRILINE;
 			case "horizontalline":
-				return E.HORIZONTALLINE;
+				return GEOMETRY.HORIZONTAL_LINE;
 			case "verticalline":
-				return E.VERTICALLINE;
+				return GEOMETRY.VERTICAL_LINE;
 			case "circle":
-				return E.CIRCLE;
+				return GEOMETRY.CIRCLE;
 			case "square":
-				return E.SQUARE;
+				return GEOMETRY.SQUARE;
 			case "cone":
-				return E.CONE;
+				return GEOMETRY.CONE;
 
 			case "simplesingle":
 				return E.SIMPLESINGLE;

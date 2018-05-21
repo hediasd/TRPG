@@ -2,10 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
-public class Animation {
+public class Animation : MonoBehaviour{
 
-	public string name;
+	public string Name;
 	public List<SfxSpriteAnimation> EffectList;	
 	//public SfxSpriteAnimation[] EffectList;
 	public Color paletteA, paletteB;

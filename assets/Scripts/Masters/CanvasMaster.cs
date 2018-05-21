@@ -29,17 +29,17 @@ public class CanvasMaster : MonoBehaviour {
 	}
 
 	public void Updater(){
-		switch (stackTop.selecter)
+		switch (stackTop.Selecter)
 		{
 			case E.ARROW_UPDOWN:
 				if(Input.GetKeyDown("up")){
 					//foreach (GameObject blox in stackTop.windows){
-						stackTop.windows[0].GetComponent<BoxMaker>().UpArrow();
+						stackTop.Windows[0].GetComponent<BoxMaker>().UpArrow();
 					//}
 				}
 				if(Input.GetKeyDown("down")){
 					//foreach (GameObject blox in stackTop.windows){
-						stackTop.windows[0].GetComponent<BoxMaker>().DownArrow();
+						stackTop.Windows[0].GetComponent<BoxMaker>().DownArrow();
 					//}
 				}				
 				
@@ -52,7 +52,7 @@ public class CanvasMaster : MonoBehaviour {
 	}
 	
 	public void ResetArrow(){
-		foreach (GameObject blox in stackTop.windows){
+		foreach (GameObject blox in stackTop.Windows){
 			while(BattleMaster.indexV > 0) blox.GetComponent<BoxMaker>().UpArrow();
 			//while(BattleMaster.indexH > 0) 
 		}

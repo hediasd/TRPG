@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 199987609574192332}
   - component: {fileID: 114930546852261700}
   m_Layer: 0
-  m_Name: Particle Shield
+  m_Name: Particle revolver
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

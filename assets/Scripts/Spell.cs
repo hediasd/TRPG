@@ -30,8 +30,8 @@ public class Spell : DataObject {
 		//Damages.Add(10);
 		Cooldown = Level = MinimumCastRange = MaximumCastRange = 1;
 		Radius = 0;
-		SpellCastShape = SpellEffectShape = E.CIRCLE;
-		SpellTargets = E.ENEMIES;		
+		SpellCastShape = SpellEffectShape = GEOMETRY.CIRCLE;
+		SpellTargets = TARGET.ENEMIES;		
 		//anim = new Animation();
 		//anim.sheet = "Bright2";
 	}
@@ -93,11 +93,11 @@ public class Spell : DataObject {
 		}
 
 		switch(SpellEffectShape){
-			case E.CIRCLE:
-			case E.SQUARE:
+			case GEOMETRY.CIRCLE:
+			case GEOMETRY.SQUARE:
 				ShapePoints = Shape.GetShape(SpellEffectShape, MaximumRange: Radius);
 				break;
-			case E.CONE:
+			case GEOMETRY.CONE:
 				for (int i = 0; i < Radius+1; i++)
 				{
 					for (int j = -i; j < i+1; j++)
@@ -107,14 +107,14 @@ public class Spell : DataObject {
 					}
 				}
 				break;
-			case E.LINE:
+			case GEOMETRY.LINE:
 				for (int i = 0; i < Radius+1; i++){
 					Point p = new Point(i*d[0], i*d[1]);
 					ShapePoints.Add(p);
 				}
 				break;
-			case E.NONE: ///
-				Shape.GetShape(E.CIRCLE, MaximumRange: Radius);
+			case GEOMETRY.NONE: ///
+				Shape.GetShape(GEOMETRY.CIRCLE, MaximumRange: Radius);
 				break;
 		}
 
@@ -154,7 +154,7 @@ public class Spell : DataObject {
 		}
 
 		switch(fragmentshape){
-			case E.CIRCLE:
+			case GEOMETRY.CIRCLE:
 				point_pool.Sort((p1, p2) => Mathf.RoundToInt(Point.Distance(to, p1) - Point.Distance(to, p2)));
 				for (int i = 0; point_pool.Count > 0; i++){
 					List<Point> pt = new List<Point>();
@@ -171,7 +171,7 @@ public class Spell : DataObject {
 					pts.Add(pt);
 				}
 				break;
-			case E.CONE:
+			case GEOMETRY.CONE:
 				/*for (int i = 0; i < Radius+1; i++)
 				{
 					for (int j = -i; j < i+1; j++)
@@ -182,13 +182,13 @@ public class Spell : DataObject {
 				}
 				*/
 			break;
-			case E.LINE:
+			case GEOMETRY.LINE:
 				for (int i = 0; i < Radius+1; i++){
 					Point p = new Point(to.x + i*d[0], to.z + i*d[1]);
 				//	pts.Add(p);
 				}
 			break;
-			case E.HORIZONTALLINE:
+			case GEOMETRY.HORIZONTAL_LINE:
 				point_pool.Sort((p1, p2) => Mathf.RoundToInt(p1.z - p2.z));
 				for (int i = 0; point_pool.Count > 0; i++){
 					List<Point> pt = new List<Point>();
@@ -205,7 +205,7 @@ public class Spell : DataObject {
 					pts.Add(pt);
 				}
 			break;
-			case E.NONE: ///
+			case GEOMETRY.NONE: ///
 
 			break;
 		}

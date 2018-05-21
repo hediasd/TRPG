@@ -1,19 +1,24 @@
 fileFormatVersion: 2
-guid: 3c5e3f91acc90e74da17ebd7b1b7e11a
+guid: 7e6f19c53ffa50a4abc45ba93ca096fd
 timeCreated: 1454449039
 licenseType: Free
 TrueTypeFontImporter:
-  serializedVersion: 2
+  externalObjects: {}
+  serializedVersion: 4
   fontSize: 120
   forceTextureCase: -2
-  characterSpacing: 1
-  characterPadding: 0
+  characterSpacing: 0
+  characterPadding: 1
   includeFontData: 1
-  use2xBehaviour: 0
-  fontNames: []
-  fallbackFontReferences: []
+  fontName: Synchronizer NBP
+  fontNames:
+  - Synchronizer NBP
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 3c5e3f91acc90e74da17ebd7b1b7e11a, type: 3}
   customCharacters: 
   fontRenderingMode: 1
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

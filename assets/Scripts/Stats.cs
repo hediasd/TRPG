@@ -27,10 +27,10 @@ public class Stats {
     }
 
 	public int HPA(){
-		return InnerStats[E.HPA, BattleActualValue];
+		return InnerStats[STAT.HPA, BattleActualValue];
 	}
 	public int HPM(){
-		return InnerStats[E.HPA, BattleStartValue];
+		return InnerStats[STAT.HPA, BattleStartValue];
 	}
 
 	public void Increase(int Index, int Amount){
