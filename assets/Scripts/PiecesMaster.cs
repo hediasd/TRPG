@@ -5,13 +5,13 @@ using System.Collections.Generic;
 
 public class PiecesMaster : MonoBehaviour {
 
+	public static int MonstersActing, AnimationsActing, TextDamagesActing;
+
 	public GameObject cellEff, cellMon, cellDmg, cellTrr;
 	public GameObject chooser, effPieces, monPieces, txtPieces;
 	public GameState stackTop;
 	ChooserMaster chooserMaster;
 	public static Dictionary<int, GameObject> MonPiecesList = new Dictionary<int, GameObject>();
-
-	public static int Actors = 0;
 
 	void Start () {		
 		chooserMaster = chooser.GetComponent<ChooserMaster>();
@@ -62,7 +62,6 @@ public class PiecesMaster : MonoBehaviour {
 	}
 
 	public void WalkTo(GameObject go, Point to, List<Point> PointPath){
-		BattleMaster.Acting++;
 		go.GetComponent<Piece>().Walk(to, PointPath);
 	}
 
@@ -111,8 +110,8 @@ public class PiecesMaster : MonoBehaviour {
 	}
 
 	public void SpawnAnimation(PieceSpell ps){
-		BattleMaster.Acting++;
-		StartCoroutine(Actor(ps));		
+		//Acting++;
+		StartCoroutine(Act(ps));		
 	}
 
 	public void SpawnSfxEffect(SfxSpriteAnimation sfx, Point to, Point fr){
@@ -157,22 +156,25 @@ public class PiecesMaster : MonoBehaviour {
 
 	}
 
-	public IEnumerator Actor(PieceSpell ps)
+	public IEnumerator Act(PieceSpell ps)
     {
 		//Animation animation = Grimoire.Animations[0];
 
-		GameObject SpellAnimation = Instantiate(Resources.Load("Animation/Fire Ball")) as GameObject;
+		GameObject SpellAnimation = Instantiate(Resources.Load("Animation/Fire Breath"), effPieces.transform) as GameObject;
 
+		ParticlesAnimation ParticlesAnimation = SpellAnimation.AddComponent<ParticlesAnimation>();
 		if(SpellAnimation.GetComponent<Piece>() == null){
 			SpellAnimation.AddComponent<Piece>();
 		}
 
-		Point target = ps.to;
-		Point fr = new Point(ps.who);
+		ParticlesAnimation.Startup(ps);
 
-		SpellAnimation.transform.localPosition = new Vector3(fr.x, 0, fr.z);
+		Point target = ps.CastedTo;
+		Point fr = new Point(ps.CastedFrom);
 
-		List<Point> shape = ps.sp.EffectShapePoints(fr, target);
+		SpellAnimation.transform.position = new Vector3(fr.x, 0, fr.z);
+
+		List<Point> shape = ps.CastedSpell.EffectShapePoints(fr, target);
 		
 		//Queue<SfxSpriteAnimation> EffectQueue = new Queue<SfxSpriteAnimation>();
 		
@@ -218,7 +220,6 @@ public class PiecesMaster : MonoBehaviour {
 
         yield return TimeMaster.WaitSeconds(0.25f);
 		//Actors--;
-		BattleMaster.Acting--;
     }
 
 

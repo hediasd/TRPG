@@ -37,7 +37,7 @@ public class Monster : DataObject {
 	[System.NonSerialized]
 	public Point MonsterPoint;
 	[System.NonSerialized]
-	public bool alive;
+	public bool Alive;
 	[System.NonSerialized]
 	public int Team, AvailableMovementPoints,
 				lastDamage, turnDamage, lastTurnDamage, totalDamageTaken;
@@ -83,7 +83,7 @@ public class Monster : DataObject {
 	}
 
 	public bool Die(){
-		alive = false;
+		Alive = false;
 		return true;
 	}
 

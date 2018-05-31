@@ -41,7 +41,7 @@ public class MapMaster : MonoBehaviour {
 		TextAsset[] MapCSVs = Resources.LoadAll<TextAsset>("GameMaps/" + MapName + "/");// + MapName + "_Blocks");
 		List<Sprite> TilesetSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Tilesets/"+TilesetName));
 
-		go.transform.Find("Terrain").Find("desert day").GetComponent<MeshFilter>().mesh.RecalculateNormals();
+		//go.transform.Find("Terrain").Find("desert day").GetComponent<MeshFilter>().mesh.RecalculateNormals();
 		
 		for (int i = 0; i < MapCSVs.Length; i++)
 		{

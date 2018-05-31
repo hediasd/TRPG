@@ -11,7 +11,7 @@ using UnityEngine;
 
 			//CastShape with Pivot
 			List<Point> CastShape = SimulatedSpell.CastShapePoints(PointPivot);
-			List<Point> Circle = Shape.GetShape(GEOMETRY.CIRCLE, BlurAmount);
+			List<Point> Circle = Shape.GetShape(GEOMETRY.CIRCLE, null, BlurAmount);
 			
 			foreach (Point CastShapePoint in CastShape)
 			{

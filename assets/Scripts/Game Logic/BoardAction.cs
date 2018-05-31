@@ -38,16 +38,16 @@ public class PieceMove : BoardAction {
 }
 
 public class PieceSpell : BoardAction {
-	public GameObject who;
-	public Spell sp;
-	public Point fr, to;
-	public Monster mon;
+	public GameObject CasterGameObject;
+	public Spell CastedSpell;
+	public Point CastedFrom, CastedTo;
+	public Monster CasterMonster;
 	public PieceSpell(Monster m, Spell ss, Point gf, Point gt){
-		who = PiecesMaster.MonsterGameObject(m);
-		mon = m;
-		sp = ss;
-		fr = gf;
-		to = gt;
+		CasterGameObject = PiecesMaster.MonsterGameObject(m);
+		CasterMonster = m;
+		CastedSpell = ss;
+		CastedFrom = gf;
+		CastedTo = gt;
 	}
 }
 

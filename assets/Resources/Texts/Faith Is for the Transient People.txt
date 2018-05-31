@@ -27,6 +27,8 @@ Legendary Hero Gilgamesh
 White Knight Hayato
 - Defeated dragonbird Hoaimu
 
+Beast, Undead, Dragon, Bird, Machine, Fish, Spirit, Rock, Plant, Fairy
+
 The Candidate for Goddess
 
 Feudal Lord ?
@@ -121,18 +123,28 @@ Magician's Books - As you approach the books, you feel and overwhelming feeling 
 - Main Questline
 
 	The Summer Lady - Holds a Key inside her Summer House. Actually Woman Clothed in the Sun, the Woman of Apocalypse.
-	Aids the player in the desert. Eventually gives advice on the house and disappears. Comes back in the Wind Temple and Episode 5.
+	Aids the player in the desert: Appears on like 3rd turn of some desert map, fully heals the party.
+	Eventually gives advice on the house and disappears. Comes back in the Wind Temple and Episode 5.
 	
-	Blessings of the Fishermen - Verdekelp, Cyanoph, 
+	Blessings of the Fishermen - Verdekelp, Cyanoph, ... In order to be protected against the powers of the next Master.
 
 = 
+
 = Cult of the Flame
 >
 >
+
+	Goyoo was self-dependent and believed that, after the "second age of terror", he would return to his true form and
+	restore the world through domination after he had distilled enough beings to evolve into his final state. 
+	
+	
 = The Purple Phoenix
 >
 >
 = Cult of the Blood
+
+	We from the Cult of the Blood are aware of you, humans, and of your intentions.
+
 
 = The Sword Monsters
 	What we are not expecting from our adventure is to encounter one of the Sword monsters, Mysteltainn. 

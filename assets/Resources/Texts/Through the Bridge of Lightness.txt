@@ -270,6 +270,7 @@ Darkness, Fire > Wood
 "Blow Away"
 "Breathsteal"
 "Confused Storm"
+"Crippling Storm"
 "Divine Wind"
  - Lv10 Attack - Damage, full AoE wind mana restore
 "Dual Sonic"
@@ -311,7 +312,7 @@ Darkness, Fire > Wood
 "Endow with Kindness"
 "Fiber Lock"
 "Forest Floor"
-"Forestry Commission
+"Forestry Commission"
 "Hoimi Table"
 "Hundred Spikes"
 "Kabuki Showdown"
@@ -804,6 +805,7 @@ Darkness, Fire > Wood
 "Fridge Bite"
 "Permafrost"
 "Rain of Needles"
+"Shard of Glass"
 "The Beautiful Maiden Wants Blood"
 "Winter Counterpart"
 

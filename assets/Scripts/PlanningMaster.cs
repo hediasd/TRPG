@@ -27,13 +27,13 @@ public class PlanningMaster : MonoBehaviour {
 
 	}
 	
-	int TeamDamageDealt(List<Damage> Damages, int Team, bool ExceptTeam = false){
+	int TeamDamageDealt(List<Damage> Damages, int Team, bool ExceptGivenTeam = false){
 		int Total = 0;
 		foreach (Damage d in Damages)
 		{
 			int TargetsTeam = d.TargetMonster.Team;
 			// if (all enemy teams) or (only my team)
-			if((ExceptTeam && TargetsTeam != Team) || (!ExceptTeam && TargetsTeam == Team)){
+			if((ExceptGivenTeam && TargetsTeam != Team) || (!ExceptGivenTeam && TargetsTeam == Team)){
 					Total += d.FinalDamage;
 			}		
 		}
@@ -63,7 +63,7 @@ public class PlanningMaster : MonoBehaviour {
 				List<Damage> DamageSimulations = Gameboard.SimulateSpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
 				
 				// Enemy damage dealt
-				int A1 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team, ExceptTeam: true);
+				int A1 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team, ExceptGivenTeam: true);
 				// Friendly fire
 				int A2 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team);
 				// Killed enemies
@@ -136,7 +136,7 @@ public class PlanningMaster : MonoBehaviour {
 		
 		if(ChosenSpell != null){
 			//PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ChosenSpell.to, WalkableMap);
-			PieceMove ChosenMovementPath = new PieceMove(ThinkingMonster, ThinkingMonster.MonsterPoint, ChosenSpell.fr, Paths[ChosenSpell.fr]);
+			PieceMove ChosenMovementPath = new PieceMove(ThinkingMonster, ThinkingMonster.MonsterPoint, ChosenSpell.CastedFrom, Paths[ChosenSpell.CastedFrom]);
 			Actions.Enqueue(ChosenMovementPath);
 			Actions.Enqueue(ChosenSpell);
 		}else{

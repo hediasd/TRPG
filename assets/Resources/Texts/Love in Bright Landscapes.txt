@@ -16,6 +16,26 @@ Subterranean Canal
 Last Tomb - Ice Egyptian Tomb
 Sourbridge
 
+> Ice Map with Ice Cracks - Stepping on cracks kills character, unlocks Ice Tombs
+> Interactive readings in some maps
+
+//
+
+Bird
+Bug
+Demon
+Dragon
+Fairy
+Fish
+Humanoid
+Machine
+Spirit
+Plant
+Undead
+-
+Ice
+Steel
+
 //
 
 = Backworld North
@@ -179,7 +199,7 @@ Lightown - Dungeon -
 		Rai [THUNDER],
 		[BOSS] Reptoplasm [THUNDER],
 		[BOSS] Maestro of Thunder [THUNDER]
-			Arc Hight Voltage, Lord of Vermillion, Eight of Bolts
+			Arc High Voltage, Lord of Vermillion, Eight of Bolts
 	
 
 Underground Bunkers - Dungeon -
@@ -195,8 +215,10 @@ Wind Hills - Field -
 		Obakemono Files [Quest Item]
 
 Wind Shrine - Dungeon -
-		Wind Priest [WIND]
-		[BOSS] Princess of the Wind [WIND]
+		Wind Priest [LIGHT, WIND],
+		Elemental of Gale [DARKNESS, WIND],
+		[BOSS] Princess of the Wind [WIND],
+		[BOSS] Incarnated Queen of the Wind [WIND]
 
 Hill of the Old Breeze - Small Field -
 		[BOSS] Stream Deity [WIND]

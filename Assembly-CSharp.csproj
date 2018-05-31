@@ -65,10 +65,14 @@
      <Compile Include="assets\pixelcamera2d\scripts\PixelCamera2D.cs" />
      <Compile Include="assets\pixelcamera2d\scripts\PixelCamera2DBehaviour.cs" />
      <Compile Include="assets\Scripts\Animation.cs" />
+     <Compile Include="assets\Scripts\BattleMaster.cs" />
      <Compile Include="assets\Scripts\BlueCells.cs" />
      <Compile Include="assets\Scripts\CameraMove1.cs" />
+     <Compile Include="assets\Scripts\CanvasMaster.cs" />
+     <Compile Include="assets\Scripts\ChooserMaster.cs" />
      <Compile Include="assets\Scripts\Classes.cs" />
      <Compile Include="assets\Scripts\Damage.cs" />
+     <Compile Include="assets\Scripts\DebugMaster.cs" />
      <Compile Include="assets\Scripts\DragCamera.cs" />
      <Compile Include="assets\Scripts\Dump\Dump.cs" />
      <Compile Include="assets\Scripts\Dump\Environment.cs" />
@@ -76,6 +80,7 @@
      <Compile Include="assets\Scripts\Exceptions\GameboardException.cs" />
      <Compile Include="assets\Scripts\Game Logic\BoardAction.cs" />
      <Compile Include="assets\Scripts\Gameboard.cs" />
+     <Compile Include="assets\Scripts\GameboardMaster.cs" />
      <Compile Include="assets\Scripts\Grimoire.cs" />
      <Compile Include="assets\Scripts\Holders\AnimationHolder.cs" />
      <Compile Include="assets\Scripts\Holders\MonsterHolder.cs" />
@@ -86,16 +91,6 @@
      <Compile Include="assets\Scripts\LookAt.cs" />
      <Compile Include="assets\Scripts\Map.cs" />
      <Compile Include="assets\Scripts\MapMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\BattleMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\CanvasMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\ChooserMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\DebugMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\GameboardMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\OverlaysMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\PiecesMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\PlanningMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\TimeMaster.cs" />
-     <Compile Include="assets\Scripts\Masters\WriteMaster.cs" />
      <Compile Include="assets\Scripts\Menu Related\BoxMaker.cs" />
      <Compile Include="assets\Scripts\Menu Related\BoxMaker2.cs" />
      <Compile Include="assets\Scripts\Menu Related\BoxMaker3.cs" />
@@ -103,7 +98,14 @@
      <Compile Include="assets\Scripts\Menu Related\TextMenu.cs" />
      <Compile Include="assets\Scripts\Monster.cs" />
      <Compile Include="assets\Scripts\MovementCells.cs" />
+     <Compile Include="assets\Scripts\OverlaysMaster.cs" />
+     <Compile Include="assets\Scripts\Particles\AnimationMove.cs" />
+     <Compile Include="assets\Scripts\Particles\AnimationSpin.cs" />
+     <Compile Include="assets\Scripts\Particles\BaseParticlesAction.cs" />
+     <Compile Include="assets\Scripts\Particles\ParticlesAnimation.cs" />
      <Compile Include="assets\Scripts\Piece.cs" />
+     <Compile Include="assets\Scripts\PiecesMaster.cs" />
+     <Compile Include="assets\Scripts\PlanningMaster.cs" />
      <Compile Include="assets\Scripts\Shape.cs" />
      <Compile Include="assets\Scripts\SizeGrow.cs" />
      <Compile Include="assets\Scripts\Spell.cs" />
@@ -120,6 +122,7 @@
      <Compile Include="assets\Scripts\Sprites\TransparencyShift.cs" />
      <Compile Include="assets\Scripts\Stats.cs" />
      <Compile Include="assets\Scripts\Terrain.cs" />
+     <Compile Include="assets\Scripts\TimeMaster.cs" />
      <Compile Include="assets\Scripts\Utilities\Algorithms.cs" />
      <Compile Include="assets\Scripts\Utilities\Deque.cs" />
      <Compile Include="assets\Scripts\Utilities\Element.cs" />
@@ -128,6 +131,7 @@
      <Compile Include="assets\Scripts\Utilities\Stuff.cs" />
      <Compile Include="assets\Scripts\Utilities\Thesaurus.cs" />
      <Compile Include="assets\Scripts\Utilities\Utility.cs" />
+     <Compile Include="assets\Scripts\WriteMaster.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Runtime\CircleObject.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Runtime\GameObjectExtensions.cs" />
      <Compile Include="assets\Tiled2Unity\Scripts\Runtime\GPUInstancing.cs" />
@@ -194,6 +198,7 @@
      <None Include="assets\Resources\Texts\Logs\MJC_120518_71363327.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Light.txt" />
      <None Include="assets\FreePixelEffect\Additive.shader" />
+     <None Include="assets\Resources\Texts\Logs\SJC_260518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_100518_1549799080.txt" />
      <None Include="assets\Resources\Texts\MonsterJsonCopy.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_0405180202_-261097059.txt" />
@@ -202,24 +207,30 @@
      <None Include="assets\Resources\Texts\Logs\MJC_090518_1672959700.txt" />
      <None Include="assets\Resources\Texts\MapOutput.txt" />
      <None Include="assets\Resources\Texts\Roses at Summer&apos;s End.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_290518_-672658293.txt" />
      <None Include="assets\Resources\Materials\ColourSpectrum.shader" />
      <None Include="assets\Resources\Texts\Logs\SJC_170518_1549799080.txt" />
      <None Include="assets\Resources\Materials\HSVDefault.shader" />
+     <None Include="assets\Resources\Texts\Logs\SJC_250518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Through the Small Bridge.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1672959700.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1484680319.txt" />
      <None Include="assets\Tiled2Unity\Imported\spooky_village.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\MJC_280518_-672658293.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_160518_-672658293.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_160518_1549799080.txt" />
      <None Include="assets\Resources\Texts\MonsterJsonCopy - Copia.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_060518_-261097059.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1680220749.txt" />
      <None Include="assets\Tiled2Unity\Imported\desert2.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\SJC_280518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1675493644.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_220518_-672658293.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy2.tiled2unity.xml" />
      <None Include="assets\Resources\Materials\VertexLit with Z.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_1587097823.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_220518_1549799080.txt" />
      <None Include="assets\Resources\Materials\Sprites-Diffuses.shader" />
      <None Include="assets\Tiled2Unity\Materials\_ReadMe.txt" />
      <None Include="assets\Resources\Texts\Size of the Moon.txt" />
@@ -243,11 +254,15 @@
      <None Include="assets\Resources\Texts\Logs\SJC_070518_731674064.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_170518_-672658293.txt" />
      <None Include="assets\Resources\Texts\Output.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_300518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_260518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_300518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-322522001.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_120518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\SJC_110518_1549799080.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
      <None Include="assets\Resources\Texts\Logs\MJC_180518_-672658293.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_250518_-672658293.txt" />
      <None Include="assets\Tiled2Unity\Imported\snowy4.tiled2unity.xml" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="assets\Resources\Materials\Sprites-Simple.shader" />
@@ -258,6 +273,7 @@
      <None Include="assets\Resources\Texts\Logs\MJC_120518_1672959700.txt" />
      <None Include="assets\Resources\Texts\Through the Bridge of Lightness.txt" />
      <None Include="assets\Tiled2Unity\License.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_290518_1549799080.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1721623659.txt" />
      <None Include="assets\Resources\GameMaps\rules.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_070518_-1932527421.txt" />
@@ -306,6 +322,9 @@
  </Reference>
  <Reference Include="UnityEngine.SpatialTracking">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
+ </Reference>
+ <Reference Include="Vuforia.UnityExtensions">
+ <HintPath>C:/Program Files/Unity/Editor/Data/PlaybackEngines/VuforiaSupport/Managed/Runtime/Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Advertisements">
  <HintPath>C:/ProgramData/Unity/cache/packages/packages.unity.com/com.unity.ads@2.0.4/UnityEngine.Advertisements.dll</HintPath>

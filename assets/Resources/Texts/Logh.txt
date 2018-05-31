@@ -1,151 +1,240 @@
 --- TURN 1 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (9, 3) to (10, 4)
 --- TURN 2 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 1) to (11, 2)
+%%% walks from (11, 1) to (10, 2)
 --- TURN 3 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (11, 3) to (11, 5)
 --- TURN 4 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 13) to (11, 13)
+%%% walks from (10, 13) to (10, 12)
 --- TURN 5 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 11) to (11, 10)
+%%% walks from (10, 11) to (10, 9)
 --- TURN 6 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (11, 11)
+%%% walks from (11, 12) to (12, 12)
 --- TURN 7 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (10, 4) to (10, 6)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 12
 --- TURN 8 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 2) to (11, 4)
+%%% walks from (10, 2) to (10, 4)
 --- TURN 9 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (11, 5) to (11, 7)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+%%% walks from (11, 5) to (10, 5)
 --- TURN 10 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 13) to (11, 12)
---- TURN 11 - [Sandstone Golem]'s turn - [5/20 HP]
-%%% walks from (11, 10) to (11, 8)
+%%% walks from (10, 12) to (10, 10)
+--- TURN 11 - [Sandstone Golem]'s turn - [8/20 HP]
+%%% walks from (10, 9) to (10, 7)
 --- TURN 12 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 11) to (11, 9)
+%%% walks from (12, 12) to (11, 13)
 --- TURN 13 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (10, 6) to (10, 8)
+%%% walks from (10, 6) to (8, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15, [Hungry Vulture] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 14
 --- TURN 14 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 4) to (11, 6)
+%%% walks from (10, 4) to (9, 5)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Snake of Latos] for 15, [Sandstone Golem] for 15, [Hungry Vulture] for 15
---- TURN 15 - [Snake of Latos]'s turn - [5/20 HP]
-%%% walks from (11, 7) to (9, 7)
+%%% spell [Evil Claw] damages [Snake of Latos] for 10, [Sandstone Golem] for 11
+--- TURN 15 - [Snake of Latos]'s turn - [10/20 HP]
+%%% walks from (10, 5) to (9, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Sandstone Golem] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
 --- TURN 16 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (11, 10)
---- TURN 17 - [Sandstone Golem]'s turn - [-40/20 HP]
-%%% walks from (11, 8) to (10, 7)
---- TURN 18 - [Hungry Vulture]'s turn - [-10/20 HP]
-%%% walks from (11, 9) to (11, 7)
---- TURN 19 - [Snake of Latos]'s turn - [-10/20 HP]
-%%% walks from (10, 8) to (8, 8)
+%%% walks from (10, 10) to (9, 9)
+--- TURN 17 - [Sandstone Golem]'s turn - [-27/20 HP]
+%%% walks from (10, 7) to (10, 5)
+--- TURN 18 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 13) to (9, 13)
+--- TURN 19 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (8, 6) to (8, 4)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
 --- TURN 20 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 6) to (9, 6)
+%%% walks from (9, 5) to (8, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Sandstone Golem] for 15, [Hungry Vulture] for 15
---- TURN 21 - [Snake of Latos]'s turn - [-10/20 HP]
+%%% spell [Evil Claw] damages [Snake of Latos] for 16, [Sandstone Golem] for 14
+--- TURN 21 - [Snake of Latos]'s turn - [-6/20 HP]
+%%% walks from (9, 6) to (8, 5)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 11
+--- TURN 22 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (9, 9) to (8, 8)
+--- TURN 23 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (10, 5) to (9, 6)
+--- TURN 24 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (9, 13) to (8, 12)
+--- TURN 25 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (8, 4) to (9, 5)
+--- TURN 26 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (8, 6) to (7, 7)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
+--- TURN 27 - [Snake of Latos]'s turn - [-6/20 HP]
+%%% walks from (8, 5) to (8, 7)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 11
+--- TURN 28 - [Sandstone Golem]'s turn - [-1/20 HP]
+%%% walks from (8, 8) to (9, 7)
+--- TURN 29 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (9, 6) to (8, 5)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Snake of Latos] for 12
+--- TURN 30 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (8, 12) to (8, 10)
+--- TURN 31 - [Snake of Latos]'s turn - [8/20 HP]
+%%% walks from (9, 5) to (8, 6)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Snake of Latos] for 11, [Sandstone Golem] for 11
+--- TURN 32 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (7, 7) to (7, 9)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 13
+--- TURN 33 - [Snake of Latos]'s turn - [-17/20 HP]
+%%% walks from (8, 7) to (7, 8)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 11, [Hungry Vulture] for 15
+--- TURN 34 - [Sandstone Golem]'s turn - [-12/20 HP]
 %%% walks from (9, 7) to (7, 7)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Hungry Vulture] for 15, [Sandstone Golem] for 15
---- TURN 22 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 10) to (9, 10)
---- TURN 23 - [Sandstone Golem]'s turn - [-85/20 HP]
-%%% walks from (10, 7) to (8, 7)
+%%% spell [Evil Claw] damages [Snake of Latos] for 10, [Hungry Vulture] for 13
+--- TURN 35 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (8, 5) to (7, 4)
+--- TURN 36 - [Hungry Vulture]'s turn - [-8/20 HP]
+%%% walks from (8, 10) to (8, 8)
+--- TURN 37 - [Snake of Latos]'s turn - [8/20 HP]
+%%% walks from (8, 6) to (8, 4)
+--- TURN 38 - [Hungry Vulture]'s turn - [-4/20 HP]
+%%% walks from (7, 9) to (8, 9)
+--- TURN 39 - [Snake of Latos]'s turn - [-27/20 HP]
+%%% walks from (7, 8) to (6, 9)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15
---- TURN 24 - [Hungry Vulture]'s turn - [-25/20 HP]
-%%% walks from (11, 7) to (9, 7)
---- TURN 25 - [Snake of Latos]'s turn - [-25/20 HP]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 11, [Hungry Vulture] for 14
+--- TURN 40 - [Sandstone Golem]'s turn - [-12/20 HP]
+%%% walks from (7, 7) to (7, 9)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 15
+--- TURN 41 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (7, 4) to (8, 3)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Snake of Latos] for 13
+--- TURN 42 - [Hungry Vulture]'s turn - [-19/20 HP]
+%%% walks from (8, 8) to (9, 9)
+--- TURN 43 - [Snake of Latos]'s turn - [-5/20 HP]
+%%% walks from (8, 4) to (7, 3)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+--- TURN 44 - [Hungry Vulture]'s turn - [-33/20 HP]
+%%% walks from (8, 9) to (7, 8)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 11
+--- TURN 45 - [Snake of Latos]'s turn - [-27/20 HP]
 --- TURN 1 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (9, 3) to (10, 4)
 --- TURN 2 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 1) to (11, 2)
+%%% walks from (11, 1) to (10, 2)
 --- TURN 3 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (11, 3) to (11, 5)
 --- TURN 4 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 13) to (11, 13)
+%%% walks from (10, 13) to (10, 12)
 --- TURN 5 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 11) to (11, 10)
+%%% walks from (10, 11) to (10, 9)
 --- TURN 6 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (11, 11)
+%%% walks from (11, 12) to (12, 12)
 --- TURN 7 - [Snake of Latos]'s turn - [20/20 HP]
 %%% walks from (10, 4) to (10, 6)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 12
 --- TURN 8 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 2) to (11, 4)
+%%% walks from (10, 2) to (10, 4)
 --- TURN 9 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (11, 5) to (11, 7)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+%%% walks from (11, 5) to (10, 5)
 --- TURN 10 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 13) to (11, 12)
---- TURN 11 - [Sandstone Golem]'s turn - [5/20 HP]
-%%% walks from (11, 10) to (11, 8)
+%%% walks from (10, 12) to (10, 10)
+--- TURN 11 - [Sandstone Golem]'s turn - [8/20 HP]
+%%% walks from (10, 9) to (10, 7)
 --- TURN 12 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 11) to (11, 9)
+%%% walks from (12, 12) to (11, 13)
 --- TURN 13 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (10, 6) to (10, 8)
+%%% walks from (10, 6) to (8, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15, [Hungry Vulture] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 14
 --- TURN 14 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 4) to (11, 6)
+%%% walks from (10, 4) to (9, 5)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Snake of Latos] for 15, [Sandstone Golem] for 15, [Hungry Vulture] for 15
---- TURN 15 - [Snake of Latos]'s turn - [5/20 HP]
-%%% walks from (11, 7) to (9, 7)
+%%% spell [Evil Claw] damages [Snake of Latos] for 10, [Sandstone Golem] for 11
+--- TURN 15 - [Snake of Latos]'s turn - [10/20 HP]
+%%% walks from (10, 5) to (9, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Sandstone Golem] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
 --- TURN 16 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (11, 10)
---- TURN 17 - [Sandstone Golem]'s turn - [-40/20 HP]
-%%% walks from (11, 8) to (10, 7)
---- TURN 18 - [Hungry Vulture]'s turn - [-10/20 HP]
-%%% walks from (11, 9) to (11, 7)
---- TURN 19 - [Snake of Latos]'s turn - [-10/20 HP]
-%%% walks from (10, 8) to (8, 8)
+%%% walks from (10, 10) to (9, 9)
+--- TURN 17 - [Sandstone Golem]'s turn - [-27/20 HP]
+%%% walks from (10, 7) to (10, 5)
+--- TURN 18 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 13) to (9, 13)
+--- TURN 19 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (8, 6) to (8, 4)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
 --- TURN 20 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 6) to (9, 6)
+%%% walks from (9, 5) to (8, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15, [Sandstone Golem] for 15, [Hungry Vulture] for 15
---- TURN 21 - [Snake of Latos]'s turn - [-10/20 HP]
+%%% spell [Evil Claw] damages [Snake of Latos] for 16, [Sandstone Golem] for 14
+--- TURN 21 - [Snake of Latos]'s turn - [-6/20 HP]
+%%% walks from (9, 6) to (8, 5)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 11
+--- TURN 22 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (9, 9) to (8, 8)
+--- TURN 23 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (10, 5) to (9, 6)
+--- TURN 24 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (9, 13) to (8, 12)
+--- TURN 25 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (8, 4) to (9, 5)
+--- TURN 26 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (8, 6) to (7, 7)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 10
+--- TURN 27 - [Snake of Latos]'s turn - [-6/20 HP]
+%%% walks from (8, 5) to (8, 7)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Sandstone Golem] for 11
+--- TURN 28 - [Sandstone Golem]'s turn - [-1/20 HP]
+%%% walks from (8, 8) to (9, 7)
+--- TURN 29 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (9, 6) to (8, 5)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Snake of Latos] for 12
+--- TURN 30 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (8, 12) to (8, 10)
+--- TURN 31 - [Snake of Latos]'s turn - [8/20 HP]
+%%% walks from (9, 5) to (8, 6)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Snake of Latos] for 11, [Sandstone Golem] for 11
+--- TURN 32 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (7, 7) to (7, 9)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 13
+--- TURN 33 - [Snake of Latos]'s turn - [-17/20 HP]
+%%% walks from (8, 7) to (7, 8)
+%%% casts [Evil Claw]
+%%% spell [Evil Claw] damages [Hungry Vulture] for 11, [Hungry Vulture] for 15
+--- TURN 34 - [Sandstone Golem]'s turn - [-12/20 HP]
 %%% walks from (9, 7) to (7, 7)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Hungry Vulture] for 15, [Sandstone Golem] for 15
---- TURN 22 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (11, 10) to (9, 10)
---- TURN 23 - [Sandstone Golem]'s turn - [-85/20 HP]
-%%% walks from (10, 7) to (8, 7)
+%%% spell [Evil Claw] damages [Snake of Latos] for 10, [Hungry Vulture] for 13
+--- TURN 35 - [Sandstone Golem]'s turn - [-62/20 HP]
+%%% walks from (8, 5) to (7, 4)
+--- TURN 36 - [Hungry Vulture]'s turn - [-8/20 HP]
+%%% walks from (8, 10) to (8, 8)
+--- TURN 37 - [Snake of Latos]'s turn - [8/20 HP]
+%%% walks from (8, 6) to (8, 4)
+--- TURN 38 - [Hungry Vulture]'s turn - [-4/20 HP]
+%%% walks from (7, 9) to (8, 9)
+--- TURN 39 - [Snake of Latos]'s turn - [-27/20 HP]
+%%% walks from (7, 8) to (6, 9)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Snake of Latos] for 15
---- TURN 24 - [Hungry Vulture]'s turn - [-25/20 HP]
-%%% walks from (11, 7) to (9, 7)
---- TURN 25 - [Snake of Latos]'s turn - [-25/20 HP]
---- TURN 1 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (9, 3) to (10, 4)
---- TURN 2 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 1) to (11, 2)
---- TURN 3 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (11, 3) to (11, 5)
---- TURN 4 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 13) to (11, 13)
---- TURN 5 - [Sandstone Golem]'s turn - [20/20 HP]
-%%% walks from (10, 11) to (11, 10)
---- TURN 6 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (11, 11)
---- TURN 7 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (10, 4) to (10, 6)
---- TURN 8 - [Hungry Vulture]'s turn - [20/20 HP]
-%%% walks from (11, 2) to (11, 4)
---- TURN 9 - [Snake of Latos]'s turn - [20/20 HP]
-%%% walks from (11, 5) to (11, 7)
+%%% spell [Evil Claw] damages [Hungry Vulture] for 11, [Hungry Vulture] for 14
+--- TURN 40 - [Sandstone Golem]'s turn - [-12/20 HP]
+%%% walks from (7, 7) to (7, 9)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15
+%%% spell [Evil Claw] damages [Hungry Vulture] for 15
 
