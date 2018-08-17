@@ -4,43 +4,54 @@ using UnityEngine;
 
 public class Stats {
 
-	int[,] InnerStats;
-	const int AbsoluteValue = 0, BattleStartValue = 1, BattleActualValue = 2;
+	int[, ] InnerStats;
 
-	public Stats(int[] Values){
-		InnerStats = new int[10, 3]; 
+	// Absolute = natural stats, start?, actual is the value right now, after equips buffs debuffs
+	const int BattleAbsoluteValue = 0,
+		BattleStartValue = 1,
+		BattleCurrentValue = 2;
 
-		for (int i = 0; i < 10; i++)
-		{
-			for (int j = 0; j < 3; j++)
-			{
+	public Stats (int[] Values) {
+		InnerStats = new int[10, 3];
+
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 3; j++) {
 				InnerStats[i, j] = Values[i];
 			}
 		}
 	}
 
-	public int this[int n]{
-        get
-        {
-			return InnerStats[n, BattleActualValue];
-        }
-    }
-
-	public int HPA(){
-		return InnerStats[STAT.HPA, BattleActualValue];
+	public int this [int n] {
+		get {
+			return InnerStats[n, BattleCurrentValue];
+		}
 	}
-	public int HPM(){
+
+	public int HPA () {
+		return InnerStats[STAT.HPA, BattleCurrentValue];
+	}
+	public int HPM () {
 		return InnerStats[STAT.HPA, BattleStartValue];
 	}
 
-	public void Increase(int Index, int Amount){
-		InnerStats[Index, BattleActualValue] += Amount;
+	public int AbsoluteValue (int Index) {
+		return InnerStats[Index, BattleAbsoluteValue];
 	}
-	public void Decrease(int Index, int Amount){
-		InnerStats[Index, BattleActualValue] -= Amount;
+	public int StartValue (int Index) {
+		return InnerStats[Index, BattleAbsoluteValue];
 	}
-	public void ResetValue(int Index){
-		InnerStats[Index, BattleActualValue] = InnerStats[Index, BattleStartValue];
+	public int CurrentValue (int Index) {
+		return InnerStats[Index, BattleAbsoluteValue];
+	}
+
+	public void Increase (int Index, int Amount) {
+		InnerStats[Index, BattleCurrentValue] += Amount;
+	}
+	public void Decrease (int Index, int Amount) {
+		InnerStats[Index, BattleCurrentValue] -= Amount;
+	}
+	public void ResetValue (int Index) {
+		InnerStats[Index, BattleCurrentValue] = InnerStats[Index, BattleStartValue];
 	}
 
 	/*
@@ -49,15 +60,12 @@ public class Stats {
 		return true;
 	}*/
 
-	public Stats Copy(){
+	public Stats Copy () {
 		int[] CopiedInts = new int[10];
-		for (int i = 0; i < 10; i++)
-		{
-				CopiedInts[i] = InnerStats[i, 1];
+		for (int i = 0; i < 10; i++) {
+			CopiedInts[i] = InnerStats[i, 1];
 		}
-		return new Stats(CopiedInts);
+		return new Stats (CopiedInts);
 	}
 
-	
-	
 }

@@ -1,0 +1,34 @@
+A - how much critical damage will the action cause
+B - how much critical life will the action restore
+C - how many enemies are likely to be killed
+D - the altered states that will be inflicted
+E - how many critical MP will be consumed
+
+Movement Points, Mana Points, Action Points
+
+Influence Maps:
+. SpellCastRange blur with MoveRange
+. Check castable spellss/combinations
+. Intersect MoveRange & 
+.
+.
+.
+
+Ground Effects:
+. Scorched, Mud, Snow
+. Snowfall creates Snow, Snow is used for spells (animate snowman etc)
+
+
+
+
+
+Hide:
+. Find point near with least LOS
+
+
+
+
+
+
+
+

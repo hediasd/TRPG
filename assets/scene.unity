@@ -12273,7 +12273,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1099600155}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 83670fabfb0fbf54c812120bdb3f7408, type: 3}
+  m_Script: {fileID: 11500000, guid: b7130b6274c819d45b1f2032a74ba3ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Spells: []
@@ -12295,7 +12295,7 @@ MonoBehaviour:
   chooser: {fileID: 955449607}
   overlays: {fileID: 1872248418}
   pieces: {fileID: 2082237893}
-  Grimoire: {fileID: 0}
+  ResourcesMaster: {fileID: 0}
   GameboardMaster: {fileID: 0}
   PiecesMaster: {fileID: 0}
 --- !u!114 &1099600160

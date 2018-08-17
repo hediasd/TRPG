@@ -8,6 +8,30 @@ public class Gameboard {
 	public Dictionary<int, Monster> MonstersOnBoard;
 	public Point size;
 
+	public Gameboard Clone () {
+
+		Gameboard g = new Gameboard ();
+
+		g.size = new Point (size.x, size.z);
+		g.Board = new int[size.x, size.z, 3];
+
+		for (int i = 0; i < size.x; i++) {
+			for (int j = 0; j < size.z; j++) {
+				for (int k = 0; k < 3; k++) {
+					g.Board[i, j, k] = Board[i, j, k];
+				}
+			}
+		}
+
+		g.MonstersOnBoard = new Dictionary<int, Monster> ();
+		foreach (int value in MonstersOnBoard.Keys) {
+			g.MonstersOnBoard.Add (value, MonstersOnBoard[value]);
+		}
+
+		return g;
+
+	}
+
 	public void Startup (int x, int z) {
 
 		size = new Point (x, z);
@@ -32,7 +56,7 @@ public class Gameboard {
 		if (size != null) Startup (size.x, size.z);
 	}
 
-	public List<Damage> SimulateSpellPerformance (Monster Caster, Spell SimulatedSpell, Point TargetedCell) {
+	public List<Damage> SpellPerformance (Monster Caster, Spell SimulatedSpell, Point TargetedCell) {
 
 		List<Damage> SimulationResult = new List<Damage> ();
 		List<Monster> TargetedMonsters = new List<Monster> ();
@@ -69,7 +93,7 @@ public class Gameboard {
 			Monster Target = MonstersOnBoard[DamageInstance.TargetID];
 			Target.TakeDamage (DamageInstance);
 			bool Killed = false;
-			if (Target.StatList.HPA () == 0) Killed = Kill (Target);
+			if (Target.StatsList.HPA () == 0) Killed = Kill (Target);
 			Success.Add (Killed);
 		}
 		return Success;
@@ -99,7 +123,7 @@ public class Gameboard {
 			throw new GameboardException ();
 		} else {
 			Monster Mon = MonstersOnBoard[MonsterIDAt (From)];
-			if (Point.Distance (From, To) > Mon.MovementPoints ()) {
+			if (Point.Distance (From, To) > Mon.AvailableMovementPoints) {
 				Debug.Log ("Illegal Board Move: No MP " + From + " " + To + " " + Point.Distance (From, To));
 				throw new GameboardException ();
 			}

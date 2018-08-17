@@ -1,0 +1,47 @@
+--- TURN 1 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (9, 3) to (10, 4)
+--- TURN 2 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 1) to (10, 2)
+--- TURN 3 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (11, 3) to (11, 5)
+--- TURN 4 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 13) to (10, 12)
+--- TURN 5 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 11) to (10, 9)
+--- TURN 6 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 12) to (12, 12)
+--- TURN 7 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (10, 4) to (10, 6)
+--- TURN 8 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (10, 2) to (10, 4)
+--- TURN 9 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (11, 5) to (10, 5)
+--- TURN 10 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 12) to (10, 10)
+--- TURN 11 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 9) to (10, 7)
+--- TURN 12 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (12, 12) to (11, 13)
+--- TURN 13 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (10, 6) to (9, 7)
+--- TURN 14 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (10, 4) to (11, 5)
+--- TURN 15 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (10, 5) to (10, 6)
+--- TURN 16 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 10) to (10, 8)
+--- TURN 17 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 7) to (11, 7)
+--- TURN 18 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 13) to (10, 12)
+--- TURN 19 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (9, 7) to (10, 7)
+--- TURN 20 - [Hungry Vulture]'s turn - [20/20 HP]
+%%% walks from (11, 5) to (10, 5)
+--- TURN 21 - [Snake of Latos]'s turn - [20/20 HP]
+%%% walks from (10, 6) to (9, 7)
+--- TURN 22 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (10, 8) to (9, 8)
+--- TURN 23 - [Sandstone Golem]'s turn - [20/20 HP]
+%%% walks from (11, 7) to (10, 8)
+

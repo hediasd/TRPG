@@ -9,6 +9,7 @@ public class BaseText : MonoBehaviour {
 
 	public void Startup (string Texts) {
 		//TODO: PlayerPrefs.DeleteAll();
+		
 		Text = Texts;
 		TextLength = Text.Length;
 
@@ -28,7 +29,6 @@ public class BaseText : MonoBehaviour {
 			GameObject dmgg4 = Instantiate (dmgg1, new Vector3(0.0f, -space, depth), Quaternion.identity);
 			GameObject dmgg5 = Instantiate (dmgg1, new Vector3(0.0f, space, depth), Quaternion.identity);
 			
-			Debug.Log(dmgg2.transform.localPosition + " " +dmgg3.transform.localPosition + " " +dmgg4.transform.localPosition + " " +dmgg5.transform.localPosition);
 			//dmgg2.transform.localPosition = ;
 			//dmgg2.GetComponent<RectTransform>().pivot = new Vector2(0.5f, 0.5f);
 			//dmgg2.transform.localScale = new Vector3(1.25f, 1.25f, 1.25f);

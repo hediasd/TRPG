@@ -15,7 +15,7 @@ public class Keys : MonoBehaviour {
 	public GameObject box;
 
 	GameObject selected;
-	Grimoire grimoire;
+	ResourcesMaster grimoire;
 	PiecesMaster pieceMaster;
 	GameObject blox;
 
@@ -23,7 +23,7 @@ public class Keys : MonoBehaviour {
 	int i = -1; 
 
 	void Start(){
-		grimoire = logic.GetComponent<Grimoire>();
+		grimoire = logic.GetComponent<ResourcesMaster>();
 		pieceMaster = pieces.GetComponent<PiecesMaster>();
 	}
 	

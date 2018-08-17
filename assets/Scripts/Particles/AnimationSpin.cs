@@ -21,8 +21,8 @@ public class AnimationSpin : BaseParticlesAction {
 		//TargetRotation *= Quaternion.AngleAxis (FinalRotation.y, Vector3.up);
 		//TargetRotation *= Quaternion.AngleAxis (FinalRotation.z, Vector3.forward);
 
-		Debug.Log("fnal " + FinalRotation);
-		Debug.Log("tqrget " + TargetRotation + " " + TargetRotation.eulerAngles);
+		//Debug.Log("fnal " + FinalRotation);
+		//Debug.Log("tqrget " + TargetRotation + " " + TargetRotation.eulerAngles);
 	}
 
 	void Update () {
@@ -31,7 +31,7 @@ public class AnimationSpin : BaseParticlesAction {
 		if (t < 1) {
 			transform.rotation = Quaternion.Lerp (transform.rotation, TargetRotation, t);
 		}
-		Debug.Log("now "+ transform.rotation.eulerAngles + " " + FinalRotation);
+		//Debug.Log("now "+ transform.rotation.eulerAngles + " " + FinalRotation);
 		if (transform.rotation.eulerAngles == FinalRotation) GetComponentInChildren<ParticleSystem> ().Stop (false, ParticleSystemStopBehavior.StopEmitting);//AndClear
 	}
 

@@ -21,21 +21,12 @@ Sourbridge
 
 //
 
-Bird
-Bug
-Demon
-Dragon
-Fairy
-Fish
-Humanoid
-Machine
-Spirit
-Plant
-Undead
--
-Ice
-Steel
+Region - Outskirts of Love
+Districts - Thornfield
 
+
+Benizakura - Purple sword sharp only by full moon
+Blade of Stone - Stone katana immune to bewitchments
 //
 
 = Backworld North
@@ -209,7 +200,7 @@ Underground Bunkers - Dungeon -
 
 Wind Hills - Field -
 		Poacher [DARKNESS, WIND],
-		Minor Simurgh [WIND],
+		Minor Simorgh [WIND],
 		Green Flame [FIRE, WIND],
 		[BOSS] Zephyr Titan [EARTH, WIND]
 		Obakemono Files [Quest Item]
@@ -253,6 +244,9 @@ Salt Ruby Excavations - Dungeon -
 Avenue of the Sphinx - Field -
 
 Crocodopolis - Dungeon -
+
+Kumae's Tree - Dungeon -
+	Invaded by the Fairy Army
 
 FBAF69
 155493

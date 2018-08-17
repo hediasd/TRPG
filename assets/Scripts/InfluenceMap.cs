@@ -107,7 +107,7 @@ public class InfluenceMap {
 			foreach (LinkedPoint BlurredPoint in BSC)
 			{
 
-				List<Damage> DamageSimulations = GameboardMaster.SimulateSpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
+				List<Damage> DamageSimulations = GameboardMaster.SpellPerformance(ThinkingMonster, CandidateSpell, BlurredPoint);
 				
 				// Enemy damage dealt
 				//int A1 = TeamDamageDealt(DamageSimulations, ThinkingMonster.Team, ExceptTeam: true);

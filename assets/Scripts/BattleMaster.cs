@@ -16,7 +16,7 @@ public class BattleMaster : MonoBehaviour {
 	public GameObject canvas, chooser, overlays, pieces;
 	[HideInInspector]
 	public static Monster Selected, OnTurn;
-	public Grimoire Grimoire;
+	public ResourcesMaster ResourcesMaster;
 
 	CanvasMaster CanvasMaster;
 	ChooserMaster ChooserMaster;
@@ -56,7 +56,7 @@ public class BattleMaster : MonoBehaviour {
 		GameboardMaster = GetComponent<GameboardMaster> ();
 		Gameboard = GameboardMaster.Gameboard;
 
-		Grimoire = GetComponent<Grimoire> ();
+		ResourcesMaster = GetComponent<ResourcesMaster> ();
 		CanvasMaster = GameObject.Find ("Canvas").GetComponent<CanvasMaster> ();
 		ChooserMaster = chooser.GetComponent<ChooserMaster> ();
 		OverlaysMaster = overlays.GetComponent<OverlaysMaster> ();
@@ -80,7 +80,9 @@ public class BattleMaster : MonoBehaviour {
 
 		TurnNumber = 0;
 		IDs = 0;
+		PiecesMaster.AnimationsActing = 0;
 		PiecesMaster.MonstersActing = 0;
+		PiecesMaster.TextDamagesActing = 0;
 
 		States.Clear ();
 		GameboardActions.Clear ();
@@ -105,13 +107,13 @@ public class BattleMaster : MonoBehaviour {
 
 		Random.InitState (1);
 
-		SpawnMonster (Grimoire.GetMonster ("Snake of Latos"), new Point (9, 3), 0);
-		SpawnMonster (Grimoire.GetMonster ("Hungry Vulture"), new Point (11, 1), 0);
-		SpawnMonster (Grimoire.GetMonster ("Snake of Latos"), new Point (11, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonster ("Tricky Viper"), new Point (9, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonster ("Guide of Lost"), new Point (11, 1), 0);
+		SpawnMonster (ResourcesMaster.GetMonster ("Tricky Viper"), new Point (11, 3), 0);
 
-		SpawnMonster (Grimoire.GetMonster ("Sandstone Golem"), new Point (10, 13), 1);
-		SpawnMonster (Grimoire.GetMonster ("Sandstone Golem"), new Point (10, 11), 1);
-		SpawnMonster (Grimoire.GetMonster ("Hungry Vulture"), new Point (11, 12), 1);
+		SpawnMonster (ResourcesMaster.GetMonster ("Sandstone Golem"), new Point (10, 13), 1);
+		SpawnMonster (ResourcesMaster.GetMonster ("Sandstone Golem"), new Point (10, 11), 1);
+		SpawnMonster (ResourcesMaster.GetMonster ("Guide of Lost"), new Point (11, 12), 1);
 
 		Allmons.AddRange (Teams[0]);
 		Allmons.AddRange (Teams[1]);
@@ -130,6 +132,7 @@ public class BattleMaster : MonoBehaviour {
 	public void SpawnMonster (Monster MonsterSample, Point Position, int TeamNumber) {
 
 		IDs += 1;
+		if(MonsterSample == null) UberDebug.LogChannel("Error", "MonsterSample null");
 		Monster SpawnedMonster = MonsterSample.Copy ();
 		SpawnedMonster.ID = IDs;
 		SpawnedMonster.Team = TeamNumber;
@@ -153,7 +156,7 @@ public class BattleMaster : MonoBehaviour {
 
 		TurnNumber += 1;
 
-		BattleMaster.Log ("--- TURN " + TurnNumber + " - [" + OnTurn.Name + "]" + "'s turn - [" + OnTurn.StatList.HPA () + "/" + OnTurn.StatList.HPM () + " HP]");
+		BattleMaster.Log ("--- TURN " + TurnNumber + " - [" + OnTurn.Name + "]" + "'s turn - [" + OnTurn.StatsList.HPA () + "/" + OnTurn.StatsList.HPM () + " HP]");
 
 		if (Teams[0].Contains (OnTurn)) {
 			StatePush (new GameState (GAMESTATE.BATTLE_MENU, E.ARROW_UPDOWN), false);
@@ -175,7 +178,7 @@ public class BattleMaster : MonoBehaviour {
 	// Turn Machine
 	void Update () {
 
-		while (GameboardActions.Count > 0) {
+		if (GameboardActions.Count > 0) {
 			ProcessBoardAction ();
 		}
 
@@ -248,7 +251,7 @@ public class BattleMaster : MonoBehaviour {
 				PieceSpell Action = GameboardActions.Dequeue () as PieceSpell;
 				PieceActions.Enqueue (Action);
 
-				List<Damage> DamagesList = Gameboard.SimulateSpellPerformance (Action.CasterMonster, Action.CastedSpell, Action.CastedTo);
+				List<Damage> DamagesList = Gameboard.SpellPerformance (Action.CasterMonster, Action.CastedSpell, Action.CastedTo);
 				Utility.Each (DamagesList, i => PieceActions.Enqueue (new PieceText (i.TargetMonster, i.FinalDamage + "")));
 
 				List<bool> KilledTargets = Gameboard.DealDamage (DamagesList);
@@ -298,7 +301,7 @@ public class BattleMaster : MonoBehaviour {
 
 	void ProcessPieceAction () {
 
-		if (PieceActions.Peek () is PieceMove && PiecesMaster.MonstersActing < 1) {
+		if (PieceActions.Peek () is PieceMove && PiecesMaster.MonstersActing < 1 && PiecesMaster.TextDamagesActing == 0) {
 
 			PieceMove Action = (PieceMove) PieceActions.Dequeue ();
 			PiecesMaster.WalkTo (Action.who, Action.to, Action.pointpath);
@@ -314,8 +317,7 @@ public class BattleMaster : MonoBehaviour {
 			while (PieceActions.Count > 0 && PieceActions.Peek () is PieceText) {
 				PieceText Action = (PieceText) PieceActions.Dequeue ();
 				PiecesMaster.SpawnDamageText (Action.who, Action.Text);
-			}
-			
+			}			
 
 		} else if (PieceActions.Peek () is PieceKill && PiecesMaster.MonstersActing < 2) {
 
@@ -509,6 +511,7 @@ public class BattleMaster : MonoBehaviour {
 		}
 
 		PlanningMaster.Feed (GameboardMaster, MonsterOnTurn, Teams[i], Teams[j]);
+
 		switch (type) {
 			case 0:
 				GameboardActions = (PlanningMaster.Thinking (MonsterOnTurn));

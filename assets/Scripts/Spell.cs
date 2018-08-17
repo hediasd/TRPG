@@ -14,13 +14,12 @@ public class Spell : DataObject {
 	public string Damage;
 
 	public bool LoS, BoostableRange, Linear;
-	public int MinimumCastRange, MaximumCastRange;
 	public string Property1, Property2, Property3;
-	public string CastShape, EffectShape; //EffectSquare / EffectCone / EffectCircle / EffectLine / Effect3Line (Default: EffectCircle)
+	public string CastRange, CastShape, EffectShape; //EffectSquare / EffectCone / EffectCircle / EffectLine / Effect3Line (Default: EffectCircle)
 	public string Targets; //Self / Allies / Enemies / Both / None / All
 
 	[System.NonSerialized]
-	public int SpellCastShape, SpellEffectShape, SpellTargets;
+	public int SpellCastShape, SpellEffectShape, SpellTargets, MinimumCastRange, MaximumCastRange;
 	[System.NonSerialized]
 	public List<DamageSegment> DamageSegments = new List<DamageSegment> ();
 
@@ -46,7 +45,7 @@ public class Spell : DataObject {
 				OverallSegmentsBruteDamage += Segment.Value;
 
 				int SegmentBakedDamage = (int) (Random.Range(Segment.Value * 0.7f, Segment.Value * 1.1f)); //spell segment power
-				SegmentBakedDamage *= (Caster.StatList[1] + 1) / (TargetMonster.StatList[1] + 1);
+				SegmentBakedDamage *= (Caster.Stats[1] + 1) / (TargetMonster.Stats[1] + 1);
 				//BakedDamage *= 
 				SegmentsIndividualDamages.Add (SegmentBakedDamage);
 				OverallSegmentsTotalDamage += SegmentBakedDamage;

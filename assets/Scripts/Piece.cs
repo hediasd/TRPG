@@ -60,7 +60,7 @@ public class Piece : MonoBehaviour {
         }
 
         //if(animate != null) animate.animating = true;
-        TimeMaster.WaitSeconds (0.15f);
+        yield return TimeMaster.WaitSeconds (0.10f);
         if (end) PiecesMaster.MonstersActing--;
 
         //BattleMaster.ReleaseLock(ck);

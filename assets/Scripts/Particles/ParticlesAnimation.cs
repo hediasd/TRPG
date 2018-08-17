@@ -28,6 +28,7 @@ public class ParticlesAnimation : MonoBehaviour {
 	void Update () {
 		if (transform.childCount == 0) {
 			//PiecesMaster.Acting--;
+			//TimeMaster.WaitSeconds(1);
 			Destroy (this.gameObject);
 		} else {
 			if (!transform.GetChild (0).gameObject.activeSelf) {

@@ -101,6 +101,16 @@
             "PaletteB": "130, 80, 250"
         },
         {
+            "Name": "Devil's Advocate",
+            "Texture": "BR_01",
+            "StatusNames": [],
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
             "Name": "Graveyard Warden",
             "Texture": "ZM_07",
             "StatusNames": [],
@@ -119,16 +129,6 @@
             "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
             "PaletteA": "150, 150, 245",
             "PaletteB": "30, 30, 140"
-        },
-        {
-            "Name": "Hungry Vulture",
-            "Texture": "BR_01",
-            "StatusNames": [],
-            "Spells": "Evil Claw",
-            "Passives": "",
-            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
-            "PaletteA": "190, 30, 30",
-            "PaletteB": "230, 240, 20"
         },
         {
             "Name": "Ice Knight",
@@ -177,7 +177,7 @@
             "Spells": "Evil Claw",
             "Passives": "",
             "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
-            "PaletteA": "190, 130, 0",
+            "PaletteA": "150, 150, 250",
             "PaletteB": "0, 0, 0"
         },
         {
@@ -191,26 +191,6 @@
             "PaletteB": "100, 160, 240"
         },
         {
-            "Name": "Snake of Latos",
-            "Texture": "DR_11",
-            "StatusNames": [],
-            "Spells": "Evil Claw",
-            "Passives": "",
-            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
-            "PaletteA": "220, 220, 110",
-            "PaletteB": "60, 90, 30"
-        },
-        {
-            "Name": "Snake of Tarros",
-            "Texture": "DR_11",
-            "StatusNames": [],
-            "Spells": "Evil Claw",
-            "Passives": "",
-            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
-            "PaletteA": "220, 220, 110",
-            "PaletteB": "60, 50, 180"
-        },
-        {
             "Name": "Tenth Spirit",
             "Texture": "BE_13",
             "StatusNames": [],
@@ -219,6 +199,16 @@
             "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
             "PaletteA": "140, 25, 20",
             "PaletteB": "140, 45, 130"
+        },
+        {
+            "Name": "Tricky Viper",
+            "Texture": "DR_11",
+            "StatusNames": [],
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
         },
         {
             "Name": "Tundra Raider",
