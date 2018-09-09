@@ -137,7 +137,7 @@ public class CanvasMaster : MonoBehaviour {
 		string spellList = "";
 		int amt = 0;
 
-		foreach (Spell sp in BattleMaster.OnTurn.Spells_)
+		foreach (Spell sp in BattleMaster.OnTurn.SpellsList)
 		{
 			//if(sp.name.Length < 9)	
 			spellList += sp.Name + " \n";

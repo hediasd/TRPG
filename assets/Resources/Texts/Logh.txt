@@ -9,7 +9,7 @@
 --- TURN 5 - [Sandstone Golem]'s turn - [20/20 HP]
 %%% walks from (10, 11) to (10, 9)
 --- TURN 6 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (11, 12) to (12, 12)
+%%% walks from (11, 12) to (10, 13)
 --- TURN 7 - [Tricky Viper]'s turn - [20/20 HP]
 %%% walks from (10, 4) to (10, 6)
 --- TURN 8 - [Guide of Lost]'s turn - [20/20 HP]
@@ -21,65 +21,25 @@
 --- TURN 11 - [Sandstone Golem]'s turn - [20/20 HP]
 %%% walks from (10, 9) to (10, 8)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 15, [Tricky Viper] for 10
+%%% spell [Evil Claw] damages [Tricky Viper] for 11, [Tricky Viper] for 12
 --- TURN 12 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (12, 12) to (11, 13)
---- TURN 13 - [Tricky Viper]'s turn - [10/20 HP]
+%%% walks from (10, 13) to (10, 11)
+--- TURN 13 - [Tricky Viper]'s turn - [8/20 HP]
 %%% walks from (10, 6) to (10, 7)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 15, [Sandstone Golem] for 16
---- TURN 14 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (10, 4) to (11, 5)
---- TURN 15 - [Tricky Viper]'s turn - [5/20 HP]
-%%% walks from (10, 5) to (10, 6)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 14, [Sandstone Golem] for 13
---- TURN 16 - [Sandstone Golem]'s turn - [4/20 HP]
-%%% walks from (10, 10) to (10, 9)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 13, [Tricky Viper] for 13, [Sandstone Golem] for 10
---- TURN 17 - [Sandstone Golem]'s turn - [-18/20 HP]
-%%% walks from (10, 8) to (9, 8)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 16
---- TURN 18 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (11, 13) to (10, 12)
---- TURN 19 - [Tricky Viper]'s turn - [-17/20 HP]
-%%% walks from (10, 7) to (9, 7)
 %%% casts [Evil Claw]
 %%% spell [Evil Claw] damages [Sandstone Golem] for 15, [Sandstone Golem] for 13
---- TURN 20 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (11, 5) to (9, 5)
---- TURN 21 - [Tricky Viper]'s turn - [-24/20 HP]
-%%% walks from (10, 6) to (10, 7)
+--- TURN 14 - [Guide of Lost]'s turn - [20/20 HP]
+%%% walks from (10, 4) to (11, 5)
+--- TURN 15 - [Tricky Viper]'s turn - [9/20 HP]
+%%% walks from (10, 5) to (10, 6)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 13, [Tricky Viper] for 10, [Sandstone Golem] for 11
---- TURN 22 - [Sandstone Golem]'s turn - [-20/20 HP]
-%%% walks from (10, 9) to (10, 8)
+%%% spell [Evil Claw] damages [Tricky Viper] for 13, [Sandstone Golem] for 12
+--- TURN 16 - [Sandstone Golem]'s turn - [7/20 HP]
+%%% walks from (10, 10) to (10, 9)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 14, [Tricky Viper] for 11, [Sandstone Golem] for 11
---- TURN 23 - [Sandstone Golem]'s turn - [-46/20 HP]
-%%% walks from (9, 8) to (8, 8)
+%%% spell [Evil Claw] damages [Tricky Viper] for 13, [Tricky Viper] for 12, [Sandstone Golem] for 14
+--- TURN 17 - [Sandstone Golem]'s turn - [-21/20 HP]
+%%% walks from (10, 8) to (9, 8)
 %%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Tricky Viper] for 15, [Tricky Viper] for 14
---- TURN 24 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (10, 12) to (10, 10)
---- TURN 25 - [Tricky Viper]'s turn - [-46/20 HP]
-%%% walks from (9, 7) to (9, 8)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 16, [Guide of Lost] for 14
---- TURN 26 - [Guide of Lost]'s turn - [20/20 HP]
-%%% walks from (9, 5) to (8, 5)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 16
---- TURN 27 - [Tricky Viper]'s turn - [-59/20 HP]
-%%% walks from (10, 7) to (9, 7)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 11, [Tricky Viper] for 11, [Tricky Viper] for 15, [Sandstone Golem] for 11
---- TURN 28 - [Sandstone Golem]'s turn - [-58/20 HP]
-%%% walks from (10, 8) to (10, 6)
---- TURN 29 - [Sandstone Golem]'s turn - [-73/20 HP]
-%%% walks from (8, 8) to (8, 7)
-%%% casts [Evil Claw]
-%%% spell [Evil Claw] damages [Sandstone Golem] for 11, [Tricky Viper] for 11, [Tricky Viper] for 11
+%%% spell [Evil Claw] damages [Tricky Viper] for 14
 

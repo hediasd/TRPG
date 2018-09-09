@@ -175,7 +175,7 @@ public class ResourcesMaster : MonoBehaviour {
 			foreach (string SpellName in Utility.ChewUp (mon.Spells, ", ")) {
 				foreach (Spell sp in Spells) {
 					if (SpellName.Equals (sp.Name)) {
-						mon.Spells_.Add (sp);
+						mon.SpellsList.Add (sp);
 						break;
 					}
 				}

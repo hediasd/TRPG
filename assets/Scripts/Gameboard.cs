@@ -35,7 +35,7 @@ public class Gameboard {
 	public void Startup (int x, int z) {
 
 		size = new Point (x, z);
-		Point.Limits = size;
+		Point.Limits = new Point (size);
 		Board = new int[x, z, 3];
 
 		for (int i = 0; i < size.x; i++) {
@@ -52,8 +52,137 @@ public class Gameboard {
 		//Debug.Log(string.Join("; ", a));
 	}
 
+	public int At (int x, int z, int layer = 0) {
+		return Board[x, z, layer];
+	}
+	public int At (Point p, int layer = 0) {
+		return Board[(int) p.x, (int) p.z, layer];
+	}
+
 	public void Cleanup () {
 		if (size != null) Startup (size.x, size.z);
+	}
+
+	/*
+		Deals the specified damage to each of its targets
+		TODO: Return a DamageResult 
+	 */
+	public List<bool> DealDamage (List<Damage> DamageList) {
+
+		List<bool> Success = new List<bool> ();
+		foreach (Damage DamageInstance in DamageList) {
+			Monster Target = MonstersOnBoard[DamageInstance.TargetID];
+			Target.TakeDamage (DamageInstance);
+			bool Killed = false;
+			if (Target.StatsList.HPA () == 0) Killed = Kill (Target);
+			Success.Add (Killed);
+		}
+		return Success;
+
+	}
+
+	public List<Monster> GetMonsters () {
+		return new List<Monster> (MonstersOnBoard.Values);
+	}
+
+	public Map GetWalkableMap () {
+		int[, ] GroundMap = GetLayer (LAYER.GROUND);
+
+		foreach (Monster Mon in MonstersOnBoard.Values) {
+			GroundMap[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
+		}
+
+		Map ReturnMap = new Map (GroundMap);
+		WriteMaster.WriteUp ("WalkableMap", GroundMap);
+
+		return ReturnMap;
+	}
+
+	public void InsertMonster (Monster mon, Point at) {
+
+		if (MonsterIDAt (at) != 0) {
+			Debug.Log ("Illegal Board Add: Occupied Cell");
+			throw new GameboardException ();
+		} else {
+			int id = mon.ID;
+			MonstersOnBoard.Add (id, mon);
+			Set (id, at, LAYER.MONSTER);
+		}
+	}
+
+	public bool IsWithinCastRange (Monster Caster, Monster Target, Spell SimulatedSpell) {
+
+		// How is the shape if i cast it from here
+		List<Point> SpellCastShape = SimulatedSpell.CastShapePoints (Caster.MonsterPoint);
+
+		return (SpellCastShape.Contains (Target.MonsterPoint));
+
+	}
+
+	public bool Kill (Monster Target) {
+
+		return true;
+	}
+
+	public int MonsterIDAt (Point at) {
+		if (!at.WithinLimits (size)) return 0;
+		return Board[at.x, at.z, LAYER.MONSTER];
+	}
+
+	public Monster MonsterAt (Point at) {
+		int id = MonsterIDAt (at);
+		if (id == 0) {
+			//Debug.Log("Illegal Board Search: Empty Cell");
+			//throw new GameboardException();
+			return null;
+		} else {
+			return MonstersOnBoard[id];
+		}
+	}
+
+	public List<Monster> MonstersAt (Point Center, List<Point> Shape) {
+		List<Monster> Monsters = new List<Monster> ();
+		//foreach (Point p in Shape)
+		//{
+		//	Debug.Log(p);
+		//}
+		foreach (Point ShapePoint in Shape) {
+			Point NewPoint = Center + ShapePoint;
+			//Debug.Log("center " + Center.x + " " + Center.z + " plus " + ShapePoint.x + " " + ShapePoint.z );
+			Monster MonsterAtPoint = MonsterAt (NewPoint);
+			if (MonsterAtPoint != null) {
+				Monsters.Add (MonsterAtPoint);
+			}
+		}
+
+		return Monsters;
+	}
+	public Point GetMonsterPosition (Monster mon) {
+		for (int i = 0; i < size.x; i++) {
+			for (int j = 0; j < size.z; j++) {
+				if (mon.ID == Board[i, j, LAYER.MONSTER]) return new Point (i, j);
+			}
+		}
+		return null;
+	}
+
+	public Deque<BoardAction> OnTurnEnter (Monster OnTurn) {
+		Deque<BoardAction> Actions = new Deque<BoardAction> ();
+
+		OnTurn.ResetMovementPoints ();
+
+		return Actions;
+	}
+
+	public void RemoveMonster (Monster mon) {
+		Point at = mon.MonsterPoint;
+		if (Board[at.x, at.z, LAYER.MONSTER] != mon.ID) {
+			Debug.Log ("Illegal Board Move: No/Wrong monster to remove");
+			throw new GameboardException ();
+		} else {
+			Set (0, at, LAYER.MONSTER);
+			//Debug.Log("gone to " + to.x + " " + to.z);
+		}
 	}
 
 	public List<Damage> SpellPerformance (Monster Caster, Spell SimulatedSpell, Point TargetedCell) {
@@ -79,42 +208,37 @@ public class Gameboard {
 		return SimulationResult;
 	}
 
-	public Deque<BoardAction> OnTurnEnter (Monster OnTurn) {
-		Deque<BoardAction> Actions = new Deque<BoardAction> ();
+	//TODO
 
-		OnTurn.ResetMovementPoints ();
-
-		return Actions;
+	public void SetGround (int Value, Point Point) {
+		Set (Value, Point, LAYER.GROUND);
 	}
-
-	public List<bool> DealDamage (List<Damage> DamageList) {
-		List<bool> Success = new List<bool> ();
-		foreach (Damage DamageInstance in DamageList) {
-			Monster Target = MonstersOnBoard[DamageInstance.TargetID];
-			Target.TakeDamage (DamageInstance);
-			bool Killed = false;
-			if (Target.StatsList.HPA () == 0) Killed = Kill (Target);
-			Success.Add (Killed);
+	private void Set (int Value, Point p, int layer) {
+		if (Value > 0 && layer == LAYER.MONSTER) { //moving someone
+			MonstersOnBoard[Value].MonsterPoint = p;
 		}
-		return Success;
-	}
-	public bool Kill (Monster Target) {
+		Board[(int) p.x, (int) p.z, layer] = Value;
 
-		return true;
 	}
 
-	public void InsertMonster (Monster mon, Point at) {
+	public int[, ] GetLayer (int level) {
+		int[, ] layer = new int[size.x, size.z];
 
-		if (MonsterIDAt (at) != 0) {
-			Debug.Log ("Illegal Board Add: Occupied Cell");
-			throw new GameboardException ();
-		} else {
-			int id = mon.ID;
-			MonstersOnBoard.Add (id, mon);
-			Set (id, at, LAYER.MONSTER);
+		//Copy matrix
+		for (int i = 0; i < size.x; i++) {
+			for (int j = 0; j < size.z; j++) {
+				layer[i, j] = Board[i, j, level];
+			}
 		}
+
+		return layer;
 	}
-	public void WalkMonster (Point From, Point To) {
+
+	public void WalkMonster(PieceMove Action){
+		WalkMonster(Action.from, Action.to);
+	}
+
+	void WalkMonster (Point From, Point To) {
 		bool EmptyFrom = Board[From.x, From.z, LAYER.MONSTER] == 0;
 		bool FullTo = Board[To.x, To.z, LAYER.MONSTER] != 0;
 		if (EmptyFrom || FullTo) {
@@ -131,104 +255,6 @@ public class Gameboard {
 			Set (0, From, LAYER.MONSTER);
 			//Debug.Log("gone to " + to.x + " " + to.z);
 		}
-	}
-	public void RemoveMonster (Monster mon) {
-		Point at = mon.MonsterPoint;
-		if (Board[at.x, at.z, LAYER.MONSTER] != mon.ID) {
-			Debug.Log ("Illegal Board Move: No/Wrong monster to remove");
-			throw new GameboardException ();
-		} else {
-			Set (0, at, LAYER.MONSTER);
-			//Debug.Log("gone to " + to.x + " " + to.z);
-		}
-	}
-
-	public List<Monster> GetMonsters () {
-		return new List<Monster> (MonstersOnBoard.Values);
-	}
-
-	public int MonsterIDAt (Point at) {
-		if (!at.WithinLimits (size)) return 0;
-		return Board[at.x, at.z, LAYER.MONSTER];
-	}
-	public Monster MonsterAt (Point at) {
-		int id = MonsterIDAt (at);
-		if (id == 0) {
-			//Debug.Log("Illegal Board Search: Empty Cell");
-			//throw new GameboardException();
-			return null;
-		} else {
-			return MonstersOnBoard[id];
-		}
-	}
-	public List<Monster> MonstersAt (Point Center, List<Point> Shape) {
-		List<Monster> Monsters = new List<Monster> ();
-		//foreach (Point p in Shape)
-		//{
-		//	Debug.Log(p);
-		//}
-		foreach (Point ShapePoint in Shape) {
-			Point NewPoint = Center + ShapePoint;
-			//Debug.Log("center " + Center.x + " " + Center.z + " plus " + ShapePoint.x + " " + ShapePoint.z );
-			Monster MonsterAtPoint = MonsterAt (NewPoint);
-			if (MonsterAtPoint != null) {
-				Monsters.Add (MonsterAtPoint);
-			}
-		}
-
-		return Monsters;
-	}
-	public Point MonsterPosition (Monster mon) {
-		for (int i = 0; i < size.x; i++) {
-			for (int j = 0; j < size.z; j++) {
-				if (mon.ID == Board[i, j, LAYER.MONSTER]) return new Point (i, j);
-			}
-		}
-		return null;
-	}
-	//TODO
-
-	public void SetGround (int Value, Point Point) {
-		Set (Value, Point, LAYER.GROUND);
-	}
-	private void Set (int Value, Point p, int layer) {
-		if (Value > 0 && layer == LAYER.MONSTER) { //moving someone
-			MonstersOnBoard[Value].MonsterPoint = p;
-		}
-		Board[(int) p.x, (int) p.z, layer] = Value;
-	}
-
-	public int At (int x, int z, int layer = 0) {
-		return Board[x, z, layer];
-	}
-	public int At (Point p, int layer = 0) {
-		return Board[(int) p.x, (int) p.z, layer];
-	}
-
-	public int[, ] GetLayer (int level) {
-		int[, ] layer = new int[size.x, size.z];
-
-		//Copy matrix
-		for (int i = 0; i < size.x; i++) {
-			for (int j = 0; j < size.z; j++) {
-				layer[i, j] = Board[i, j, level];
-			}
-		}
-
-		return layer;
-	}
-
-	public Map WalkableMap () {
-		int[, ] GroundMap = GetLayer (LAYER.GROUND);
-
-		foreach (Monster Mon in MonstersOnBoard.Values) {
-			GroundMap[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
-		}
-
-		Map ReturnMap = new Map (GroundMap);
-		WriteMaster.WriteUp ("WalkableMap", GroundMap);
-
-		return ReturnMap;
 	}
 
 }

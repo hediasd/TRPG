@@ -13,6 +13,7 @@ public class BlueCells : MonoBehaviour {
 	}
 
 	public void Feed(List<LinkedPoint> points, bool HSV = false, bool depther = false, float Max = 0.5f, float Min = 0.1f){
+		CleanUp();
 		if(HSV){
 			float f = 0;
 			float maxDepth = 0;
@@ -44,6 +45,7 @@ public class BlueCells : MonoBehaviour {
 	}
 
 	public void Feed(List<Point> points, bool HSV = false, bool depther = false, float Max = 0.5f, float Min = 0.1f){
+		CleanUp();
 		if(HSV){
 			float maxDepth = 0;
 			float minDepth = 0;

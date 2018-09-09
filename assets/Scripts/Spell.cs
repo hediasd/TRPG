@@ -44,7 +44,7 @@ public class Spell : DataObject {
 			foreach (DamageSegment Segment in DamageSegments) { //natural damage
 				OverallSegmentsBruteDamage += Segment.Value;
 
-				int SegmentBakedDamage = (int) (Random.Range(Segment.Value * 0.7f, Segment.Value * 1.1f)); //spell segment power
+				int SegmentBakedDamage = (int) (Random.Range (Segment.Value * 0.7f, Segment.Value * 1.1f)); //spell segment power
 				SegmentBakedDamage *= (Caster.Stats[1] + 1) / (TargetMonster.Stats[1] + 1);
 				//BakedDamage *= 
 				SegmentsIndividualDamages.Add (SegmentBakedDamage);
@@ -56,7 +56,8 @@ public class Spell : DataObject {
 
 	}
 
-	public List<Point> CastShapePoints (Point PivotPoint = null) { // int Radius){
+	// Point List representing the cast shape
+	public List<Point> CastShapePoints (Point PivotPoint = null) {
 
 		List<Point> ShapePoints = Shape.GetShape (SpellCastShape, null, MaximumCastRange, MinimumCastRange);
 
@@ -69,9 +70,9 @@ public class Spell : DataObject {
 		return ShapePoints;
 	}
 
-	float[,] DirectionPivots(Point From, Point To){
+	float[, ] DirectionPivots (Point From, Point To) {
 
-		float[,] ReturnPivots = new float[2,2];
+		float[, ] ReturnPivots = new float[2, 2];
 
 		float difz = To.z - From.z;
 		float difx = To.x - From.x;
@@ -92,11 +93,12 @@ public class Spell : DataObject {
 	}
 
 	public List<Point> EffectShapePoints (Point From, Point To, Point PivotPoint = null) { // int Radius){
-		List<Point> ShapePoints = new List<Point> ();
 		
-		float[,] DirectionPivot = DirectionPivots(From, To);
+		List<Point> ShapePoints = new List<Point> ();
+
+		float[, ] DirectionPivot = DirectionPivots (From, To);
 		ShapePoints = Shape.GetShape (SpellEffectShape, DirectionPivot, MaximumRange : Radius);
-			
+
 		if (PivotPoint != null) {
 			for (int i = 0; i < ShapePoints.Count; i++) {
 				ShapePoints[i] += PivotPoint;

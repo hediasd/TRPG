@@ -129,8 +129,13 @@ Magician's Books - As you approach the books, you feel and overwhelming feeling 
 	Aids the player in the desert: Appears on like 3rd turn of some desert map, fully heals the party.
 	Eventually gives advice on the house and disappears. Comes back in the Wind Temple and Episode 5.
 	
+	Crow Witch - Human from previous, defeated party. Callipso-like, lives hidden in a serene swamp oasis inside 
+	the desert, along her two ever ressurecting Crow Familiars. States the problems of the Mage, his sudden appearance and paradoxes.
+	
 	Blessings of the Fishermen - Verdekelp, Cyanoph, ... In order to be protected against the powers of the next Master.
 
+	Desire to grow a garden where the great desert thrives
+	
 = 
 
 = Cult of the Flame
@@ -194,6 +199,11 @@ Magician's Books - As you approach the books, you feel and overwhelming feeling 
 	- I dreamt about an upcoming menace
 	- Enter Ra's Dream in the Vaults of Noghaltz
 	- Defeat the Cataclism Golem
+
+= The Road to the City of Light
+= The Road to the Magnetower
+= Concert Atop the Tower
+
 	
 
  - Underground World Questline
@@ -216,6 +226,9 @@ Magician's Books - As you approach the books, you feel and overwhelming feeling 
 
  - Main Questline
 	Cosmo Queen revived from Mistress of Winter's ice mirror. No mastership.
+	
+ - The Crafting of a Powerful Weapon
+	Root of All Evil - Mossy Crevice
 
 	The Wicked North
 = Coming Forth by Day 

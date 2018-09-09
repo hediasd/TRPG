@@ -11,13 +11,13 @@ public class PlanningMaster : MonoBehaviour {
 	public Point OnTurnPoint;
 	public List<Monster> Allies, Enemies;
 
-	public void Feed (GameboardMaster board, Monster on, List<Monster> a, List<Monster> e) {
+	public void Feed (GameboardMaster board, Monster ThinkingMonster, List<Monster> Allies, List<Monster> Enemies) {
 		GameboardMaster = board;
 		Gameboard = GameboardMaster.Gameboard;
-		OnTurn = on;
-		OnTurnPoint = new Point (on);
-		Allies = a;
-		Enemies = e;
+		OnTurn = ThinkingMonster;
+		OnTurnPoint = new Point (ThinkingMonster);
+		this.Allies = Allies;
+		this.Enemies = Enemies;
 	}
 
 	class SpellCandidate {
@@ -49,14 +49,14 @@ public class PlanningMaster : MonoBehaviour {
 		Point CastFrom = null, CastTo = null;
 
 		// For each castable spell available
-		foreach (Spell CandidateSpell in ThinkingMonster.Spells_) {
+		foreach (Spell CandidateSpell in ThinkingMonster.SpellsList) {
 			// Evaluate the result score when casting from+to any available point
 			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange (Here, GroundMap, CandidateSpell, ThinkingMonster.AvailableMovementPoints);
 
 			foreach (LinkedPoint BlurredPoint in BSC) {
 
 				// Checks if the blurred point is reachable
-				if (!ReachablePoints.Contains ((Point) BlurredPoint.Parents[0])) {
+				if (!ReachablePoints.Contains (BlurredPoint.Parents[0])) {
 					continue;
 				}
 
@@ -96,11 +96,11 @@ public class PlanningMaster : MonoBehaviour {
 		int A2 = TargetTeamDamageDealt (DamageSimulations, ThinkingMonster.Team);
 
 		// Killed enemies
-		int B1;
+		int B1 = 0;
 		// Killed allies;
-		int B2;
+		int B2 = 0;
 
-		return (A1 - A2);
+		return (A1 - A2) + (B1 - B2);
 
 	}
 
@@ -141,19 +141,20 @@ public class PlanningMaster : MonoBehaviour {
 
 		// TODO: Where to walk considers weighted medium range of spells
 
-		InfluenceMap InfluenceMap = new InfluenceMap (ThinkingMonster, Gameboard);
-		InfluenceMap.ConsiderWalkableSpaces (Gameboard.GetLayer (LAYER.GROUND));
-		InfluenceMap.ConsiderMonsters (Allies, Enemies); // Make customizable behaviors, liking get near enemies or allies for example
+		InfluenceMap InfluenceMap = new InfluenceMap (ThinkingMonster, Allies, Enemies, Gameboard);
+		InfluenceMap.ConsiderWalkableSpaces ();
+		InfluenceMap.ConsiderSpellRanges ();
+		//InfluenceMap.ConsiderMonsters (Allies, Enemies); // Make customizable behaviors, liking get near enemies or allies for example
 		//InfluenceMap.ConsiderCastableSpells(ThinkingMonster, Allies, Enemies, Gameboard.GetLayer(LAYER.GROUND));
 
-		Map WalkableMap = Gameboard.WalkableMap ();
-		Dictionary<Point, List<Point>> Paths = Algorithms.PathTracer (ThinkingMonster.MonsterPoint, ThinkingMonster.AvailableMovementPoints, WalkableMap);
-		PieceSpell ChosenSpell = ChooseSpell (ThinkingMonster, new List<Point> (Paths.Keys), InfluenceMap);
+		Map WalkableMap = Gameboard.GetWalkableMap ();
+		Dictionary<Point, List<Point>> PathsDictionary = Algorithms.PathTracer (ThinkingMonster.MonsterPoint, ThinkingMonster.AvailableMovementPoints, WalkableMap);
+		PieceSpell ChosenSpell = ChooseSpell (ThinkingMonster, new List<Point> (PathsDictionary.Keys), InfluenceMap);
 
 		if (ChosenSpell != null) {
 
 			//PieceMove ChosenMovementPath = PathMaker(ThinkingMonster, ChosenSpell.to, WalkableMap);
-			PieceMove ChosenMovementPath = new PieceMove (ThinkingMonster, ThinkingMonster.MonsterPoint, ChosenSpell.CastedFrom, Paths[ChosenSpell.CastedFrom]);
+			PieceMove ChosenMovementPath = new PieceMove (ThinkingMonster, ThinkingMonster.MonsterPoint, ChosenSpell.CastedFrom, (PathsDictionary[ChosenSpell.CastedFrom]));
 			Actions.Enqueue (ChosenMovementPath);
 			Actions.Enqueue (ChosenSpell);
 
@@ -166,7 +167,7 @@ public class PlanningMaster : MonoBehaviour {
 
 			//TODO: What if PM = 0
 			if (ReachablePoints.Count > 0) {
-				PieceMove ChosenMovementPath = new PieceMove (ThinkingMonster, ThinkingMonster.MonsterPoint, ReachablePoints[0], Paths[ReachablePoints[0]]);
+				PieceMove ChosenMovementPath = new PieceMove (ThinkingMonster, ThinkingMonster.MonsterPoint, ReachablePoints[0], (PathsDictionary[ReachablePoints[0]]));
 				////////Debug.Log(ThinkingMonster.Name + " to " + ChosenMovementPath.to);
 				//Debug.Log(ChosenMovementPath);
 				Actions.Enqueue (ChosenMovementPath);

@@ -15,11 +15,11 @@ public class Monster : DataObject {
 	public string Texture;
 
 	[System.NonSerialized]
-	public List<Spell> Spells_; // = new List<Spell>();
+	public List<Spell> SpellsList; // = new List<Spell>();
 	[System.NonSerialized]
-	public List<Spell> Passives_;
+	public List<Spell> PassivesList;
 	[System.NonSerialized]
-	public List<Status> Statuses_; // = new List<Status>();
+	public List<Status> StatusesList; // = new List<Status>();
 
 	//public List<string> SpellNames;// = new List<string>();
 	public List<string> StatusNames; // = new List<string>();
@@ -47,10 +47,10 @@ public class Monster : DataObject {
 	public List<Spell> SpellsCast; //= new List<Spell>();
 
 	public Monster () {
-		Spells_ = new List<Spell> ();
+		SpellsList = new List<Spell> ();
 		//SpellNames = new List<string>();
 		SpellsCast = new List<Spell> ();
-		Statuses_ = new List<Status> ();
+		StatusesList = new List<Status> ();
 		StatusNames = new List<string> ();
 		StatsList = new Stats (new int[10]);
 	}
@@ -59,8 +59,8 @@ public class Monster : DataObject {
 
 		Monster mon = (Monster) this.MemberwiseClone ();
 
-		mon.Spells_ = new List<Spell> (Spells_);
-		mon.Statuses_ = new List<Status> (Statuses_);
+		mon.SpellsList = new List<Spell> (SpellsList);
+		mon.StatusesList = new List<Status> (StatusesList);
 		//mon.SpellNames = new List<string>(SpellNames);
 		mon.StatusNames = new List<string> (StatusNames);
 		mon.SpellsCast = new List<Spell> ();
@@ -75,15 +75,15 @@ public class Monster : DataObject {
 		mon.AvailableMovementPoints = MovementPoints ();
 
 		return mon;
-		
+
 	}
 
 	public void AddSpell (Spell sp) {
-		Spells_.Add (sp);
+		SpellsList.Add (sp);
 		//SpellNames.Add(sp.name);
 	}
 	public void AddStatus (Status st) {
-		Statuses_.Add (st);
+		StatusesList.Add (st);
 		StatusNames.Add (st.Name);
 	}
 
