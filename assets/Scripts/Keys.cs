@@ -15,7 +15,7 @@ public class Keys : MonoBehaviour {
 	public GameObject box;
 
 	GameObject selected;
-	ResourcesMaster grimoire;
+	ResourcesMaster ResourcesMaster;
 	PiecesMaster pieceMaster;
 	GameObject blox;
 
@@ -23,7 +23,7 @@ public class Keys : MonoBehaviour {
 	int i = -1; 
 
 	void Start(){
-		grimoire = logic.GetComponent<ResourcesMaster>();
+		ResourcesMaster = logic.GetComponent<ResourcesMaster>();
 		pieceMaster = pieces.GetComponent<PiecesMaster>();
 	}
 	
@@ -62,8 +62,10 @@ public class Keys : MonoBehaviour {
 			}else{
 				for (int i = 0; i < 6; i++){
 					//Random.seed *= Random.seed/2;
-					Monster m = grimoire.Monsters[Random.Range( 0, grimoire.Monsters.Count)]; //
-					pieceMaster.SpawnMonsterPiece(m, new Point(ch.x + Random.Range(-2, 2), ch.z + Random.Range(-2, 2)));
+					MonsterEntry m = ResourcesMaster.MonsterEntries[Random.Range( 0, ResourcesMaster.MonsterEntries.Count)]; //
+					
+					//TODO: what ? 
+					//pieceMaster.SpawnMonsterPiece(m, new Point(ch.x + Random.Range(-2, 2), ch.z + Random.Range(-2, 2)));
 				}
 			}
 						

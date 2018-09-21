@@ -47,6 +47,10 @@ Sanguine Swamp
 
 The Casino
 
+	Lord of the Casino ?
+		Casino Lights
+		Roulette Flush - full positions scramble
+
 Land of Shadows
 
 
@@ -68,8 +72,6 @@ Roots of the Mountain - Dungeon - hidden lore
 Vaults of Noghaltz - Camp -
 	Tea Warehouse - Dungeon -
 		[BOSS] Oolong
-	Hoaimu's Nest - Dungeon -
-		[BOSS] White Knight Hayato
 	Astarion Belt - Dungeon -
 		[BOSS] Bringer of the End
 	Fireflies Heaven - Dungeon
@@ -77,15 +79,21 @@ Vaults of Noghaltz - Camp -
 Shelf of Past Mistakes -   -
 	Edge of the Universe - Dungeon -
 		[BOSS] Heat Death
+	Hoaimu's Nest - Dungeon -
+		The day Hayato slayed the its dragon friend Hoaimu to save his loved
+		[BOSS] White Knight Hayato
 		
 Garden Castle - Dungeon -
-		Catoblepas [WOOD], Bamboozle [EARTH, WOOD], 
+		Catoblepas [WOOD], Bamboozler [EARTH, WOOD], 
 		[BOSS] The Empress [LIGHT, WOOD]
+			Tea Party - mass poisoning, Tinfoil Hat, Long Arms, Skee
 
 Charmed Ridge - Dungeon -
 
-The Magma Puddles - Dungeon -
+The Magma Puddles - Dungeon - Pumping heart of the mountain, lava flows until Minnachi defeated
+							someone's bad and living dream
 		[BOSS] Minnachi [DARK, FIRE]
+		Tamed Pit Dragon [FIRE]
 		
 		
 = North
@@ -206,8 +214,9 @@ Wind Hills - Field -
 		Obakemono Files [Quest Item]
 
 Wind Shrine - Dungeon -
-		Wind Priest [LIGHT, WIND],
 		Elemental of Gale [DARKNESS, WIND],
+		Elemental of Debris [EARTH, WIND],
+		Wind Priest [LIGHT, WIND],
 		[BOSS] Princess of the Wind [WIND],
 		[BOSS] Incarnated Queen of the Wind [WIND]
 
@@ -231,7 +240,7 @@ Dunes' Dam - Dungeon -
 
 Higher Dunes - Field -
 
-Nile River - Field - aa
+Nile River - Field - flows up or down, water moves standing creatures
 
 
 

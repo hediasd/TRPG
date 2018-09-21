@@ -43,7 +43,7 @@ public class Point {
 		x = (int) go.transform.position.x;
 		z = (int) go.transform.position.z;
 	}
-	public Point (Monster mon) {
+	public Point (MonsterInstance mon) {
 		x = (int) mon.MonsterPoint.x;
 		z = (int) mon.MonsterPoint.z;
 	}

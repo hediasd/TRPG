@@ -2,13 +2,13 @@
     "Items": [
         {
             "Name": "Asmodeus",
-            "Texture": "DV_09",
+            "Texture": "Nogg",
             "StatusNames": [],
             "Spells": "Fire Wall, Evil Claw",
             "Passives": "",
             "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
-            "PaletteA": "240, 240, 240",
-            "PaletteB": "100, 50, 120"
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 250, 250"
         },
         {
             "Name": "Astaroth",

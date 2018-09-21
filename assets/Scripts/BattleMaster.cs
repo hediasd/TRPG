@@ -5,17 +5,17 @@ using UnityEngine;
 
 public class BattleMaster : MonoBehaviour {
 
-	public static List<List<Monster>> Teams = new List<List<Monster>> ();
+	public static List<List<MonsterInstance>> Teams = new List<List<MonsterInstance>> ();
 	//public static List<GameObject> Allies = new List<GameObject>();
 	//public static List<GameObject> Enemies = new List<GameObject>();
-	public static List<Monster> Allmons = new List<Monster> ();
-	public static List<Monster> UpTurn = new List<Monster> ();
-	public static List<Monster> HadTurn = new List<Monster> ();
+	public static List<MonsterInstance> Allmons = new List<MonsterInstance> ();
+	public static List<MonsterInstance> UpTurn = new List<MonsterInstance> ();
+	public static List<MonsterInstance> HadTurn = new List<MonsterInstance> ();
 
 	//[HideInInspector]
 	public GameObject canvas, chooser, overlays, pieces;
 	[HideInInspector]
-	public static Monster Selected, OnTurn;
+	public static MonsterInstance Selected, OnTurn;
 	public ResourcesMaster ResourcesMaster;
 
 	CanvasMaster CanvasMaster;
@@ -64,9 +64,9 @@ public class BattleMaster : MonoBehaviour {
 		PlanningMaster = GetComponent<PlanningMaster> ();
 		MapMaster = GameObject.Find ("Map").GetComponent<MapMaster> ();
 
-		Teams = new List<List<Monster>> ();
-		Allmons = new List<Monster> ();
-		UpTurn = new List<Monster> ();
+		Teams = new List<List<MonsterInstance>> ();
+		Allmons = new List<MonsterInstance> ();
+		UpTurn = new List<MonsterInstance> ();
 
 		//StatePush(new GameState(E.BATTLE_MENU, E.ARROW_UPDOWN), false);
 		//GameObject blox = CanvasMaster.SummonBattleMenu();
@@ -95,8 +95,8 @@ public class BattleMaster : MonoBehaviour {
 		UpTurn.Clear ();
 		HadTurn.Clear ();
 
-		Teams.Add (new List<Monster> ());
-		Teams.Add (new List<Monster> ());
+		Teams.Add (new List<MonsterInstance> ());
+		Teams.Add (new List<MonsterInstance> ());
 
 		CanvasMaster.Cleanup ();
 		PiecesMaster.Cleanup ();
@@ -107,13 +107,13 @@ public class BattleMaster : MonoBehaviour {
 
 		Random.InitState (1);
 
-		SpawnMonster (ResourcesMaster.GetMonster ("Tricky Viper"), new Point (9, 3), 0);
-		SpawnMonster (ResourcesMaster.GetMonster ("Guide of Lost"), new Point (11, 1), 0);
-		SpawnMonster (ResourcesMaster.GetMonster ("Tricky Viper"), new Point (11, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (9, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (11, 1), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (11, 3), 0);
 
-		SpawnMonster (ResourcesMaster.GetMonster ("Sandstone Golem"), new Point (10, 13), 1);
-		SpawnMonster (ResourcesMaster.GetMonster ("Sandstone Golem"), new Point (10, 11), 1);
-		SpawnMonster (ResourcesMaster.GetMonster ("Guide of Lost"), new Point (11, 12), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (10, 13), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (10, 11), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (11, 12), 1);
 
 		Allmons.AddRange (Teams[0]);
 		Allmons.AddRange (Teams[1]);
@@ -129,11 +129,11 @@ public class BattleMaster : MonoBehaviour {
 
 	}
 
-	public void SpawnMonster (Monster MonsterSample, Point Position, int TeamNumber) {
+	public void SpawnMonster (MonsterEntry MonsterSample, Point Position, int TeamNumber) {
 
 		IDs += 1;
 		if(MonsterSample == null) UberDebug.LogChannel("Error", "MonsterSample null");
-		Monster SpawnedMonster = MonsterSample.Copy ();
+		MonsterInstance SpawnedMonster = MonsterSample.Instantiate ();
 		SpawnedMonster.ID = IDs;
 		SpawnedMonster.Team = TeamNumber;
 		Teams[TeamNumber].Add (SpawnedMonster);
@@ -275,7 +275,7 @@ public class BattleMaster : MonoBehaviour {
 				for (int i = 0; i < KilledTargets.Count; i++) {
 					// TODO: Move to gameboard master
 					if (KilledTargets[i]) {
-						Monster DeadMonster = DamagesList[i].TargetMonster;
+						MonsterInstance DeadMonster = DamagesList[i].TargetMonster;
 						Allmons.Remove (DeadMonster);
 						UpTurn.Remove (DeadMonster);
 						HadTurn.Remove (DeadMonster);
@@ -404,7 +404,7 @@ public class BattleMaster : MonoBehaviour {
 				OverlaysMaster.CleanUp ();
 				StatePop (2); // TODO: THIS IS AWFUL
 				int id = Environment.GameBoard.MonsterIDAt (new Point (OnTurn));
-				Monster mon = Environment.GameBoard.MonstersOnBoard[id];
+				MonsterInstance mon = Environment.GameBoard.MonstersOnBoard[id];
 				Debug.Log ("fix this");
 				GameboardActions.Enqueue (new PieceMove (mon, Environment.GameBoard.GetMonsterPosition (mon), new Point (chooser), null));
 				TurnWheel ();
@@ -513,7 +513,7 @@ public class BattleMaster : MonoBehaviour {
 		Lock ck = new Lock (LOCK.WAIT, LOCK.FLUSH, LOCK.TURN_WHEEL);
 		AddLock (ck);
 
-		Monster MonsterOnTurn = OnTurn;
+		MonsterInstance MonsterOnTurn = OnTurn;
 
 		int type = 0;
 		int i, j;

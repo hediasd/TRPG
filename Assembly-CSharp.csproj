@@ -94,7 +94,8 @@
      <Compile Include="assets\Scripts\Menu Related\BoxMaker3.cs" />
      <Compile Include="assets\Scripts\Menu Related\TextDialog.cs" />
      <Compile Include="assets\Scripts\Menu Related\TextMenu.cs" />
-     <Compile Include="assets\Scripts\Monster.cs" />
+     <Compile Include="assets\Scripts\MonsterEntry.cs" />
+     <Compile Include="assets\Scripts\MonsterInstance.cs" />
      <Compile Include="assets\Scripts\MovementCells.cs" />
      <Compile Include="assets\Scripts\OverlaysMaster.cs" />
      <Compile Include="assets\Scripts\Particles\AnimationMove.cs" />
@@ -108,6 +109,7 @@
      <Compile Include="assets\Scripts\Shape.cs" />
      <Compile Include="assets\Scripts\SizeGrow.cs" />
      <Compile Include="assets\Scripts\Spell.cs" />
+     <Compile Include="assets\Scripts\SpellEntry.cs" />
      <Compile Include="assets\Scripts\Spin.cs" />
      <Compile Include="assets\Scripts\Sprites\BaseSpriteAnimation.cs" />
      <Compile Include="assets\Scripts\Sprites\BaseText.cs" />
@@ -120,6 +122,8 @@
      <Compile Include="assets\Scripts\Sprites\SnapToPixelGrid.cs" />
      <Compile Include="assets\Scripts\Sprites\TransparencyShift.cs" />
      <Compile Include="assets\Scripts\Stats.cs" />
+     <Compile Include="assets\Scripts\Status.cs" />
+     <Compile Include="assets\Scripts\StatusEntry.cs" />
      <Compile Include="assets\Scripts\Terrain.cs" />
      <Compile Include="assets\Scripts\TimeMaster.cs" />
      <Compile Include="assets\Scripts\Utilities\Algorithms.cs" />
@@ -182,6 +186,7 @@
      <None Include="assets\Resources\Texts\Backup\Logh.txt" />
      <None Include="assets\Tiled2Unity\Prefabs\_ReadMe.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaTiledMap.shader" />
+     <None Include="assets\Resources\Texts\Logs\MJC_200918_1157596559.txt" />
      <None Include="assets\Resources\GameMaps\town.xml" />
      <None Include="assets\Tiled2Unity\Shaders\Tiled2Unity.cginc" />
      <None Include="assets\Resources\Texts\Logs\MJC_160818_-650042674.txt" />
@@ -234,6 +239,7 @@
      <None Include="assets\Resources\Texts\Logs\SJC_080918_1556888142.txt" />
      <None Include="assets\Resources\Materials\Sprites-Diffuses.shader" />
      <None Include="assets\Tiled2Unity\Materials\_ReadMe.txt" />
+     <None Include="assets\Resources\Texts\Logs\MJC_200918_1085563455.txt" />
      <None Include="assets\Resources\Texts\Size of the Moon.txt" />
      <None Include="assets\Resources\Texts\Backup\AnimationsJson.txt" />
      <None Include="assets\Resources\Texts\Backup\Bright Lights Big City.txt" />
@@ -248,10 +254,12 @@
      <None Include="assets\Tiled2Unity\Imported\snowp.tiled2unity.xml" />
      <None Include="assets\Resources\Texts\Logs\SJC_160818_2123199383.txt" />
      <None Include="assets\Resources\Texts\SpellsJson.txt" />
+     <None Include="assets\Resources\Texts\Logs\SJC_200918_1556888142.txt" />
      <None Include="assets\Resources\Texts\Output.txt" />
      <None Include="assets\Resources\Texts\Logs\MJC_270818_1157596559.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey-Instanced.shader" />
      <None Include="assets\Tiled2Unity\Imported\snowy4.tiled2unity.xml" />
+     <None Include="assets\Resources\Texts\Logs\MJC_200918_545935067.txt" />
      <None Include="assets\Tiled2Unity\Shaders\shaColorKey.shader" />
      <None Include="assets\Resources\Materials\Sprites-Simple.shader" />
      <None Include="assets\ProjectSettings\ProjectVersion.txt" />

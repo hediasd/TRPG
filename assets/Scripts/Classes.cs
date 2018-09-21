@@ -82,12 +82,6 @@ public class DataObject {
 	public string Name;
 }
 
-
-
-public class Status : DataObject {
-
-
-}
 /*
 public class Property {
 	public int a, b, c, d;

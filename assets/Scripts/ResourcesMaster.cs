@@ -7,20 +7,20 @@ using UnityEngine;
 public class ResourcesMaster : MonoBehaviour {
 
 	//public static List<Animation> Animations;
-	public List<Spell> Spells;
-	public List<Status> Statuses;
-	public List<Monster> Monsters;
-	public List<Monster> Characters;
-	public List<Terrain> Terrains;
+	public List<SpellEntry> Spells;
+	public List<StatusEntry> Statuses;
+	public List<MonsterEntry> MonsterEntries;
+	public List<MonsterEntry> Characters;
+	public List<TerrainEntry> Terrains;
 
 	void Start () {
 
 		//Animations = new List<Animation>();
-		Characters = new List<Monster> ();
-		Monsters = new List<Monster> ();
-		Spells = new List<Spell> ();
-		Statuses = new List<Status> ();
-		Terrains = new List<Terrain> ();
+		Characters = new List<MonsterEntry> ();
+		MonsterEntries = new List<MonsterEntry> ();
+		Spells = new List<SpellEntry> ();
+		Statuses = new List<StatusEntry> ();
+		Terrains = new List<TerrainEntry> ();
 
 		//Relog();
 		TerrainLoader ();
@@ -32,11 +32,11 @@ public class ResourcesMaster : MonoBehaviour {
 		//Relog();
 		MonsterLoader ();
 		//Relog();		
-		UberDebug.LogChannel ("Resources", Characters.Count + " characters, " + Monsters.Count + " monsters, " + Spells.Count + " spells, " + Statuses.Count + " statuses, " + Terrains.Count + " terrains");
+		UberDebug.LogChannel ("Resources", Characters.Count + " characters, " + MonsterEntries.Count + " monsters, " + Spells.Count + " spells, " + Statuses.Count + " statuses, " + Terrains.Count + " terrains");
 	}
 
-	public Monster GetMonster (string name) {
-		foreach (Monster mon in Monsters) {
+	public MonsterEntry GetMonsterEntry (string name) {
+		foreach (MonsterEntry mon in MonsterEntries) {
 			if (mon.Name == name) return mon;
 		}
 		return null;
@@ -65,14 +65,14 @@ public class ResourcesMaster : MonoBehaviour {
 		if (read) {
 			TextAsset textAsset = (TextAsset) Resources.Load ("Texts/TerrainsJson", typeof (TextAsset));
 			string line = textAsset.text;
-			Terrains = WriteMaster.JsonToList<Terrain> (line);
+			Terrains = WriteMaster.JsonToList<TerrainEntry> (line);
 		}
 		if (write) {
-			string playerToJason = WriteMaster.ListToJson<Terrain> (Terrains, true);
+			string playerToJason = WriteMaster.ListToJson<TerrainEntry> (Terrains, true);
 			WriteMaster.WriteUp ("TerrainsJson", playerToJason);
 			//Debug.Log(playerToJason);
 		}
-		foreach (Terrain trr in Terrains) {
+		foreach (TerrainEntry trr in Terrains) {
 			try {
 				string[] ColorA = Utility.ChewUp (trr.PaletteA, ", ");
 				string[] ColorB = Utility.ChewUp (trr.PaletteB, ", ");
@@ -92,9 +92,9 @@ public class ResourcesMaster : MonoBehaviour {
 		if (read) {
 			TextAsset textAsset = (TextAsset) Resources.Load ("Texts/SpellsJson", typeof (TextAsset));
 			string line = textAsset.text;
-			Spells = WriteMaster.JsonToList<Spell> (line);
+			Spells = WriteMaster.JsonToList<SpellEntry> (line);
 		}
-		foreach (Spell sp in Spells) {
+		foreach (SpellEntry sp in Spells) {
 			if (sp.MaximumCastRange - sp.MinimumCastRange < 0) throw new Exception ();
 			string[] Segments = Utility.ChewUp (sp.Damage, "_|, "); //sp.Damage
 			for (int i = 0; i < Segments.Length; i += 2) {
@@ -112,12 +112,12 @@ public class ResourcesMaster : MonoBehaviour {
 		}
 		if (write) {
 			Spells.Sort ((a, b) => a.Name.CompareTo (b.Name));
-			string playerToJason = WriteMaster.ListToJson<Spell> (Spells, true);
+			string playerToJason = WriteMaster.ListToJson<SpellEntry> (Spells, true);
 			WriteMaster.WriteUp ("SpellsJson", playerToJason, true);
 			//Debug.Log(playerToJason);
 		}
 		if (read || write) {
-			string playerToJason = WriteMaster.ListToJson<Spell> (Spells, true);
+			string playerToJason = WriteMaster.ListToJson<SpellEntry> (Spells, true);
 			WriteMaster.WriteUp ("Logs/SJC_" + DateTime.Now.ToString ("ddMMyy") + "_" + playerToJason.GetHashCode (), playerToJason);
 		}
 	}
@@ -132,28 +132,28 @@ public class ResourcesMaster : MonoBehaviour {
 		if (read) {
 			TextAsset textAsset = (TextAsset) Resources.Load ("Texts/MonsterJson", typeof (TextAsset));
 			string line = textAsset.text;
-			Monsters = WriteMaster.JsonToList<Monster> (line);
+			MonsterEntries = WriteMaster.JsonToList<MonsterEntry> (line);
 		}
-		Monsters.Sort ((x, y) => x.Name.CompareTo (y.Name));
-		foreach (Monster mon in Monsters) {
+		MonsterEntries.Sort ((x, y) => x.Name.CompareTo (y.Name));
+		foreach (MonsterEntry mon in MonsterEntries) {
 			//
 		}
 		if (writeOriginal) {
-			string playerToJason = WriteMaster.ListToJson<Monster> (Monsters, true);
+			string playerToJason = WriteMaster.ListToJson<MonsterEntry> (MonsterEntries, true);
 			WriteMaster.WriteUp ("MonsterJson", playerToJason);
 			Debug.Log (playerToJason);
 		}
 		if (writeCopy) {
-			string playerToJason = WriteMaster.ListToJson<Monster> (Monsters, true);
+			string playerToJason = WriteMaster.ListToJson<MonsterEntry> (MonsterEntries, true);
 			WriteMaster.WriteUp ("MonsterJsonCopy", playerToJason);
 			Debug.Log (playerToJason);
 		}
 		if (writeOriginal || writeCopy) {
-			string playerToJason = WriteMaster.ListToJson<Monster> (Monsters, true);
+			string playerToJason = WriteMaster.ListToJson<MonsterEntry> (MonsterEntries, true);
 			WriteMaster.WriteUp ("Logs/MJC_" + DateTime.Now.ToString ("ddMMyy") + "_" + playerToJason.GetHashCode (), playerToJason);
 		}
 
-		foreach (Monster mon in Monsters) //TODO: This is awful
+		foreach (MonsterEntry mon in MonsterEntries) //TODO: This is awful
 		{
 			try {
 				string[] ColorA = Utility.ChewUp (mon.PaletteA, ", ");
@@ -173,7 +173,7 @@ public class ResourcesMaster : MonoBehaviour {
 			mon.StatsList = new Stats (IntValues);
 
 			foreach (string SpellName in Utility.ChewUp (mon.Spells, ", ")) {
-				foreach (Spell sp in Spells) {
+				foreach (SpellEntry sp in Spells) {
 					if (SpellName.Equals (sp.Name)) {
 						mon.SpellsList.Add (sp);
 						break;
@@ -273,7 +273,7 @@ public class ResourcesMaster : MonoBehaviour {
 		for (int z = 1; z < whole_text.Length; z++) { //
 			string[] sections = Utility.ChewUp (whole_text[z], "> ");
 			//try{
-			Monster character = new Monster ();
+			MonsterInstance character = new MonsterInstance ();
 
 			string[] first_line = Utility.ChewUp (sections[0], @" \[|]|\(|\)");
 			character.Name = first_line[0];
@@ -307,7 +307,7 @@ public class ResourcesMaster : MonoBehaviour {
 
 			string[] fourth_line = Utility.ChewUp (sections[3], @", ");
 			foreach (string s in fourth_line) {
-				Spell sp = new Spell ();
+				SpellEntry sp = new SpellEntry ();
 				sp.Name = s;
 				character.AddSpell (sp);
 			}

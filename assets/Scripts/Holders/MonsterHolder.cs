@@ -7,12 +7,12 @@ public class MonsterHolder : MonoBehaviour {
 
 	public Color MonsterColorA, MonsterColorB;
 	public int Team;
-	public Monster Monster;
+	public MonsterInstance HeldMonster;
 
 	void LateUpdate(){
-		MonsterColorA = Monster.PaletteA_;
-		MonsterColorB = Monster.PaletteB_;
-		Team = Monster.Team;
+		MonsterColorA = HeldMonster.PaletteA_;
+		MonsterColorB = HeldMonster.PaletteB_;
+		Team = HeldMonster.Team;
 	}
 	
 }

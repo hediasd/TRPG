@@ -6,7 +6,7 @@ using UnityEngine;
 
 		static int[,] Corners = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
-		public static List<LinkedPoint> BlurredSpellCastRange(Point PointPivot, int[,] GroundMap, Spell SimulatedSpell, int BlurAmount){
+		public static List<LinkedPoint> BlurredSpellCastRange(Point PointPivot, int[,] GroundMap, SpellEntry SimulatedSpell, int BlurAmount){
 			List<LinkedPoint> BlurredCastShape = new List<LinkedPoint>();
 
 			//CastShape with Pivot
@@ -228,7 +228,7 @@ using UnityEngine;
 			List<Point> reach = new List<Point>(); 
 			Queue<Point> queue = new Queue<Point>(); 
 
-			List<Monster> Obstacles = new List<Monster>();
+			List<MonsterInstance> Obstacles = new List<MonsterInstance>();
 			if(BattleMaster.Teams[0].Contains(BattleMaster.OnTurn)){
 				Obstacles.AddRange(BattleMaster.Teams[1]);
 			}else{

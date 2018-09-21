@@ -7,11 +7,11 @@ public class PlanningMaster : MonoBehaviour {
 	[HideInInspector]
 	public GameboardMaster GameboardMaster;
 	public Gameboard Gameboard;
-	public Monster OnTurn;
+	public MonsterInstance OnTurn;
 	public Point OnTurnPoint;
-	public List<Monster> Allies, Enemies;
+	public List<MonsterInstance> Allies, Enemies;
 
-	public void Feed (GameboardMaster board, Monster ThinkingMonster, List<Monster> Allies, List<Monster> Enemies) {
+	public void Feed (GameboardMaster board, MonsterInstance ThinkingMonster, List<MonsterInstance> Allies, List<MonsterInstance> Enemies) {
 		GameboardMaster = board;
 		Gameboard = GameboardMaster.Gameboard;
 		OnTurn = ThinkingMonster;
@@ -39,17 +39,17 @@ public class PlanningMaster : MonoBehaviour {
 		return Total;
 	}
 
-	PieceSpell ChooseSpell (Monster ThinkingMonster, List<Point> ReachablePoints, InfluenceMap InfluenceMap) {
+	PieceSpell ChooseSpell (MonsterInstance ThinkingMonster, List<Point> ReachablePoints, InfluenceMap InfluenceMap) {
 
 		UberDebug.LogChannel ("ID " + ThinkingMonster.ID, ThinkingMonster.Name + " choosing a spell");
 		Point Here = new Point (ThinkingMonster.MonsterPoint);
 		int[, ] GroundMap = Gameboard.GetLayer (LAYER.GROUND);
 		int MyTeam = ThinkingMonster.Team, BestScore = 0;
-		Spell ChosenSpell = null;
+		SpellEntry ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
 
 		// For each castable spell available
-		foreach (Spell CandidateSpell in ThinkingMonster.SpellsList) {
+		foreach (SpellEntry CandidateSpell in ThinkingMonster.SpellsList) {
 			// Evaluate the result score when casting from+to any available point
 			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange (Here, GroundMap, CandidateSpell, ThinkingMonster.AvailableMovementPoints);
 
@@ -84,7 +84,7 @@ public class PlanningMaster : MonoBehaviour {
 
 	}
 
-	int EvaluateSpellScore (Monster ThinkingMonster, Spell CandidateSpell, Point CastFrom) {
+	int EvaluateSpellScore (MonsterInstance ThinkingMonster, SpellEntry CandidateSpell, Point CastFrom) {
 
 		int Score = 0;
 
@@ -104,7 +104,7 @@ public class PlanningMaster : MonoBehaviour {
 
 	}
 
-	PieceMove PathMaker (Monster ThinkingMonster, Point Goal, Map WalkableMap) {
+	PieceMove PathMaker (MonsterInstance ThinkingMonster, Point Goal, Map WalkableMap) {
 
 		Point Here = new Point (ThinkingMonster.MonsterPoint);
 		//BattleMaster.Log("["+ThinkingMonster.Name+"] aims for ["+NearestMonster.Name+"]");
@@ -131,7 +131,7 @@ public class PlanningMaster : MonoBehaviour {
 
 	}
 
-	public Deque<BoardAction> Thinking (Monster ThinkingMonster) {
+	public Deque<BoardAction> Thinking (MonsterInstance ThinkingMonster) {
 
 		Deque<BoardAction> Actions = new Deque<BoardAction> ();
 

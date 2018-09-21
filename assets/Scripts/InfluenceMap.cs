@@ -8,15 +8,15 @@ public class InfluenceMap {
 	Gameboard Gameboard;
 	int LayerAmount = 8;
 	Point size;
-	Monster ThinkingMonster;
-	List<Monster> Allies, Enemies;
+	MonsterInstance ThinkingMonster;
+	List<MonsterInstance> Allies, Enemies;
 
 	private class LAYER {
 		public const int GROUND = 0,
 			MONSTER = 1;
 	}
 
-	public InfluenceMap (Monster ThinkingMonster, List<Monster> Allies, List<Monster> Enemies, Gameboard Gameboard) {
+	public InfluenceMap (MonsterInstance ThinkingMonster, List<MonsterInstance> Allies, List<MonsterInstance> Enemies, Gameboard Gameboard) {
 
 		this.ThinkingMonster = ThinkingMonster;
 		this.Gameboard = Gameboard;
@@ -66,7 +66,7 @@ public class InfluenceMap {
 
 	}
 
-	public void ConsiderMonsters (List<Monster> Allies, List<Monster> Enemies) {
+	public void ConsiderMonsters (List<MonsterInstance> Allies, List<MonsterInstance> Enemies) {
 
 		// For every cell
 		/*
@@ -85,10 +85,10 @@ public class InfluenceMap {
 		*/
 
 		// No chance to move to an occupied cell
-		foreach (Monster AllyMonster in Allies) {
+		foreach (MonsterInstance AllyMonster in Allies) {
 			Map[AllyMonster.MonsterPoint.x, AllyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;
 		}
-		foreach (Monster EnemyMonster in Enemies) {
+		foreach (MonsterInstance EnemyMonster in Enemies) {
 			Map[EnemyMonster.MonsterPoint.x, EnemyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;
 		}
 
@@ -98,12 +98,12 @@ public class InfluenceMap {
 
 	public void ConsiderSpellRanges () {
 
-		List<Spell> ConsideredSpells = ThinkingMonster.SpellsList;
+		List<SpellEntry> ConsideredSpells = ThinkingMonster.SpellsList;
 
 		// For each enemy
-		foreach (Monster EnemyMonster in Enemies) {
+		foreach (MonsterInstance EnemyMonster in Enemies) {
 			// Checks every reverse perspective cast range
-			foreach (Spell CandidateSpell in ConsideredSpells) {
+			foreach (SpellEntry CandidateSpell in ConsideredSpells) {
 
 				List<Point> CastShapePoints = CandidateSpell.CastShapePoints (EnemyMonster.MonsterPoint);
 
@@ -123,24 +123,24 @@ public class InfluenceMap {
 		}
 
 		// No chance to move to an occupied cell
-		foreach (Monster AllyMonster in Allies) {
+		foreach (MonsterInstance AllyMonster in Allies) {
 			Map[AllyMonster.MonsterPoint.x, AllyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;
 		}
-		foreach (Monster EnemyMonster in Enemies) {
+		foreach (MonsterInstance EnemyMonster in Enemies) {
 			Map[EnemyMonster.MonsterPoint.x, EnemyMonster.MonsterPoint.z, LAYER.MONSTER] = -1;
 		}
 
 	}
 
-	public void ConsiderCastableSpells (Monster ThinkingMonster, List<Monster> Allies, List<Monster> Enemies, int[, ] Walkable) {
+	public void ConsiderCastableSpells (MonsterInstance ThinkingMonster, List<MonsterInstance> Allies, List<MonsterInstance> Enemies, int[, ] Walkable) {
 
 		Point Here = new Point (ThinkingMonster.MonsterPoint);
 		int MyTeam = ThinkingMonster.Team, BestDamage = 0;
-		Spell ChosenSpell = null;
+		SpellEntry ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
 
 		//Foreach castable spell available
-		foreach (Spell CandidateSpell in ThinkingMonster.SpellsList) {
+		foreach (SpellEntry CandidateSpell in ThinkingMonster.SpellsList) {
 			//Evaluate result when casting at any available point
 			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange (Here, Walkable, CandidateSpell, 2);
 			foreach (LinkedPoint BlurredPoint in BSC) {

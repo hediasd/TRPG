@@ -6,7 +6,7 @@ using System.Collections.Generic;
 public class TerrainHolder : MonoBehaviour {
 
 	public Color TerrainColorA, TerrainColorB;
-	public Terrain Terrain;
+	public TerrainEntry Terrain;
 
 	void Start () {
 		TerrainColorA = Terrain.PaletteA_;

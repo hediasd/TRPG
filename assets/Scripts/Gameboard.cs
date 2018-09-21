@@ -5,7 +5,7 @@ using UnityEngine;
 public class Gameboard {
 
 	public int[, , ] Board;
-	public Dictionary<int, Monster> MonstersOnBoard;
+	public Dictionary<int, MonsterInstance> MonstersOnBoard;
 	public Point size;
 
 	public Gameboard Clone () {
@@ -23,7 +23,7 @@ public class Gameboard {
 			}
 		}
 
-		g.MonstersOnBoard = new Dictionary<int, Monster> ();
+		g.MonstersOnBoard = new Dictionary<int, MonsterInstance> ();
 		foreach (int value in MonstersOnBoard.Keys) {
 			g.MonstersOnBoard.Add (value, MonstersOnBoard[value]);
 		}
@@ -47,7 +47,7 @@ public class Gameboard {
 			}
 		}
 
-		MonstersOnBoard = new Dictionary<int, Monster> ();
+		MonstersOnBoard = new Dictionary<int, MonsterInstance> ();
 		//System.Array.Copy(a, b, a.Length);
 		//Debug.Log(string.Join("; ", a));
 	}
@@ -71,7 +71,7 @@ public class Gameboard {
 
 		List<bool> Success = new List<bool> ();
 		foreach (Damage DamageInstance in DamageList) {
-			Monster Target = MonstersOnBoard[DamageInstance.TargetID];
+			MonsterInstance Target = MonstersOnBoard[DamageInstance.TargetID];
 			Target.TakeDamage (DamageInstance);
 			bool Killed = false;
 			if (Target.StatsList.HPA () == 0) Killed = Kill (Target);
@@ -81,14 +81,14 @@ public class Gameboard {
 
 	}
 
-	public List<Monster> GetMonsters () {
-		return new List<Monster> (MonstersOnBoard.Values);
+	public List<MonsterInstance> GetMonsters () {
+		return new List<MonsterInstance> (MonstersOnBoard.Values);
 	}
 
 	public Map GetWalkableMap () {
 		int[, ] GroundMap = GetLayer (LAYER.GROUND);
 
-		foreach (Monster Mon in MonstersOnBoard.Values) {
+		foreach (MonsterInstance Mon in MonstersOnBoard.Values) {
 			GroundMap[Mon.MonsterPoint.x, Mon.MonsterPoint.z] = 1; //TODO:
 		}
 
@@ -98,11 +98,11 @@ public class Gameboard {
 		return ReturnMap;
 	}
 
-	public void InsertMonster (Monster mon, Point at) {
+	public void InsertMonster (MonsterInstance mon, Point at) {
 
 		if (MonsterIDAt (at) != 0) {
 			Debug.Log ("Illegal Board Add: Occupied Cell");
-			throw new GameboardException ();
+			throw new GameboardException ("Illegal Board Add: Occupied Cell");
 		} else {
 			int id = mon.ID;
 			MonstersOnBoard.Add (id, mon);
@@ -110,7 +110,7 @@ public class Gameboard {
 		}
 	}
 
-	public bool IsWithinCastRange (Monster Caster, Monster Target, Spell SimulatedSpell) {
+	public bool IsWithinCastRange (MonsterInstance Caster, MonsterInstance Target, SpellEntry SimulatedSpell) {
 
 		// How is the shape if i cast it from here
 		List<Point> SpellCastShape = SimulatedSpell.CastShapePoints (Caster.MonsterPoint);
@@ -119,7 +119,7 @@ public class Gameboard {
 
 	}
 
-	public bool Kill (Monster Target) {
+	public bool Kill (MonsterInstance Target) {
 
 		return true;
 	}
@@ -129,7 +129,7 @@ public class Gameboard {
 		return Board[at.x, at.z, LAYER.MONSTER];
 	}
 
-	public Monster MonsterAt (Point at) {
+	public MonsterInstance MonsterAt (Point at) {
 		int id = MonsterIDAt (at);
 		if (id == 0) {
 			//Debug.Log("Illegal Board Search: Empty Cell");
@@ -140,8 +140,8 @@ public class Gameboard {
 		}
 	}
 
-	public List<Monster> MonstersAt (Point Center, List<Point> Shape) {
-		List<Monster> Monsters = new List<Monster> ();
+	public List<MonsterInstance> MonstersAt (Point Center, List<Point> Shape) {
+		List<MonsterInstance> Monsters = new List<MonsterInstance> ();
 		//foreach (Point p in Shape)
 		//{
 		//	Debug.Log(p);
@@ -149,7 +149,7 @@ public class Gameboard {
 		foreach (Point ShapePoint in Shape) {
 			Point NewPoint = Center + ShapePoint;
 			//Debug.Log("center " + Center.x + " " + Center.z + " plus " + ShapePoint.x + " " + ShapePoint.z );
-			Monster MonsterAtPoint = MonsterAt (NewPoint);
+			MonsterInstance MonsterAtPoint = MonsterAt (NewPoint);
 			if (MonsterAtPoint != null) {
 				Monsters.Add (MonsterAtPoint);
 			}
@@ -157,7 +157,7 @@ public class Gameboard {
 
 		return Monsters;
 	}
-	public Point GetMonsterPosition (Monster mon) {
+	public Point GetMonsterPosition (MonsterInstance mon) {
 		for (int i = 0; i < size.x; i++) {
 			for (int j = 0; j < size.z; j++) {
 				if (mon.ID == Board[i, j, LAYER.MONSTER]) return new Point (i, j);
@@ -166,7 +166,7 @@ public class Gameboard {
 		return null;
 	}
 
-	public Deque<BoardAction> OnTurnEnter (Monster OnTurn) {
+	public Deque<BoardAction> OnTurnEnter (MonsterInstance OnTurn) {
 		Deque<BoardAction> Actions = new Deque<BoardAction> ();
 
 		OnTurn.ResetMovementPoints ();
@@ -174,21 +174,21 @@ public class Gameboard {
 		return Actions;
 	}
 
-	public void RemoveMonster (Monster mon) {
+	public void RemoveMonster (MonsterInstance mon) {
 		Point at = mon.MonsterPoint;
 		if (Board[at.x, at.z, LAYER.MONSTER] != mon.ID) {
 			Debug.Log ("Illegal Board Move: No/Wrong monster to remove");
-			throw new GameboardException ();
+			throw new GameboardException ("Illegal Board Move: No/Wrong monster to remove");
 		} else {
 			Set (0, at, LAYER.MONSTER);
 			//Debug.Log("gone to " + to.x + " " + to.z);
 		}
 	}
 
-	public List<Damage> SpellPerformance (Monster Caster, Spell SimulatedSpell, Point TargetedCell) {
+	public List<Damage> SpellPerformance (MonsterInstance Caster, SpellEntry SimulatedSpell, Point TargetedCell) {
 
 		List<Damage> SimulationResult = new List<Damage> ();
-		List<Monster> TargetedMonsters = new List<Monster> ();
+		List<MonsterInstance> TargetedMonsters = new List<MonsterInstance> ();
 
 		if (SimulatedSpell.Damage == "") {
 
@@ -244,12 +244,12 @@ public class Gameboard {
 		if (EmptyFrom || FullTo) {
 			if (EmptyFrom) Debug.Log ("Illegal Board Move: Empty From");
 			if (FullTo) Debug.Log ("Illegal Board Move: Full To");
-			throw new GameboardException ();
+			throw new GameboardException ("kkk");
 		} else {
-			Monster Mon = MonstersOnBoard[MonsterIDAt (From)];
+			MonsterInstance Mon = MonstersOnBoard[MonsterIDAt (From)];
 			if (Point.Distance (From, To) > Mon.AvailableMovementPoints) {
 				Debug.Log ("Illegal Board Move: No MP " + From + " " + To + " " + Point.Distance (From, To));
-				throw new GameboardException ();
+				throw new GameboardException ("Illegal Board Move: No MP " + From + " " + To + " " + Point.Distance (From, To));
 			}
 			Set (MonsterIDAt (From), To, LAYER.MONSTER);
 			Set (0, From, LAYER.MONSTER);

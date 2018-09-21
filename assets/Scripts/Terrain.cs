@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
-public class Terrain : DataObject {
+public class TerrainEntry : DataObject {
 
 	public string Texture, PaletteA, PaletteB;
 	
@@ -12,7 +12,7 @@ public class Terrain : DataObject {
 	[System.NonSerialized]
 	public Point Point;
 	[System.NonSerialized]
-	public Spell ResultOf;
+	public SpellEntry ResultOf;
 	[System.NonSerialized]
-	public Monster CreatedBy;
+	public MonsterInstance CreatedBy;
 }

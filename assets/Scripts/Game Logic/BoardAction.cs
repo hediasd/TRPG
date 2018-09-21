@@ -18,9 +18,9 @@ public class PieceMove : BoardAction {
 	public GameObject who;
 	public List<Point> pointpath;
 	public Point from, to;
-	public Monster mon;
+	public MonsterInstance mon;
 
-	public PieceMove(Monster m, Point fr, Point gt, List<Point> PointPath){
+	public PieceMove(MonsterInstance m, Point fr, Point gt, List<Point> PointPath){
 		who = PiecesMaster.MonsterGameObject(m);
 		mon = m;
 		from = fr;
@@ -39,10 +39,10 @@ public class PieceMove : BoardAction {
 
 public class PieceSpell : BoardAction {
 	public GameObject CasterGameObject;
-	public Spell CastedSpell;
+	public SpellEntry CastedSpell;
 	public Point CastedFrom, CastedTo;
-	public Monster CasterMonster;
-	public PieceSpell(Monster m, Spell ss, Point gf, Point gt){
+	public MonsterInstance CasterMonster;
+	public PieceSpell(MonsterInstance m, SpellEntry ss, Point gf, Point gt){
 		CasterGameObject = PiecesMaster.MonsterGameObject(m);
 		CasterMonster = m;
 		CastedSpell = ss;
@@ -53,10 +53,10 @@ public class PieceSpell : BoardAction {
 
 public class PieceText : BoardAction {
 	public GameObject who;
-	public Monster mon;
+	public MonsterInstance mon;
 	public string Text;
 
-	public PieceText(Monster m, string words){
+	public PieceText(MonsterInstance m, string words){
 		who = PiecesMaster.MonsterGameObject(m);
 		mon = m;
 		Text = words;
@@ -65,9 +65,9 @@ public class PieceText : BoardAction {
 
 public class PieceKill : BoardAction {
 	public GameObject who;
-	public Monster mon;
+	public MonsterInstance mon;
 	
-	public PieceKill(Monster m){
+	public PieceKill(MonsterInstance m){
 		who = PiecesMaster.MonsterGameObject(m);
 		mon = m;
 	}

@@ -741,7 +741,7 @@ Darkness, Fire > Wood
 "White-Hot Steam"
 
 :Fire+Wind:
->
+> I am the fire and the wind, do not try to know me
 >
 
 "Anger"

@@ -36,7 +36,7 @@ public class PiecesMaster : MonoBehaviour {
 
 	}
 
-	public static GameObject MonsterGameObject(Monster mon){
+	public static GameObject MonsterGameObject(MonsterInstance mon){
 		return MonPiecesList[mon.ID];
 	}
 
@@ -65,7 +65,7 @@ public class PiecesMaster : MonoBehaviour {
 		go.GetComponent<Piece>().Walk(to, PointPath);
 	}
 
-	public GameObject SpawnMonsterPiece(Monster mon, Point p){
+	public GameObject SpawnMonsterPiece(MonsterInstance mon, Point p){
 
 		GameObject SpawnedMonsterPiece = (GameObject) Instantiate(cellMon, new Vector3(p.x, 0, p.z), Quaternion.Euler (0, 0, 0));
 		/* //////////////////////////////////// */
@@ -86,7 +86,7 @@ public class PiecesMaster : MonoBehaviour {
 		//foreach (FieldInfo fi in mon.GetType().GetFields()){
 		//	fi.SetValue(monscript, fi.GetValue(mon));
 		//}
-		SpawnedMonsterPiece.GetComponent<MonsterHolder>().Monster = mon;		
+		SpawnedMonsterPiece.GetComponent<MonsterHolder>().HeldMonster = mon;		
 		SpawnedMonsterPiece.name = "(Mon) " + mon.Name;
 		SpawnedMonsterPiece.transform.SetParent(monPieces.transform, false);
 		MonPiecesList.Add(mon.ID, SpawnedMonsterPiece);
@@ -133,7 +133,7 @@ public class PiecesMaster : MonoBehaviour {
 		//if(fr != null) GoTo(effect, to, spa);
 	}
 
-	public void SpawnTerrain(Terrain trr, Point p){
+	public void SpawnTerrain(TerrainEntry trr, Point p){
 
 		GameObject SpawnedTerrain = (GameObject) Instantiate(cellTrr, new Vector3(p.x, 0, p.z), Quaternion.Euler (-90, 0, 0));
 		/* //////////////////////////////////// */
