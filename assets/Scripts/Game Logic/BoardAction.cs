@@ -39,10 +39,10 @@ public class PieceMove : BoardAction {
 
 public class PieceSpell : BoardAction {
 	public GameObject CasterGameObject;
-	public SpellEntry CastedSpell;
+	public SpellInstance CastedSpell;
 	public Point CastedFrom, CastedTo;
 	public MonsterInstance CasterMonster;
-	public PieceSpell(MonsterInstance m, SpellEntry ss, Point gf, Point gt){
+	public PieceSpell(MonsterInstance m, SpellInstance ss, Point gf, Point gt){
 		CasterGameObject = PiecesMaster.MonsterGameObject(m);
 		CasterMonster = m;
 		CastedSpell = ss;

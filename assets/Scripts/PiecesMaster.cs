@@ -75,8 +75,8 @@ public class PiecesMaster : MonoBehaviour {
 
 		if(mon.PaletteA != null){		
 			ColorSwap cs = SpawnedMonsterPiece.transform.GetChild(0).GetComponent<ColorSwap>();
-			cs.news.Add(mon.PaletteA_);
-			cs.news.Add(mon.PaletteB_);
+			cs.news.Add(mon.PaletteA);
+			cs.news.Add(mon.PaletteB);
 			cs.Startup(msa.sprites[0]);
 		}else{
 			Destroy(SpawnedMonsterPiece.GetComponent<ColorSwap>());

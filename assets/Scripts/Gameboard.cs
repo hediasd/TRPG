@@ -74,7 +74,7 @@ public class Gameboard {
 			MonsterInstance Target = MonstersOnBoard[DamageInstance.TargetID];
 			Target.TakeDamage (DamageInstance);
 			bool Killed = false;
-			if (Target.StatsList.HPA () == 0) Killed = Kill (Target);
+			if (Target.Stats.HPA () == 0) Killed = Kill (Target);
 			Success.Add (Killed);
 		}
 		return Success;
@@ -110,7 +110,7 @@ public class Gameboard {
 		}
 	}
 
-	public bool IsWithinCastRange (MonsterInstance Caster, MonsterInstance Target, SpellEntry SimulatedSpell) {
+	public bool IsWithinCastRange (MonsterInstance Caster, MonsterInstance Target, SpellInstance SimulatedSpell) {
 
 		// How is the shape if i cast it from here
 		List<Point> SpellCastShape = SimulatedSpell.CastShapePoints (Caster.MonsterPoint);
@@ -185,12 +185,12 @@ public class Gameboard {
 		}
 	}
 
-	public List<Damage> SpellPerformance (MonsterInstance Caster, SpellEntry SimulatedSpell, Point TargetedCell) {
+	public List<Damage> SpellPerformance (MonsterInstance Caster, SpellInstance SimulatedSpell, Point TargetedCell) {
 
 		List<Damage> SimulationResult = new List<Damage> ();
 		List<MonsterInstance> TargetedMonsters = new List<MonsterInstance> ();
 
-		if (SimulatedSpell.Damage == "") {
+		if (SimulatedSpell.Entry.Damage == "") {
 
 		} else {
 			//if(SimulatedSpell.Radius == 1){ //single target

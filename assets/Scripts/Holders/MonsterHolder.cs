@@ -10,8 +10,8 @@ public class MonsterHolder : MonoBehaviour {
 	public MonsterInstance HeldMonster;
 
 	void LateUpdate(){
-		MonsterColorA = HeldMonster.PaletteA_;
-		MonsterColorB = HeldMonster.PaletteB_;
+		MonsterColorA = HeldMonster.PaletteA;
+		MonsterColorB = HeldMonster.PaletteB;
 		Team = HeldMonster.Team;
 	}
 	

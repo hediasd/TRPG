@@ -1,10 +1,10 @@
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frog", "Assembly-CSharp.csproj", "{E75FC6D0-D838-4B0E-95AA-5DE3F225B498}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{E75FC6D0-D838-4B0E-95AA-5DE3F225B498}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frog", "Assembly-CSharp-Editor.csproj", "{3E49FA88-EBAA-5615-5C82-B69A8CBBA734}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{3E49FA88-EBAA-5615-5C82-B69A8CBBA734}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Frog", "Assembly-CSharp-Editor-firstpass.csproj", "{8655EABD-8F6A-2A39-6461-A2F6DA58FB77}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor-firstpass", "Assembly-CSharp-Editor-firstpass.csproj", "{8655EABD-8F6A-2A39-6461-A2F6DA58FB77}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

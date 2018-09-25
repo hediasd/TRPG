@@ -25,7 +25,7 @@ public class MapMaster : MonoBehaviour {
 		//this.MapName = MapName;
 		MapName = this.MapName;
 		UnityEngine.Object prefab = Resources.Load(MapName);
-		Debug.Log(prefab.name);
+		Debug.Log("Loading map: " + prefab.name);
 
 		GameObject go = (GameObject) Instantiate(prefab);
 		go.transform.Translate(0, -0.062f, go.GetComponent<TiledMap>().NumTilesHigh);
@@ -42,11 +42,11 @@ public class MapMaster : MonoBehaviour {
 		List<Sprite> TilesetSprites = new List<Sprite>(Resources.LoadAll<Sprite>("Tilesets/"+TilesetName));
 
 		//go.transform.Find("Terrain").Find("desert day").GetComponent<MeshFilter>().mesh.RecalculateNormals();
-		
+
 		for (int i = 0; i < MapCSVs.Length; i++)
 		{
 			TextAsset MapCSV = MapCSVs[i];
-			string[] FileName = Regex.Split(MapCSV.name, "_");
+			string[] FileName = Utility.ChewUp(MapCSV.name);//Regex.Split(MapCSV.name, /([^_]+)/g);
 			string[] MapMatrix = Regex.Split(MapCSV.text, "\n"); 
 
 			if(i == 0){

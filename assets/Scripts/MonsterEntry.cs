@@ -7,15 +7,12 @@ using UnityEngine;
 //using System.IO;
 
 [System.Serializable]
-public class MonsterEntry : DataObject {
+public class MonsterEntry : DataEntry {
 
 	public string Texture;
-	[System.NonSerialized]
-	public bool Started = false;
-	//TODO: Started
 
 	[System.NonSerialized]
-	public List<SpellEntry> SpellsList; // = new List<Spell>();
+	public List<SpellEntry> SpellEntries; // = new List<Spell>();
 	[System.NonSerialized]
 	public List<SpellEntry> PassivesList;
 
@@ -25,32 +22,44 @@ public class MonsterEntry : DataObject {
 	public string Spells, Passives, Stats, PaletteA, PaletteB;
 
 	[System.NonSerialized]
-	public Color PaletteA_, PaletteB_;
+	public Color ColorPaletteA, ColorPaletteB;
 	[System.NonSerialized]
-	public Stats StatsList; //TODO: 9
-
-	//public int HPA_, HPM_, LVL_, POW_, MGT_, END_, RES_, LUK_, SPD_, MOV_; //original
-	//public int HPA, HPM, POW, MGT, END, RES, LUK, SPD, MOV;
+	public MonsterStats StatsList; //TODO: 9
 
 	public MonsterEntry () {
-		SpellsList = new List<SpellEntry> ();
+		SpellEntries = new List<SpellEntry> ();
 		PassivesList = new List<SpellEntry> ();
-		StatsList = new Stats (new int[10]);
-	}
-
-	public void Startup () {
-
+		StatsList = new MonsterStats ();
 	}
 
 	public MonsterInstance Instantiate () {
+		return new MonsterInstance (this);
+	}
 
-		//MonsterEntry thisclone = this.MemberwiseClone ();
-		//MonsterInstance mon = (MonsterInstance) ( this.MemberwiseClone());
-		MonsterInstance mon = new MonsterInstance (this);
+	public override void Startup () {
 
-		Debug.Log (mon.Name + " " + mon.Texture);
+		try {
+			string[] ColorA = Utility.ChewUp (PaletteA, ", ");
+			string[] ColorB = Utility.ChewUp (PaletteB, ", ");
+			ColorPaletteA = new Color32 (byte.Parse (ColorA[0]), byte.Parse (ColorA[1]), byte.Parse (ColorA[2]), 255);
+			ColorPaletteB = new Color32 (byte.Parse (ColorB[0]), byte.Parse (ColorB[1]), byte.Parse (ColorB[2]), 255);
+		} catch (Exception) {
+			ColorPaletteA = new Color32 (250, 250, 250, 255);
+			ColorPaletteB = new Color32 (250, 250, 250, 255);
+		}
 
-		return mon;
+		string[] Values = Utility.ChewUp (Stats, ", ");
+		int[] IntValues = new int[10];
+		for (int i = 0; i < 10; i++) {
+			IntValues[i] = (int.Parse (Values[i]));
+		}
+
+		StatsList = new MonsterStats (IntValues);
+
+		foreach (string SpellName in Utility.ChewUp (Spells, ", ")) {
+			SpellEntry SE = ResourcesMaster.GetSpellEntry (SpellName);
+			SpellEntries.Add (SE);
+		}
 
 	}
 

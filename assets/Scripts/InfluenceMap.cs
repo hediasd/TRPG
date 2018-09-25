@@ -98,12 +98,12 @@ public class InfluenceMap {
 
 	public void ConsiderSpellRanges () {
 
-		List<SpellEntry> ConsideredSpells = ThinkingMonster.SpellsList;
+		List<SpellInstance> ConsideredSpells = ThinkingMonster.SpellsList;
 
 		// For each enemy
 		foreach (MonsterInstance EnemyMonster in Enemies) {
 			// Checks every reverse perspective cast range
-			foreach (SpellEntry CandidateSpell in ConsideredSpells) {
+			foreach (SpellInstance CandidateSpell in ConsideredSpells) {
 
 				List<Point> CastShapePoints = CandidateSpell.CastShapePoints (EnemyMonster.MonsterPoint);
 
@@ -136,11 +136,11 @@ public class InfluenceMap {
 
 		Point Here = new Point (ThinkingMonster.MonsterPoint);
 		int MyTeam = ThinkingMonster.Team, BestDamage = 0;
-		SpellEntry ChosenSpell = null;
+		SpellInstance ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
 
 		//Foreach castable spell available
-		foreach (SpellEntry CandidateSpell in ThinkingMonster.SpellsList) {
+		foreach (SpellInstance CandidateSpell in ThinkingMonster.SpellsList) {
 			//Evaluate result when casting at any available point
 			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange (Here, Walkable, CandidateSpell, 2);
 			foreach (LinkedPoint BlurredPoint in BSC) {

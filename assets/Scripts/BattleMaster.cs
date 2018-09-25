@@ -156,7 +156,7 @@ public class BattleMaster : MonoBehaviour {
 
 		TurnNumber += 1;
 
-		BattleMaster.Log ("--- TURN " + TurnNumber + " - [" + OnTurn.Name + "]" + "'s turn - [" + OnTurn.StatsList.HPA () + "/" + OnTurn.StatsList.HPM () + " HP]");
+		BattleMaster.Log ("--- TURN " + TurnNumber + " - [" + OnTurn.Name + "]" + "'s turn - [" + OnTurn.Stats.HPA () + "/" + OnTurn.Stats.HPM () + " HP]");
 
 		if (Teams[0].Contains (OnTurn)) {
 			StatePush (new GameState (GAMESTATE.BATTLE_MENU, E.ARROW_UPDOWN), false);
@@ -288,8 +288,8 @@ public class BattleMaster : MonoBehaviour {
 				}
 
 				//	PiecesMaster.SpawnTerrain(Grimoire.Terrains[0], ps.to);
-				BattleMaster.Log ("%%% casts [" + Action.CastedSpell.Name + "]");
-				BattleMaster.Log ("%%% spell [" + Action.CastedSpell.Name + "] damages ", JumpLine : false);
+				BattleMaster.Log ("%%% casts [" + Action.CastedSpell.Entry.Name + "]");
+				BattleMaster.Log ("%%% spell [" + Action.CastedSpell.Entry.Name + "] damages ", JumpLine : false);
 
 				for (int i = 0; i < DamagesList.Count; i++) {
 					string TargetName = DamagesList[i].TargetMonster.Name;

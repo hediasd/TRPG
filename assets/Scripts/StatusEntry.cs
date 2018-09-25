@@ -2,15 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StatusEntry : MonoBehaviour {
+public class StatusEntry : DataEntry {
 
-	// Use this for initialization
-	void Start () {
-		
+	public override void Startup(){
+
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+
 }

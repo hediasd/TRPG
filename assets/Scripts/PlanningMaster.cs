@@ -6,8 +6,10 @@ public class PlanningMaster : MonoBehaviour {
 
 	[HideInInspector]
 	public GameboardMaster GameboardMaster;
+
 	public Gameboard Gameboard;
 	public MonsterInstance OnTurn;
+	public MonsterEntry OnTurnEntry;
 	public Point OnTurnPoint;
 	public List<MonsterInstance> Allies, Enemies;
 
@@ -15,6 +17,7 @@ public class PlanningMaster : MonoBehaviour {
 		GameboardMaster = board;
 		Gameboard = GameboardMaster.Gameboard;
 		OnTurn = ThinkingMonster;
+		OnTurnEntry = OnTurn.MonsterEntry;
 		OnTurnPoint = new Point (ThinkingMonster);
 		this.Allies = Allies;
 		this.Enemies = Enemies;
@@ -45,11 +48,11 @@ public class PlanningMaster : MonoBehaviour {
 		Point Here = new Point (ThinkingMonster.MonsterPoint);
 		int[, ] GroundMap = Gameboard.GetLayer (LAYER.GROUND);
 		int MyTeam = ThinkingMonster.Team, BestScore = 0;
-		SpellEntry ChosenSpell = null;
+		SpellInstance ChosenSpell = null;
 		Point CastFrom = null, CastTo = null;
 
 		// For each castable spell available
-		foreach (SpellEntry CandidateSpell in ThinkingMonster.SpellsList) {
+		foreach (SpellInstance CandidateSpell in ThinkingMonster.SpellsList) {
 			// Evaluate the result score when casting from+to any available point
 			List<LinkedPoint> BSC = Algorithms.BlurredSpellCastRange (Here, GroundMap, CandidateSpell, ThinkingMonster.AvailableMovementPoints);
 
@@ -79,12 +82,12 @@ public class PlanningMaster : MonoBehaviour {
 			return null;
 		}
 
-		UberDebug.LogChannel ("ID " + ThinkingMonster.ID, ThinkingMonster.Name + " chooses spell " + ChosenSpell.Name);
+		UberDebug.LogChannel ("ID " + ThinkingMonster.ID, ThinkingMonster.Name + " chooses spell " + ChosenSpell.Entry.Name);
 		return new PieceSpell (ThinkingMonster, ChosenSpell, CastFrom, CastTo);
 
 	}
 
-	int EvaluateSpellScore (MonsterInstance ThinkingMonster, SpellEntry CandidateSpell, Point CastFrom) {
+	int EvaluateSpellScore (MonsterInstance ThinkingMonster, SpellInstance CandidateSpell, Point CastFrom) {
 
 		int Score = 0;
 

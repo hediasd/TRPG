@@ -4,26 +4,27 @@ using System.Globalization;
 using System.Reflection;
 using UnityEngine;
 
+[System.Serializable]
 public class ResourcesMaster : MonoBehaviour {
 
 	//public static List<Animation> Animations;
-	public List<SpellEntry> Spells;
-	public List<StatusEntry> Statuses;
-	public List<MonsterEntry> MonsterEntries;
-	public List<MonsterEntry> Characters;
-	public List<TerrainEntry> Terrains;
+	public static List<SpellEntry> SpellEntries;
+	public static List<StatusEntry> Statuses;
+	public static List<MonsterEntry> MonsterEntries;
+	public static List<MonsterEntry> Characters;
+	public static List<TerrainEntry> Terrains;
 
 	void Start () {
 
 		//Animations = new List<Animation>();
 		Characters = new List<MonsterEntry> ();
 		MonsterEntries = new List<MonsterEntry> ();
-		Spells = new List<SpellEntry> ();
+		SpellEntries = new List<SpellEntry> ();
 		Statuses = new List<StatusEntry> ();
 		Terrains = new List<TerrainEntry> ();
-
-		//Relog();
+	
 		TerrainLoader ();
+		//Relog();
 		SpellLoader ();
 		//Relog();
 		StatusChewUp ();
@@ -32,12 +33,19 @@ public class ResourcesMaster : MonoBehaviour {
 		//Relog();
 		MonsterLoader ();
 		//Relog();		
-		UberDebug.LogChannel ("Resources", Characters.Count + " characters, " + MonsterEntries.Count + " monsters, " + Spells.Count + " spells, " + Statuses.Count + " statuses, " + Terrains.Count + " terrains");
+		UberDebug.LogChannel ("Resources", Characters.Count + " characters, " + MonsterEntries.Count + " monsters, " + SpellEntries.Count + " spells, " + Statuses.Count + " statuses, " + Terrains.Count + " terrains");
 	}
 
-	public MonsterEntry GetMonsterEntry (string name) {
+	public static MonsterEntry GetMonsterEntry (string Name) {
 		foreach (MonsterEntry mon in MonsterEntries) {
-			if (mon.Name == name) return mon;
+			if (mon.Name == Name) return mon;
+		}
+		return null;
+	}
+
+	public static SpellEntry GetSpellEntry (string Name) {
+		foreach (SpellEntry spe in SpellEntries) {
+			if (spe.Name == Name) return spe;
 		}
 		return null;
 	}
@@ -86,40 +94,33 @@ public class ResourcesMaster : MonoBehaviour {
 	}
 
 	void SpellLoader () {
+
 		bool read = true;
 		bool write = true;
 
 		if (read) {
 			TextAsset textAsset = (TextAsset) Resources.Load ("Texts/SpellsJson", typeof (TextAsset));
 			string line = textAsset.text;
-			Spells = WriteMaster.JsonToList<SpellEntry> (line);
+			SpellEntries = WriteMaster.JsonToList<SpellEntry> (line);
 		}
-		foreach (SpellEntry sp in Spells) {
-			if (sp.MaximumCastRange - sp.MinimumCastRange < 0) throw new Exception ();
-			string[] Segments = Utility.ChewUp (sp.Damage, "_|, "); //sp.Damage
-			for (int i = 0; i < Segments.Length; i += 2) {
-				sp.DamageSegments.Add (new DamageSegment (int.Parse (Segments[i]), Thesaurus.Chew (Segments[i + 1])));
-			}
-			string[] Range = Utility.ChewUp (sp.CastRange, "_|, "); //sp.Damage
-			for (int i = 0; i < Range.Length; i++) {
-				sp.MinimumCastRange = int.Parse (Range[0]);
-				sp.MaximumCastRange = int.Parse (Range[1]);
-			}
-			sp.SpellCastShape = Thesaurus.Chew (sp.CastShape);
-			sp.SpellEffectShape = Thesaurus.Chew (sp.EffectShape);
-			sp.SpellTargets = Thesaurus.Chew (sp.Targets);
+
+		foreach (SpellEntry sp in SpellEntries) {
+			sp.Startup ();
 			//Utility.Each(sp.DamageSegments, i => sp.Damages += (""+i.Value+"_"+i.Element));
 		}
+
 		if (write) {
-			Spells.Sort ((a, b) => a.Name.CompareTo (b.Name));
-			string playerToJason = WriteMaster.ListToJson<SpellEntry> (Spells, true);
+			SpellEntries.Sort ((a, b) => a.Name.CompareTo (b.Name));
+			string playerToJason = WriteMaster.ListToJson<SpellEntry> (SpellEntries, true);
 			WriteMaster.WriteUp ("SpellsJson", playerToJason, true);
 			//Debug.Log(playerToJason);
 		}
+
 		if (read || write) {
-			string playerToJason = WriteMaster.ListToJson<SpellEntry> (Spells, true);
+			string playerToJason = WriteMaster.ListToJson<SpellEntry> (SpellEntries, true);
 			WriteMaster.WriteUp ("Logs/SJC_" + DateTime.Now.ToString ("ddMMyy") + "_" + playerToJason.GetHashCode (), playerToJason);
 		}
+
 	}
 
 	void MonsterLoader () {
@@ -134,10 +135,12 @@ public class ResourcesMaster : MonoBehaviour {
 			string line = textAsset.text;
 			MonsterEntries = WriteMaster.JsonToList<MonsterEntry> (line);
 		}
+
 		MonsterEntries.Sort ((x, y) => x.Name.CompareTo (y.Name));
-		foreach (MonsterEntry mon in MonsterEntries) {
-			//
+		foreach (MonsterEntry Entry in MonsterEntries) {
+			Entry.Startup ();
 		}
+
 		if (writeOriginal) {
 			string playerToJason = WriteMaster.ListToJson<MonsterEntry> (MonsterEntries, true);
 			WriteMaster.WriteUp ("MonsterJson", playerToJason);
@@ -151,35 +154,6 @@ public class ResourcesMaster : MonoBehaviour {
 		if (writeOriginal || writeCopy) {
 			string playerToJason = WriteMaster.ListToJson<MonsterEntry> (MonsterEntries, true);
 			WriteMaster.WriteUp ("Logs/MJC_" + DateTime.Now.ToString ("ddMMyy") + "_" + playerToJason.GetHashCode (), playerToJason);
-		}
-
-		foreach (MonsterEntry mon in MonsterEntries) //TODO: This is awful
-		{
-			try {
-				string[] ColorA = Utility.ChewUp (mon.PaletteA, ", ");
-				string[] ColorB = Utility.ChewUp (mon.PaletteB, ", ");
-				mon.PaletteA_ = new Color32 (byte.Parse (ColorA[0]), byte.Parse (ColorA[1]), byte.Parse (ColorA[2]), 255);
-				mon.PaletteB_ = new Color32 (byte.Parse (ColorB[0]), byte.Parse (ColorB[1]), byte.Parse (ColorB[2]), 255);
-			} catch (Exception) {
-				mon.PaletteA_ = new Color32 (250, 250, 250, 255);
-				mon.PaletteB_ = new Color32 (250, 250, 250, 255);
-			}
-
-			string[] Values = Utility.ChewUp (mon.Stats, ", ");
-			int[] IntValues = new int[10];
-			for (int i = 0; i < 10; i++) {
-				IntValues[i] = (int.Parse (Values[i]));
-			}
-			mon.StatsList = new Stats (IntValues);
-
-			foreach (string SpellName in Utility.ChewUp (mon.Spells, ", ")) {
-				foreach (SpellEntry sp in Spells) {
-					if (SpellName.Equals (sp.Name)) {
-						mon.SpellsList.Add (sp);
-						break;
-					}
-				}
-			}
 		}
 
 	}
@@ -273,7 +247,7 @@ public class ResourcesMaster : MonoBehaviour {
 		for (int z = 1; z < whole_text.Length; z++) { //
 			string[] sections = Utility.ChewUp (whole_text[z], "> ");
 			//try{
-			MonsterInstance character = new MonsterInstance ();
+			MonsterEntry character = new MonsterEntry ();
 
 			string[] first_line = Utility.ChewUp (sections[0], @" \[|]|\(|\)");
 			character.Name = first_line[0];
@@ -281,9 +255,9 @@ public class ResourcesMaster : MonoBehaviour {
 			character.Texture = texture[0];
 
 			string[] colorA = Utility.ChewUp (texture[1], "_");
-			character.PaletteA_ = new Color32 (byte.Parse (colorA[0]), byte.Parse (colorA[1]), byte.Parse (colorA[2]), 255);
+			character.ColorPaletteA = new Color32 (byte.Parse (colorA[0]), byte.Parse (colorA[1]), byte.Parse (colorA[2]), 255);
 			string[] colorB = Utility.ChewUp (texture[2], "_");
-			character.PaletteB_ = new Color32 (byte.Parse (colorB[0]), byte.Parse (colorB[1]), byte.Parse (colorB[2]), 255);
+			character.ColorPaletteB = new Color32 (byte.Parse (colorB[0]), byte.Parse (colorB[1]), byte.Parse (colorB[2]), 255);
 
 			string[] second_line = Utility.ChewUp (sections[1], @", ");
 			int[] stats = Array.ConvertAll (second_line, s => int.Parse (s));
@@ -294,22 +268,13 @@ public class ResourcesMaster : MonoBehaviour {
 			//{
 			//	IntValues[i] = (int.Parse(stats[i]));
 			//}
-			character.StatsList = new Stats (stats);
-
-			/*monster.POW_ = stats[2];
-			monster.MGT_ = stats[3];
-			monster.END_ = stats[4];
-			monster.RES_ = stats[5];
-			monster.SPD_ = stats[6];
-			monster.LUK_ = stats[7];
-			monster.MOV_ = stats[8];
-			*/
+			character.StatsList = new MonsterStats (stats);
 
 			string[] fourth_line = Utility.ChewUp (sections[3], @", ");
 			foreach (string s in fourth_line) {
 				SpellEntry sp = new SpellEntry ();
 				sp.Name = s;
-				character.AddSpell (sp);
+				//TODO: character.AddSpell (sp);
 			}
 
 			Characters.Add (character);
@@ -319,128 +284,6 @@ public class ResourcesMaster : MonoBehaviour {
 
 		}
 	}
-
-	/*
-	void SpellChewUp(){
-		
-		TextAsset textAsset = (TextAsset)Resources.Load("Texts/Through the Bridge of Light", typeof(TextAsset)); 
-		string[] elements = Utility.ChewUp(textAsset.text, ":", true);
-
-		for (int z = 0; z < elements.Length-1; z+=2)
-		{ //
-
-			string[] elem = Utility.ChewUp(elements[z], @"\+", true);
-			string e_content = elements[z+1].Replace('"', '#');
-			e_content = e_content.Replace("# -", "#");//.Remove(0, 3);
-			string[] e_spells = Utility.ChewUp(e_content,  @"= |\r|\n\r", true); // @"#|\[|]|\n|\r|\n\r"
-			
-			for (int w = 1; w < e_spells.Length; w+=4)
-			{
-				try{
-				
-					Spell spell = new Spell();
-					foreach (string el in elem)
-					{
-						spell.Elements.Add(Thesaurus.Chew(el.ToLower()));
-					}
-					//spell.elements = elem;
-					string[] name_desc = Utility.ChewUp(e_spells[w], @"#", true);
-					spell.name = name_desc[0];					
-					//spell.description = name_desc[1];
-
-					string[] first_line = Utility.ChewUp(e_spells[w+1], "> |, ", true, eatFirst: true);
-					foreach (string statement in first_line)
-					{
-						//Debug.Log(statement);
-						string[] state = Utility.ChewUp(statement, "_", false);
-						int data = 0;
-						try{
-							if(state.Length > 1) data = int.Parse(state[1]);
-						}catch{}
-						switch(state[0]){
-							case "All":
-							case "Allies":
-							case "Enemies":
-							case "None":
-								spell.targeter = (int) typeof(E).GetField(state[0].ToUpper()).GetValue(null);
-								break;
-							case "CastShape":
-								spell.CastShape = Thesaurus.Chew(state[1]);
-								break;
-							case "EffectShape":
-								spell.EffectShape = Thesaurus.Chew(state[1]);
-								break;
-							case "Animation":
-								foreach (Animation a in Animations)
-								{	
-									if(a.name.Equals(state[1])){
-										spell.AnimationName = a.name;
-										break;
-									}
-								}
-								break;
-							default:
-								try{
-									var esp = spell.GetType().GetField(state[0].ToLower(), System.Reflection.BindingFlags.Public | System.Reflection.BindingFlags.Instance);
-									esp.SetValue(spell, data);
-								}catch{
-									Alog("SpellNullRef " + state[0]);
-								}							
-								//Debug.Log("SpellSpec Error " + state[0] + " at " + spell.name);
-								break;						
-						}
-					}
-
-					string[] second_line = Utility.ChewUp(e_spells[w+2], "> |, ", true, eatFirst: true);
-					foreach (string statement in second_line)
-					{
-						int a = 0, b = 0, c = 0, d = 0;
-						string[] state = Utility.ChewUp(statement, "_", false);
-
-						try
-						{
-							if(state.Length > 1) b = int.Parse(state[1]);
-						}
-						catch (FormatException)	{}
-						if(state.Length > 2) {
-							c = int.Parse(state[2]);
-							if(state.Length > 3) d = int.Parse(state[3]);
-						}											
-												
-						switch(state[0]){
-							case "Damage":
-								a = E.DAMAGE;
-								b = Thesaurus.Chew(state[1]);
-								break;
-							case "Poison":
-								a = E.POISON;
-								b = Thesaurus.Chew(state[1]);
-								break;
-							default:
-								a = (int) typeof(E).GetField(state[0].ToUpper()).GetValue(null);
-								if(a == 0) Alog("SpellProp Error " + state[0] + " at " + spell.name);
-								break;
-						}
-
-						Property pr = new Property(a, b, c, d);
-						//Debug.Log(pr.ToString());
-						spell.Properties.Add(pr);
-					}
-					
-					Spells.Add(spell);
-					
-				}catch(Exception e){
-					//Alog("Exception");
-					//Debug.Log(e.);
-					//Debug.Log("Threw");
-				}
-			}
-			
-				
-			
-		}		
-	}
-	*/
 
 	void StatusChewUp () {
 

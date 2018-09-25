@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class MonsterInstance {
 
     public MonsterEntry MonsterEntry;
@@ -10,7 +11,10 @@ public class MonsterInstance {
     public string Name, Texture;
     public Color PaletteA, PaletteB;
 
-    public Stats StatsList;
+    public MonsterStats Stats;
+
+    public List<SpellInstance> SpellsList, SpellsCast; //= new List<Spell>();
+    public List<Status> StatusesList; // = new List<Status>();
 
     public Point MonsterPoint;
     public bool Alive;
@@ -18,40 +22,41 @@ public class MonsterInstance {
     lastDamage, turnDamage, lastTurnDamage, totalDamageTaken;
     public string lastSpellCast, lastElement;
 
-    public List<SpellEntry> SpellsCast; //= new List<Spell>();
-    public List<Status> StatusesList; // = new List<Status>();
+    public MonsterInstance (MonsterEntry Entry) {
 
-    public MonsterInstance (MonsterEntry MonsterEntry) {
+        this.MonsterEntry = Entry;
 
-        this.MonsterEntry = MonsterEntry;
+        this.Name = Entry.Name;
+        this.Texture = Entry.Texture;
 
-        //mon.SpellsList = new List<SpellEntry> (SpellsList);
-        //mon.SpellNames = new List<string>(SpellNames);
-        //mon.StatusNames = new List<string> (StatusNames);
-        //mon.SpellsCast = new List<SpellEntry> ();
-
-        Color EntryPaletteA = MonsterEntry.PaletteA_;
-        Color EntryPaletteB = MonsterEntry.PaletteB_;
+        Color EntryPaletteA = Entry.ColorPaletteA;
+        Color EntryPaletteB = Entry.ColorPaletteB;
 
         PaletteA = new Color (EntryPaletteA.r, EntryPaletteA.g, EntryPaletteA.b, EntryPaletteA.a);
         PaletteB = new Color (EntryPaletteB.r, EntryPaletteB.g, EntryPaletteB.b, EntryPaletteB.a);
 
-        StatsList = MonsterEntry.StatsList.Copy ();
-        //Array.Copy(STATS_, mon.STATS_, 9);
+        SpellsList = new List<SpellInstance> ();
+        SpellsCast = new List<SpellInstance> ();
 
-        StatsList.Increase (STAT.MOV, 3);
+        foreach (SpellEntry SE in Entry.SpellEntries) {
+            SpellInstance SI = SE.Instantiate ();
+            SpellsList.Add (SI);
+        }
+
+        Stats = Entry.StatsList.Copy ();
+        Stats.Increase (STAT.MOV, 3);
         AvailableMovementPoints = MovementPoints ();
 
     }
 
-    public void AddSpell (SpellEntry sp) {
+    public void AddSpell (SpellInstance sp) {
         SpellsList.Add (sp);
         //SpellNames.Add(sp.name);
     }
-    public void AddStatus (StatusEntry st) {
-        StatusesList.Add (st);
-        StatusNames.Add (st.Name);
-    }
+    //public void AddStatus (StatusEntry st) {
+    //    StatusesList.Add (st);
+    //    StatusNames.Add (st.Name);
+    //}
 
     public bool Die () {
         Alive = false;
@@ -59,13 +64,13 @@ public class MonsterInstance {
     }
 
     public int MovementPoints () {
-        return StatsList[STAT.MOV];
+        return Stats[STAT.MOV];
     }
     public void ResetMovementPoints () {
-        StatsList.ResetValue (STAT.MOV);
+        Stats.ResetValue (STAT.MOV);
     }
     public bool TakeDamage (Damage TakenDamage) {
-        StatsList.Decrease (STAT.HPA, TakenDamage.FinalDamage);
+        Stats.Decrease (STAT.HPA, TakenDamage.FinalDamage);
         return true;
 
     }

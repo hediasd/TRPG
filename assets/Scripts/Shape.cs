@@ -1,8 +1,14 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public static class Shape {
+
+	//public int Name;
+
+	//public Shape (string ShapeName) {
+
+	//}
 
 	public static List<Point> GetShape (int Name, float[, ] DirectionPivot, int MaximumRange, int MinimumRange = -1) {
 		List<Point> MaximumShape = SwitchShape (Name, DirectionPivot, MaximumRange);
@@ -15,6 +21,7 @@ public static class Shape {
 	}
 
 	static List<Point> SwitchShape (int Name, float[, ] DirectionPivot, int Range) {
+
 		try {
 
 			switch (Name) {
@@ -33,7 +40,7 @@ public static class Shape {
 					return new List<Point> ();
 			}
 
-		} catch (System.Exception) {
+		} catch (Exception) {
 			return CircleShape (Range);
 		}
 
@@ -100,7 +107,7 @@ public static class Shape {
 	static List<Point> CrossShape (int Range) {
 		if (Range < 0) return new List<Point> ();
 		List<Point> FinalPoints = new List<Point> ();
-		
+
 		for (int i = -Range; i < 0; i++) {
 			Point p = new Point (i, 0);
 			Point q = new Point (0, i);

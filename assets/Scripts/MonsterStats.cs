@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Stats {
+public class MonsterStats {
 
 	int[, ] InnerStats;
 
@@ -11,7 +11,17 @@ public class Stats {
 		BattleStartValue = 1,
 		BattleCurrentValue = 2;
 
-	public Stats (int[] Values) {
+	public MonsterStats () {
+		InnerStats = new int[10, 3];
+
+		for (int i = 0; i < 10; i++) {
+			for (int j = 0; j < 3; j++) {
+				InnerStats[i, j] = 0;
+			}
+		}
+	}
+
+	public MonsterStats (int[] Values) {
 		InnerStats = new int[10, 3];
 
 		for (int i = 0; i < 10; i++) {
@@ -60,12 +70,12 @@ public class Stats {
 		return true;
 	}*/
 
-	public Stats Copy () {
+	public MonsterStats Copy () {
 		int[] CopiedInts = new int[10];
 		for (int i = 0; i < 10; i++) {
 			CopiedInts[i] = InnerStats[i, 1];
 		}
-		return new Stats (CopiedInts);
+		return new MonsterStats (CopiedInts);
 	}
 
 }

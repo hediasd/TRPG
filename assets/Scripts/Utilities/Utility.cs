@@ -12,7 +12,7 @@ public static class Utility {
 		}
 	}
 
-	public static string[] ChewUp (string s, string format) {
+	public static string[] ChewUp (string s, string format = "_|, ") {
 		//char[] formated = Regex.Split(format, "|");
 		string[] r = Regex.Split (s, format);
 		List<string> li = new List<string> ();

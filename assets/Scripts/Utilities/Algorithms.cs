@@ -6,7 +6,7 @@ using UnityEngine;
 
 		static int[,] Corners = {{-1, 0}, {1, 0}, {0, -1}, {0, 1}};
 
-		public static List<LinkedPoint> BlurredSpellCastRange(Point PointPivot, int[,] GroundMap, SpellEntry SimulatedSpell, int BlurAmount){
+		public static List<LinkedPoint> BlurredSpellCastRange(Point PointPivot, int[,] GroundMap, SpellInstance SimulatedSpell, int BlurAmount){
 			List<LinkedPoint> BlurredCastShape = new List<LinkedPoint>();
 
 			//CastShape with Pivot
