@@ -13,13 +13,12 @@ public class BattleMaster : MonoBehaviour {
 	public static List<MonsterInstance> HadTurn = new List<MonsterInstance> ();
 
 	//[HideInInspector]
-	public GameObject canvas, chooser, overlays, pieces;
+	public GameObject Canvas, Chooser, Overlays, Pieces;
 	[HideInInspector]
 	public static MonsterInstance Selected, OnTurn;
 	public ResourcesMaster ResourcesMaster;
 
-	CanvasMaster CanvasMaster;
-	ChooserMaster ChooserMaster;
+	public CanvasMaster CanvasMaster;
 	public GameboardMaster GameboardMaster;
 	Gameboard Gameboard;
 	MapMaster MapMaster;
@@ -56,11 +55,11 @@ public class BattleMaster : MonoBehaviour {
 		GameboardMaster = GetComponent<GameboardMaster> ();
 		Gameboard = GameboardMaster.Gameboard;
 
-		ResourcesMaster = GetComponent<ResourcesMaster> ();
+		//ResourcesMaster = GetComponent<ResourcesMaster> ();
 		CanvasMaster = GameObject.Find ("Canvas").GetComponent<CanvasMaster> ();
-		ChooserMaster = chooser.GetComponent<ChooserMaster> ();
-		OverlaysMaster = overlays.GetComponent<OverlaysMaster> ();
+		OverlaysMaster = GameObject.Find ("Overlays").GetComponent<OverlaysMaster> ();
 		PiecesMaster = GameObject.Find ("Pieces").GetComponent<PiecesMaster> ();
+		Chooser = GameObject.Find ("Chooser");
 		PlanningMaster = GetComponent<PlanningMaster> ();
 		MapMaster = GameObject.Find ("Map").GetComponent<MapMaster> ();
 
@@ -105,15 +104,15 @@ public class BattleMaster : MonoBehaviour {
 
 		MapMaster.Load (Gameboard, "desert1");
 
-		Random.InitState (1);
+		Random.InitState (10);
 
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (9, 3), 0);
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (11, 1), 0);
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (11, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (6, 3), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (8, 1), 0);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Tricky Viper"), new Point (8, 3), 0);
 
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (10, 13), 1);
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (10, 11), 1);
-		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (11, 12), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (7, 13), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Sandstone Golem"), new Point (7, 11), 1);
+		SpawnMonster (ResourcesMaster.GetMonsterEntry ("Guide of Lost"), new Point (8, 12), 1);
 
 		Allmons.AddRange (Teams[0]);
 		Allmons.AddRange (Teams[1]);
@@ -132,8 +131,9 @@ public class BattleMaster : MonoBehaviour {
 	public void SpawnMonster (MonsterEntry MonsterSample, Point Position, int TeamNumber) {
 
 		IDs += 1;
-		if(MonsterSample == null) UberDebug.LogChannel("Error", "MonsterSample null");
+		if (MonsterSample == null) UberDebug.LogChannel ("Error", "MonsterSample null");
 		MonsterInstance SpawnedMonster = MonsterSample.Instantiate ();
+		
 		SpawnedMonster.ID = IDs;
 		SpawnedMonster.Team = TeamNumber;
 		Teams[TeamNumber].Add (SpawnedMonster);
@@ -160,8 +160,9 @@ public class BattleMaster : MonoBehaviour {
 
 		if (Teams[0].Contains (OnTurn)) {
 			StatePush (new GameState (GAMESTATE.BATTLE_MENU, E.ARROW_UPDOWN), false);
-			GameObject blox = CanvasMaster.SummonBattleMenu ();
-			States.Peek ().Windows.Add (blox);
+			//CanvasMaster.SummonBattleMenu ();
+			//TODO: GameObject blox = 
+			//States.Peek ().Windows.Add (blox);
 		}
 
 		UpTurn.Remove (OnTurn);
@@ -333,7 +334,7 @@ public class BattleMaster : MonoBehaviour {
 			while (PiecesMasterActions.Count > 0 && PiecesMasterActions.Peek () is PieceText) {
 				PieceText Action = (PieceText) PiecesMasterActions.Dequeue ();
 				PiecesMaster.SpawnDamageText (Action.who, Action.Text);
-			}			
+			}
 
 		} else if (PiecesMasterActions.Peek () is PieceKill && PiecesMaster.MonstersActing < 2) {
 
@@ -372,19 +373,19 @@ public class BattleMaster : MonoBehaviour {
 
 					case 2: //Spell
 						newState = new GameState (GAMESTATE.SPELL, E.ARROW_UPDOWN);
-						GameObject spellList = CanvasMaster.SummonSpellList (); //Arrow at first
-						GameObject spellData = CanvasMaster.SummonSpellData ();
-						GameObject nameTag = CanvasMaster.SummonNameTag (OnTurn.Name, false);
-						newState.Windows.Add (spellList);
-						newState.Windows.Add (spellData);
-						newState.Windows.Add (nameTag);
+						//GameObject spellList = CanvasMaster.SummonSpellList (); //Arrow at first
+						//GameObject spellData = CanvasMaster.SummonSpellData ();
+						//GameObject nameTag = CanvasMaster.SummonNameTag (OnTurn.Name, false);
+						//newState.Windows.Add (spellList);
+						//newState.Windows.Add (spellData);
+						//newState.Windows.Add (nameTag);
 						StatePush (newState, true);
 						break;
 
 					case 3: //Item
 						newState = new GameState (GAMESTATE.ITEM);
-						GameObject dialogBubble = CanvasMaster.SummonDialog ("QUAL ERA O JOGO SURPRESA ?"); //Arrow at first
-						newState.Windows.Add (dialogBubble);
+						//GameObject dialogBubble = CanvasMaster.SummonDialog ("QUAL ERA O JOGO SURPRESA ?"); //Arrow at first
+						//newState.Windows.Add (dialogBubble);
 						StatePush (newState, true);
 						break;
 				}
@@ -406,7 +407,7 @@ public class BattleMaster : MonoBehaviour {
 				int id = Environment.GameBoard.MonsterIDAt (new Point (OnTurn));
 				MonsterInstance mon = Environment.GameBoard.MonstersOnBoard[id];
 				Debug.Log ("fix this");
-				GameboardActions.Enqueue (new PieceMove (mon, Environment.GameBoard.GetMonsterPosition (mon), new Point (chooser), null));
+				GameboardActions.Enqueue (new PieceMove (mon, Environment.GameBoard.GetMonsterPosition (mon), new Point (Chooser), null));
 				TurnWheel ();
 				break;
 			case "x":

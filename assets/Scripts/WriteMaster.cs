@@ -20,7 +20,7 @@ public static class WriteMaster {
         }
     */
 
-    public static string ListToJson<T> (List<T> list, bool prettyPrint) {
+    public static string ListToJson<T> (List<T> list, bool prettyPrint = true) {
         Wrapper<T> wrapper = new Wrapper<T> ();
         wrapper.Items = list.ToArray ();
         return JsonUtility.ToJson (wrapper, prettyPrint);
@@ -37,22 +37,28 @@ public static class WriteMaster {
         }*/
 
     public static void WriteUp (string file, string text, bool cleanEmpty = false) {
-        TextAsset asset = Resources.Load (file + ".txt") as TextAsset;
-        StreamWriter writer = new StreamWriter ("Assets/Resources/Texts/" + file + ".txt"); // Does this work?
 
-        if (cleanEmpty) {
-            string[] ss = Utility.ChewUp (text, "\n");
-            string s = "";
-            for (int i = 0; i < ss.Length; i++)
-            {
-                if(!ss[i].Contains(": \"\",")) s += ss[i] + "\n";// = "";
+        try {
+
+            TextAsset asset = Resources.Load (file + ".txt") as TextAsset;
+            StreamWriter writer = new StreamWriter ("Assets/Resources/Texts/" + file + ".txt"); // Does this work?
+
+            if (cleanEmpty) {
+                string[] ss = Utility.ChewUp (text, "\n");
+                string s = "";
+                for (int i = 0; i < ss.Length; i++) {
+                    if (!ss[i].Contains (": \"\",")) s += ss[i] + "\n"; // = "";
+                }
+                writer.WriteLine (s);
+            } else {
+                writer.WriteLine (text);
             }
-            writer.WriteLine (s);
-        }else{
-            writer.WriteLine (text);
+
+            writer.Close ();
+
+        } catch (IOException ioe) {
+            UberDebug.LogChannel ("Exception", "IOException on " + file);
         }
-        
-        writer.Close ();
 
     }
 

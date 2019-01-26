@@ -1,0 +1,114 @@
+{
+    "Items": [
+        {
+            "Name": "???",
+            "Texture": "CH_01",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "230, 90, 0",
+            "PaletteB": "248, 216, 144"
+        },
+        {
+            "Name": "Bingo",
+            "Texture": "CH_13",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "50, 50, 210",
+            "PaletteB": "248, 216, 144"
+        },
+        {
+            "Name": "Diana / Kath",
+            "Texture": "CH_06",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "248, 216, 144",
+            "PaletteB": "110, 10, 10"
+        },
+        {
+            "Name": "Don",
+            "Texture": "CH_10",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "120, 60, 20",
+            "PaletteB": "248, 216, 144"
+        },
+        {
+            "Name": "Gees",
+            "Texture": "CH_04",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "248, 216, 144",
+            "PaletteB": "60, 140, 0"
+        },
+        {
+            "Name": "Heathcliff",
+            "Texture": "CH_14",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "248, 216, 144",
+            "PaletteB": "220, 30, 30"
+        },
+        {
+            "Name": "Janny",
+            "Texture": "CH_11",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "160, 0, 40",
+            "PaletteB": "248, 216, 144"
+        },
+        {
+            "Name": "Jenny",
+            "Texture": "CH_09",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "248, 216, 144",
+            "PaletteB": "150, 70, 170"
+        },
+        {
+            "Name": "John",
+            "Texture": "CH_02",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "248, 216, 144",
+            "PaletteB": "40, 170, 60"
+        },
+        {
+            "Name": "Nina",
+            "Texture": "CH_05",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "80, 80, 250",
+            "PaletteB": "248, 216, 144"
+        },
+        {
+            "Name": "Sidney",
+            "Texture": "CH_07",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "60, 90, 140",
+            "PaletteB": "248, 216, 144"
+        }
+    ]
+}

@@ -1,4 +1,4 @@
-﻿using System.Collections;
+﻿using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -9,8 +9,44 @@ public class DebugMaster : MonoBehaviour {
 	bool Q, W, e, R, T, Y, U;
 
 	void Start () {
+		BattleMaster = GameObject.Find ("Logic").GetComponent<BattleMaster> ();
+	}
 
-		
+	void LateUpdate () {
+		if (Input.GetKeyDown ("q") && !Q) {
+			InputQ ();
+		}
+		if (Input.GetKeyDown ("w")) {
+			InputW ();
+		}
+		if (Input.GetKeyDown ("e")) {
+			InputE ();
+		}
+		if (Input.GetKeyDown ("up") || Input.GetKeyDown ("down")) {
+
+			BattleMaster.PiecesMaster.MoveChooser (0, (Input.GetKeyDown ("up") ? 1 : 0) + (Input.GetKeyDown ("down") ? -1 : 0));
+
+		}
+		if (Input.GetKeyDown ("left") || Input.GetKeyDown ("right")) {
+
+			BattleMaster.PiecesMaster.MoveChooser ((Input.GetKeyDown ("left") ? -1 : 0) + (Input.GetKeyDown ("right") ? 1 : 0), 0);
+
+		}
+		if (Input.GetAxis ("Horizontal") != 0 || Input.GetAxis ("Vertical") != 0) {
+
+		}
+	}
+
+	void InputQ () {
+		BattleMaster.CanvasMaster.SummonBattleMenu ();
+		Q = !Q;
+	}
+
+	void InputW () {
+
+	}
+
+	void InputE () {
 
 	}
 

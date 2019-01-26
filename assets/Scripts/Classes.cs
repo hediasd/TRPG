@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Classes : MonoBehaviour { }
@@ -54,13 +55,7 @@ public class GAMESTATE {
 		ITEM = 15;
 }
 
-public class TARGET {
-	public const int SELF = 100,
-		ALLIES = 101,
-		ENEMIES = 102,
-		BOTH = 103,
-		ALL = 104;
-}
+
 
 public class LOCK {
 	public const int TURN_WHEEL = 900,
@@ -72,6 +67,7 @@ public class LOCK {
 }
 
 public class E {
+
 	/* USED AS ARRAY POSITIONS */
 
 	/* GENERAL */
@@ -118,12 +114,13 @@ public class DataEntry : DataObject {
 	public bool Started = false;
 
 	public void Starter () {
+		if (Started) throw new DataEntryException ("Entry already initialized");
 		Startup ();
 		Started = true;
 	}
 
-	public virtual void Startup (){
-		Debug.Log("Bleurgh");
+	public virtual void Startup () {
+		throw new DataEntryException ("Startup not implemented");
 	}
 
 }

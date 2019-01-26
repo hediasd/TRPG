@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class TimeMaster : MonoBehaviour {
 
+	public static int GeneralFrameWaitingInterval = 40;
 	public static float GeneralTiming = 1.2f;
 
 	void Start () {

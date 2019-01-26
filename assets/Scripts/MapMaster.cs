@@ -10,7 +10,7 @@ public class MapMaster : MonoBehaviour {
 	BattleMaster BattleMaster;
 
 	public string MapName;
-	public GameObject cellSpr;
+	//public GameObject cellSpr;
 
 	public void Cleanup(){
 
@@ -27,15 +27,15 @@ public class MapMaster : MonoBehaviour {
 		UnityEngine.Object prefab = Resources.Load(MapName);
 		Debug.Log("Loading map: " + prefab.name);
 
-		GameObject go = (GameObject) Instantiate(prefab);
-		go.transform.Translate(0, -0.062f, go.GetComponent<TiledMap>().NumTilesHigh);
-		go.transform.Rotate(90, 0, 0);
-		go.transform.parent = this.transform;
+		GameObject MapFloor = (GameObject) Instantiate(prefab);
+		MapFloor.transform.Translate(0, -0.062f, MapFloor.GetComponent<TiledMap>().NumTilesHigh);
+		MapFloor.transform.Rotate(90, 0, 0);
+		MapFloor.transform.parent = this.transform;
 
-		GameObject blocks = (GameObject) Instantiate(new GameObject(), parent: go.transform);
+		GameObject blocks = (GameObject) Instantiate(new GameObject(), parent: MapFloor.transform);
 		blocks.name = "Blocksss";
 
-		string TilesetName = go.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().sharedMaterials[0].name;
+		string TilesetName = MapFloor.transform.GetChild(0).GetChild(0).gameObject.GetComponent<Renderer>().sharedMaterials[0].name;
 		string MapWriteOutput = "";
 
 		TextAsset[] MapCSVs = Resources.LoadAll<TextAsset>("GameMaps/" + MapName + "/");// + MapName + "_Blocks");
@@ -53,11 +53,34 @@ public class MapMaster : MonoBehaviour {
 				Gameboard.Startup(Regex.Split(MapMatrix[0], ",").Length, MapMatrix.Length-1);
 			}
 
-			if(FileName[1].Equals("Terrain")){
+			string FileMiddleName = FileName[1];
+
+			if(FileMiddleName.Equals("Terrain")){
 				continue;
 			}
-			if(!FileName[1].Equals("Blocks")){
+			//if(!FileName[1].Equals("Blocks")){
+			//	continue;
+			//}
+			switch(FileMiddleName){
+				case "Terrain":
+				//
 				continue;
+				case "Blocks":
+				
+				break;
+				case "NorthFaces":
+				
+				break;
+				case "SouthFaces":
+				
+				break;
+				case "EastFaces":
+				
+				break;
+				case "WestFaces":
+				
+				break;
+				
 			}
 
 			float Height = 0;
@@ -77,8 +100,7 @@ public class MapMaster : MonoBehaviour {
 					int TileTypeAtPoint = TileType(IdAtPoint);
 
 					if(IdAtPoint >= 0){
-
-						GameObject cellSprite = Instantiate(cellSpr, new Vector3(p.x, Height, p.z), Quaternion.identity);
+						GameObject cellSprite = Instantiate(ResourcesMaster.GetCellSprite(), new Vector3(p.x, Height, p.z), Quaternion.identity);
 						cellSprite.transform.parent = blocks.transform;
 						cellSprite.GetComponentInChildren<SpriteRenderer>().sprite = TilesetSprites[IdAtPoint];//.Find(Tile => Tile.name == (""+IdAtPoint));
 						if(Height != 0) cellSprite.transform.GetChild(1).gameObject.SetActive(false);

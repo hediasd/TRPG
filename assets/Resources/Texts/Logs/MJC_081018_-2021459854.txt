@@ -1,0 +1,254 @@
+{
+    "Items": [
+        {
+            "Name": "Asmodeus",
+            "Texture": "DV_09",
+            "Races": "",
+            "Spells": "Fire Wall, Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "240, 240, 240",
+            "PaletteB": "100, 50, 120"
+        },
+        {
+            "Name": "Astaroth",
+            "Texture": "DV_19",
+            "Races": "",
+            "Spells": "Beneath the Absolute",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "240, 240, 240",
+            "PaletteB": "100, 50, 120"
+        },
+        {
+            "Name": "Beast of Revelation",
+            "Texture": "DV_10",
+            "Races": "",
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Betrayed Knight",
+            "Texture": "DV_09",
+            "Races": "",
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "150, 150, 250"
+        },
+        {
+            "Name": "Blood Priest",
+            "Texture": "CH_04",
+            "Races": "",
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 220, 140",
+            "PaletteB": "240, 40, 40"
+        },
+        {
+            "Name": "Blood Templar",
+            "Texture": "DV_08",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "250, 20, 20"
+        },
+        {
+            "Name": "Bosk Mage",
+            "Texture": "PL_02",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "40, 80, 0",
+            "PaletteB": "250, 250, 190"
+        },
+        {
+            "Name": "Callalily",
+            "Texture": "PL_01",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "165, 70, 250"
+        },
+        {
+            "Name": "Dark Mirror",
+            "Texture": "MT_03",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "210, 60, 240",
+            "PaletteB": "250, 250, 200"
+        },
+        {
+            "Name": "Deity of Thirst",
+            "Texture": "WA_05",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "130, 80, 250"
+        },
+        {
+            "Name": "Devil's Advocate",
+            "Texture": "BR_01",
+            "Races": "",
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Graveyard Warden",
+            "Texture": "ZM_07",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "70, 50, 30",
+            "PaletteB": "200, 200, 130"
+        },
+        {
+            "Name": "Guide of Lost",
+            "Texture": "ZM_03",
+            "Races": "Undead, Ice",
+            "Spells": "Evil Claw, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 245",
+            "PaletteB": "30, 30, 140"
+        },
+        {
+            "Name": "Ice Knight",
+            "Texture": "DV_09",
+            "Races": "",
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Polar Gargoyle",
+            "Texture": "DV_06",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "60, 200, 230",
+            "PaletteB": "250, 250, 230"
+        },
+        {
+            "Name": "Prophet of Wicked",
+            "Texture": "WA_16",
+            "Races": "",
+            "Spells": "Evil Claw, Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "190, 30, 30",
+            "PaletteB": "250, 250, 230"
+        },
+        {
+            "Name": "Rasselbock",
+            "Texture": "BE_22",
+            "Races": "",
+            "Spells": "Zap",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "100, 65, 35",
+            "PaletteB": "240, 240, 240"
+        },
+        {
+            "Name": "Sandstone Golem",
+            "Texture": "MT_06",
+            "Races": "Rock",
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "0, 0, 0"
+        },
+        {
+            "Name": "Shold",
+            "Texture": "SL_10",
+            "Races": "",
+            "Spells": "",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "100, 160, 240"
+        },
+        {
+            "Name": "Tenth Spirit",
+            "Texture": "BE_13",
+            "Races": "",
+            "Spells": "Zap",
+            "Passives": "Moral Philosophy",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "140, 25, 20",
+            "PaletteB": "140, 45, 130"
+        },
+        {
+            "Name": "Tricky Viper",
+            "Texture": "DR_11",
+            "Races": "",
+            "Spells": "Evil Claw",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "150, 150, 250",
+            "PaletteB": "250, 250, 250"
+        },
+        {
+            "Name": "Tundra Raider",
+            "Texture": "BE_27",
+            "Races": "",
+            "Spells": "Zap",
+            "Passives": "Moral Philosophy",
+            "Stats": "20, 10, 10, 10, 10, 0, 0, 0, 0, 2",
+            "PaletteA": "250, 250, 200",
+            "PaletteB": "10, 120, 250"
+        },
+        {
+            "Name": "Vinlandsaga",
+            "Texture": "ZM_03",
+            "Races": "",
+            "Spells": "Fire Wall",
+            "Passives": "Skraelings",
+            "Stats": "25, 10, 10, 10, 10, 0, 0, 0, 0, 8",
+            "PaletteA": "250, 240, 240",
+            "PaletteB": "200, 0, 0"
+        },
+        {
+            "Name": "Yatagarasu",
+            "Texture": "BR_08",
+            "Races": "",
+            "Spells": "Boom, Evil Claw, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 3, 3, 3, 3",
+            "PaletteA": "230, 250, 230",
+            "PaletteB": "130, 0, 130"
+        },
+        {
+            "Name": "Yeti",
+            "Texture": "BE_14",
+            "Races": "",
+            "Spells": "Boom, Zap, Fire Wall",
+            "Passives": "",
+            "Stats": "20, 10, 10, 10, 10, 0, 2, 2, 2, 2",
+            "PaletteA": "250, 250, 250",
+            "PaletteB": "150, 100, 50"
+        }
+    ]
+}

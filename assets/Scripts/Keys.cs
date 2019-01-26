@@ -56,9 +56,9 @@ public class Keys : MonoBehaviour {
 				Destroy(blox);
 				blox = (GameObject) Instantiate(box, Vector3.zero, Quaternion.Euler (0, 0, 0));
 				blox.transform.SetParent(canvas.transform, false);
-				blox.GetComponent<BoxMaker>().message = go.name.Remove(0, 6);
+				//blox.GetComponent<BoxMaker>().message = go.name.Remove(0, 6);
 				blox.transform.localPosition = new Vector3(-600, 160, 0);
-				blox.GetComponent<BoxMaker>().Transite(222);
+				//blox.GetComponent<BoxMaker>().Transite(222);
 			}else{
 				for (int i = 0; i < 6; i++){
 					//Random.seed *= Random.seed/2;

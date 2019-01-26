@@ -27,7 +27,7 @@ public class SpellEntry : DataEntry {
 		Cooldown = Level = MinimumCastRange = MaximumCastRange = 1;
 		Radius = 0;
 		SpellCastShape = SpellEffectShape = GEOMETRY.CIRCLE;
-		SpellTargets = TARGET.ENEMIES;
+		SpellTargets = TARGETS.ENEMIES;
 		//anim = new Animation();
 		//anim.sheet = "Bright2";
 	}
@@ -39,11 +39,10 @@ public class SpellEntry : DataEntry {
 	public override void Startup () {
 
 		//if (MaximumCastRange - MinimumCastRange < 0) //throw new Exception ();
-
 		string[] Segments = Utility.ChewUp (Damage); //sp.Damage
 
 		for (int i = 0; i < Segments.Length; i += 2) {
-			DamageSegments.Add (new DamageSegment (int.Parse (Segments[i]), Thesaurus.Chew (Segments[i + 1])));
+			DamageSegments.Add (new DamageSegment (int.Parse (Segments[i]), ELEMENT.GetElementValue (Segments[i + 1])));
 		}
 
 		string[] Range = Utility.ChewUp (CastRange); //sp.Damage
@@ -53,11 +52,10 @@ public class SpellEntry : DataEntry {
 			MaximumCastRange = int.Parse (Range[1]);
 		}
 
-		SpellCastShape = Thesaurus.Chew (CastShape);
-		SpellEffectShape = Thesaurus.Chew (EffectShape);
-		SpellTargets = Thesaurus.Chew (Targets);
+		SpellCastShape = GEOMETRY.GetGeometryValue (CastShape);
+		SpellEffectShape = GEOMETRY.GetGeometryValue (EffectShape);
+		SpellTargets = TARGETS.GetTargetsValue (Targets);
 
 	}
-
 
 }

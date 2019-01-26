@@ -9,6 +9,9 @@ Consolas Breathstealer's Crypt
 
 ice wood - sorbet
 Arestum Momentum
+Mr Log has me at it again
+Rainbow Road
+World at its best
 
 	
 Mystic Pond - Miracle at Dawn
@@ -26,6 +29,9 @@ Gatekeeping
 Skee
 Unprecedent
 
+Erupt Through - Jumps and damages, requires no enemies near and enemies near the target
+
+
 - ACTIVES -
 
 Coal to Diamonds - -res to non earth, +res to earth
@@ -40,32 +46,38 @@ Mega Electro Shocker
 
 - PASSIVES -
 
-Eternity - fire passive, constant heals and revive
-Secret Night - all darkness-users gain bonus turn
-Early Spring -
-River Mist -
+Ballooner - unaffected by ground
 Blizzard Blitz -
+Early Spring -
+Eternity - fire passive, constant heals and revive
+Secret Night - all darkness-users gain bonus turn, devils can invade this turn
+River Mist -
 Soteriology - study of salvation
 God Tree -
 Top of the Morning -
+Time of Ice
 Gateway to Glimmer - AoE immunity
 
 - COUNTER -
 
 Throw Banana Slip when walking
+Turn into Mist - auto/counter, evades
 Super Loft - ally spell dmg increase
 
 - REGULAR SPELLS -
 
 Against All Odds
 Arc High Voltage
+Ars Magna
 At the Highest Level Possible
+Advantage Zone
 Back Storm
 Before It Kicks
 Blackout Tendencies
 Blazing Veins
 Casebook of Luck
 Cheating Back At You
+Claw Crane - luck game
 Collapsing Ceilling
 Conclave Chorus - heals allies, deals 3x3 damage on healed
 Constant Blessing / Constantly Blessed
@@ -87,6 +99,7 @@ Fog Gathering
 Force Ride
 Funeral Mists
 Heat Dragon
+Heavy Land
 Heaven Promised
 Hall of Flame
 Honored Pillars Festival
@@ -96,7 +109,8 @@ Late Night Troubles
 Legal Plunder
 Light That Burns the Sky
 Low Storm
-Master of Land
+Make it Big / Gigantinize
+Master of Land - terrain immunity
 Naptime - Pajama Party
 No Desire
 Nowhere to be Found (You're)
@@ -105,6 +119,7 @@ Out of Order
 Palace Prelude
 Peach Tree Legend
 Portal of Schlagl -
+Querosene Sun
 Rain of Snakes - Massive summoning of snakes
 Rapid Cooling
 Region Locked
@@ -126,5 +141,6 @@ Welcome, My Lord
 Wide Disgrace
 Windscale Pileup
 Winter Evenings by the Fire
+World of Thunder
 Worms Armageddon
 

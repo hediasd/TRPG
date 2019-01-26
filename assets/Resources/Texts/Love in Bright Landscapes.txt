@@ -80,8 +80,9 @@ Shelf of Past Mistakes -   -
 	Edge of the Universe - Dungeon -
 		[BOSS] Heat Death
 	Hoaimu's Nest - Dungeon -
-		The day Hayato slayed the its dragon friend Hoaimu to save his loved
-		[BOSS] White Knight Hayato
+		The day Hayato slayed its dragon friend Hoaimu to save his loved Lady of the Moon (exposed secret)
+		[BOSS] White Knight Hayato [WIND]
+			Legend of Heart
 		
 Garden Castle - Dungeon -
 		Catoblepas [WOOD], Bamboozler [EARTH, WOOD], 
@@ -131,9 +132,15 @@ Abandoned Zoo - Dungeon -
 
 Mount ... -
 		Shieldsman [STEEL, WOOD], Shieldmaiden [LIGHT, STEEL],
-		[BOSS] Stonemaiden [EARTH, THUNDER]
+		[BOSS] Stonemaiden [EARTH, LIGHT, THUNDER]
 			Colleen was once a human, you know. Fascinated with the weirdstone, she wore it as a necklace.
-			Long has the stone drained her energy
+			"So, long time I don't see humans, you know."
+			"W-What ?"
+			"Yes, I can read your mind, like a piece of paper. 
+			I know what you're thinking my dear.
+			But, yes, I am Colleen, Prioress of Havenhal. 
+			For decades I have walked these lands, heard its songs,
+			drunk from the energies that flow and burst from the ground ... "
 		Quest: "The Weird Stone"
 Mount ... -
 

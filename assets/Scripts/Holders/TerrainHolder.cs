@@ -1,7 +1,4 @@
 ﻿using UnityEngine;
-using System;
-using System.Collections;
-using System.Collections.Generic;
 
 public class TerrainHolder : MonoBehaviour {
 
@@ -12,5 +9,9 @@ public class TerrainHolder : MonoBehaviour {
 		TerrainColorA = Terrain.PaletteA_;
 		TerrainColorB = Terrain.PaletteB_;
 	}
-	
+
+	void Update () {
+		if (Time.frameCount % TimeMaster.GeneralFrameWaitingInterval == 0) { }
+	}
+
 }
